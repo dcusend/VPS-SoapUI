@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="ba7e0dbc-2609-40b5-8fff-4ec6095b7fc7" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="SubmitCustomerAccount TestCase" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ba7e0dbc-2609-40b5-8fff-4ec6095b7fc7fileName">SubmitCustomerAccount-TestCase</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="request" id="45234fef-33bf-4de9-8cef-aa7e709fb72d" name="SubmitCustomerAccount">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitCustomerAccount</con:operation>
+      <con:request name="SubmitCustomerAccount" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitCustomerAccount>
+         <ws:token>
+            <ppi:UserName>User2741</ppi:UserName>
+            <ppi:Password>Pswd2741</ppi:Password>
+            <ppi:PPITransactionRequestId>12341100059</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>ab2741</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:accountInformation>
+            <ppi:Customer>
+               <ppi:AddressLine1>123 rock road</ppi:AddressLine1>
+               <ppi:Country>USA</ppi:Country>
+               <ppi:FirstName>andy</ppi:FirstName>
+               <ppi:LastName>america</ppi:LastName>
+               <ppi:PhoneNumber>6262232323</ppi:PhoneNumber>
+               <ppi:Zip>91115</ppi:Zip>
+               <ppi:Username>12341100059</ppi:Username>
+               <ppi:Password>prime3333</ppi:Password>
+            </ppi:Customer>
+            <ppi:ClientAccountNumber>12341100059</ppi:ClientAccountNumber>
+            <ppi:Action>Unregister</ppi:Action>
+            <ppi:MaxAmountForRecurringPayments/>
+         </ws:accountInformation>
+      </ws:SubmitCustomerAccount>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="bef42a6f-cf6c-4d84-bfe9-5d2926d62534" name="SubmitCustomerAccountWWW">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitCustomerAccount</con:operation>
+      <con:request name="SubmitCustomerAccountWWW" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitCustomerAccount>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user2325</ppi:UserName>
+            <ppi:Password>pwd2325</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsd34fs54sdfsdfs</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:accountInformation Notes="">
+            <!--Optional:-->
+            <ppi:Customer>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppi:AddressLine1>2000 14th st N</ppi:AddressLine1>
+               <ppi:Country>USA</ppi:Country>
+               <ppi:EmailAddress>iahmed@govolution.com</ppi:EmailAddress>
+               <ppi:FirstName>Hingori</ppi:FirstName>
+               <ppi:LastName>Tinda</ppi:LastName>
+               <ppi:Zip>22201</ppi:Zip>
+               <ppi:Username>4202582108</ppi:Username>
+               <ppi:Password>Prime12345</ppi:Password>
+            </ppi:Customer>
+            <ppi:ClientAccountNumber>4202582108</ppi:ClientAccountNumber>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:CustomData>
+               <ppi:ID/>
+               <!--Optional:-->
+            </ppi:CustomData>
+            <ppi:Action>Register</ppi:Action>
+            <ppi:MaxAmountForRecurringPayments/>
+         </ws:accountInformation>
+      </ws:SubmitCustomerAccount>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="ab44764b-4f96-48d1-997a-36d7ae2377f6" name="SubmitCustomerAccountQA">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitCustomerAccount</con:operation>
+      <con:request name="SubmitCustomerAccountQA" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitCustomerAccount>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>junit</ppi:UserName>
+            <ppi:Password>testing</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsdf43rfsdfsdfsdf</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>ab12</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:accountInformation Notes="">
+            <!--Optional:-->
+            <ppi:Customer>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppi:AddressLine1>2311 york road mirchi gali</ppi:AddressLine1>
+               <ppi:AddressLine2>Suite 555</ppi:AddressLine2>
+               <ppi:Country>US</ppi:Country>
+               <ppi:EmailAddress>iahmed@govolution.com</ppi:EmailAddress>
+               <ppi:FirstName>mirchios</ppi:FirstName>
+               <ppi:LastName>sethos</ppi:LastName>
+               <ppi:PhoneNumber>2104785200</ppi:PhoneNumber>
+               <ppi:Zip>03104</ppi:Zip>
+               <ppi:Username>mirchiseth</ppi:Username>
+               <ppi:Password>11111111</ppi:Password>
+            </ppi:Customer>
+            <ppi:ClientAccountNumber>1478523914</ppi:ClientAccountNumber>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:CustomData>
+               <ppi:ID/>
+               <!--Optional:-->
+            </ppi:CustomData>
+            <ppi:Action>Register</ppi:Action>
+            <ppi:MaxAmountForRecurringPayments/>
+         </ws:accountInformation>
+      </ws:SubmitCustomerAccount>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="47cf14bd-4b4e-46aa-acc5-0aa76cccdae1" name="SubmitCustomerAccountDemo">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitCustomerAccount</con:operation>
+      <con:request name="SubmitCustomerAccountDemo" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitCustomerAccount>\r
+         <ws:token>\r
+            <ppi:UserName>User2741</ppi:UserName>\r
+            <ppi:Password>Pswd2741</ppi:Password>\r
+            <ppi:PPITransactionRequestId>12341100059</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>ab2741</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:accountInformation>\r
+            <ppi:Customer>\r
+               <ppi:AddressLine1>6910 SW Lisbon Ct</ppi:AddressLine1>\r
+               <ppi:Country>USA</ppi:Country>\r
+               <ppi:FirstName>andy</ppi:FirstName>\r
+               <ppi:LastName>america</ppi:LastName>\r
+               <ppi:PhoneNumber>6262232323</ppi:PhoneNumber>\r
+               <ppi:Zip>97078</ppi:Zip>\r
+               <ppi:Username>12341100062</ppi:Username>\r
+               <ppi:Password>prime33332</ppi:Password>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber>12341100062</ppi:ClientAccountNumber>\r
+            <ppi:Action>Register</ppi:Action>\r
+            <ppi:MaxAmountForRecurringPayments/>\r
+         </ws:accountInformation>\r
+      </ws:SubmitCustomerAccount>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="2617ca15-4ff2-4165-bcc4-98b4ae21f160" name="SubmitCustomerAccountQA590">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitCustomerAccount</con:operation>
+      <con:request name="SubmitCustomerAccountQA590" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitCustomerAccount>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>user590</ppi:UserName>\r
+            <ppi:Password>pwd590</ppi:Password>\r
+            <ppi:PPITransactionRequestId>sdfsdf43rfsdfsdfsdf</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>590</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:accountInformation Notes="">\r
+            <!--Optional:-->\r
+            <ppi:Customer>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppi:AddressLine1>96099 Main road</ppi:AddressLine1>\r
+               <ppi:EmailAddress>iahmed@govolution.net</ppi:EmailAddress>\r
+               <ppi:FirstName>Hello</ppi:FirstName>\r
+               <ppi:LastName>World</ppi:LastName>\r
+               <ppi:PhoneNumber>4231056900</ppi:PhoneNumber>\r
+               <ppi:Zip>21114</ppi:Zip>\r
+               <ppi:Username>4231056660</ppi:Username>\r
+               <ppi:Password>Prime12345</ppi:Password>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber>4231056660</ppi:ClientAccountNumber>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:CustomData>\r
+               <ppi:ID/>\r
+               <!--Optional:-->\r
+            </ppi:CustomData>\r
+            <ppi:Action>Register</ppi:Action>\r
+            <ppi:MaxAmountForRecurringPayments>0.00</ppi:MaxAmountForRecurringPayments>\r
+         </ws:accountInformation>\r
+      </ws:SubmitCustomerAccount>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="7d2fac2c-4305-4566-a39d-ef486cf30b52" name="SubmitCustomerAccountQA589">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitCustomerAccount</con:operation>
+      <con:request name="SubmitCustomerAccountQA589" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitCustomerAccount>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>shri</ppi:UserName>\r
+            <ppi:Password>shri12</ppi:Password>\r
+            <ppi:PPITransactionRequestId>sdfsdf43rfsdfsdfsdf</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>459</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:accountInformation Notes="">\r
+            <!--Optional:-->\r
+            <ppi:Customer>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppi:AddressLine1>96099 Main road</ppi:AddressLine1>\r
+               <ppi:EmailAddress>iahmed@govolution.net</ppi:EmailAddress>\r
+               <ppi:FirstName>Mohal</ppi:FirstName>\r
+               <ppi:LastName>Joe</ppi:LastName>\r
+               <ppi:PhoneNumber>4231056900</ppi:PhoneNumber>\r
+               <ppi:Zip>22201</ppi:Zip>\r
+               <ppi:Username>4231056910</ppi:Username>\r
+               <ppi:Password>Prime12345</ppi:Password>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber>4231056910</ppi:ClientAccountNumber>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:CustomData>\r
+               <ppi:ID/>\r
+               <!--Optional:-->\r
+            </ppi:CustomData>\r
+            <ppi:Action>Register</ppi:Action>\r
+            <ppi:MaxAmountForRecurringPayments>0.00</ppi:MaxAmountForRecurringPayments>\r
+         </ws:accountInformation>\r
+      </ws:SubmitCustomerAccount>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="08cd79fa-e267-4195-8d09-672d9c585eea" name="SubmitCustomerAccountQA459">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitCustomerAccount</con:operation>
+      <con:request name="SubmitCustomerAccountQA459" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitCustomerAccount>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>user589</ppi:UserName>\r
+            <ppi:Password>pwd589</ppi:Password>\r
+            <ppi:PPITransactionRequestId>sdfsdf43rfsdfsdfsdf</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>589</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:accountInformation Notes="">\r
+            <!--Optional:-->\r
+            <ppi:Customer>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppi:AddressLine1>6910 SW Lisbon Ct</ppi:AddressLine1>\r
+               <ppi:Country>USA</ppi:Country>\r
+               <ppi:EmailAddress>iahmed@govolution.net</ppi:EmailAddress>\r
+               <ppi:FirstName>Mohal</ppi:FirstName>\r
+               <ppi:LastName>Joe</ppi:LastName>\r
+               <ppi:PhoneNumber>4231056900</ppi:PhoneNumber>\r
+               <ppi:Zip>97078</ppi:Zip>\r
+               <ppi:Username>42310570</ppi:Username>\r
+               <ppi:Password>Prime12345</ppi:Password>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber>42310570</ppi:ClientAccountNumber>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:CustomData>\r
+               <ppi:ID/>\r
+               <!--Optional:-->\r
+            </ppi:CustomData>\r
+            <ppi:Action>Register</ppi:Action>\r
+            <ppi:MaxAmountForRecurringPayments>0.00</ppi:MaxAmountForRecurringPayments>\r
+         </ws:accountInformation>\r
+      </ws:SubmitCustomerAccount>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="db50878f-c7a4-4901-b9b2-70a8356c1c54" name="SubmitCustomerAccountWWW524">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitCustomerAccount</con:operation>
+      <con:request name="SubmitCustomerAccountWWW524" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitCustomerAccount>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>user524</ppi:UserName>\r
+            <ppi:Password>pwd524</ppi:Password>\r
+            <ppi:PPITransactionRequestId>sdfsd34fs54sdfsdfs</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>524</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:accountInformation Notes="">\r
+            <!--Optional:-->\r
+            <ppi:Customer>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppi:AddressLine1>6910 SW Lisbon Ct</ppi:AddressLine1>\r
+               <ppi:Country>USA</ppi:Country>\r
+               <ppi:EmailAddress>iahmed@govolution.net</ppi:EmailAddress>\r
+               <ppi:FirstName>junggg</ppi:FirstName>\r
+               <ppi:LastName>munggg</ppi:LastName>\r
+               <ppi:Zip>97078</ppi:Zip>\r
+               <ppi:Username>145879901</ppi:Username>\r
+               <ppi:Password>Prime12345</ppi:Password>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber>145879901</ppi:ClientAccountNumber>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:CustomData>\r
+               <ppi:ID/>\r
+               <!--Optional:-->\r
+            </ppi:CustomData>\r
+            <ppi:Action>Register</ppi:Action>\r
+            <ppi:MaxAmountForRecurringPayments/>\r
+         </ws:accountInformation>\r
+      </ws:SubmitCustomerAccount>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="4b3772c1-80e6-4194-820f-171d5830798b" name="SubmitCustomerAccountDemo1286">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitCustomerAccount</con:operation>
+      <con:request name="SubmitCustomerAccountDemo1286" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitCustomerAccount>\r
+         <ws:token>\r
+            <ppi:UserName>User1286</ppi:UserName>\r
+            <ppi:Password>Pswd1286</ppi:Password>\r
+            <ppi:PPITransactionRequestId>12341100059</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>1286</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:accountInformation>\r
+            <ppi:Customer>\r
+               <ppi:AddressLine1>6910 SW Lisbon Ct</ppi:AddressLine1>\r
+               <ppi:Country>USA</ppi:Country>\r
+               <ppi:EmailAddress>iahmed@govolution.com</ppi:EmailAddress>\r
+               <ppi:FirstName>Brahhuww</ppi:FirstName>\r
+               <ppi:LastName>anhuyww</ppi:LastName>\r
+               <ppi:MiddleInitial>o</ppi:MiddleInitial>\r
+               <ppi:PhoneNumber>6262232323</ppi:PhoneNumber>\r
+               <ppi:Zip>97078</ppi:Zip>\r
+               <ppi:Username>12341100089</ppi:Username>\r
+               <ppi:Password>prime3333</ppi:Password>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber>12341100089</ppi:ClientAccountNumber>\r
+            <ppi:Action>Register</ppi:Action>\r
+            <ppi:MaxAmountForRecurringPayments/>\r
+         </ws:accountInformation>\r
+      </ws:SubmitCustomerAccount>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="99848b33-e542-4977-be7d-ebf5fdc51b31" name="SubmitCustomerAccountDemo2983">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitCustomerAccount</con:operation>
+      <con:request name="SubmitCustomerAccountDemo2983" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitCustomerAccount>\r
+         <ws:token>\r
+            <ppi:UserName>highland_epay</ppi:UserName>\r
+            <ppi:Password>dfz539eso6</ppi:Password>\r
+            <ppi:PPITransactionRequestId>12341100059</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>ab2983</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:accountInformation>\r
+            <ppi:Customer>\r
+               <ppi:AddressLine1>2717 Clublake Trail</ppi:AddressLine1>\r
+               <ppi:Country>USA</ppi:Country>\r
+               <ppi:EmailAddress>iahmed@govolution.com</ppi:EmailAddress>\r
+               <ppi:FirstName>Brahhu</ppi:FirstName>\r
+               <ppi:LastName>Anhuy</ppi:LastName>\r
+               <ppi:PhoneNumber>6262232323</ppi:PhoneNumber>\r
+               <ppi:Zip>75070</ppi:Zip>\r
+               <ppi:Username>6014000211</ppi:Username>\r
+               <ppi:Password>prime3333</ppi:Password>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber>6014000211</ppi:ClientAccountNumber>\r
+            <ppi:Action>Unregister</ppi:Action>\r
+            <ppi:MaxAmountForRecurringPayments/>\r
+         </ws:accountInformation>\r
+      </ws:SubmitCustomerAccount>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="034e949b-6e29-4814-8abf-03034bda808c" name="SubmitCustomerAccountWWW3217">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitCustomerAccount</con:operation>
+      <con:request name="SubmitCustomerAccountWWW3217" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitCustomerAccount>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>loanXsource33</ppi:UserName>\r
+            <ppi:Password>oreo20cookies</ppi:Password>\r
+            <ppi:PPITransactionRequestId>sdfsd34fs54sdfsdfs</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>ab3217</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:accountInformation Notes="">\r
+            <!--Optional:-->\r
+            <ppi:Customer>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppi:AddressLine1>2000 14th st N</ppi:AddressLine1>\r
+               <ppi:Country>USA</ppi:Country>\r
+               <ppi:EmailAddress>iahmed@govolution.com</ppi:EmailAddress>\r
+               <ppi:FirstName>Mekbib</ppi:FirstName>\r
+               <ppi:LastName>Singh</ppi:LastName>\r
+               <ppi:Zip>22201</ppi:Zip>\r
+               <ppi:Username>4202581801</ppi:Username>\r
+               <ppi:Password>Prime12345</ppi:Password>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber>4202581801</ppi:ClientAccountNumber>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:CustomData>\r
+               <ppi:ID/>\r
+               <!--Optional:-->\r
+            </ppi:CustomData>\r
+            <ppi:Action>Unregister</ppi:Action>\r
+            <ppi:MaxAmountForRecurringPayments/>\r
+         </ws:accountInformation>\r
+      </ws:SubmitCustomerAccount>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="13a99249-0176-46d5-afc5-51649b91c256" name="SubmitCustomerAccountDemo1310">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitCustomerAccount</con:operation>
+      <con:request name="SubmitCustomerAccountDemo1310" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitCustomerAccount>\r
+         <ws:token>\r
+            <ppi:UserName>user1310</ppi:UserName>\r
+            <ppi:Password>pswd1310</ppi:Password>\r
+            <ppi:PPITransactionRequestId>12341100059</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>1310</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:accountInformation>\r
+            <ppi:Customer>\r
+               <ppi:AddressLine1>6910 SW Lisbon Ct</ppi:AddressLine1>\r
+               <ppi:Country>USA</ppi:Country>\r
+               <ppi:EmailAddress>iahmed@govolution.com</ppi:EmailAddress>\r
+               <ppi:FirstName>Brahhu</ppi:FirstName>\r
+               <ppi:LastName>anhuy</ppi:LastName>\r
+               <ppi:MiddleInitial>o</ppi:MiddleInitial>\r
+               <ppi:PhoneNumber>6262232323</ppi:PhoneNumber>\r
+               <ppi:Zip>21144</ppi:Zip>\r
+               <ppi:Username>9529630110</ppi:Username>\r
+               <ppi:Password>prime3333</ppi:Password>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber>9529630110</ppi:ClientAccountNumber>\r
+            <ppi:Action>Register</ppi:Action>\r
+            <ppi:MaxAmountForRecurringPayments/>\r
+         </ws:accountInformation>\r
+      </ws:SubmitCustomerAccount>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="9c24f93a-2ba9-499a-9fb9-17c76d437e77" name="SubmitCustomerAccount-Demo1286">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitCustomerAccount</con:operation>
+      <con:request name="SubmitCustomerAccount-Demo1286" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitCustomerAccount>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>User1286</ppi:UserName>
+            <ppi:Password>Pswd1286</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsd34fs54sdfsdfs</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>1286</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:accountInformation Notes="">
+            <!--Optional:-->
+            <ppi:Customer>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppi:AddressLine1>258 mian road</ppi:AddressLine1>
+               <ppi:EmailAddress>iahmed@govolution.net</ppi:EmailAddress>
+               <ppi:FirstName>Tikkanx</ppi:FirstName>
+               <ppi:LastName>Blingnx</ppi:LastName>
+               <ppi:Zip>22201</ppi:Zip>
+               <ppi:Username>145879654</ppi:Username>
+               <ppi:Password>11111111i@</ppi:Password>
+            </ppi:Customer>
+            <ppi:ClientAccountNumber>145879653</ppi:ClientAccountNumber>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:CustomData>
+               <ppi:ID/>
+               <!--Optional:-->
+            </ppi:CustomData>
+            <ppi:Action>Register</ppi:Action>
+            <ppi:MaxAmountForRecurringPayments/>
+         </ws:accountInformation>
+      </ws:SubmitCustomerAccount>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="279265e8-c7bf-4e0c-9e6f-bd6940d560ae" name="SubmitCustomerAccount-Demo-3792">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitCustomerAccount</con:operation>
+      <con:request name="SubmitCustomerAccount-Demo-3792" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitCustomerAccount>\r
+         <ws:token>\r
+            <ppi:UserName>dtc_paratransit</ppi:UserName>\r
+            <ppi:Password>velocity2020</ppi:Password>\r
+            <ppi:PPITransactionRequestId>123411000590</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>3792</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:accountInformation>\r
+            <ppi:Customer>\r
+               <ppi:AddressLine1>2311 york roads</ppi:AddressLine1>\r
+               <ppi:FirstName>karns</ppi:FirstName>\r
+               <ppi:LastName>Sharma</ppi:LastName>\r
+               <ppi:Zip>22201</ppi:Zip>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber>12341027</ppi:ClientAccountNumber>\r
+            <ppi:Action>Register</ppi:Action>\r
+            <ppi:MaxAmountForRecurringPayments/>\r
+         </ws:accountInformation>\r
+      </ws:SubmitCustomerAccount>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="779599ae-d947-4a62-bd2e-b0c0b24e464f" name="SubmitCustomerAccount-Modify-Demo-3792">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitCustomerAccount</con:operation>
+      <con:request name="SubmitCustomerAccount-Modify-Demo-3792" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitCustomerAccount>\r
+         <ws:token>\r
+            <ppi:UserName>dtc_paratransit</ppi:UserName>\r
+            <ppi:Password>velocity2020</ppi:Password>\r
+            <ppi:PPITransactionRequestId>123411000590</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>3792</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:accountInformation>\r
+            <ppi:Customer>\r
+               <ppi:AddressLine1>2000 14th street N</ppi:AddressLine1>\r
+               <ppi:AddressLine2>Suite 600</ppi:AddressLine2>\r
+               <ppi:Country>USA</ppi:Country>\r
+               <ppi:EmailAddress>iahmed@govolution.com</ppi:EmailAddress>\r
+               <ppi:FirstName>AndyS</ppi:FirstName>\r
+               <ppi:LastName>SmithS</ppi:LastName>\r
+               <ppi:PhoneNumber>7038945000</ppi:PhoneNumber>\r
+               <ppi:Zip>22201</ppi:Zip>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber>12341027</ppi:ClientAccountNumber>\r
+            <ppi:CustomData>\r
+               <ppi:ID>CustomData1</ppi:ID>\r
+               <ppi:Value>Hello</ppi:Value>\r
+            </ppi:CustomData>\r
+            <ppi:Action>Modify</ppi:Action>\r
+            <ppi:MaxAmountForRecurringPayments/>\r
+         </ws:accountInformation>\r
+      </ws:SubmitCustomerAccount>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="75659a68-a184-4bc2-b119-cecc95b2d5bb" name="SubmitCustomerAccount-Unregister-Demo-3792">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitCustomerAccount</con:operation>
+      <con:request name="SubmitCustomerAccount-Unregister-Demo-3792" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitCustomerAccount>\r
+         <ws:token>\r
+            <ppi:UserName>dtc_paratransit</ppi:UserName>\r
+            <ppi:Password>velocity2020</ppi:Password>\r
+            <ppi:PPITransactionRequestId>123411000590</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>3792</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:accountInformation>\r
+            <ppi:ClientAccountNumber>12341186</ppi:ClientAccountNumber>\r
+            <ppi:Action>Unregister</ppi:Action>\r
+            <ppi:MaxAmountForRecurringPayments/>\r
+         </ws:accountInformation>\r
+      </ws:SubmitCustomerAccount>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
