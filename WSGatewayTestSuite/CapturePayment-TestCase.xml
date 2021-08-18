@@ -369,7 +369,7 @@
          </ws:token>
          <!--Optional:-->
          <ws:paymentId>1814319763839165</ws:paymentId>
-         <ws:amount>3.00</ws:amount>
+         <ws:amount>4</ws:amount>
       </ws:CapturePayment>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
