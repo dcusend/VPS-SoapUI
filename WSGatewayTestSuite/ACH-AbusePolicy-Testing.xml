@@ -48,7 +48,7 @@
                </ppi:PaymentSegment>
                <!--Optional:-->
                <ppi:PaymentType>Regular</ppi:PaymentType>
-               <ppi:ProcessDate>2021-06-15T19:57:02.338Z</ppi:ProcessDate>
+               <ppi:ProcessDate>2021-08-24T19:57:02.338Z</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
             </ppi:AdditionalInfo>
             <!--Optional:-->
@@ -290,7 +290,7 @@
                </ppi:PaymentSegment>
                <!--Optional:-->
                <ppi:PaymentType>Regular</ppi:PaymentType>
-               <ppi:ProcessDate>2021-06-09T08:59:00.000-04:00</ppi:ProcessDate>
+               <ppi:ProcessDate>2021-08-24T08:59:00.000-04:00</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
             </ppi:AdditionalInfo>
             <!--Optional:-->

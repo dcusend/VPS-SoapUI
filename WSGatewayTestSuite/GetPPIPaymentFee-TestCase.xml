@@ -30,8 +30,8 @@
             <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
             <ppi:PPIBusinessEntityIdentifierToken>524</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
-         <ws:paymentAmount>20.00</ws:paymentAmount>
-         <ws:method>Ach</ws:method>
+         <ws:paymentAmount>100</ws:paymentAmount>
+         <ws:method>CreditCard</ws:method><ws:clientAccountNumber>5424000000000015</ws:clientAccountNumber>
          <!--Optional:-->
       </ws:GetPPIPaymentFee>
    </soapenv:Body>

@@ -14,61 +14,61 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:SubmitWalletInformation>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <ppi:UserName>junit</ppi:UserName>\r
-            <ppi:Password>testing</ppi:Password>\r
-            <ppi:PPITransactionRequestId>sdfsdf345rgsdfgsdfs2</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken>ab12</ppi:PPIBusinessEntityIdentifierToken>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-         </ws:token>\r
-         <!--Optional:-->\r
-         <ws:walletRequest>\r
-            <ppi:Action>AddToken</ppi:Action>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:NickName>180WalletID712</ppi:NickName>\r
-            <ppi:WalletID>180WalletID712</ppi:WalletID>\r
-            <ppi:Vehicle>\r
-               <!--Optional:-->\r
-               <ppip:AccountType/>\r
-               <!--Optional:-->\r
-               <ppip:CheckType/>\r
-               <ppip:CheckNumberPosition/>\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <ppip:CVV2Code>123</ppip:CVV2Code>\r
-               <ppip:ExpirationDate>12/23</ppip:ExpirationDate>\r
-               <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>\r
-               <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>\r
-               <ppip:EnforcePinDebitValidation/>\r
-            </ppi:Vehicle>\r
-            <!--Optional:-->\r
-            <ppi:Payor>\r
-               <ppi:AccountName>AC name2</ppi:AccountName>\r
-               <ppi:AddressLine1>2311 york road</ppi:AddressLine1>\r
-               <ppi:PhoneNumber>7038945000</ppi:PhoneNumber>\r
-               <ppi:FirstName>fname</ppi:FirstName>\r
-               <ppi:LastName>lname</ppi:LastName>\r
-               <ppi:ZipCode>22201</ppi:ZipCode>\r
-               <ppi:IsBusinessName/>\r
-            </ppi:Payor>\r
-            <ppi:PaymentAccountToken>1248611111</ppi:PaymentAccountToken>\r
-            <ppi:ClientReferenceNumber>536563556</ppi:ClientReferenceNumber>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-         </ws:walletRequest>\r
-      </ws:SubmitWalletInformation>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitWalletInformation>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <ppi:UserName>junit</ppi:UserName>
+            <ppi:Password>testing</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsdf345rgsdfgsdfs2</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>ab12</ppi:PPIBusinessEntityIdentifierToken>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:token>
+         <!--Optional:-->
+         <ws:walletRequest>
+            <ppi:Action>AddToken</ppi:Action>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:NickName>180WalletID713</ppi:NickName>
+            <ppi:WalletID>180WalletID713</ppi:WalletID>
+            <ppi:Vehicle>
+               <!--Optional:-->
+               <ppip:AccountType/>
+               <!--Optional:-->
+               <ppip:CheckType/>
+               <ppip:CheckNumberPosition/>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppip:CVV2Code>123</ppip:CVV2Code>
+               <ppip:ExpirationDate>12/23</ppip:ExpirationDate>
+               <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
+               <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               <ppip:EnforcePinDebitValidation/>
+            </ppi:Vehicle>
+            <!--Optional:-->
+            <ppi:Payor>
+               <ppi:AccountName>AC name2</ppi:AccountName>
+               <ppi:AddressLine1>2311 york road</ppi:AddressLine1>
+               <ppi:PhoneNumber>7038945000</ppi:PhoneNumber>
+               <ppi:FirstName>fname</ppi:FirstName>
+               <ppi:LastName>lname</ppi:LastName>
+               <ppi:ZipCode>22201</ppi:ZipCode>
+               <ppi:IsBusinessName/>
+            </ppi:Payor>
+            <ppi:PaymentAccountToken>1248611111</ppi:PaymentAccountToken>
+            <ppi:ClientReferenceNumber>536563557</ppi:ClientReferenceNumber>
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:walletRequest>
+      </ws:SubmitWalletInformation>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="8d414cc5-3acb-4cb0-aae9-9cc6539e8d58" name="SOAP Response"/>
         <con:credentials>
@@ -262,7 +262,7 @@
             <!--Optional:-->
             <ppi:Password>pwd524</ppi:Password>
             <!--Optional:-->
-            <ppi:PPITransactionRequestId>Request15</ppi:PPITransactionRequestId>
+            <ppi:PPITransactionRequestId>Request16</ppi:PPITransactionRequestId>
             <ppi:PPIBusinessEntityIdentifierToken>524</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <!--Optional:-->
@@ -271,8 +271,8 @@
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:NickName>524Nickname151</ppi:NickName>
-            <ppi:WalletID>524Wallet151</ppi:WalletID>
+            <ppi:NickName>524Nickname833</ppi:NickName>
+            <ppi:WalletID>524Wallet833</ppi:WalletID>
             <ppi:Vehicle>
                <!--Optional:-->
                <ppip:AccountType/>
@@ -286,7 +286,7 @@
                <ppip:ExpirationDate>09/25</ppip:ExpirationDate>
                <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
                <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
-               <ppip:EnforcePinDebitValidation/>
+               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
             </ppi:Vehicle>
             <!--Optional:-->
             <ppi:Payor>
@@ -302,16 +302,16 @@
                <!--Optional:-->
                <!--Optional:-->
                <!--Optional:-->
-               <ppi:AccountName>ac name 151</ppi:AccountName>
-               <ppi:AddressLine1>2311 york road151</ppi:AddressLine1>
+               <ppi:AccountName>ac name 833</ppi:AccountName>
+               <ppi:AddressLine1>2311 york road833</ppi:AddressLine1>
                <ppi:Country>US</ppi:Country>
                <ppi:PhoneNumber>5471250011</ppi:PhoneNumber>
-               <ppi:FirstName>fname151</ppi:FirstName>
-               <ppi:LastName>lname151</ppi:LastName>
-               <ppi:ZipCode>22201</ppi:ZipCode>
-               <ppi:IsBusinessName>false</ppi:IsBusinessName>
+               <ppi:FirstName>fname833</ppi:FirstName>
+               <ppi:LastName>lname833</ppi:LastName>
+               
+               <ppi:ZipCode>02116</ppi:ZipCode><ppi:IsBusinessName>false</ppi:IsBusinessName>
             </ppi:Payor>
-            <ppi:ClientReferenceNumber>CAN524151</ppi:ClientReferenceNumber>
+            <ppi:ClientReferenceNumber>CAN524833</ppi:ClientReferenceNumber>
             <!--Optional:-->
             <!--Optional:-->
          </ws:walletRequest>
@@ -361,8 +361,8 @@
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:NickName>1286Nickname205</ppi:NickName>
-            <ppi:WalletID>1286WalletID205</ppi:WalletID>
+            <ppi:NickName>1286Nickname206</ppi:NickName>
+            <ppi:WalletID>1286WalletID206</ppi:WalletID>
             <ppi:Vehicle>
                <ppip:AccountType/>
                <ppip:CheckType/>
@@ -1687,8 +1687,8 @@
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:NickName>562Nickname161</ppi:NickName>
-            <ppi:WalletID>562Wallet161</ppi:WalletID>
+            <ppi:NickName>562Nickname172</ppi:NickName>
+            <ppi:WalletID>562Wallet652</ppi:WalletID>
             <ppi:Vehicle>
                <!--Optional:-->
                <ppip:AccountType/>
@@ -1727,7 +1727,7 @@
                <ppi:ZipCode>22201</ppi:ZipCode>
                <ppi:IsBusinessName>false</ppi:IsBusinessName>
             </ppi:Payor>
-            <ppi:ClientReferenceNumber>562Wallet161</ppi:ClientReferenceNumber>
+            <ppi:ClientReferenceNumber>562Wallet651</ppi:ClientReferenceNumber>
             <!--Optional:-->
             <!--Optional:-->
          </ws:walletRequest>
