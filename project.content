@@ -164,6 +164,10 @@ WSGatewayTestSuite\CreateInstallmentPlan-Upgrade.xml
 WSGatewayTestSuite\SchedulerProcessorTestingQAApp19.xml
 WSGatewayTestSuite\ACH-AbusePolicy-Testing.xml
 WSGatewayTestSuite\JacksonHewitt-Test-Case.xml
+WSGatewayTestSuite\Refund-Issue-Delaware-WWW.xml
+WSGatewayTestSuite\Refund-AuthOnly-Error-WWW.xml
+WSGatewayTestSuite\Refund-Issue-Delaware-QA.xml
+WSGatewayTestSuite\Refund-AuthOnly-Error-QA.xml
 PPIServiceFacadeSoap12-TestSuite\CapturePayment-TestCase.xml
 PPIServiceFacadeSoap12-TestSuite\FinalizePPIPayment-TestCase.xml
 PPIServiceFacadeSoap12-TestSuite\GetIVRTransferOptions-TestCase.xml

@@ -39,3 +39,7 @@ CreateInstallmentPlan-Upgrade.xml
 SchedulerProcessorTestingQAApp19.xml
 ACH-AbusePolicy-Testing.xml
 JacksonHewitt-Test-Case.xml
+Refund-Issue-Delaware-WWW.xml
+Refund-AuthOnly-Error-WWW.xml
+Refund-Issue-Delaware-QA.xml
+Refund-AuthOnly-Error-QA.xml

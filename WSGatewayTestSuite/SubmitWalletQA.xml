@@ -3,6 +3,7 @@
   <con:settings>
     <con:setting id="44648954-87ad-4698-9fff-04b904a01b27fileName">SubmitWalletQA</con:setting>
   </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="request" id="45081872-4243-4dcc-9ee3-6771e85a0c70" name="SubmitWalletInformationQA">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -161,7 +162,7 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -183,8 +184,8 @@
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:NickName>2325CC652</ppi:NickName>
-            <ppi:WalletID>2325CC652</ppi:WalletID>
+            <ppi:NickName>2325CC654</ppi:NickName>
+            <ppi:WalletID>2325CC654</ppi:WalletID>
             <ppi:Vehicle>
                <!--Optional:-->
                <ppip:AccountType/>
@@ -194,9 +195,9 @@
                <!--Optional:-->
                <!--Optional:-->
                <!--Optional:-->
-               <ppip:CVV2Code>125</ppip:CVV2Code>
+               <ppip:CVV2Code>1250</ppip:CVV2Code>
                <ppip:ExpirationDate>12/25</ppip:ExpirationDate>
-               <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
+               <ppip:PaymentVehicleNumber>371449635392376</ppip:PaymentVehicleNumber>
                <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
             </ppi:Vehicle>
@@ -215,12 +216,12 @@
                <!--Optional:-->
                <ppi:AddressLine1>1387 N DUPONT HWY</ppi:AddressLine1>
                <ppi:PhoneNumber>4106280790</ppi:PhoneNumber>
-               <ppi:FirstName>chotass</ppi:FirstName>
-               <ppi:LastName>chatriss</ppi:LastName>
+               <ppi:FirstName>Mota</ppi:FirstName>
+               <ppi:LastName>Bhai</ppi:LastName>
                <ppi:ZipCode>21054</ppi:ZipCode>
                <ppi:IsBusinessName>false</ppi:IsBusinessName>
             </ppi:Payor>
-            <ppi:ClientReferenceNumber>536563652</ppi:ClientReferenceNumber>
+            <ppi:ClientReferenceNumber>536563654</ppi:ClientReferenceNumber>
             <!--Optional:-->
             <!--Optional:-->
          </ws:walletRequest>

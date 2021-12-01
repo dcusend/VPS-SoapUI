@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="310fb5c7-89db-4ffb-bd69-57faccd03360" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Refund AuthOnly Error WWW" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="310fb5c7-89db-4ffb-bd69-57faccd03360fileName">Refund-AuthOnly-Error-WWW</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datagen" name="DataGen-RandomNumber" id="0d27c60c-28aa-4624-9d86-c2f5b7445b01">
+    <con:settings/>
+    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:property type="Number">
+        <con:configuration>
+          <start>10000</start>
+          <end>100000000000</end>
+          <step/>
+          <pattern/>
+          <random>true</random>
+          <persist>false</persist>
+        </con:configuration>
+        <con:name>RandomNumber</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="a98e5609-c728-4028-8100-1690073690b5" name="SubmitWalletInformationWWW">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitWalletInformation</con:operation>
+      <con:request name="SubmitWalletInformationWWW" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8069539d-f842-40ba-aa58-e15e3455ca98" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitWalletInformation>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <ppi:UserName>user2325</ppi:UserName>
+            <ppi:Password>pwd2325</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsdf345rgsdfgsdfs</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:token>
+         <!--Optional:-->
+         <ws:walletRequest>
+            <ppi:Action>AddToken</ppi:Action>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:NickName>${DataGen-RandomNumber#RandomNumber}</ppi:NickName>
+            <ppi:WalletID>${DataGen-RandomNumber#RandomNumber}</ppi:WalletID>
+            <ppi:Vehicle>
+               <!--Optional:-->
+               <ppip:AccountType/>
+               <!--Optional:-->
+               <ppip:CheckType/>
+               <ppip:CheckNumberPosition/>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppip:CVV2Code>1250</ppip:CVV2Code>
+               <ppip:ExpirationDate>12/25</ppip:ExpirationDate>
+               <ppip:PaymentVehicleNumber>371449635392376</ppip:PaymentVehicleNumber>
+               <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
+            </ppi:Vehicle>
+            <!--Optional:-->
+            <ppi:Payor>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppi:AddressLine1>1387 N DUPONT HWY</ppi:AddressLine1>
+               <ppi:PhoneNumber>4106280790</ppi:PhoneNumber>
+               <ppi:FirstName>Mota</ppi:FirstName>
+               <ppi:LastName>Bhai</ppi:LastName>
+               <ppi:ZipCode>21054</ppi:ZipCode>
+               <ppi:IsBusinessName>false</ppi:IsBusinessName>
+            </ppi:Payor>
+            <ppi:ClientReferenceNumber>${DataGen-RandomNumber#RandomNumber}</ppi:ClientReferenceNumber>
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:walletRequest>
+      </ws:SubmitWalletInformation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="8d414cc5-3acb-4cb0-aae9-9cc6539e8d58" name="SOAP Response"/>
+        <con:assertion type="XPath Match" id="f5904faa-2dde-44a5-9386-0c90fb103279" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitWalletInformationResponse[1]/ns1:SubmitWalletInformationResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>50054</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="3b8f61b9-5be0-48fe-a206-b7b1dfccb9ff" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitWalletInformationResponse[1]/ns1:SubmitWalletInformationResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment Account Token added sucessfully to wallet</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="a31535e5-3cd3-4251-b455-2cd84ce7c4cd" name="Check for existence of [ns0:PaymentAccountToken]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+exists( //ns1:SubmitWalletInformationResponse/ns1:SubmitWalletInformationResult/ns0:PaymentAccountToken)</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="9299bfd3-a22c-4847-bcea-cbfe774e7694" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitWalletInformationResponse[1]/ns1:SubmitWalletInformationResult[1]/ns0:Success[1]/text()</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitWalletInformation"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="d9331aeb-67b4-4563-a86d-16d86267f3c1" name="GetWalletInformationWWW">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>GetWalletInformation</con:operation>
+      <con:request name="GetWalletInformationWWW" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="24ea61a1-41f8-41f5-af4c-8894b2dd46fc" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetWalletInformation>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user2325</ppi:UserName>
+            <ppi:Password>pwd2325</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:walletID>${DataGen-RandomNumber#RandomNumber}</ws:walletID>
+         <!--Optional:-->
+      </ws:GetWalletInformation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
+        <con:assertion type="XPath Match" id="b4d85303-a3ef-4f38-9b2e-8fec6adfb496" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>50062</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="541e9e95-0200-4683-90fa-fa0f63c5c40b" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Wallet infornmation retrieved successfully</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="e5ad4088-bd1c-4028-9ab4-44ef8fdddb68" name="Match content of [ns2:PaymentAccountToken]">
+          <con:configuration>
+            <path>declare namespace ns2='http://tempuri.org/';
+declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:Wallet[1]/ns0:PaymentAccount[1]/ns2:PaymentAccountToken[1]/text()</path>
+            <content>${SubmitWalletInformationWWW#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitWalletInformationResponse[1]/ns1:SubmitWalletInformationResult[1]/ns0:PaymentAccountToken[1]}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="4aecf11b-bf4d-4415-99c4-5b31220db29d" name="Match content of [ns0:WalletID]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:Wallet[1]/ns0:WalletID[1]/text()</path>
+            <content>${DataGen-RandomNumber#RandomNumber}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="55697481-6403-4ca0-a4fd-9ad10227caea" name="Match content of [ns0:AddressLine1]">
+          <con:configuration>
+            <path>declare namespace ns2='http://tempuri.org/';
+declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:Wallet[1]/ns0:PaymentAccount[1]/ns2:Payor[1]/ns0:AddressLine1[1]/text()</path>
+            <content>1387 N DUPONT HWY</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="383d6f3b-502f-4400-9307-c8947651e278" name="Match content of [ns0:PhoneNumber]">
+          <con:configuration>
+            <path>declare namespace ns2='http://tempuri.org/';
+declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:Wallet[1]/ns0:PaymentAccount[1]/ns2:Payor[1]/ns0:PhoneNumber[1]/text()</path>
+            <content>4106280790</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="83290470-a3fb-4b47-bb65-d4388c95d688" name="Match content of [ns0:ZipCode]">
+          <con:configuration>
+            <path>declare namespace ns2='http://tempuri.org/';
+declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:Wallet[1]/ns0:PaymentAccount[1]/ns2:Payor[1]/ns0:ZipCode[1]/text()</path>
+            <content>21054</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="6f3273b8-67d7-411d-972b-9df666e50047" name="Match content of [ns0:IsBusinessName]">
+          <con:configuration>
+            <path>declare namespace ns2='http://tempuri.org/';
+declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:Wallet[1]/ns0:PaymentAccount[1]/ns2:Payor[1]/ns0:IsBusinessName[1]/text()</path>
+            <content>false</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="340dcb83-7d4d-443c-a5db-2144a2f9cf1a" name="Match content of [ns2:PaymentMethodCategory]">
+          <con:configuration>
+            <path>declare namespace ns2='http://tempuri.org/';
+declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:Wallet[1]/ns0:PaymentAccount[1]/ns2:PaymentMethodCategory[1]/text()</path>
+            <content>CreditCard</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="21b6c26e-0b2a-4c13-849d-8481a4a38d19" name="Match content of [ns2:PaymentMethod]">
+          <con:configuration>
+            <path>declare namespace ns2='http://tempuri.org/';
+declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:Wallet[1]/ns0:PaymentAccount[1]/ns2:PaymentMethod[1]/text()</path>
+            <content>American Express</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="e01de04b-704f-4e8f-a7b4-3e5da11ec32c" name="Match content of [ns2:ClientReferenceNumber]">
+          <con:configuration>
+            <path>declare namespace ns2='http://tempuri.org/';
+declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:Wallet[1]/ns0:PaymentAccount[1]/ns2:ClientReferenceNumber[1]/text()</path>
+            <content>${DataGen-RandomNumber#RandomNumber}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="9614a755-d8ad-469c-a95e-58bfea39f28c" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:Success[1]/text()</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/GetWalletInformation"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="10839278-e785-4d4f-a44d-872bb3e02205" name="SubmitPPIPaymentUsingWalletWWW">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
+      <con:request name="SubmitPPIPaymentUsingWalletWWW" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitPPIPaymentUsingWallet>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user2325</ppi:UserName>
+            <ppi:Password>pwd2325</ppi:Password>
+            <ppi:PPITransactionRequestId>ssdf344545efsdfsdfsdf</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:ppiWalletPayment Notes="">
+            <!--Optional:-->
+            <ppi:AdditionalInfo>
+               <!--Zero or more repetitions:-->
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>0</ppip:Amount>
+               </ppi:Fees>
+               <!--Zero or more repetitions:-->
+               <!--Zero or more repetitions:-->
+               <ppi:PaymentSegment>
+                  <ppip:Amount>1.00</ppip:Amount>
+                  <ppip:SegmentType>Regular</ppip:SegmentType>
+                  <!--Optional:-->
+               </ppi:PaymentSegment>
+               <!--Optional:-->
+               <ppi:PaymentType>Utility</ppi:PaymentType>
+               <ppi:ProcessDate>${DataGenDateTest#TodayDate}</ppi:ProcessDate>
+               <ppi:CustomData>
+                  <ppi:ID>CustomData1</ppi:ID>
+                  <ppi:Value>Hello</ppi:Value>
+               </ppi:CustomData>
+               <!--Zero or more repetitions:-->
+            </ppi:AdditionalInfo>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:Customer>
+               <ppi:AddressLine1>5701 Truxton Avenue, Suite 200</ppi:AddressLine1>
+               <ppi:Country>US</ppi:Country>
+               <ppi:FirstName>Mota</ppi:FirstName>
+               <ppi:LastName>Bhai</ppi:LastName>
+               <ppi:PhoneNumber>7038945000</ppi:PhoneNumber>
+               <ppi:Zip>22201</ppi:Zip>
+            </ppi:Customer>
+            <ppi:ClientAccountNumber>${DataGen-RandomNumber#RandomNumber}</ppi:ClientAccountNumber>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:PreAuthorizeOnly>true</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource>Agent</ppi:PaymentSource>
+            <ppi:WalletID>${DataGen-RandomNumber#RandomNumber}</ppi:WalletID>
+            <ppi:PaymentAccountToken>${SubmitWalletInformationWWW#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitWalletInformationResponse[1]/ns1:SubmitWalletInformationResult[1]/ns0:PaymentAccountToken[1]}</ppi:PaymentAccountToken>
+         </ws:ppiWalletPayment>
+      </ws:SubmitPPIPaymentUsingWallet>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="719435cb-0ff9-4ac5-a061-f1c65e68970f" name="SOAP Response"/>
+        <con:assertion type="XPath Match" id="324f074f-6a58-4c3d-ae13-262273897d0b" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>50029</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="775b6176-db8a-4d88-9b6f-1d70c5195ee6" name="Check for existence of [ns0:PaymentID]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+exists( //ns1:SubmitPPIPaymentUsingWalletResponse/ns1:SubmitPPIPaymentUsingWalletResult/ns0:PaymentID)</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="10f38bf5-564d-4ac3-b344-261bedd65329" name="Check for existence of [ns0:ApprovalCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+exists( //ns1:SubmitPPIPaymentUsingWalletResponse/ns1:SubmitPPIPaymentUsingWalletResult/ns0:ApprovalCode)</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="1b8e8448-93aa-45e8-ab19-14b02fd0c80e" name="Check for existence of [ns0:TransactionTime]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+exists( //ns1:SubmitPPIPaymentUsingWalletResponse/ns1:SubmitPPIPaymentUsingWalletResult/ns0:TransactionTime)</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="4268459c-429d-4098-936e-cdae858fc808" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:Success[1]/text()</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="2b4b0f83-ea0b-44de-994c-dce8c673176e" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment PreAuthorized</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="d48ea8d9-1f7c-49ce-8ae6-1212d692ccd1" name="RefundPPIPayment-WWW2325">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>RefundPPIPayment</con:operation>
+      <con:request name="RefundPPIPayment-WWW2325" id="8b40194f-c509-4dec-8ea0-ba5bc3afbad0" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:RefundPPIPayment>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user2325</ppi:UserName>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:Password>pwd2325</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsdf34sdfsdfsdf</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <!--Optional:-->
+         <!--Optional:-->
+         <ws:paymentId>${SubmitPPIPaymentUsingWalletWWW#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:PaymentID[1]}</ws:paymentId>
+         <ws:code>A01</ws:code>
+         <ws:comments>State of Delaware - Division of corporations refunded payment for SR: 20180139136</ws:comments>
+         <ws:isRefundMemo>false</ws:isRefundMemo>
+         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>
+         <!--Optional:-->
+      </ws:RefundPPIPayment>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="XPath Match" id="6d96ba74-8ea9-47d9-b6d0-c1e0e9748d13" name="Check for existence of [ns0:PaymentID]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+exists( //ns1:RefundPPIPaymentResponse/ns1:RefundPPIPaymentResult/ns0:PaymentID)</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="e9261add-e3ec-469f-bada-7c251842fc3d" name="Check for existence of [ns0:TransactionTime]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+exists( //ns1:RefundPPIPaymentResponse/ns1:RefundPPIPaymentResult/ns0:TransactionTime)</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="2899532d-6e95-4b13-b1e8-6db973e0948f" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:RefundPPIPaymentResponse[1]/ns1:RefundPPIPaymentResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>10102</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="58317caf-415c-48e1-bf49-421b7fb19ebb" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:RefundPPIPaymentResponse[1]/ns1:RefundPPIPaymentResult[1]/ns0:ResultText[1]/text()</path>
+            <content>VALIDATION ERROR: This payment may not be refunded</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="9be0de1e-9841-4f89-bc6e-633ef154f138" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:RefundPPIPaymentResponse[1]/ns1:RefundPPIPaymentResult[1]/ns0:Success[1]/text()</path>
+            <content>false</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/RefundPPIPayment" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datagen" name="DataGenDateTest" id="e1b95e39-6b7a-4567-ad19-e2d33c009d26">
+    <con:settings/>
+    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:property type="Script">
+        <con:configuration>
+          <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd")
+return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
+        </con:configuration>
+        <con:name>TodayDate</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>6e3245af-eac0-4168-8eb5-54ade7dbbfe6</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

@@ -451,7 +451,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <AdditionalInfo xmlns="http://www.ePayments.com/PPI">
                <Fees>
                   <ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">Customer</ppip:FeeType>
-                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${Properties GetFees#ns0:PPIFeeValue}</ppip:Amount>
+                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">0.00</ppip:Amount>
                </Fees>
                <PaymentSegment>
                   <Amount xmlns="http://www.ePayments.com/PPIPayment">20.00</Amount>
@@ -687,14 +687,14 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <AdditionalInfo xmlns="http://www.ePayments.com/PPI">
                <Fees>
                   <ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">Customer</ppip:FeeType>
-                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">0.9</ppip:Amount>
+                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">0.00</ppip:Amount>
                </Fees>
                <PaymentSegment>
                   <Amount xmlns="http://www.ePayments.com/PPIPayment">20.00</Amount>
                   <SegmentType xmlns="http://www.ePayments.com/PPIPayment">Regular</SegmentType>
                </PaymentSegment>
                <PaymentType>Regular</PaymentType>
-               <ProcessDate>2021-09-03T19:35:53.000Z</ProcessDate>
+               <ProcessDate>2021-11-03T19:35:53.000Z</ProcessDate>
             </AdditionalInfo>
             <ClientAccountNumber xmlns="http://www.ePayments.com/PPI">6639201</ClientAccountNumber>
             <PreAuthorizeOnly xmlns="http://www.ePayments.com/PPI">true</PreAuthorizeOnly>
@@ -707,6 +707,28 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </SubmitPPIPaymentUsingWallet>
    </s:Body>
 </s:Envelope>]]></con:request>
+        <con:assertion type="XPath Match" id="3b04515c-1d61-4097-9119-8933fb939de1" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>50029</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="6c970670-8211-4981-aa2f-af86031f8553" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment PreAuthorized</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -783,14 +805,14 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <AdditionalInfo xmlns="http://www.ePayments.com/PPI">
                <Fees>
                   <ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">Customer</ppip:FeeType>
-                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">0.9</ppip:Amount>
+                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">0.00</ppip:Amount>
                </Fees>
                <PaymentSegment>
                   <Amount xmlns="http://www.ePayments.com/PPIPayment">30.00</Amount>
                   <SegmentType xmlns="http://www.ePayments.com/PPIPayment">Regular</SegmentType>
                </PaymentSegment>
                <PaymentType>Regular</PaymentType>
-               <ProcessDate>2021-09-03T19:35:53.000Z</ProcessDate>
+               <ProcessDate>2021-11-03T19:35:53.000Z</ProcessDate>
             </AdditionalInfo>
             <ClientAccountNumber xmlns="http://www.ePayments.com/PPI">6639201</ClientAccountNumber>
             <PreAuthorizeOnly xmlns="http://www.ePayments.com/PPI">false</PreAuthorizeOnly>
@@ -886,14 +908,14 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <AdditionalInfo xmlns="http://www.ePayments.com/PPI">
                <Fees>
                   <ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">Customer</ppip:FeeType>
-                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">0.9</ppip:Amount>
+                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">0.00</ppip:Amount>
                </Fees>
                <PaymentSegment>
                   <Amount xmlns="http://www.ePayments.com/PPIPayment">30.00</Amount>
                   <SegmentType xmlns="http://www.ePayments.com/PPIPayment">Regular</SegmentType>
                </PaymentSegment>
                <PaymentType>Regular</PaymentType>
-               <ProcessDate>2021-09-03T19:35:53.000Z</ProcessDate>
+               <ProcessDate>2021-11-03T19:35:53.000Z</ProcessDate>
             </AdditionalInfo>
             <ClientAccountNumber xmlns="http://www.ePayments.com/PPI">6639201</ClientAccountNumber>
             <PreAuthorizeOnly xmlns="http://www.ePayments.com/PPI">false</PreAuthorizeOnly>
@@ -1123,7 +1145,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
       <con:properties>
         <con:property>
           <con:name>ns2:PaymentAccountToken</con:name>
-          <con:value>3830941111</con:value>
+          <con:value>3846981111</con:value>
         </con:property>
       </con:properties>
     </con:config>
@@ -1134,7 +1156,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
       <con:properties>
         <con:property>
           <con:name>ns0:PaymentID</con:name>
-          <con:value>3709808590349907</con:value>
+          <con:value>1124322349844586</con:value>
         </con:property>
       </con:properties>
     </con:config>

@@ -148,7 +148,7 @@
                   <SegmentType xmlns="http://www.ePayments.com/PPIPayment">Regular</SegmentType>
                </PaymentSegment>
                <PaymentType>Regular</PaymentType>
-               <ProcessDate>2021-09-30T19:35:53.000Z</ProcessDate>
+               <ProcessDate>2021-11-03T19:35:53.000Z</ProcessDate>
             </AdditionalInfo>
             <ClientAccountNumber xmlns="http://www.ePayments.com/PPI">663031</ClientAccountNumber>
             <PreAuthorizeOnly xmlns="http://www.ePayments.com/PPI">true</PreAuthorizeOnly>
