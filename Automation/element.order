@@ -15,3 +15,12 @@ ACHabusePolicy-SubmitPayment.xml
 ACHabusePolicy-PaymentWithWallet.xml
 ACHabusePolicy-SubmitPaymentNegative.xml
 JacksonHewitt-Test-Case-Demo.xml
+CreateAndCancelInstallmentPlan-QA-ACH.xml
+Refund-Issue-Delaware-QA.xml
+Refund-AuthOnly-Error-QA.xml
+Partial-Refund-Issue-Delaware-QA.xml
+Full-Refund-with-All-Fields-Issue-Delaware-QA.xml
+Multiple-Partial-Refund-Issue-Delaware-QA.xml
+JacksonHewitt-Test-Case-in-QA.xml
+JacksonHewitt-PartialRefund-Test-Case-in-QA.xml
+CreateAndCancelInstallmentPlan-QA-CC.xml

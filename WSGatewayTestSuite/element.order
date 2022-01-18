@@ -34,7 +34,7 @@ SubmitWalletAddTokenAutomation.xml
 SubmitPPIPaymentUsingWalletAutomation.xml
 SubmitPPIPaymentAutomationTesting.xml
 SubmitPPIPayment-DataCreation.xml
-CreateInstallmentPlan.xml
+CreateAndCancelInstallmentPlan-QA-ACH.xml
 CreateInstallmentPlan-Upgrade.xml
 SchedulerProcessorTestingQAApp19.xml
 ACH-AbusePolicy-Testing.xml
@@ -43,3 +43,11 @@ Refund-Issue-Delaware-WWW.xml
 Refund-AuthOnly-Error-WWW.xml
 Refund-Issue-Delaware-QA.xml
 Refund-AuthOnly-Error-QA.xml
+RefundPPIPayment-DelawareWWW.xml
+Partial-Refund-Issue-Delaware-WWW.xml
+Partial-Refund-Issue-Delaware-QA.xml
+Full-Refund-with-All-Fields-Issue-Delaware-QA.xml
+Multiple-Partial-Refund-Issue-Delaware-QA.xml
+JacksonHewitt-Test-Case-in-QA.xml
+JacksonHewitt-PartialRefund-Test-Case-in-QA.xml
+CreateAndCancelInstallmentPlan-QA-CC.xml

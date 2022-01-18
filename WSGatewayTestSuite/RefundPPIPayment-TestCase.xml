@@ -790,59 +790,59 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:RefundPPIPayment>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:UserName>junit</ppi:UserName>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:Password>testing</ppi:Password>\r
-            <ppi:PPITransactionRequestId>sdfsdf34sdfsdfsdf</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken>ab12</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <!--Optional:-->\r
-         <!--Optional:-->\r
-         <!--Optional:-->\r
-         <ws:paymentId>-1</ws:paymentId>\r
-         <ws:code>A01</ws:code>\r
-         <ws:isRefundMemo/>\r
-         <ws:isDiffpaymentAccount/>\r
-         <ws:ppiPayment Notes="">\r
-            <ppi:AdditionalInfo>\r
-               <ppi:Fees>\r
-                  <ppip:FeeType>Customer</ppip:FeeType>\r
-                  <ppip:Amount>0</ppip:Amount>\r
-               </ppi:Fees>\r
-               <ppi:PaymentSegment>\r
-                  <ppip:Amount>10.50</ppip:Amount>\r
-                  <ppip:SegmentType>Utility</ppip:SegmentType>\r
-               </ppi:PaymentSegment>\r
-               <ppi:PaymentType>Regular</ppi:PaymentType>\r
-               <ppi:ProcessDate>2019-08-09T14:30:00.000-04:00</ppi:ProcessDate>\r
-            </ppi:AdditionalInfo>\r
-            <ppi:PreAuthorizeOnly/>\r
-            <ppi:PaymentSource/>\r
-            <ppi:Payor>\r
-               <ppi:IsBusinessName/>\r
-            </ppi:Payor>\r
-            <ppi:Vehicle>\r
-               <ppip:AbaNumber>256072691</ppip:AbaNumber>\r
-               <ppip:AccountType>Checking</ppip:AccountType>\r
-               <ppip:CheckType>Personal</ppip:CheckType>\r
-               <ppip:CheckNumberPosition/>\r
-               <ppip:PaymentVehicleNumber>11111111</ppip:PaymentVehicleNumber>\r
-               <ppip:PaymentMethodCategory>Ach</ppip:PaymentMethodCategory>\r
-               <ppip:EnforcePinDebitValidation/>\r
-            </ppi:Vehicle>\r
-         </ws:ppiPayment>\r
-         <!--Optional:-->\r
-      </ws:RefundPPIPayment>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:RefundPPIPayment>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>junit</ppi:UserName>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:Password>testing</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsdf34sdfsdfsdf</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>ab12</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <!--Optional:-->
+         <!--Optional:-->
+         <ws:paymentId>-1</ws:paymentId>
+         <ws:code>A01</ws:code>
+         <ws:isRefundMemo/>
+         <ws:isDiffpaymentAccount/>
+         <ws:ppiPayment Notes="">
+            <ppi:AdditionalInfo>
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>0</ppip:Amount>
+               </ppi:Fees>
+               <ppi:PaymentSegment>
+                  <ppip:Amount>10.50</ppip:Amount>
+                  <ppip:SegmentType>Utility</ppip:SegmentType>
+               </ppi:PaymentSegment>
+               <ppi:PaymentType>Regular</ppi:PaymentType>
+               <ppi:ProcessDate>2019-08-09T14:30:00.000-04:00</ppi:ProcessDate>
+            </ppi:AdditionalInfo>
+            <ppi:PreAuthorizeOnly/>
+            <ppi:PaymentSource/>
+            <ppi:Payor>
+               <ppi:IsBusinessName/>
+            </ppi:Payor>
+            <ppi:Vehicle>
+               <ppip:AbaNumber>256072691</ppip:AbaNumber>
+               <ppip:AccountType>Checking</ppip:AccountType>
+               <ppip:CheckType>Personal</ppip:CheckType>
+               <ppip:CheckNumberPosition/>
+               <ppip:PaymentVehicleNumber>11111111</ppip:PaymentVehicleNumber>
+               <ppip:PaymentMethodCategory>Ach</ppip:PaymentMethodCategory>
+               <ppip:EnforcePinDebitValidation/>
+            </ppi:Vehicle>
+         </ws:ppiPayment>
+         <!--Optional:-->
+      </ws:RefundPPIPayment>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -866,47 +866,47 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:RefundPPIPayment>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:UserName>junit</ppi:UserName>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:Password>testing</ppi:Password>\r
-            <ppi:PPITransactionRequestId>sdfsdf34sdfsdfsdf</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken>ab12</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <!--Optional:-->\r
-         <!--Optional:-->\r
-         <!--Optional:-->\r
-         <ws:paymentId>270439446369081</ws:paymentId>\r
-         <ws:code>A01</ws:code>\r
-         <ws:isRefundMemo/>\r
-         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>\r
-         <ws:ppiPayment>\r
-            <ppi:AdditionalInfo>\r
-               <ppi:Fees>\r
-                  <ppip:FeeType>Customer</ppip:FeeType>\r
-                  <ppip:Amount>0</ppip:Amount>\r
-               </ppi:Fees>\r
-               <ppi:PaymentSegment>\r
-                  <ppip:Amount>10.50</ppip:Amount>\r
-                  <ppip:SegmentType>Utility</ppip:SegmentType>\r
-               </ppi:PaymentSegment>\r
-               <ppi:PaymentType>Regular</ppi:PaymentType>\r
-               <ppi:ProcessDate>2019-07-25T14:30:00.000-04:00</ppi:ProcessDate>\r
-            </ppi:AdditionalInfo>\r
-            <ppi:PreAuthorizeOnly/>\r
-            <ppi:PaymentSource/>\r
-         </ws:ppiPayment>\r
-         <!--Optional:-->\r
-      </ws:RefundPPIPayment>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:RefundPPIPayment>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>junit</ppi:UserName>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:Password>testing</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsdf34sdfsdfsdf</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>ab12</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <!--Optional:-->
+         <!--Optional:-->
+         <ws:paymentId>270439446369081</ws:paymentId>
+         <ws:code>A01</ws:code>
+         <ws:isRefundMemo/>
+         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>
+         <ws:ppiPayment>
+            <ppi:AdditionalInfo>
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>0</ppip:Amount>
+               </ppi:Fees>
+               <ppi:PaymentSegment>
+                  <ppip:Amount>10.50</ppip:Amount>
+                  <ppip:SegmentType>Utility</ppip:SegmentType>
+               </ppi:PaymentSegment>
+               <ppi:PaymentType>Regular</ppi:PaymentType>
+               <ppi:ProcessDate>2019-07-25T14:30:00.000-04:00</ppi:ProcessDate>
+            </ppi:AdditionalInfo>
+            <ppi:PreAuthorizeOnly/>
+            <ppi:PaymentSource/>
+         </ws:ppiPayment>
+         <!--Optional:-->
+      </ws:RefundPPIPayment>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -1363,64 +1363,64 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:RefundPPIPayment>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:UserName>user2325</ppi:UserName>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:Password>pwd2325</ppi:Password>\r
-            <ppi:PPITransactionRequestId>sdfsdf34sdfsdfsdf</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <!--Optional:-->\r
-         <!--Optional:-->\r
-         <!--Optional:-->\r
-         <ws:paymentId>-1</ws:paymentId>\r
-         <ws:code>A01</ws:code>\r
-         <ws:comments>State of Delaware - Division of corporations refunded payment for SR: 20180139136</ws:comments>\r
-         <ws:isRefundMemo>false</ws:isRefundMemo>\r
-         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>\r
-         <ws:ppiPayment>\r
-            <ppi:AdditionalInfo>\r
-               <ppi:Fees>\r
-                  <ppip:FeeType>Customer</ppip:FeeType>\r
-                  <ppip:Amount>0</ppip:Amount>\r
-               </ppi:Fees>\r
-               <ppi:PaymentSegment>\r
-                  <ppip:Amount>10.50</ppip:Amount>\r
-                  <ppip:SegmentType>Regular</ppip:SegmentType>\r
-               </ppi:PaymentSegment>\r
-               <ppi:PaymentType>Utility</ppi:PaymentType>\r
-               <ppi:ProcessDate>2019-10-23T14:00:00.000-04:00</ppi:ProcessDate>\r
-            </ppi:AdditionalInfo>\r
-            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>\r
-            <ppi:PaymentSource>Web</ppi:PaymentSource>\r
-            <ppi:Payor>\r
-               <ppi:AddressLine1>2311 york road</ppi:AddressLine1>\r
-               <ppi:FirstName>Uma</ppi:FirstName>\r
-               <ppi:LastName>Barati</ppi:LastName>\r
-               <ppi:ZipCode>22201</ppi:ZipCode>\r
-               <ppi:IsBusinessName/>\r
-            </ppi:Payor>\r
-            <ppi:Vehicle>\r
-               <ppip:AbaNumber>256072691</ppip:AbaNumber>\r
-               <ppip:AccountType>Checking</ppip:AccountType>\r
-               <ppip:CheckType>Personal</ppip:CheckType>\r
-               <ppip:CheckNumberPosition/>\r
-               <ppip:PaymentVehicleNumber>22222222</ppip:PaymentVehicleNumber>\r
-               <ppip:PaymentMethodCategory>Ach</ppip:PaymentMethodCategory>\r
-               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>\r
-            </ppi:Vehicle>\r
-         </ws:ppiPayment>\r
-         <!--Optional:-->\r
-      </ws:RefundPPIPayment>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:RefundPPIPayment>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user2325</ppi:UserName>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:Password>pwd2325</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsdf34sdfsdfsdf</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <!--Optional:-->
+         <!--Optional:-->
+         <ws:paymentId>-1</ws:paymentId>
+         <ws:code>A01</ws:code>
+         <ws:comments>State of Delaware - Division of corporations refunded payment for SR: 20180139136</ws:comments>
+         <ws:isRefundMemo>false</ws:isRefundMemo>
+         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>
+         <ws:ppiPayment>
+            <ppi:AdditionalInfo>
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>0</ppip:Amount>
+               </ppi:Fees>
+               <ppi:PaymentSegment>
+                  <ppip:Amount>10.50</ppip:Amount>
+                  <ppip:SegmentType>Regular</ppip:SegmentType>
+               </ppi:PaymentSegment>
+               <ppi:PaymentType>Utility</ppi:PaymentType>
+               <ppi:ProcessDate>2019-10-23T14:00:00.000-04:00</ppi:ProcessDate>
+            </ppi:AdditionalInfo>
+            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource>Web</ppi:PaymentSource>
+            <ppi:Payor>
+               <ppi:AddressLine1>2311 york road</ppi:AddressLine1>
+               <ppi:FirstName>Uma</ppi:FirstName>
+               <ppi:LastName>Barati</ppi:LastName>
+               <ppi:ZipCode>22201</ppi:ZipCode>
+               <ppi:IsBusinessName/>
+            </ppi:Payor>
+            <ppi:Vehicle>
+               <ppip:AbaNumber>256072691</ppip:AbaNumber>
+               <ppip:AccountType>Checking</ppip:AccountType>
+               <ppip:CheckType>Personal</ppip:CheckType>
+               <ppip:CheckNumberPosition/>
+               <ppip:PaymentVehicleNumber>22222222</ppip:PaymentVehicleNumber>
+               <ppip:PaymentMethodCategory>Ach</ppip:PaymentMethodCategory>
+               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
+            </ppi:Vehicle>
+         </ws:ppiPayment>
+         <!--Optional:-->
+      </ws:RefundPPIPayment>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -1470,6 +1470,189 @@
       </ws:RefundPPIPayment>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/RefundPPIPayment" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="b8368263-1e2a-4260-bf26-6d4b4f64d5f5" name="RefundPPIPayment-DelawareWWW">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>RefundPPIPayment</con:operation>
+      <con:request name="RefundPPIPayment-DelawareWWW" id="8b40194f-c509-4dec-8ea0-ba5bc3afbad0" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:RefundPPIPayment>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>de_doc</ppi:UserName>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:Password>dqrn4ou</ppi:Password>
+            <ppi:PPITransactionRequestId>Request10001</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>3317</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <!--Optional:-->
+         <!--Optional:-->
+         
+         <ws:code>A01</ws:code>
+         <ws:comments>State of Delaware - Division of corporations refunded payment for SR: 20180139136</ws:comments>
+         <ws:isRefundMemo>false</ws:isRefundMemo>
+         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>
+         <!--Optional:-->
+      </ws:RefundPPIPayment>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/RefundPPIPayment" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="0f5c810e-5a00-44f0-8c20-b54b0dccf3b5" name="RefundPPIPayment-Partial-WWW2325">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>RefundPPIPayment</con:operation>
+      <con:request name="RefundPPIPayment-Partial-WWW2325" id="8b40194f-c509-4dec-8ea0-ba5bc3afbad0" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:RefundPPIPayment>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <ppi:UserName>user2325</ppi:UserName>
+            <ppi:Password>pwd2325</ppi:Password>
+            <ppi:PPITransactionRequestId>3324234235</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:token>
+         <!--Optional:-->
+         <!--Optional:-->
+         <!--Optional:-->
+         <ws:paymentId>2933430265660551</ws:paymentId>
+         <ws:code>Other</ws:code>
+         <ws:comments>refunded payment for SR: 111111111</ws:comments>
+         <ws:isRefundMemo>false</ws:isRefundMemo>
+         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>
+         <!--Optional:-->
+         <ws:ppiPayment Notes="">
+            <!--Optional:-->
+            <ppi:AdditionalInfo>
+               <!--Zero or more repetitions:-->
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>0</ppip:Amount>
+               </ppi:Fees>
+               <!--Zero or more repetitions:-->
+               <!--Zero or more repetitions:-->
+               <ppi:PaymentSegment>
+                  <ppip:Amount>1</ppip:Amount><ppip:SegmentType>Regular</ppip:SegmentType>
+                  <!--Optional:-->
+                  
+               </ppi:PaymentSegment>
+               <!--Optional:-->
+               
+               <ppi:PaymentType>Utility</ppi:PaymentType><ppi:ProcessDate>2022-01-11T15:59:44.703-05:00</ppi:ProcessDate>
+               <!--Zero or more repetitions:-->
+            </ppi:AdditionalInfo>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource>Web</ppi:PaymentSource>
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:ppiPayment>
+      </ws:RefundPPIPayment>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/RefundPPIPayment" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="63945f8c-a761-48f2-aa51-c3a49c1a647e" name="RefundPPIPayment-Partial-WWW2325 2">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>RefundPPIPayment</con:operation>
+      <con:request name="RefundPPIPayment-Partial-WWW2325 2" id="8b40194f-c509-4dec-8ea0-ba5bc3afbad0" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Body xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <RefundPPIPayment xmlns="https://www.velocitypayment.com/ws">
+            <token>
+                <UserName xmlns="http://www.ePayments.com/PPI">user2325</UserName>
+                <Password xmlns="http://www.ePayments.com/PPI">pwd2325</Password>
+                <PPITransactionRequestId xmlns="http://www.ePayments.com/PPI">111111</PPITransactionRequestId>
+                <PPIBusinessEntityIdentifierToken xmlns="http://www.ePayments.com/PPI">2325</PPIBusinessEntityIdentifierToken>
+            </token>
+            <paymentId>3430897265087920</paymentId>
+            <code>Other</code>
+            <comments> refunded payment for SR: 111111111</comments>
+            <isRefundMemo>false</isRefundMemo>
+            <isDiffpaymentAccount>false</isDiffpaymentAccount>
+            <ppiPayment>
+                <AdditionalInfo xmlns="http://www.ePayments.com/PPI">
+                    <Fees>
+                        <FeeType xmlns="http://www.ePayments.com/PPIPayment">Customer</FeeType>
+                        <Amount xmlns="http://www.ePayments.com/PPIPayment">0</Amount>
+                    </Fees>
+                    <InvoiceData>
+                        <Amount xmlns="http://www.ePayments.com/PPIPayment">0</Amount>
+                    </InvoiceData>
+                    <PaymentSegment>
+                        <Amount xmlns="http://www.ePayments.com/PPIPayment">11</Amount>
+                        <SegmentType xmlns="http://www.ePayments.com/PPIPayment">Regular</SegmentType>
+                    </PaymentSegment>
+                    <PaymentType>Utility</PaymentType>
+                    <ProcessDate>2022-01-11T15:59:44.703-05:00</ProcessDate>
+                </AdditionalInfo>
+                <PreAuthorizeOnly xmlns="http://www.ePayments.com/PPI">false</PreAuthorizeOnly>
+                <PaymentSource xmlns="http://www.ePayments.com/PPI">Web</PaymentSource>
+            </ppiPayment>
+        </RefundPPIPayment>
+    </s:Body>
+</s:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>

@@ -593,51 +593,51 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:SubmitWalletInformation>\r
-         <ws:token>\r
-            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceDeleteWalletError#Username}</ppi:UserName>\r
-            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceDeleteWalletError#Password}</ppi:Password>\r
-            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceDeleteWalletError#RequestID}</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceDeleteWalletError#BEIDToken}</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <ws:walletRequest>\r
-            <ppi:Action xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceDeleteWalletError#Action}</ppi:Action>\r
-            <ppi:NickName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceDeleteWalletError#Nickname}</ppi:NickName>\r
-            <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceDeleteWalletError#WalletID}</ppi:WalletID>\r
-            <ppi:Vehicle xmlns:ppi="http://www.ePayments.com/PPI">\r
-               <ppip:AbaNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#ABANumber}</ppip:AbaNumber>\r
-               <ppip:AccountType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#ACType}</ppip:AccountType>\r
-               <ppip:CheckNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#CheckNum}</ppip:CheckNumber>\r
-               <ppip:CheckType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#CheckType}</ppip:CheckType>\r
-               <ppip:CheckNumberPosition xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#CheckPos}</ppip:CheckNumberPosition>\r
-               <ppip:CVV2Code xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#CVV}</ppip:CVV2Code>\r
-               <ppip:ExpirationDate xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#ExpDate}</ppip:ExpirationDate>\r
-               <ppip:PaymentVehicleNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#VehicleNumber}</ppip:PaymentVehicleNumber>\r
-               <ppip:PaymentMethodCategory xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#PMCategory}</ppip:PaymentMethodCategory>\r
-               <ppip:EnforcePinDebitValidation xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#EnforcePIN}</ppip:EnforcePinDebitValidation>\r
-            </ppi:Vehicle>\r
-            <ppi:Payor xmlns:ppi="http://www.ePayments.com/PPI">\r
-               <ppi:AccountName>${DataSourceDeleteWalletError#ACName}</ppi:AccountName>\r
-               <ppi:AddressLine1>${DataSourceDeleteWalletError#AL1}</ppi:AddressLine1>\r
-               <ppi:AddressLine2>${DataSourceDeleteWalletError#AL2}</ppi:AddressLine2>\r
-               <ppi:Country>${DataSourceDeleteWalletError#Country}</ppi:Country>\r
-               <ppi:PhoneNumber>${DataSourceDeleteWalletError#Phone}</ppi:PhoneNumber>\r
-               <ppi:FirstName>${DataSourceDeleteWalletError#FirstName}</ppi:FirstName>\r
-               <ppi:LastName>${DataSourceDeleteWalletError#LastName}</ppi:LastName>\r
-               <ppi:MiddleInitial>${DataSourceDeleteWalletError#MI}</ppi:MiddleInitial>\r
-               <ppi:EmailAddress>${DataSourceDeleteWalletError#Email}</ppi:EmailAddress>\r
-               <ppi:ZipCode>${DataSourceDeleteWalletError#ZIP}</ppi:ZipCode>\r
-               <ppi:BusinessName>${DataSourceDeleteWalletError#BusineName}</ppi:BusinessName>\r
-               <ppi:IsBusinessName>${DataSourceDeleteWalletError#IsBusName}</ppi:IsBusinessName>\r
-            </ppi:Payor>\r
-            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceDeleteWalletError#PayACToken}</ppi:PaymentAccountToken>\r
-            <ppi:ClientReferenceNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceDeleteWalletError#ClientRefNum}</ppi:ClientReferenceNumber>\r
-         </ws:walletRequest>\r
-      </ws:SubmitWalletInformation>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitWalletInformation>
+         <ws:token>
+            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceDeleteWalletError#Username}</ppi:UserName>
+            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceDeleteWalletError#Password}</ppi:Password>
+            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceDeleteWalletError#RequestID}</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceDeleteWalletError#BEIDToken}</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:walletRequest>
+            <ppi:Action xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceDeleteWalletError#Action}</ppi:Action>
+            <ppi:NickName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceDeleteWalletError#Nickname}</ppi:NickName>
+            <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceDeleteWalletError#WalletID}</ppi:WalletID>
+            <ppi:Vehicle xmlns:ppi="http://www.ePayments.com/PPI">
+               <ppip:AbaNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#ABANumber}</ppip:AbaNumber>
+               <ppip:AccountType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#ACType}</ppip:AccountType>
+               <ppip:CheckNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#CheckNum}</ppip:CheckNumber>
+               <ppip:CheckType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#CheckType}</ppip:CheckType>
+               <ppip:CheckNumberPosition xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#CheckPos}</ppip:CheckNumberPosition>
+               <ppip:CVV2Code xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#CVV}</ppip:CVV2Code>
+               <ppip:ExpirationDate xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#ExpDate}</ppip:ExpirationDate>
+               <ppip:PaymentVehicleNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#VehicleNumber}</ppip:PaymentVehicleNumber>
+               <ppip:PaymentMethodCategory xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#PMCategory}</ppip:PaymentMethodCategory>
+               <ppip:EnforcePinDebitValidation xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceDeleteWalletError#EnforcePIN}</ppip:EnforcePinDebitValidation>
+            </ppi:Vehicle>
+            <ppi:Payor xmlns:ppi="http://www.ePayments.com/PPI">
+               <ppi:AccountName>${DataSourceDeleteWalletError#ACName}</ppi:AccountName>
+               <ppi:AddressLine1>${DataSourceDeleteWalletError#AL1}</ppi:AddressLine1>
+               <ppi:AddressLine2>${DataSourceDeleteWalletError#AL2}</ppi:AddressLine2>
+               <ppi:Country>${DataSourceDeleteWalletError#Country}</ppi:Country>
+               <ppi:PhoneNumber>${DataSourceDeleteWalletError#Phone}</ppi:PhoneNumber>
+               <ppi:FirstName>${DataSourceDeleteWalletError#FirstName}</ppi:FirstName>
+               <ppi:LastName>${DataSourceDeleteWalletError#LastName}</ppi:LastName>
+               <ppi:MiddleInitial>${DataSourceDeleteWalletError#MI}</ppi:MiddleInitial>
+               <ppi:EmailAddress>${DataSourceDeleteWalletError#Email}</ppi:EmailAddress>
+               <ppi:ZipCode>${DataSourceDeleteWalletError#ZIP}</ppi:ZipCode>
+               <ppi:BusinessName>${DataSourceDeleteWalletError#BusineName}</ppi:BusinessName>
+               <ppi:IsBusinessName>${DataSourceDeleteWalletError#IsBusName}</ppi:IsBusinessName>
+            </ppi:Payor>
+            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceDeleteWalletError#PayACToken}</ppi:PaymentAccountToken>
+            <ppi:ClientReferenceNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceDeleteWalletError#ClientRefNum}</ppi:ClientReferenceNumber>
+         </ws:walletRequest>
+      </ws:SubmitWalletInformation>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="860abb05-c240-48b7-a162-202dba3b38f9"/>
         <con:assertion type="XPath Match" id="30482a60-90e0-43e3-a7cb-648dd4c56a48" name="Match content of [ns0:ResultCode]">
@@ -693,7 +693,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   <con:properties>
     <con:property>
       <con:name>WalletID</con:name>
-      <con:value>7766043511</con:value>
+      <con:value>2671403838</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

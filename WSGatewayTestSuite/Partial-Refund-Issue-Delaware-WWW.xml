@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="7bd695a6-7972-4fc7-8075-66da7f9bdc2e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Refund Issue Delaware WWW" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="98ac717d-ef62-4c35-8e38-c1fb80517bee" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Partial Refund Issue Delaware WWW" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="7bd695a6-7972-4fc7-8075-66da7f9bdc2efileName">Refund-Issue-Delaware-WWW</con:setting>
+    <con:setting id="98ac717d-ef62-4c35-8e38-c1fb80517beefileName">Partial-Refund-Issue-Delaware-WWW</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="datagen" name="DataGen-RandomNumber" id="6e3245af-eac0-4168-8eb5-54ade7dbbfe6">
+  <con:testStep type="datagen" name="DataGen-RandomNumber" id="cf5d5bb3-42e4-4532-b792-a79bae8d0a7f">
     <con:settings/>
     <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:property type="Number">
@@ -22,7 +22,7 @@
       </con:property>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="e857d12d-fbf2-4a7b-a927-b18038ee2bf6" name="SubmitWalletInformationWWW">
+  <con:testStep type="request" id="b4d08e08-a912-4698-b4bb-aff2ce731f64" name="SubmitWalletInformationWWW">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -154,7 +154,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="dc7324b5-ee04-4eed-97cb-9ac77ccc95ae" name="GetWalletInformationWWW">
+  <con:testStep type="request" id="cfcb64c5-15fa-42fa-b552-19dd8377ff6a" name="GetWalletInformationWWW">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -337,7 +337,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="3a1fc0bc-5b87-4dad-9d73-8f415296f873" name="SubmitPPIPaymentUsingWalletWWW">
+  <con:testStep type="request" id="d8e17298-718e-413b-a57a-7559cf0803b0" name="SubmitPPIPaymentUsingWalletWWW">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -375,7 +375,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
-                  <ppip:Amount>1.00</ppip:Amount>
+                  <ppip:Amount>10.00</ppip:Amount>
                   <ppip:SegmentType>Regular</ppip:SegmentType>
                   <!--Optional:-->
                </ppi:PaymentSegment>
@@ -487,43 +487,60 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="da643ecd-4b78-4fd5-9ee9-a8df127fdcff" name="RefundPPIPayment-WWW2325">
+  <con:testStep type="request" id="67aafe14-e6db-4331-a318-69a6975acf27" name="PartialRefundPPIPayment-WWW2325">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>RefundPPIPayment</con:operation>
-      <con:request name="RefundPPIPayment-WWW2325" id="8b40194f-c509-4dec-8ea0-ba5bc3afbad0" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="PartialRefundPPIPayment-WWW2325" id="8b40194f-c509-4dec-8ea0-ba5bc3afbad0" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:RefundPPIPayment>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:UserName>user2325</ppi:UserName>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:Password>pwd2325</ppi:Password>\r
-            <ppi:PPITransactionRequestId>sdfsdf34sdfsdfsdf</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <!--Optional:-->\r
-         <!--Optional:-->\r
-         <!--Optional:-->\r
-         <ws:paymentId>${SubmitPPIPaymentUsingWalletWWW#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:PaymentID[1]}</ws:paymentId>\r
-         <ws:code>A01</ws:code>\r
-         <ws:comments>State of Delaware - Division of corporations refunded payment for SR: 20180139136</ws:comments>\r
-         <ws:isRefundMemo>false</ws:isRefundMemo>\r
-         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>\r
-         <!--Optional:-->\r
-      </ws:RefundPPIPayment>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:RefundPPIPayment>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user2325</ppi:UserName>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:Password>pwd2325</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsdf34sdfsdfsdf</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <!--Optional:-->
+         <!--Optional:-->
+         <ws:paymentId>${SubmitPPIPaymentUsingWalletWWW#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:PaymentID[1]}</ws:paymentId>
+         <ws:code>A01</ws:code>
+         <ws:comments>State of Delaware - Division of corporations refunded payment for SR: 20180139136</ws:comments>
+         <ws:isRefundMemo>false</ws:isRefundMemo>
+         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>
+         <ws:ppiPayment>
+            <ppi:AdditionalInfo>
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>0</ppip:Amount>
+               </ppi:Fees>
+               <ppi:PaymentSegment>
+                  <ppip:Amount>1.00</ppip:Amount>
+                  <ppip:SegmentType>Regular</ppip:SegmentType>
+               </ppi:PaymentSegment>
+               <ppi:PaymentType>Utility</ppi:PaymentType>
+               <ppi:ProcessDate>${DataGenDateTest#TodayDate}</ppi:ProcessDate>
+            </ppi:AdditionalInfo>
+            <ppi:ClientAccountNumber>${DataGen-RandomNumber#RandomNumber}</ppi:ClientAccountNumber>
+            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource>Agent</ppi:PaymentSource>
+         </ws:ppiPayment>
+         <!--Optional:-->
+      </ws:RefundPPIPayment>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="XPath Match" id="801d330f-f38f-40f2-b76b-7b2ccd0b077d" name="Match content of [ns0:ResultCode]">
           <con:configuration>
@@ -602,7 +619,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="datagen" name="DataGenDateTest" id="52419ab9-391b-4214-b75a-a98c60146efc">
+  <con:testStep type="datagen" name="DataGenDateTest" id="30050df2-e08f-499f-9ca6-3142a014b5b0">
     <con:settings/>
     <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:property type="Script">
