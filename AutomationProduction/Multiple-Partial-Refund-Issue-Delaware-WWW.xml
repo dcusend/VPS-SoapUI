@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="7bd695a6-7972-4fc7-8075-66da7f9bdc2e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Refund Issue Delaware WWW" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="51e087ff-ea13-43ab-ada5-a421c1756497" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Multiple Partial Refund Issue Delaware WWW" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="7bd695a6-7972-4fc7-8075-66da7f9bdc2efileName">Refund-Issue-Delaware-WWW</con:setting>
+    <con:setting id="51e087ff-ea13-43ab-ada5-a421c1756497fileName">Multiple-Partial-Refund-Issue-Delaware-WWW</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="datagen" name="DataGen-RandomNumber" id="6e3245af-eac0-4168-8eb5-54ade7dbbfe6">
+  <con:testStep type="datagen" name="DataGen-RandomNumber" id="18277a68-5ad4-40b3-85d4-9f0588507c98">
     <con:settings/>
     <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:property type="Number">
@@ -22,7 +22,7 @@
       </con:property>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="e857d12d-fbf2-4a7b-a927-b18038ee2bf6" name="SubmitWalletInformationWWW">
+  <con:testStep type="request" id="f8fc3224-7ecf-4e6a-abe6-46214837de67" name="SubmitWalletInformationWWW">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -154,7 +154,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="dc7324b5-ee04-4eed-97cb-9ac77ccc95ae" name="GetWalletInformationWWW">
+  <con:testStep type="request" id="e0a6509e-c873-47c0-9a70-e77c92e46d32" name="GetWalletInformationWWW">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -337,7 +337,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="3a1fc0bc-5b87-4dad-9d73-8f415296f873" name="SubmitPPIPaymentUsingWalletWWW">
+  <con:testStep type="request" id="e51d3017-bc78-4f7a-80fd-4ab8c36e9965" name="SubmitPPIPaymentUsingWalletWWW">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -375,7 +375,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
-                  <ppip:Amount>1.00</ppip:Amount>
+                  <ppip:Amount>10.00</ppip:Amount>
                   <ppip:SegmentType>Regular</ppip:SegmentType>
                   <!--Optional:-->
                </ppi:PaymentSegment>
@@ -487,12 +487,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="da643ecd-4b78-4fd5-9ee9-a8df127fdcff" name="RefundPPIPayment-WWW2325">
+  <con:testStep type="request" id="aae87a19-063e-4ca4-b89d-9f4011558d0a" name="FirstPartialRefundPPIPayment-WWW2325">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>RefundPPIPayment</con:operation>
-      <con:request name="RefundPPIPayment-WWW2325" id="8b40194f-c509-4dec-8ea0-ba5bc3afbad0" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="FirstPartialRefundPPIPayment-WWW2325" id="8b40194f-c509-4dec-8ea0-ba5bc3afbad0" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -521,6 +521,23 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
          <ws:comments>State of Delaware - Division of corporations refunded payment for SR: 20180139136</ws:comments>
          <ws:isRefundMemo>false</ws:isRefundMemo>
          <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>
+         <ws:ppiPayment>
+            <ppi:AdditionalInfo>
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>0</ppip:Amount>
+               </ppi:Fees>
+               <ppi:PaymentSegment>
+                  <ppip:Amount>7.00</ppip:Amount>
+                  <ppip:SegmentType>Regular</ppip:SegmentType>
+               </ppi:PaymentSegment>
+               <ppi:PaymentType>Utility</ppi:PaymentType>
+               <ppi:ProcessDate>${DataGenDateTest#TodayDate}</ppi:ProcessDate>
+            </ppi:AdditionalInfo>
+            <ppi:ClientAccountNumber>${DataGen-RandomNumber#RandomNumber}</ppi:ClientAccountNumber>
+            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource>Agent</ppi:PaymentSource>
+         </ws:ppiPayment>
          <!--Optional:-->
       </ws:RefundPPIPayment>
    </soapenv:Body>
@@ -602,7 +619,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="datagen" name="DataGenDateTest" id="52419ab9-391b-4214-b75a-a98c60146efc">
+  <con:testStep type="datagen" name="DataGenDateTest" id="26f9267d-9a42-45f7-aa3d-b3ec313e6f69">
     <con:settings/>
     <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:property type="Script">
@@ -614,6 +631,281 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
         <con:mode>STEP</con:mode>
         <con:shared>false</con:shared>
       </con:property>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="d45d2cb3-ec10-4e50-8b58-9c476f21124d" name="SecondPartialRefundPPIPayment-WWW2325">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>RefundPPIPayment</con:operation>
+      <con:request name="SecondPartialRefundPPIPayment-WWW2325" id="8b40194f-c509-4dec-8ea0-ba5bc3afbad0" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:RefundPPIPayment>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user2325</ppi:UserName>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:Password>pwd2325</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsdf34sdfsdfsdf</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <!--Optional:-->
+         <!--Optional:-->
+         <ws:paymentId>${SubmitPPIPaymentUsingWalletWWW#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:PaymentID[1]}</ws:paymentId>
+         <ws:code>A01</ws:code>
+         <ws:comments>State of Delaware - Division of corporations refunded payment for SR: 20180139136</ws:comments>
+         <ws:isRefundMemo>false</ws:isRefundMemo>
+         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>
+         <ws:ppiPayment>
+            <ppi:AdditionalInfo>
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>0</ppip:Amount>
+               </ppi:Fees>
+               <ppi:PaymentSegment>
+                  <ppip:Amount>3.00</ppip:Amount>
+                  <ppip:SegmentType>Regular</ppip:SegmentType>
+               </ppi:PaymentSegment>
+               <ppi:PaymentType>Utility</ppi:PaymentType>
+               <ppi:ProcessDate>${DataGenDateTest#TodayDate}</ppi:ProcessDate>
+            </ppi:AdditionalInfo>
+            <ppi:ClientAccountNumber>${DataGen-RandomNumber#RandomNumber}</ppi:ClientAccountNumber>
+            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource>Agent</ppi:PaymentSource>
+         </ws:ppiPayment>
+         <!--Optional:-->
+      </ws:RefundPPIPayment>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="XPath Match" id="801d330f-f38f-40f2-b76b-7b2ccd0b077d" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:RefundPPIPaymentResponse[1]/ns1:RefundPPIPaymentResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>50018</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="37d8b1ec-9106-4b24-964d-b8eaf3443efa" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:RefundPPIPaymentResponse[1]/ns1:RefundPPIPaymentResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment Approved</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="6d96ba74-8ea9-47d9-b6d0-c1e0e9748d13" name="Check for existence of [ns0:PaymentID]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+exists( //ns1:RefundPPIPaymentResponse/ns1:RefundPPIPaymentResult/ns0:PaymentID)</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="5be0cae2-78b0-473f-91e9-1f6881f92887" name="Match content of [ns0:ApprovalCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:RefundPPIPaymentResponse[1]/ns1:RefundPPIPaymentResult[1]/ns0:ApprovalCode[1]/text()</path>
+            <content>NA</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="e9261add-e3ec-469f-bada-7c251842fc3d" name="Check for existence of [ns0:TransactionTime]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+exists( //ns1:RefundPPIPaymentResponse/ns1:RefundPPIPaymentResult/ns0:TransactionTime)</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="7e098ac7-dc80-47a1-811f-740e9f7a5e79" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:RefundPPIPaymentResponse[1]/ns1:RefundPPIPaymentResult[1]/ns0:Success[1]/text()</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/RefundPPIPayment" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="118d2c61-012d-4c9d-b049-cd9f92421f6d" name="ThirdErrorPartialRefundPPIPayment-WWW2325">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>RefundPPIPayment</con:operation>
+      <con:request name="ThirdErrorPartialRefundPPIPayment-WWW2325" id="8b40194f-c509-4dec-8ea0-ba5bc3afbad0" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:RefundPPIPayment>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user2325</ppi:UserName>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:Password>pwd2325</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsdf34sdfsdfsdf</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <!--Optional:-->
+         <!--Optional:-->
+         <ws:paymentId>${SubmitPPIPaymentUsingWalletWWW#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:PaymentID[1]}</ws:paymentId>
+         <ws:code>A01</ws:code>
+         <ws:comments>State of Delaware - Division of corporations refunded payment for SR: 20180139136</ws:comments>
+         <ws:isRefundMemo>false</ws:isRefundMemo>
+         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>
+         <ws:ppiPayment>
+            <ppi:AdditionalInfo>
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>0</ppip:Amount>
+               </ppi:Fees>
+               <ppi:PaymentSegment>
+                  <ppip:Amount>1.00</ppip:Amount>
+                  <ppip:SegmentType>Regular</ppip:SegmentType>
+               </ppi:PaymentSegment>
+               <ppi:PaymentType>Utility</ppi:PaymentType>
+               <ppi:ProcessDate>${DataGenDateTest#TodayDate}</ppi:ProcessDate>
+            </ppi:AdditionalInfo>
+            <ppi:ClientAccountNumber>${DataGen-RandomNumber#RandomNumber}</ppi:ClientAccountNumber>
+            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource>Agent</ppi:PaymentSource>
+         </ws:ppiPayment>
+         <!--Optional:-->
+      </ws:RefundPPIPayment>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="XPath Match" id="6d96ba74-8ea9-47d9-b6d0-c1e0e9748d13" name="Check for existence of [ns0:PaymentID]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+exists( //ns1:RefundPPIPaymentResponse/ns1:RefundPPIPaymentResult/ns0:PaymentID)</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="e9261add-e3ec-469f-bada-7c251842fc3d" name="Check for existence of [ns0:TransactionTime]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+exists( //ns1:RefundPPIPaymentResponse/ns1:RefundPPIPaymentResult/ns0:TransactionTime)</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="dde45d83-e83a-4889-a0a6-9fc1015280da" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:RefundPPIPaymentResponse[1]/ns1:RefundPPIPaymentResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>10145</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="e7ef6432-8ba4-48fe-900a-100615c45ba0" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:RefundPPIPaymentResponse[1]/ns1:RefundPPIPaymentResult[1]/ns0:ResultText[1]/text()</path>
+            <content>The specified refund amount is greater than what is allowed for the payment</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="62efccfa-fe86-4cd1-97d7-4fb3408f4735" name="Check for existence of [ns0:PaymentID]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+exists( //ns1:RefundPPIPaymentResponse/ns1:RefundPPIPaymentResult/ns0:PaymentID)</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="305acc2d-fdd9-42ba-9af1-ef3c4acc1af1" name="Check for existence of [ns0:TransactionTime]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+exists( //ns1:RefundPPIPaymentResponse/ns1:RefundPPIPaymentResult/ns0:TransactionTime)</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="1a792bd4-fc62-4115-b5fd-d39888e95129" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:RefundPPIPaymentResponse[1]/ns1:RefundPPIPaymentResult[1]/ns0:Success[1]/text()</path>
+            <content>false</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/RefundPPIPayment" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
     </con:config>
   </con:testStep>
   <con:properties/>

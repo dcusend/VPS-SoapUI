@@ -505,8 +505,8 @@
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:NickName>495Nickname138</ppi:NickName>
-            <ppi:WalletID>495Wallet138</ppi:WalletID>
+            <ppi:NickName>495Nickname141</ppi:NickName>
+            <ppi:WalletID>495Wallet141</ppi:WalletID>
             <ppi:Vehicle>
                <!--Optional:-->
                <ppip:AccountType/>
@@ -518,7 +518,7 @@
                <!--Optional:-->
                <ppip:CVV2Code>147</ppip:CVV2Code>
                <ppip:ExpirationDate>12/25</ppip:ExpirationDate>
-               <ppip:PaymentVehicleNumber></ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
             </ppi:Vehicle>
             <!--Optional:-->
@@ -536,7 +536,7 @@
                <!--Optional:-->
                <!--Optional:-->
                <ppi:AccountName>ac name</ppi:AccountName>
-               <ppi:AddressLine1>2311 york road</ppi:AddressLine1>
+               
                <ppi:AddressLine2>NULL</ppi:AddressLine2>
                <ppi:Country>US</ppi:Country>
                <ppi:PhoneNumber>5471250011</ppi:PhoneNumber>
@@ -1528,42 +1528,42 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:SubmitWalletInformation>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <ppi:UserName>user2325</ppi:UserName>\r
-            <ppi:Password>pwd2325</ppi:Password>\r
-            <ppi:PPITransactionRequestId>sdfsdf345rgsdfgsdfs</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-         </ws:token>\r
-         <!--Optional:-->\r
-         <ws:walletRequest>\r
-            <ppi:Action>DeleteToken</ppi:Action>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:WalletID>2325CC651</ppi:WalletID>\r
-            <ppi:Vehicle>\r
-               <ppip:AccountType/>\r
-               <ppip:CheckType/>\r
-               <ppip:CheckNumberPosition/>\r
-               <ppip:PaymentMethodCategory/>\r
-               <ppip:EnforcePinDebitValidation/>\r
-            </ppi:Vehicle>\r
-            <ppi:PaymentAccountToken>25194041111</ppi:PaymentAccountToken>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-         </ws:walletRequest>\r
-      </ws:SubmitWalletInformation>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitWalletInformation>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <ppi:UserName>user2325</ppi:UserName>
+            <ppi:Password>pwd2325</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsdf345rgsdfgsdfs</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:token>
+         <!--Optional:-->
+         <ws:walletRequest>
+            <ppi:Action>DeleteToken</ppi:Action>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:WalletID>2325CC651</ppi:WalletID>
+            <ppi:Vehicle>
+               <ppip:AccountType/>
+               <ppip:CheckType/>
+               <ppip:CheckNumberPosition/>
+               <ppip:PaymentMethodCategory/>
+               <ppip:EnforcePinDebitValidation/>
+            </ppi:Vehicle>
+            <ppi:PaymentAccountToken>25194041111</ppi:PaymentAccountToken>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:walletRequest>
+      </ws:SubmitWalletInformation>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="8d414cc5-3acb-4cb0-aae9-9cc6539e8d58" name="SOAP Response"/>
         <con:credentials>

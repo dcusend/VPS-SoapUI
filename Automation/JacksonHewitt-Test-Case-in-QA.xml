@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="879a3d9b-83d7-4d4a-9bde-9b3359897ed2" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="JacksonHewitt Test Case in QA" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="879a3d9b-83d7-4d4a-9bde-9b3359897ed2" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="JacksonHewitt Test Case in QA" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="879a3d9b-83d7-4d4a-9bde-9b3359897ed2fileName">JacksonHewitt-Test-Case-in-QA</con:setting>
   </con:settings>

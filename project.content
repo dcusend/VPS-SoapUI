@@ -237,6 +237,11 @@ AutomationProduction\VoidUpgrade.xml
 AutomationProduction\FullRefundUpgrade.xml
 AutomationProduction\PartialRefundUpgrade.xml
 AutomationProduction\CaptureUpgrade.xml
+AutomationProduction\Full-Refund-Req-Fields-Issue-Delaware-WWW.xml
+AutomationProduction\Refund-AuthOnly-Error-WWW.xml
+AutomationProduction\Partial-Refund-Issue-Delaware-WWW.xml
+AutomationProduction\Full-Refund-All-Fields-Issue-Delaware-WWW.xml
+AutomationProduction\Multiple-Partial-Refund-Issue-Delaware-WWW.xml
 WSGateway01292016-TestSuite-1\PPIServiceFacadeSoap-CapturePayment-CapturePayment-Request-TestCase.xml
 WSGateway01292016-TestSuite-1\PPIServiceFacadeSoap-FinalizePPIPayment-FinalizePPIPayment-Request-TestCase.xml
 WSGateway01292016-TestSuite-1\PPIServiceFacadeSoap-GetIVRTransferOptions-GetIVRTransferOptions-Request-TestCase.xml
