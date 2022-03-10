@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="51e087ff-ea13-43ab-ada5-a421c1756497" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Multiple Partial Refund Issue Delaware WWW" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="51e087ff-ea13-43ab-ada5-a421c1756497" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Multiple Partial Refund Issue Delaware WWW" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="51e087ff-ea13-43ab-ada5-a421c1756497fileName">Multiple-Partial-Refund-Issue-Delaware-WWW</con:setting>
   </con:settings>

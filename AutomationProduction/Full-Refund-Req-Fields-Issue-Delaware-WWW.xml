@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="3c67f03e-191e-4fa5-b564-3ae861d8b5fe" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Full Refund Req Fields Issue Delaware WWW" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="3c67f03e-191e-4fa5-b564-3ae861d8b5fe" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Full Refund Req Fields Issue Delaware WWW" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="3c67f03e-191e-4fa5-b564-3ae861d8b5fefileName">Full-Refund-Req-Fields-Issue-Delaware-WWW</con:setting>
   </con:settings>

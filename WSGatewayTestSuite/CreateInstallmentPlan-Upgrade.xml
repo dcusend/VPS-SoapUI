@@ -14,7 +14,7 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -37,7 +37,7 @@
             <!--Optional:-->
             <!--Optional:-->
             <ppi:NickName>2325CC683</ppi:NickName>
-            <ppi:WalletID>2325CC683</ppi:WalletID>
+            <ppi:WalletID>2325CC685</ppi:WalletID>
             <ppi:Vehicle>
                <!--Optional:-->
                <ppip:AccountType/>
@@ -81,6 +81,39 @@
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="8d414cc5-3acb-4cb0-aae9-9cc6539e8d58" name="SOAP Response"/>
+        <con:assertion type="XPath Match" id="f1063113-68bb-44de-8e63-32ffca9c073c" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitWalletInformationResponse[1]/ns1:SubmitWalletInformationResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>50054</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="6b323ef1-61c7-4bdd-902b-cfb0b351ffc7" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitWalletInformationResponse[1]/ns1:SubmitWalletInformationResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment Account Token added sucessfully to wallet</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="879089f3-0444-47ea-9851-98aa4171a93f" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitWalletInformationResponse[1]/ns1:SubmitWalletInformationResult[1]/ns0:Success[1]/text()</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -118,12 +151,45 @@
             <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>
             <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
-         <ws:walletID>2325CC683</ws:walletID>
+         <ws:walletID>2325CC685</ws:walletID>
          <!--Optional:-->
       </ws:GetWalletInformation>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
+        <con:assertion type="XPath Match" id="5db85d8b-e2b7-4ed5-b7e4-410eca53da0e" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>50062</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="9adf2ad4-dfbd-42c3-bbb3-a00e344e4a64" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Wallet information retrieved successfully</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="222fbe18-cff8-481e-9f39-ed17ba6c2c85" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:Success[1]/text()</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -163,7 +229,7 @@
          </ws:token>
          <!--Optional:-->
          <ws:createInstallmentPlanInfo>
-            <ppi:StartDate>2021-06-29T00:00:00.000-05:00</ppi:StartDate>
+            <ppi:StartDate>2022-06-29T00:00:00.000-05:00</ppi:StartDate>
             <!--Optional:-->
             <ppi:Frequency>Daily</ppi:Frequency>
             <!--Optional:-->
@@ -174,7 +240,7 @@
             <!--Optional:-->
             
             <!--Optional:-->
-            <ppi:PaymentAccountToken>27159151111</ppi:PaymentAccountToken><ppi:WalletID>2325CC683</ppi:WalletID><ppi:Customer>
+            <ppi:PaymentAccountToken>30174741111</ppi:PaymentAccountToken><ppi:WalletID>2325CC685</ppi:WalletID><ppi:Customer>
                <!--Optional:-->
                
                <!--Optional:-->
@@ -220,14 +286,42 @@
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="b2d40d67-2d28-4686-9fcc-636914628d93" name="Response SLA">
-          <con:configuration>
-            <SLA>200</SLA>
-          </con:configuration>
-        </con:assertion>
         <con:assertion type="SOAP Fault Assertion" id="c09b90fc-d405-4ade-b66a-e9258e1086e2" name="Not SOAP Fault"/>
         <con:assertion type="Schema Compliance" id="b2bd9039-eb7a-4e22-b640-18d335ad636c" name="Schema Compliance">
           <con:configuration/>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="21bbc8da-e6d8-4809-985e-215560cb5b86" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:CreateInstallmentPlanResponse[1]/ns1:CreateInstallmentPlanResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>10223</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="c5fe1615-9e80-46db-a253-515228402436" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:CreateInstallmentPlanResponse[1]/ns1:CreateInstallmentPlanResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment Plan Created Successfully</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="cd8a85d8-56ad-422d-a787-1d83c82149be" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:CreateInstallmentPlanResponse[1]/ns1:CreateInstallmentPlanResult[1]/ns0:Success[1]/text()</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
         </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -265,7 +359,7 @@
             <ppi:PPITransactionRequestId>75675675hhfgh6</ppi:PPITransactionRequestId>
             <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
-         <ws:paymentPlanID>1035580</ws:paymentPlanID>
+         <ws:paymentPlanID>1141159</ws:paymentPlanID>
          <!--Optional:-->
       </ws:CancelInstallmentPlan>
    </soapenv:Body>
@@ -276,14 +370,42 @@
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="c40bf74f-6936-44a6-abb5-e3ef109c5140" name="Response SLA">
-          <con:configuration>
-            <SLA>200</SLA>
-          </con:configuration>
-        </con:assertion>
         <con:assertion type="SOAP Fault Assertion" id="7047acbf-7f0d-4b41-b7a4-a0e29c3c221c" name="Not SOAP Fault"/>
         <con:assertion type="Schema Compliance" id="8162c0af-3f43-4809-af4d-e1cd1750eacb" name="Schema Compliance">
           <con:configuration/>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="56f2e48a-1bcd-44c9-a485-d49f67b6a246" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:CancelInstallmentPlanResponse[1]/ns1:CancelInstallmentPlanResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>10225</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="014f7a80-dfe4-4900-a4ab-aeb93f835d21" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:CancelInstallmentPlanResponse[1]/ns1:CancelInstallmentPlanResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment Plan Cancelled Successfully</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="77b90f97-75fc-4fc3-bf1e-6a42072ee0f7" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:CancelInstallmentPlanResponse[1]/ns1:CancelInstallmentPlanResult[1]/ns0:Success[1]/text()</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
         </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
