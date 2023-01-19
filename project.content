@@ -176,6 +176,7 @@ WSGatewayTestSuite\Multiple-Partial-Refund-Issue-Delaware-QA.xml
 WSGatewayTestSuite\JacksonHewitt-Test-Case-in-QA.xml
 WSGatewayTestSuite\JacksonHewitt-PartialRefund-Test-Case-in-QA.xml
 WSGatewayTestSuite\CreateAndCancelInstallmentPlan-QA-CC.xml
+WSGatewayTestSuite\MVDExpress-Test-Case.xml
 PPIServiceFacadeSoap12-TestSuite\CapturePayment-TestCase.xml
 PPIServiceFacadeSoap12-TestSuite\FinalizePPIPayment-TestCase.xml
 PPIServiceFacadeSoap12-TestSuite\GetIVRTransferOptions-TestCase.xml

@@ -294,7 +294,7 @@
             <ppi:PPIBusinessEntityIdentifierToken>524</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:amount>5</ws:amount>
-         <ws:paymentType>3</ws:paymentType>
+         <ws:paymentType>4</ws:paymentType>
          
          <!--Optional:-->
       </ws:GetVelocityFee>
@@ -600,6 +600,50 @@
          <!--Optional:-->\r
       </ws:GetVelocityFee>\r
    </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/GetVelocityFee" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="23767116-ddb5-464c-9379-b3c1f0e786ee" name="GetVelocityFee-WWW-4733-LIVE-DoNotUse">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>GetVelocityFee</con:operation>
+      <con:request name="GetVelocityFee-WWW-4733-LIVE-DoNotUse" id="923111e8-1464-4321-aac7-077a86a8b4f8" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetVelocityFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>MVD_Express</ppi:UserName>
+            <ppi:Password>izBJvRhjuKjNB</ppi:Password>
+            <ppi:PPITransactionRequestId>NM3</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>4733</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:amount>40.00</ws:amount>
+         <ws:paymentType>4</ws:paymentType>
+         
+         <!--Optional:-->
+      </ws:GetVelocityFee>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
