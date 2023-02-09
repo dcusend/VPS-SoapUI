@@ -505,8 +505,8 @@
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:NickName>495Nickname141</ppi:NickName>
-            <ppi:WalletID>495Wallet141</ppi:WalletID>
+            <ppi:NickName>495Nickname142</ppi:NickName>
+            <ppi:WalletID>495Wallet142</ppi:WalletID>
             <ppi:Vehicle>
                <!--Optional:-->
                <ppip:AccountType/>
@@ -544,10 +544,10 @@
                <ppi:LastName>lname</ppi:LastName>
                <ppi:ZipCode>19806</ppi:ZipCode>
                <ppi:BusinessName>fgdfgdfgdf</ppi:BusinessName>
-               <ppi:IsBusinessName>true</ppi:IsBusinessName>
+               <ppi:IsBusinessName>false</ppi:IsBusinessName>
             </ppi:Payor>
-            <ppi:PaymentAccountToken>258147369</ppi:PaymentAccountToken>
-            <ppi:ClientReferenceNumber>495CAN138</ppi:ClientReferenceNumber>
+            
+            <ppi:ClientReferenceNumber>495CAN139</ppi:ClientReferenceNumber>
             <!--Optional:-->
             <!--Optional:-->
          </ws:walletRequest>

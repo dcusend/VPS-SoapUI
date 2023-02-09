@@ -154,7 +154,7 @@
          </ws:token>
          <!--Optional:-->
          <ws:createInstallmentPlanInfo>
-            <ppi:StartDate>2022-09-23T00:00:00.000-05:00</ppi:StartDate>
+            <ppi:StartDate>${DataGenDateTest#TodayDate}</ppi:StartDate>
             <!--Optional:-->
             <!--Optional:-->
             <ppi:Frequency>Quarterly</ppi:Frequency>
@@ -283,7 +283,7 @@ exists( //ns1:CreateInstallmentPlanResponse/ns1:CreateInstallmentPlanResult/ns0:
          </ws:token>
          <!--Optional:-->
          <ws:createInstallmentPlanInfo>
-            <ppi:StartDate>2023-05-29T00:00:00.000-05:00</ppi:StartDate>
+            <ppi:StartDate>${DataGenDateTest#TodayDate}</ppi:StartDate>
             <!--Optional:-->
             <!--Optional:-->
             <ppi:Frequency>Daily</ppi:Frequency>
@@ -665,6 +665,20 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <persist>false</persist>
         </con:configuration>
         <con:name>RandomNumber</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datagen" name="DataGenDateTest" id="deb8ea1b-da4c-4532-af4f-5ca10e066cc6">
+    <con:settings/>
+    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:property type="Script">
+        <con:configuration>
+          <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd")
+return sdf.format(new Date() + 2) + "T08:59:00.000-04:00"</script>
+        </con:configuration>
+        <con:name>TodayDate</con:name>
         <con:mode>STEP</con:mode>
         <con:shared>false</con:shared>
       </con:property>
