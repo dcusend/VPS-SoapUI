@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:interface xsi:type="con:WsdlInterface" id="e865bd2c-71f0-4e98-b957-a176fe156690" wsaVersion="NONE" name="PPIServiceFacadeSoap12" type="wsdl" bindingName="{https://www.velocitypayment.com/ws}PPIServiceFacadeSoap12" soapVersion="1_2" anonymous="optional" definition="https://demo.velocitypayment.com:443/vgateway/VGatewayWebService?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="e865bd2c-71f0-4e98-b957-a176fe156690fileName">PPIServiceFacadeSoap12</con:setting></con:settings><con:definitionCache type="TEXT" rootPart="https://demo.velocitypayment.com:443/vgateway/VGatewayWebService?WSDL"><con:part><con:url>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService?WSDL</con:url><con:content><![CDATA[<!--Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.10-b140319.1121 svn-revision#7b34660d6bc70e587e8ec81a17e4d76af68816a6.-->
+<con:interface xsi:type="con:WsdlInterface" id="e865bd2c-71f0-4e98-b957-a176fe156690" wsaVersion="NONE" name="PPIServiceFacadeSoap12" type="wsdl" bindingName="{https://www.velocitypayment.com/ws}PPIServiceFacadeSoap12" soapVersion="1_2" anonymous="optional" definition="https://demo.velocitypayment.com:443/vgateway/VGatewayWebService?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e865bd2c-71f0-4e98-b957-a176fe156690fileName">PPIServiceFacadeSoap12</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="https://demo.velocitypayment.com:443/vgateway/VGatewayWebService?WSDL">
+    <con:part>
+      <con:url>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService?WSDL</con:url>
+      <con:content><![CDATA[<!--Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.10-b140319.1121 svn-revision#7b34660d6bc70e587e8ec81a17e4d76af68816a6.-->
 <wsdl:definitions targetNamespace="https://www.velocitypayment.com/ws" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://www.ePayments.com/PPI" xmlns:s2="http://www.ePayments.com/PPIPayment" xmlns:s3="http://tempuri.org/TransactionData.xsd" xmlns:s4="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:tns="https://www.velocitypayment.com/ws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="https://www.velocitypayment.com/ws">
@@ -1251,4 +1258,16 @@
       <soap12:address location="https://demo.velocitypayment.com:443/vgateway/VGatewayWebService"/>
     </wsdl:port>
   </wsdl:service>
-</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint></con:endpoints></con:interface>
+</wsdl:definitions>]]></con:content>
+      <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+  </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:interface>

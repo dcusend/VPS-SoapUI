@@ -224,6 +224,7 @@ Automation\Multiple-Partial-Refund-Issue-Delaware-QA.xml
 Automation\JacksonHewitt-Test-Case-in-QA.xml
 Automation\JacksonHewitt-PartialRefund-Test-Case-in-QA.xml
 Automation\CreateAndCancelInstallmentPlan-QA-CC.xml
+Automation\CardNotAcceptedError.xml
 AutomationUpgrade\SubmitPPIPaymentUpgrade.xml
 AutomationUpgrade\GetVelocityFeeUpgrade.xml
 AutomationUpgrade\SubmitWalletUpgrade.xml
@@ -285,3 +286,5 @@ WSGateway01292016-TestSuite-1\PPIServiceFacadeSoap12-ValidatePPICustomer-Validat
 WSGateway01292016-TestSuite-1\PPIServiceFacadeSoap12-VoidPPIPayment-VoidPPIPayment-Request-TestCase.xml
 VLinkPaymentPlan-Test-Suite\VLinkPaymentPlan-Test-Case.xml
 WSGateway01292016-TestSuite-2\WSGateway01292016-TestCase-1.xml
+Demo2-Testing\Demo2-Test-Cases.xml
+Demo2-Testing\Demo2-Wallet-Test-Cases.xml

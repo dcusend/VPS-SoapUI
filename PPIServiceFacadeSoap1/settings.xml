@@ -1271,4 +1271,9 @@
   <con:endpoints>
     <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
   </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:interface>

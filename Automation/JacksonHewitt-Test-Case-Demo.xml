@@ -133,6 +133,11 @@ exists( //ns1:SubmitWalletInformationResponse/ns1:SubmitWalletInformationResult/
         <con:jmsPropertyConfig/>
         <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitWalletInformation"/>
         <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:request>
     </con:config>
   </con:testStep>
@@ -340,6 +345,11 @@ exists( //ns1:GetWalletInformationResponse/ns1:GetWalletInformationResult/ns0:Wa
         <con:jmsPropertyConfig/>
         <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/GetWalletInformation"/>
         <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:request>
     </con:config>
   </con:testStep>
@@ -394,6 +404,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         <con:jmsPropertyConfig/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/GetPPIPaymentFee" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:request>
     </con:config>
   </con:testStep>
@@ -544,6 +559,11 @@ exists( //ns1:SubmitPPIPaymentUsingWalletResponse/ns1:SubmitPPIPaymentUsingWalle
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:request>
     </con:config>
   </con:testStep>
@@ -660,6 +680,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/VoidPPIPayment" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:request>
     </con:config>
   </con:testStep>
@@ -736,6 +761,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:request>
     </con:config>
   </con:testStep>
@@ -778,6 +808,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/CapturePayment" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:request>
     </con:config>
   </con:testStep>
@@ -832,6 +867,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:request>
     </con:config>
   </con:testStep>
@@ -881,6 +921,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         <con:jmsPropertyConfig/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/RefundPPIPayment" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:request>
     </con:config>
   </con:testStep>
@@ -935,6 +980,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:request>
     </con:config>
   </con:testStep>
@@ -1027,6 +1077,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         <con:jmsPropertyConfig/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/RefundPPIPayment" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:request>
     </con:config>
   </con:testStep>
@@ -1067,6 +1122,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/GetReasonCodes" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:request>
     </con:config>
   </con:testStep>
@@ -1111,6 +1171,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         <con:jmsPropertyConfig/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/GetVelocityFee" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
       </con:request>
     </con:config>
   </con:testStep>
@@ -1213,4 +1278,9 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
+  <con:environmentSpec>
+    <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:testCase>
