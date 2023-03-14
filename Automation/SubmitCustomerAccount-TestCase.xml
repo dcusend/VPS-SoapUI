@@ -63,65 +63,65 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:SubmitCustomerAccount>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:UserName>${DataSourceRegister#TokenUserName}</ppi:UserName>\r
-            <ppi:Password>${DataSourceRegister#TokenPassword}</ppi:Password>\r
-            <ppi:PPITransactionRequestId>${DataSourceRegister#TokenRequestID}</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken>${DataSourceRegister#TokenIdentifier}</ppi:PPIBusinessEntityIdentifierToken>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-         </ws:token>\r
-         <!--Optional:-->\r
-         <ws:accountInformation Notes="${DataSourceRegister#AccountNotes}">\r
-            <!--Optional:-->\r
-            <ppi:Customer>\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <ppi:AddressLine1>${DataSourceRegister#CAL1}</ppi:AddressLine1>\r
-               <ppi:AddressLine2>${DataSourceRegister#CAL2}</ppi:AddressLine2>\r
-               <ppi:Country>${DataSourceRegister#Ccountry}</ppi:Country>\r
-               <ppi:EmailAddress>${DataSourceRegister#Cemail}</ppi:EmailAddress>\r
-               <ppi:FirstName>${DataSourceRegister#Cfname}</ppi:FirstName>\r
-               <ppi:LastName>${DataSourceRegister#Clname}</ppi:LastName>\r
-               <ppi:MiddleInitial>${DataSourceRegister#Cmi}</ppi:MiddleInitial>\r
-               <ppi:Notes>${DataSourceRegister#Cnotes}</ppi:Notes>\r
-               <ppi:PhoneNumber>${DataSourceRegister#Cphone}</ppi:PhoneNumber>\r
-               <ppi:Zip>${DataSourceRegister#Czip}</ppi:Zip>\r
-               <ppi:Username>${DataGen1#RandomNumber}</ppi:Username>\r
-               <ppi:Password>${DataSourceRegister#Cpassword}</ppi:Password>\r
-            </ppi:Customer>\r
-            <ppi:ClientAccountNumber>${DataGen1#RandomNumber}</ppi:ClientAccountNumber>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:CustomData>\r
-               <ppi:ID>${DataSourceRegister#CustomData1Label}</ppi:ID>\r
-               <ppi:Value>${DataSourceRegister#CustomData1}</ppi:Value>\r
-               <!--Optional:-->\r
-            </ppi:CustomData>\r
-            <ppi:Action>Register</ppi:Action>\r
-            <ppi:MaxAmountForRecurringPayments>${DataSourceRegister#MaxAmountForRecurringPayments}</ppi:MaxAmountForRecurringPayments>\r
-         </ws:accountInformation>\r
-      </ws:SubmitCustomerAccount>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitCustomerAccount>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>${DataSourceRegister#TokenUserName}</ppi:UserName>
+            <ppi:Password>${DataSourceRegister#TokenPassword}</ppi:Password>
+            <ppi:PPITransactionRequestId>${DataSourceRegister#TokenRequestID}</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>${DataSourceRegister#TokenIdentifier}</ppi:PPIBusinessEntityIdentifierToken>
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:token>
+         <!--Optional:-->
+         <ws:accountInformation Notes="${DataSourceRegister#AccountNotes}">
+            <!--Optional:-->
+            <ppi:Customer>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppi:AddressLine1>${DataSourceRegister#CAL1}</ppi:AddressLine1>
+               <ppi:AddressLine2>${DataSourceRegister#CAL2}</ppi:AddressLine2>
+               <ppi:Country>${DataSourceRegister#Ccountry}</ppi:Country>
+               <ppi:EmailAddress>${DataSourceRegister#Cemail}</ppi:EmailAddress>
+               <ppi:FirstName>${DataSourceRegister#Cfname}</ppi:FirstName>
+               <ppi:LastName>${DataSourceRegister#Clname}</ppi:LastName>
+               <ppi:MiddleInitial>${DataSourceRegister#Cmi}</ppi:MiddleInitial>
+               <ppi:Notes>${DataSourceRegister#Cnotes}</ppi:Notes>
+               <ppi:PhoneNumber>${DataSourceRegister#Cphone}</ppi:PhoneNumber>
+               <ppi:Zip>${DataSourceRegister#Czip}</ppi:Zip>
+               <ppi:Username>${DataGen1#RandomNumber}</ppi:Username>
+               <ppi:Password>${DataSourceRegister#Cpassword}</ppi:Password>
+            </ppi:Customer>
+            <ppi:ClientAccountNumber>${DataGen1#RandomNumber}</ppi:ClientAccountNumber>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:CustomData>
+               <ppi:ID>${DataSourceRegister#CustomData1Label}</ppi:ID>
+               <ppi:Value>${DataSourceRegister#CustomData1}</ppi:Value>
+               <!--Optional:-->
+            </ppi:CustomData>
+            <ppi:Action>Register</ppi:Action>
+            <ppi:MaxAmountForRecurringPayments>${DataSourceRegister#MaxAmountForRecurringPayments}</ppi:MaxAmountForRecurringPayments>
+         </ws:accountInformation>
+      </ws:SubmitCustomerAccount>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="XPath Match" id="a369f338-6fb0-4354-98e2-1f01322667ff" name="Match content of [ns0:ResultCode]">
           <con:configuration>
@@ -165,6 +165,21 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         <con:wsrmConfig version="1.2"/>
         <con:environmentSpec>
           <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
         </con:environmentSpec>
@@ -218,8 +233,43 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>6850cbc0-8706-4f8d-a2b5-cb52bcda5087</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>f096a54c-73b1-4728-883e-8cc9fcc6e410</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>17cf8be0-1744-438e-b294-772371bb7b88</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>43ac483f-ca9e-43cc-912c-8d6e5139f45e</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
   <con:environmentSpec>
     <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

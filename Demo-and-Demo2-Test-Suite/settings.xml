@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="d896f17a-a822-4f05-8afc-c0e765c460cf" name="Demo and Demo2 Test Suite" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d896f17a-a822-4f05-8afc-c0e765c460cffileName">Demo-and-Demo2-Test-Suite</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testSuite>

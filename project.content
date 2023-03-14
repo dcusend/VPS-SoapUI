@@ -286,5 +286,4 @@ WSGateway01292016-TestSuite-1\PPIServiceFacadeSoap12-ValidatePPICustomer-Validat
 WSGateway01292016-TestSuite-1\PPIServiceFacadeSoap12-VoidPPIPayment-VoidPPIPayment-Request-TestCase.xml
 VLinkPaymentPlan-Test-Suite\VLinkPaymentPlan-Test-Case.xml
 WSGateway01292016-TestSuite-2\WSGateway01292016-TestCase-1.xml
-Demo2-Testing\Demo2-Test-Cases.xml
-Demo2-Testing\Demo2-Wallet-Test-Cases.xml
+Demo-and-Demo2-Test-Suite\Demo-and-Demo2-Test-Cases.xml
