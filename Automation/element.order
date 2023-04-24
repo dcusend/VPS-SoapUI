@@ -2,8 +2,9 @@ SubmitCustomerAccount-TestCase.xml
 SubmitWalletAddTokenAutomation.xml
 SubmitPPIPaymentUsingWalletAutomation.xml
 SubmitPPIPaymentTestPositive.xml
-GetVelocityFee-TestCase.xml
+GetVelocityFee-TestCase-Dual-Old.xml
 GetVelocityFeeSingle-TestCase.xml
+GetVelocityFee-195-Single-Old-QA.xml
 GetVelocityFeeSingleANDDualAdvanced-TestCase.xml
 GetVelocityFeeNegativeAdvanced-TestCase.xml
 GetVelocityFeeNegative.xml

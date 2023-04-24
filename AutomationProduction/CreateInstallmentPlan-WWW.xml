@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="f5828526-742c-43b1-a5f2-6a9f0c7828b8" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="CreateInstallmentPlan-Upgrade" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="56616f8a-d7df-4453-ae41-869e754526e5" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="CreateInstallmentPlan-WWW" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="f5828526-742c-43b1-a5f2-6a9f0c7828b8fileName">CreateInstallmentPlan-Upgrade</con:setting>
+    <con:setting id="56616f8a-d7df-4453-ae41-869e754526e5fileName">CreateInstallmentPlan-WWW</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="request" id="0e25f053-ebee-4444-b495-9558a2a22eda" name="SubmitWalletInformationUpgrade">
+  <con:testStep type="request" id="d1d2d1d4-630e-41bb-b4e2-8484bda9338f" name="SubmitWalletInformation-WWW">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitWalletInformation</con:operation>
-      <con:request name="SubmitWalletInformationUpgrade" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8069539d-f842-40ba-aa58-e15e3455ca98" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="SubmitWalletInformation-WWW" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8069539d-f842-40ba-aa58-e15e3455ca98" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -145,7 +145,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="9dc3671b-a985-48fc-baf8-74a60716d894" name="GetWalletInformationWWW">
+  <con:testStep type="request" id="1889393d-f903-4895-a52b-2c68d82fc109" name="GetWalletInformationWWW">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -241,7 +241,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="1c5b0ce9-21d0-4bcc-9b3f-c437c05d91b7" name="CreateInstallmentPlan">
+  <con:testStep type="request" id="7f11f1d1-0967-46f4-be50-19ac951d002a" name="CreateInstallmentPlan">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -393,7 +393,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="263d5982-ffdd-4376-9348-8f6698976615" name="CancelInstallmentPlan">
+  <con:testStep type="request" id="e878219d-1597-4db3-b53b-8f80926285a6" name="CancelInstallmentPlan">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -497,7 +497,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="datagen" name="DataGen-RandomNumber" id="c7c62194-c890-42d6-949b-6aa9a0202f8e">
+  <con:testStep type="datagen" name="DataGen-RandomNumber" id="39980f41-be06-42cc-93ef-b64e740cf7dd">
     <con:settings/>
     <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:property type="Number">
@@ -515,7 +515,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:property>
     </con:config>
   </con:testStep>
-  <con:testStep type="datagen" name="DataGenDateTest" id="d458b167-58d4-43fc-aff4-e4ae5dc71df8">
+  <con:testStep type="datagen" name="DataGenDateTest" id="024ab488-eefc-42ce-b10b-2e0ef489a74a">
     <con:settings/>
     <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:property type="Script">

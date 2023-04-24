@@ -1747,7 +1747,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <path>declare namespace ns0='http://www.ePayments.com/PPI';
 declare namespace ns1='https://www.velocitypayment.com/ws';
 //ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:ResultText[1]/text()</path>
-            <content>Wallet infornmation retrieved successfully</content>
+            <content>Wallet information retrieved successfully</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -2316,7 +2316,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <path>declare namespace ns0='http://www.ePayments.com/PPI';
 declare namespace ns1='https://www.velocitypayment.com/ws';
 //ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:ResultText[1]/text()</path>
-            <content>Wallet infornmation retrieved successfully</content>
+            <content>Wallet information retrieved successfully</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -2375,17 +2375,6 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
 declare namespace ns1='https://www.velocitypayment.com/ws';
 //ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:ResultCode[1]/text()</path>
             <content>50062</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="XPath Match" id="f677388a-629a-4f42-8eaf-e3949ad66112" name="Match content of [ns0:ResultText]">
-          <con:configuration>
-            <path>declare namespace ns0='http://www.ePayments.com/PPI';
-declare namespace ns1='https://www.velocitypayment.com/ws';
-//ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:ResultText[1]/text()</path>
-            <content>Wallet infornmation retrieved successfully</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -2702,12 +2691,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="a5ecf212-7c52-4038-ac45-5dd29f3a6568" name="GetVelocityFee-CC-Demo1286">
+  <con:testStep type="request" id="a5ecf212-7c52-4038-ac45-5dd29f3a6568" name="GetVelocityFee-1286-CC-Dual-Old-Demo">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetVelocityFee</con:operation>
-      <con:request name="GetVelocityFee-CC-Demo1286" id="923111e8-1464-4321-aac7-077a86a8b4f8" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="GetVelocityFee-1286-CC-Dual-Old-Demo" id="923111e8-1464-4321-aac7-077a86a8b4f8" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -2799,12 +2788,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="23d50e2b-faf9-4740-8f94-6191bbc63eda" name="GetVelocityFee-Advanced-CC-Demo2164">
+  <con:testStep type="request" id="23d50e2b-faf9-4740-8f94-6191bbc63eda" name="GetVelocityFee-CC-2164-Single-Advanced-Demo">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetVelocityFee</con:operation>
-      <con:request name="GetVelocityFee-Advanced-CC-Demo2164" id="923111e8-1464-4321-aac7-077a86a8b4f8" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="GetVelocityFee-CC-2164-Single-Advanced-Demo" id="923111e8-1464-4321-aac7-077a86a8b4f8" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -2820,8 +2809,8 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>username</ppi:UserName>
-            <ppi:Password>password</ppi:Password>
+            <ppi:UserName>user2164</ppi:UserName>
+            <ppi:Password>pwd2164</ppi:Password>
             <ppi:PPITransactionRequestId>sdf34tegdfg456rgdfg</ppi:PPITransactionRequestId>
             <ppi:PPIBusinessEntityIdentifierToken>2164</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
@@ -2871,6 +2860,197 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/GetVelocityFee" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="5dec8cc8-d067-403a-a289-5992b1d482e8" name="GetVelocityFee-3489-Single-Old-Demo">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>GetVelocityFee</con:operation>
+      <con:request name="GetVelocityFee-3489-Single-Old-Demo" id="923111e8-1464-4321-aac7-077a86a8b4f8" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://demo.velocitypayment.com/vgateway/VGatewayWebService?WSDL</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetVelocityFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>nexbillpay</ppi:UserName>
+            <ppi:Password>Ut!l!ty3</ppi:Password>
+            <ppi:PPITransactionRequestId>sdf34tegdfg456rgdfg</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>3489</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:amount>1</ws:amount>
+         <ws:paymentType>1</ws:paymentType><ws:accountNumber>4111111111111111</ws:accountNumber>
+         <!--Optional:-->
+      </ws:GetVelocityFee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="XPath Match" id="fbc1e940-a718-4ab3-b74f-eeaa701db561" name="Match content of [ns0:PPIFeeValue]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetVelocityFeeResponse[1]/ns1:GetVelocityFeeResult[1]/ns0:PPIFeeValue[1]/text()</path>
+            <content>3.00</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="e03f35f6-4f2a-4054-afb6-a16aefe7337e" name="Match content of [ns0:TenderType]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetVelocityFeeResponse[1]/ns1:GetVelocityFeeResult[1]/ns0:TenderType[1]/text()</path>
+            <content>VI</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="d16680b8-68e7-4406-a722-e915c5b96408" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetVelocityFeeResponse[1]/ns1:GetVelocityFeeResult[1]/ns0:Success[1]/text()</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/GetVelocityFee" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="981417a8-93a0-477f-87e0-9beb310b3b62" name="GetVelocityFee-2989-Dual-Advanced-Demo">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>GetVelocityFee</con:operation>
+      <con:request name="GetVelocityFee-2989-Dual-Advanced-Demo" id="923111e8-1464-4321-aac7-077a86a8b4f8" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetVelocityFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>comm_CC</ppi:UserName>
+            <ppi:Password>magic88tide</ppi:Password>
+            <ppi:PPITransactionRequestId>sdf34tegdfg456rgdfg</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>2989</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:amount>100</ws:amount>
+         <ws:paymentType>1</ws:paymentType>
+         <ws:accountNumber>6011000000000004</ws:accountNumber>
+         <!--Optional:-->
+      </ws:GetVelocityFee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="XPath Match" id="e0ad1a7e-0615-4821-9c3e-ead39dbdf226" name="Match content of [ns0:PPIFeeValue]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetVelocityFeeResponse[1]/ns1:GetVelocityFeeResult[1]/ns0:PPIFeeValue[1]/text()</path>
+            <content>3.75</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="6353791a-7f6e-49e7-8bbc-d4b7c3e97505" name="Match content of [ns0:TenderType]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetVelocityFeeResponse[1]/ns1:GetVelocityFeeResult[1]/ns0:TenderType[1]/text()</path>
+            <content>DI</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="363ac4a9-e429-4961-9b16-7d6baad638b9" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetVelocityFeeResponse[1]/ns1:GetVelocityFeeResult[1]/ns0:Success[1]/text()</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/GetVelocityFee" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
         <con:environmentSpec>
@@ -3599,11 +3779,6 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="cdbd7953-4b34-4fbf-a740-f6d5f22c7933" name="Response SLA">
-          <con:configuration>
-            <SLA>2200</SLA>
-          </con:configuration>
-        </con:assertion>
         <con:assertion type="SOAP Fault Assertion" id="a6798aaa-3e6c-45bf-88bc-883a042ceeed" name="Not SOAP Fault"/>
         <con:assertion type="Schema Compliance" id="b523d9e8-59f3-49f3-bdf2-1349d6e9c1cc" name="Schema Compliance">
           <con:configuration/>
@@ -3718,7 +3893,7 @@ exists( //ns1:CreateInstallmentPlanResponse/ns1:CreateInstallmentPlanResult/ns0:
             <ppi:Password>tGM1T1Bfi</ppi:Password>
             <ppi:PPITransactionRequestId>75675675hhfgh6</ppi:PPITransactionRequestId>
             <ppi:PPIBusinessEntityIdentifierToken>1286</ppi:PPIBusinessEntityIdentifierToken>
-         </ws:token>
+         </ws:token><ws:paymentPlanID>${CreateInstallmentPlan-CC-Demo1286#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:CreateInstallmentPlanResponse[1]/ns1:CreateInstallmentPlanResult[1]/ns0:PaymentPlanID[1]}</ws:paymentPlanID>
          
          <!--Optional:-->
       </ws:CancelInstallmentPlan>
@@ -3757,22 +3932,22 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="XPath Match" id="11afccd2-f53f-4139-95fc-73c873e757a4" name="Match content of [ns0:PaymentPlanID] using RegEx">
+        <con:assertion type="XPath Match" id="a4b278e3-e3a0-4190-afe6-32ee04f341a9" name="Check for existence of [ns0:PlanCancelTime]">
           <con:configuration>
             <path>declare namespace ns0='http://www.ePayments.com/PPI';
 declare namespace ns1='https://www.velocitypayment.com/ws';
-matches( //ns1:CancelInstallmentPlanResponse[1]/ns1:CancelInstallmentPlanResult[1]/ns0:PaymentPlanID[1]/text(), '10.*' )</path>
+exists( //ns1:CancelInstallmentPlanResponse/ns1:CancelInstallmentPlanResult/ns0:PlanCancelTime)</path>
             <content>true</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="XPath Match" id="a4b278e3-e3a0-4190-afe6-32ee04f341a9" name="Check for existence of [ns0:PlanCancelTime]">
+        <con:assertion type="XPath Match" id="86a24e2b-d944-4c0c-b94c-c9eb21f60350" name="Check for existence of [ns0:PaymentPlanID]">
           <con:configuration>
             <path>declare namespace ns0='http://www.ePayments.com/PPI';
 declare namespace ns1='https://www.velocitypayment.com/ws';
-exists( //ns1:CancelInstallmentPlanResponse/ns1:CancelInstallmentPlanResult/ns0:PlanCancelTime)</path>
+exists( //ns1:CancelInstallmentPlanResponse/ns1:CancelInstallmentPlanResult/ns0:PaymentPlanID)</path>
             <content>true</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>

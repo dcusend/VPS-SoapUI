@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="7f7bd34e-dca2-4d46-81e1-1e6cf862eea7" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetVelocityFee TestCase" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="7f7bd34e-dca2-4d46-81e1-1e6cf862eea7" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetVelocityFee TestCase-Dual-Old" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="7f7bd34e-dca2-4d46-81e1-1e6cf862eea7fileName">GetVelocityFee-TestCase</con:setting>
+    <con:setting id="7f7bd34e-dca2-4d46-81e1-1e6cf862eea7fileName">GetVelocityFee-TestCase-Dual-Old</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="datasource" name="DataSourceFee" id="a295f3c3-63af-424e-8470-9775d5e7bd1d">
@@ -42,27 +42,27 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:GetVelocityFee>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:UserName>user5621</ppi:UserName>\r
-            <!--Optional:-->\r
-            <ppi:Password>pwd5621</ppi:Password>\r
-            <!--Optional:-->\r
-            <ppi:PPITransactionRequestId>sgdfg45tgdfgdfg34gg</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken>BEID-Token562</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <ws:amount>${DataSourceFee#AmountSent}</ws:amount>\r
-         <ws:paymentType>${DataSourceFee#PaymentTypeSent}</ws:paymentType>\r
-         <ws:accountNumber>${DataSourceFee#AccountSent}</ws:accountNumber>\r
-         <!--Optional:-->\r
-      </ws:GetVelocityFee>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetVelocityFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user5621</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>pwd5621</ppi:Password>
+            <!--Optional:-->
+            <ppi:PPITransactionRequestId>sgdfg45tgdfgdfg34gg</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>BEID-Token562</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:amount>${DataSourceFee#AmountSent}</ws:amount>
+         <ws:paymentType>${DataSourceFee#PaymentTypeSent}</ws:paymentType>
+         <ws:accountNumber>${DataSourceFee#AccountSent}</ws:accountNumber>
+         <!--Optional:-->
+      </ws:GetVelocityFee>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="XPath Match" id="0a82f94c-958c-473b-9a5c-3a6c2681558b" name="Match content of [PPIFeeValue]">
           <con:configuration>

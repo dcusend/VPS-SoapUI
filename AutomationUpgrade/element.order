@@ -5,3 +5,4 @@ VoidUpgrade.xml
 FullRefundUpgrade.xml
 PartialRefundUpgrade.xml
 CaptureUpgrade.xml
+CreateInstallmentPlan-Upgrade.xml
