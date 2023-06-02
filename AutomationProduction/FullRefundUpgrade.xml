@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="f408570e-a132-47de-8347-67a2cb515a9f" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="FullRefundUpgrade" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="f408570e-a132-47de-8347-67a2cb515a9f" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="FullRefundUpgrade" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+  <con:settings id="658c8598-5288-43d5-8f82-7e0d9260bb20">
     <con:setting id="42dfc3c5-67b7-4b2e-ae4c-96c0b43fee06fileName">FullRefundUpgrade</con:setting>
     <con:setting id="f408570e-a132-47de-8347-67a2cb515a9ffileName">FullRefundUpgrade</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="datasource" name="DataSourceFullRefundUpgrade" id="0cb332e2-2002-4a5a-b23d-b979b7048c26">
     <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/FullRefundDataUpgrade.xlsx</file>
@@ -100,7 +100,7 @@
   </con:testStep>
   <con:testStep type="request" name="SaleToBeRefunded" id="ad2e7cb9-28c7-46db-84f6-f3bb59d2f0a6">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SaleToBeRefunded" id="28a6d5f2-3dd5-439b-bca3-0e24358555f3">
@@ -246,7 +246,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" name="FullRefundUpgrade" id="4ff89c8e-135d-48d0-bef0-95743faf95c3">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>RefundPPIPayment</con:operation>
       <con:request name="FullRefundUpgrade" id="f20021fb-00e0-4a0b-802c-11c13b17f3e2">
@@ -255,23 +255,23 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:RefundPPIPayment>\r
-         <ws:token>\r
-            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">user2325</ppi:UserName>\r
-            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">pwd2325</ppi:Password>\r
-            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">dfsdfsdfew34tgg</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">2325</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <ws:paymentId>${SaleToBeRefunded#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:PaymentID[1]}</ws:paymentId>\r
-         <ws:code>A01</ws:code>\r
-         <ws:comments>Doing a Full Refund</ws:comments>\r
-         <ws:isRefundMemo>false</ws:isRefundMemo>\r
-         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>\r
-      </ws:RefundPPIPayment>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:RefundPPIPayment>
+         <ws:token>
+            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">user2325</ppi:UserName>
+            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">pwd2325</ppi:Password>
+            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">dfsdfsdfew34tgg</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">2325</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:paymentId>${SaleToBeRefunded#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:PaymentID[1]}</ws:paymentId>
+         <ws:code>A01</ws:code>
+         <ws:comments>Doing a Full Refund</ws:comments>
+         <ws:isRefundMemo>false</ws:isRefundMemo>
+         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>
+      </ws:RefundPPIPayment>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="a5a081a2-fb48-444d-acfd-c4cd7efba716"/>
         <con:assertion type="XPath Match" id="3796e06a-eca0-4673-b146-fd0c2d28ee46" name="Match content of [ns0:ResultCode]">
@@ -348,7 +348,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="datagen" name="DataGenRefundUpgrade" id="de4a603e-0085-4697-9d37-2d6f672deb1a">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Script">
         <con:configuration>
           <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:dd.sss'Z'")

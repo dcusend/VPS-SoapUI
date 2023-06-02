@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="364721f4-65f4-4815-9c51-54a6f1a7dbe2" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap-GetReasonCodes-GetReasonCodes Request TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="364721f4-65f4-4815-9c51-54a6f1a7dbe2" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap-GetReasonCodes-GetReasonCodes Request TestCase" searchProperties="true" timeout="0">
+  <con:settings id="0c041f9f-784d-44b2-8756-017c81f8d544">
     <con:setting id="364721f4-65f4-4815-9c51-54a6f1a7dbe2fileName">PPIServiceFacadeSoap-GetReasonCodes-GetReasonCodes-Request-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="6a279881-6f5f-4af3-b6f6-eb873e47448b" name="GetReasonCodes GetReasonCodes Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetReasonCodes</con:operation>
       <con:request name="GetReasonCodes GetReasonCodes Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b754c20a-dd4f-4188-aa64-a718a21c026b">

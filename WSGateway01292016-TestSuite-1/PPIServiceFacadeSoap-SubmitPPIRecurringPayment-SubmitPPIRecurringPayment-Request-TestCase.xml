@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="aea00031-96a6-47ae-a9a2-d1f39125f1cf" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap-SubmitPPIRecurringPayment-SubmitPPIRecurringPayment Request TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="aea00031-96a6-47ae-a9a2-d1f39125f1cf" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap-SubmitPPIRecurringPayment-SubmitPPIRecurringPayment Request TestCase" searchProperties="true" timeout="0">
+  <con:settings id="86792067-d1fc-4f64-9d69-8b953b3cc2aa">
     <con:setting id="aea00031-96a6-47ae-a9a2-d1f39125f1cffileName">PPIServiceFacadeSoap-SubmitPPIRecurringPayment-SubmitPPIRecurringPayment-Request-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="44713f58-c20b-4e5a-aea9-a14068076851" name="SubmitPPIRecurringPayment SubmitPPIRecurringPayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIRecurringPayment</con:operation>
       <con:request name="SubmitPPIRecurringPayment SubmitPPIRecurringPayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="45d372a0-d20a-47b8-bd31-91292ccd089e">

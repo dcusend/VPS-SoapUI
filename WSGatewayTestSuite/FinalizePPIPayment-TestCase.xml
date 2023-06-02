@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="314dfd3a-d59d-4b27-92df-0fac3de50c14" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="FinalizePPIPayment TestCase" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="314dfd3a-d59d-4b27-92df-0fac3de50c14" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="FinalizePPIPayment TestCase" searchProperties="true" maxResults="0">
+  <con:settings id="d9538633-bb50-4252-8173-445a42c206ba">
     <con:setting id="314dfd3a-d59d-4b27-92df-0fac3de50c14fileName">FinalizePPIPayment-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="86911c00-496a-4db7-9f99-4b88399881ea" name="FinalizePPIPayment">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>FinalizePPIPayment</con:operation>
       <con:request name="FinalizePPIPayment" id="c465f821-766d-43e5-b781-3b5c03e43ed4" defaultOutgoingWss="" defaultIncomingWss="">

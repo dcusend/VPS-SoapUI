@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="ffcf49cf-e3c4-462d-8f88-2fdd589784b9" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Demo and Demo2-Test Cases" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="ffcf49cf-e3c4-462d-8f88-2fdd589784b9" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Demo and Demo2-Test Cases" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="">
+  <con:settings id="5077db4f-014b-43b9-a52c-15d9c3b9efb1">
     <con:setting id="ffcf49cf-e3c4-462d-8f88-2fdd589784b9fileName">Demo-and-Demo2-Test-Cases</con:setting>
   </con:settings>
   <con:testStep type="datagen" name="DataGenDateTest" id="af1b4167-68e6-4537-97fd-644bcf859f6a">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Script">
         <con:configuration>
           <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd")
@@ -19,7 +19,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="datagen" name="DataGenWalletID" id="4fed9d71-a9f6-4816-adff-4bb6f308c243">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Number">
         <con:configuration>
           <start>1000000000</start>
@@ -37,7 +37,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="datagen" name="DataGenDate-Future" id="a586ad9d-dd0f-4f31-bef1-88322c45283e">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Script">
         <con:configuration>
           <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd")
@@ -51,7 +51,7 @@ return sdf.format(new Date() + 2) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="request" id="cea0ddca-5254-43d7-88b3-ff259135c6f9" name="SubmitCustomerAccountDemo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccountDemo1286" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
@@ -59,7 +59,7 @@ return sdf.format(new Date() + 2) + "T08:59:00.000-04:00"</script>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -177,7 +177,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="907bec7f-bc82-4453-a97e-d8ece895e404" name="SubmitPPIPayment-CC-Sale-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment-CC-Sale-Demo1286" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -185,7 +185,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -373,7 +373,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="5d223b9d-5624-4a47-bbdd-34d861303865" name="SubmitPPIPayment-CC-Auth-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment-CC-Auth-Demo1286" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -381,7 +381,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -569,7 +569,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="5a7a46d3-9705-4e60-83f5-3dffdcbb10e5" name="SubmitPPIPayment-PC-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment-PC-Demo1286" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -577,7 +577,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -831,7 +831,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="7572bdcf-d815-43ad-a15e-63dce6b4c583" name="SubmitPPIPayment-PS-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment-PS-Demo1286" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -839,7 +839,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -1159,7 +1159,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="b1b162af-e94c-48b5-a6d2-43a708c432e3" name="SubmitPPIPayment-Corp-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment-Corp-Demo1286" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -1167,7 +1167,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -1553,7 +1553,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="b81216df-bd7a-43e5-9060-e21b86fa552a" name="SubmitWalletInformation-AddToken-CC-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitWalletInformation</con:operation>
       <con:request name="SubmitWalletInformation-AddToken-CC-Demo1286" id="2e8ca9cf-f51b-48e1-98d3-b2662375c32d" defaultOutgoingWss="" defaultIncomingWss="">
@@ -1561,7 +1561,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -1701,7 +1701,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="414e21de-3106-41ff-acea-c6edef125294" name="GetWalletInformation-CC-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetWalletInformation</con:operation>
       <con:request name="GetWalletInformation-CC-Demo1286" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="24ea61a1-41f8-41f5-af4c-8894b2dd46fc" defaultOutgoingWss="" defaultIncomingWss="">
@@ -1709,7 +1709,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
    <soapenv:Header/>
    <soapenv:Body>
@@ -1916,7 +1916,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="0500b16a-0387-4c53-9d68-62c5739632b7" name="SubmitPPIPaymentUsingWallet-CC-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
       <con:request name="SubmitPPIPaymentUsingWallet-CC-Demo1286" id="5ea1ab63-dae7-443b-a34f-b570404595cb" defaultOutgoingWss="" defaultIncomingWss="">
@@ -1924,7 +1924,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -2078,7 +2078,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="54673d17-8a06-4e9e-91f3-ae822700b4f0" name="SubmitWalletInformation-AddToken-PC-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitWalletInformation</con:operation>
       <con:request name="SubmitWalletInformation-AddToken-PC-Demo1286" id="2e8ca9cf-f51b-48e1-98d3-b2662375c32d" defaultOutgoingWss="" defaultIncomingWss="">
@@ -2086,7 +2086,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -2270,7 +2270,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="2371ddf9-7673-490f-85d8-14acb8764a2a" name="GetWalletInformation-PC-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetWalletInformation</con:operation>
       <con:request name="GetWalletInformation-PC-Demo1286" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="24ea61a1-41f8-41f5-af4c-8894b2dd46fc" defaultOutgoingWss="" defaultIncomingWss="">
@@ -2278,7 +2278,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
    <soapenv:Header/>
    <soapenv:Body>
@@ -2531,7 +2531,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="3894f4d4-14b1-49a7-a092-224a418e63d4" name="SubmitPPIPaymentUsingWallet-PC-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
       <con:request name="SubmitPPIPaymentUsingWallet-PC-Demo1286" id="5ea1ab63-dae7-443b-a34f-b570404595cb" defaultOutgoingWss="" defaultIncomingWss="">
@@ -2539,7 +2539,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -2693,7 +2693,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="a5ecf212-7c52-4038-ac45-5dd29f3a6568" name="GetVelocityFee-1286-CC-Dual-Old-Demo">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetVelocityFee</con:operation>
       <con:request name="GetVelocityFee-1286-CC-Dual-Old-Demo" id="923111e8-1464-4321-aac7-077a86a8b4f8" defaultOutgoingWss="" defaultIncomingWss="">
@@ -2701,7 +2701,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
    <soapenv:Header/>
    <soapenv:Body>
@@ -2790,7 +2790,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="23d50e2b-faf9-4740-8f94-6191bbc63eda" name="GetVelocityFee-CC-2164-Single-Advanced-Demo">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetVelocityFee</con:operation>
       <con:request name="GetVelocityFee-CC-2164-Single-Advanced-Demo" id="923111e8-1464-4321-aac7-077a86a8b4f8" defaultOutgoingWss="" defaultIncomingWss="">
@@ -2798,7 +2798,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
    <soapenv:Header/>
    <soapenv:Body>
@@ -2887,7 +2887,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="5dec8cc8-d067-403a-a289-5992b1d482e8" name="GetVelocityFee-3489-Single-Old-Demo">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetVelocityFee</con:operation>
       <con:request name="GetVelocityFee-3489-Single-Old-Demo" id="923111e8-1464-4321-aac7-077a86a8b4f8" defaultOutgoingWss="" defaultIncomingWss="">
@@ -2982,7 +2982,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="981417a8-93a0-477f-87e0-9beb310b3b62" name="GetVelocityFee-2989-Dual-Advanced-Demo">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetVelocityFee</con:operation>
       <con:request name="GetVelocityFee-2989-Dual-Advanced-Demo" id="923111e8-1464-4321-aac7-077a86a8b4f8" defaultOutgoingWss="" defaultIncomingWss="">
@@ -3078,7 +3078,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="995af264-0e7f-407d-9851-7e03273fd82d" name="SubmitPPIPayment-CC-Sale-ToBeVoided-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment-CC-Sale-ToBeVoided-Demo1286" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -3086,7 +3086,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -3274,7 +3274,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="47628106-50da-49f6-b9e5-d93bc4fc33a9" name="VoidPPIPayment-CC-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>VoidPPIPayment</con:operation>
       <con:request name="VoidPPIPayment-CC-Demo1286" id="ecc66677-0a5d-4b44-8c27-938c752eb3bd" defaultOutgoingWss="" defaultIncomingWss="">
@@ -3282,7 +3282,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
    <soapenv:Header/>
    <soapenv:Body>
@@ -3395,7 +3395,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="03d388c6-ec10-4fe1-9b90-e96043b63f8a" name="SubmitPPIPayment-CC-Sale-ToBeRefunded-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment-CC-Sale-ToBeRefunded-Demo1286" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -3403,7 +3403,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -3591,7 +3591,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="265dddd0-ba59-488c-88fe-88893ebe962a" name="RefundPPIPayment-CC-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>RefundPPIPayment</con:operation>
       <con:request name="RefundPPIPayment-CC-Demo1286" id="8b40194f-c509-4dec-8ea0-ba5bc3afbad0" defaultOutgoingWss="" defaultIncomingWss="">
@@ -3599,7 +3599,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -3726,7 +3726,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="ca3e8451-7573-44ff-93e5-eb4ac426d6a0" name="CreateInstallmentPlan-CC-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>CreateInstallmentPlan</con:operation>
       <con:request name="CreateInstallmentPlan-CC-Demo1286" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="089c70b8-d718-4f1f-917f-1ca48681d113">
@@ -3734,7 +3734,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
    <soapenv:Header/>
    <soapenv:Body>
@@ -3870,7 +3870,7 @@ exists( //ns1:CreateInstallmentPlanResponse/ns1:CreateInstallmentPlanResult/ns0:
   </con:testStep>
   <con:testStep type="request" id="21444513-96ca-4c5d-8168-3f5ccc9b0706" name="CancelInstPlan-CC-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>CancelInstallmentPlan</con:operation>
       <con:request name="CancelInstPlan-CC-Demo1286" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="27ec77b6-0042-47f0-a29e-4d85cfcfa3f4">
@@ -3878,7 +3878,7 @@ exists( //ns1:CreateInstallmentPlanResponse/ns1:CreateInstallmentPlanResult/ns0:
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
    <soapenv:Header/>
    <soapenv:Body>
@@ -3986,7 +3986,7 @@ exists( //ns1:CancelInstallmentPlanResponse/ns1:CancelInstallmentPlanResult/ns0:
   </con:testStep>
   <con:testStep type="request" id="c023d6f0-86e5-4ac1-8c9d-290c8cf438b6" name="SubmitPPIPayment-CC-AuthToBeCaptured-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment-CC-AuthToBeCaptured-Demo1286" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -3994,7 +3994,7 @@ exists( //ns1:CancelInstallmentPlanResponse/ns1:CancelInstallmentPlanResult/ns0:
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -4182,7 +4182,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="6ceaa5c1-bbd3-4d72-b244-3f9131144525" name="CapturePayment-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>CapturePayment</con:operation>
       <con:request name="CapturePayment-Demo1286" id="8b925bfb-5bb2-4184-beac-053d99cd7a60" defaultOutgoingWss="" defaultIncomingWss="">
@@ -4190,7 +4190,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
    <soapenv:Header/>
    <soapenv:Body>
@@ -4299,7 +4299,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="7430b3c2-f176-4562-804c-9c5fb6f55c54" name="SubmitPPIPayment-CC-SaleZeroDollarError-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment-CC-SaleZeroDollarError-Demo1286" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -4307,7 +4307,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>

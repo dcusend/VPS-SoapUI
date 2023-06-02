@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="1b0efa06-bcff-43a5-9869-7fce8995158e" isOneWay="false" action="urn:retrievePaymentPlan" name="retrievePaymentPlan" bindingOperationName="retrievePaymentPlan" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:operation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="1b0efa06-bcff-43a5-9869-7fce8995158e" isOneWay="false" action="urn:retrievePaymentPlan" name="retrievePaymentPlan" bindingOperationName="retrievePaymentPlan" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+  <con:settings id="441e030a-feab-4ef5-84d8-dba611899475">
     <con:setting id="1b0efa06-bcff-43a5-9869-7fce8995158efileName">retrievePaymentPlan</con:setting>
   </con:settings>
   <con:call id="cbe348e6-a8cb-439e-abfd-2485d3866cc9" name="retrievePaymentPlan Request">

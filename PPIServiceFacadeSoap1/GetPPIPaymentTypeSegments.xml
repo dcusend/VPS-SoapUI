@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="f235a774-7459-4c5e-9725-03885ad4ee73" isOneWay="false" action="https://www.velocitypayment.com/ws/GetPPIPaymentTypeSegments" name="GetPPIPaymentTypeSegments" bindingOperationName="GetPPIPaymentTypeSegments" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:operation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="f235a774-7459-4c5e-9725-03885ad4ee73" isOneWay="false" action="https://www.velocitypayment.com/ws/GetPPIPaymentTypeSegments" name="GetPPIPaymentTypeSegments" bindingOperationName="GetPPIPaymentTypeSegments" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+  <con:settings id="e042eaec-33c3-4069-8c50-6f13bc03b82a">
     <con:setting id="f235a774-7459-4c5e-9725-03885ad4ee73fileName">GetPPIPaymentTypeSegments</con:setting>
   </con:settings>
   <con:call id="91b087e3-c865-4add-a5a9-db9e520edb28" name="GetPPIPaymentTypeSegments Request">

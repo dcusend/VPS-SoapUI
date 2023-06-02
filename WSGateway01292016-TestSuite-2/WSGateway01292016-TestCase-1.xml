@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="274b77ec-769f-41ec-883d-82e6e939dab6" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="WSGateway01292016 TestCase 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="274b77ec-769f-41ec-883d-82e6e939dab6" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="WSGateway01292016 TestCase 1" searchProperties="true" timeout="0">
+  <con:settings id="122f7023-6d9f-404a-9620-b5c5da785741">
     <con:setting id="274b77ec-769f-41ec-883d-82e6e939dab6fileName">WSGateway01292016-TestCase-1</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="request" id="2fbb23f6-9caf-4b86-bf72-b1dd3744577e" name="PPIServiceFacadeSoap CapturePayment-CapturePayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>CapturePayment</con:operation>
       <con:request name="PPIServiceFacadeSoap CapturePayment-CapturePayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="c80cbdc5-a842-479d-a860-51f7aa02ecc5">
@@ -82,7 +82,7 @@
   </con:testStep>
   <con:testStep type="request" id="5ca7c625-fa01-4257-9d13-edacc8104bc0" name="PPIServiceFacadeSoap FinalizePPIPayment-FinalizePPIPayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>FinalizePPIPayment</con:operation>
       <con:request name="PPIServiceFacadeSoap FinalizePPIPayment-FinalizePPIPayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="a9f802cf-38c1-49d6-9221-9073911e98cd">
@@ -157,7 +157,7 @@
   </con:testStep>
   <con:testStep type="request" id="55d86e61-4937-40f6-90a9-d6abbf6c54ad" name="PPIServiceFacadeSoap GetIVRTransferOptions-GetIVRTransferOptions Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetIVRTransferOptions</con:operation>
       <con:request name="PPIServiceFacadeSoap GetIVRTransferOptions-GetIVRTransferOptions Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="82b545dc-2b2d-404a-8ac8-b2e1ac52874b">
@@ -231,7 +231,7 @@
   </con:testStep>
   <con:testStep type="request" id="e8ae66f2-136f-411f-8076-46f4814493f6" name="PPIServiceFacadeSoap GetPPIPaymentFee-GetPPIPaymentFee Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
       <con:request name="PPIServiceFacadeSoap GetPPIPaymentFee-GetPPIPaymentFee Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="34c31350-73d1-4bd4-a5d4-72167a9e30ff">
@@ -307,7 +307,7 @@
   </con:testStep>
   <con:testStep type="request" id="c48349d4-0829-4cd6-9ab2-d1ae7f6f6c98" name="PPIServiceFacadeSoap GetPPIPaymentTypeSegments-GetPPIPaymentTypeSegments Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentTypeSegments</con:operation>
       <con:request name="PPIServiceFacadeSoap GetPPIPaymentTypeSegments-GetPPIPaymentTypeSegments Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="71d71c72-b33e-4c7e-a868-91deca837bd7">
@@ -379,7 +379,7 @@
   </con:testStep>
   <con:testStep type="request" id="3eadcb4d-cdd2-4ddb-8482-502228650bdb" name="PPIServiceFacadeSoap GetReasonCodes-GetReasonCodes Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetReasonCodes</con:operation>
       <con:request name="PPIServiceFacadeSoap GetReasonCodes-GetReasonCodes Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="3a042f0a-a1e1-4a83-9809-e6ab66acaa8c">
@@ -452,7 +452,7 @@
   </con:testStep>
   <con:testStep type="request" id="f454c30d-89d8-49e7-9ba9-445e3253bad5" name="PPIServiceFacadeSoap GetVelocityFee-GetVelocityFee Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetVelocityFee</con:operation>
       <con:request name="PPIServiceFacadeSoap GetVelocityFee-GetVelocityFee Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="cef1135e-6f8b-44c3-9f89-1a581a432f33">
@@ -528,7 +528,7 @@
   </con:testStep>
   <con:testStep type="request" id="bf301530-9e5a-47fe-aa17-4510f59935cc" name="PPIServiceFacadeSoap GetWalletInformation-GetWalletInformation Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetWalletInformation</con:operation>
       <con:request name="PPIServiceFacadeSoap GetWalletInformation-GetWalletInformation Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="1ff55943-a412-40c5-94cc-e25eb0b2f246">
@@ -602,7 +602,7 @@
   </con:testStep>
   <con:testStep type="request" id="f389114e-2b8c-441c-aeb0-8ebdcc8c3802" name="PPIServiceFacadeSoap ModifyPPICustomer-ModifyPPICustomer Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>ModifyPPICustomer</con:operation>
       <con:request name="PPIServiceFacadeSoap ModifyPPICustomer-ModifyPPICustomer Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="9439eb85-5eab-45e2-9980-1ed5e408900b">
@@ -703,7 +703,7 @@
   </con:testStep>
   <con:testStep type="request" id="41fa0eac-91cf-4c5a-9629-6659e8ae2b2e" name="PPIServiceFacadeSoap ModifyPPIPayment-ModifyPPIPayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>ModifyPPIPayment</con:operation>
       <con:request name="PPIServiceFacadeSoap ModifyPPIPayment-ModifyPPIPayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="10c86f43-d4d4-4ec7-89a1-66214ea15895">
@@ -884,7 +884,7 @@
   </con:testStep>
   <con:testStep type="request" id="a018a246-086d-4a95-8b16-1a100aa57599" name="PPIServiceFacadeSoap RefundPPIPayment-RefundPPIPayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>RefundPPIPayment</con:operation>
       <con:request name="PPIServiceFacadeSoap RefundPPIPayment-RefundPPIPayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4843c984-1288-4d3b-a815-fa9089090b3a">
@@ -1071,7 +1071,7 @@
   </con:testStep>
   <con:testStep type="request" id="5c393faa-02c4-419f-9820-c47e77070cb9" name="PPIServiceFacadeSoap SubmitCustomerAccount-SubmitCustomerAccount Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="PPIServiceFacadeSoap SubmitCustomerAccount-SubmitCustomerAccount Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="7e68a723-131e-4e99-b6c5-ad078712a4f8">
@@ -1227,7 +1227,7 @@
   </con:testStep>
   <con:testStep type="request" id="489d3d0f-6ce6-4185-94f1-142fdd459680" name="PPIServiceFacadeSoap SubmitPPIPayment-SubmitPPIPayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="PPIServiceFacadeSoap SubmitPPIPayment-SubmitPPIPayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="f1a9434e-336a-42f5-b1dc-de1106335d30">
@@ -1416,7 +1416,7 @@
   </con:testStep>
   <con:testStep type="request" id="2bdabbd3-9214-442c-8774-62c9435988b8" name="PPIServiceFacadeSoap SubmitPPIPaymentUsingWallet-SubmitPPIPaymentUsingWallet Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
       <con:request name="PPIServiceFacadeSoap SubmitPPIPaymentUsingWallet-SubmitPPIPaymentUsingWallet Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="3f88c16a-b83e-4a2b-ba5e-bdfd4696045b">
@@ -1559,7 +1559,7 @@
   </con:testStep>
   <con:testStep type="request" id="73041411-d4dd-4587-bbf9-f5970a286d62" name="PPIServiceFacadeSoap SubmitPPIRecurringPayment-SubmitPPIRecurringPayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIRecurringPayment</con:operation>
       <con:request name="PPIServiceFacadeSoap SubmitPPIRecurringPayment-SubmitPPIRecurringPayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="326df527-52ad-4e1a-97fa-0c80d8078586">
@@ -1641,7 +1641,7 @@
   </con:testStep>
   <con:testStep type="request" id="fa37c0ac-66b4-4b25-819b-dc7c37961565" name="PPIServiceFacadeSoap SubmitPPIReturnOrChargeback-SubmitPPIReturnOrChargeback Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIReturnOrChargeback</con:operation>
       <con:request name="PPIServiceFacadeSoap SubmitPPIReturnOrChargeback-SubmitPPIReturnOrChargeback Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="d4df25ed-9707-4a81-aa7f-77e07bc7f917">
@@ -1719,7 +1719,7 @@
   </con:testStep>
   <con:testStep type="request" id="3283a411-6de6-44b6-8ca6-cd5a81e619f5" name="PPIServiceFacadeSoap SubmitWalletInformation-SubmitWalletInformation Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitWalletInformation</con:operation>
       <con:request name="PPIServiceFacadeSoap SubmitWalletInformation-SubmitWalletInformation Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="90e747f3-21c6-480f-93d7-0398edc45a7f">
@@ -1847,7 +1847,7 @@
   </con:testStep>
   <con:testStep type="request" id="7f13072b-4e9b-4119-9bcd-3da5103f7fbf" name="PPIServiceFacadeSoap ValidateFinancialInfo-ValidateFinancialInfo Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>ValidateFinancialInfo</con:operation>
       <con:request name="PPIServiceFacadeSoap ValidateFinancialInfo-ValidateFinancialInfo Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="7e6b1311-1a17-448c-9b12-fcaa090dccd0">
@@ -1922,7 +1922,7 @@
   </con:testStep>
   <con:testStep type="request" id="842b3f1a-6172-4be2-b435-f38b22be1f7e" name="PPIServiceFacadeSoap ValidatePPICustomer-ValidatePPICustomer Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>ValidatePPICustomer</con:operation>
       <con:request name="PPIServiceFacadeSoap ValidatePPICustomer-ValidatePPICustomer Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="145423c9-29e2-4e91-a530-847375df00af">
@@ -1996,7 +1996,7 @@
   </con:testStep>
   <con:testStep type="request" id="a87e2af9-3a4c-44c4-a17c-a189fb25137d" name="PPIServiceFacadeSoap VoidPPIPayment-VoidPPIPayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>VoidPPIPayment</con:operation>
       <con:request name="PPIServiceFacadeSoap VoidPPIPayment-VoidPPIPayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="f2be9a14-885d-44de-804d-717dc9719258">
@@ -2074,7 +2074,7 @@
   </con:testStep>
   <con:testStep type="request" id="f4c710c9-ad94-4f1f-8b67-374fe39479da" name="PPIServiceFacadeSoap12 CapturePayment-CapturePayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>CapturePayment</con:operation>
       <con:request name="PPIServiceFacadeSoap12 CapturePayment-CapturePayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="531a6745-fc80-4ad6-95b8-e13ef1a1f6b0">
@@ -2150,7 +2150,7 @@
   </con:testStep>
   <con:testStep type="request" id="1d31bf0a-9ae1-4f28-8d7e-ec1bf79e9f7a" name="PPIServiceFacadeSoap12 FinalizePPIPayment-FinalizePPIPayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>FinalizePPIPayment</con:operation>
       <con:request name="PPIServiceFacadeSoap12 FinalizePPIPayment-FinalizePPIPayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="f4a9cbb3-8d74-433a-942f-eee111caef65">
@@ -2225,7 +2225,7 @@
   </con:testStep>
   <con:testStep type="request" id="71c91e62-36b7-409f-8e21-5dfea26c393e" name="PPIServiceFacadeSoap12 GetIVRTransferOptions-GetIVRTransferOptions Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>GetIVRTransferOptions</con:operation>
       <con:request name="PPIServiceFacadeSoap12 GetIVRTransferOptions-GetIVRTransferOptions Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="3cd148f5-93ac-4dd2-bcf1-722a8359bb2a">
@@ -2299,7 +2299,7 @@
   </con:testStep>
   <con:testStep type="request" id="5b4cf399-b6c7-49a9-8116-a22267d4c459" name="PPIServiceFacadeSoap12 GetPPIPaymentFee-GetPPIPaymentFee Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
       <con:request name="PPIServiceFacadeSoap12 GetPPIPaymentFee-GetPPIPaymentFee Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="f5f4dc7e-29f6-417d-b92c-e266257e4282">
@@ -2375,7 +2375,7 @@
   </con:testStep>
   <con:testStep type="request" id="3fde4f22-3c27-4951-930b-3400d96cf4e3" name="PPIServiceFacadeSoap12 GetPPIPaymentTypeSegments-GetPPIPaymentTypeSegments Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>GetPPIPaymentTypeSegments</con:operation>
       <con:request name="PPIServiceFacadeSoap12 GetPPIPaymentTypeSegments-GetPPIPaymentTypeSegments Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="5b5e1060-6877-4c56-93e0-2da38579e7c8">
@@ -2447,7 +2447,7 @@
   </con:testStep>
   <con:testStep type="request" id="b6a26752-c41c-47bb-8f1a-603c25c75867" name="PPIServiceFacadeSoap12 GetReasonCodes-GetReasonCodes Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>GetReasonCodes</con:operation>
       <con:request name="PPIServiceFacadeSoap12 GetReasonCodes-GetReasonCodes Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="7151b438-7150-43dd-a695-6f94bd6da593">
@@ -2520,7 +2520,7 @@
   </con:testStep>
   <con:testStep type="request" id="8d7c490c-439d-4d0a-8e7e-af43941d7350" name="PPIServiceFacadeSoap12 GetVelocityFee-GetVelocityFee Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>GetVelocityFee</con:operation>
       <con:request name="PPIServiceFacadeSoap12 GetVelocityFee-GetVelocityFee Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="0755ebb2-9d59-480e-920e-4f2da67fc0f2">
@@ -2596,7 +2596,7 @@
   </con:testStep>
   <con:testStep type="request" id="4f662f66-59da-436f-93ae-c308ba0ee775" name="PPIServiceFacadeSoap12 GetWalletInformation-GetWalletInformation Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>GetWalletInformation</con:operation>
       <con:request name="PPIServiceFacadeSoap12 GetWalletInformation-GetWalletInformation Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="74c04b63-f564-4c26-9c94-a7feb2d0a645">
@@ -2670,7 +2670,7 @@
   </con:testStep>
   <con:testStep type="request" id="6ea80cef-c3fc-41ab-bae8-65f7de413114" name="PPIServiceFacadeSoap12 ModifyPPICustomer-ModifyPPICustomer Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>ModifyPPICustomer</con:operation>
       <con:request name="PPIServiceFacadeSoap12 ModifyPPICustomer-ModifyPPICustomer Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="a6fa53ad-527c-46e4-826c-ba5a089b9a2a">
@@ -2771,7 +2771,7 @@
   </con:testStep>
   <con:testStep type="request" id="1d2e0b78-9058-4f15-8429-0697fdbdf365" name="PPIServiceFacadeSoap12 ModifyPPIPayment-ModifyPPIPayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>ModifyPPIPayment</con:operation>
       <con:request name="PPIServiceFacadeSoap12 ModifyPPIPayment-ModifyPPIPayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="6ff2c064-b826-4846-a504-223b00e93aff">
@@ -2952,7 +2952,7 @@
   </con:testStep>
   <con:testStep type="request" id="9622473b-0676-4745-8139-7cded864bfe3" name="PPIServiceFacadeSoap12 RefundPPIPayment-RefundPPIPayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>RefundPPIPayment</con:operation>
       <con:request name="PPIServiceFacadeSoap12 RefundPPIPayment-RefundPPIPayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="284c4c3d-073c-4f13-a7e6-fae09c4c6197">
@@ -3139,7 +3139,7 @@
   </con:testStep>
   <con:testStep type="request" id="f6a8f2ed-b93e-40b3-ab5b-6d573a3d2cd3" name="PPIServiceFacadeSoap12 SubmitCustomerAccount-SubmitCustomerAccount Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="PPIServiceFacadeSoap12 SubmitCustomerAccount-SubmitCustomerAccount Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="5984a06f-344b-46ab-8903-7ec289fafd0a">
@@ -3295,7 +3295,7 @@
   </con:testStep>
   <con:testStep type="request" id="9a9a639b-9746-47c5-9da1-a4a4a7518d27" name="PPIServiceFacadeSoap12 SubmitPPIPayment-SubmitPPIPayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="PPIServiceFacadeSoap12 SubmitPPIPayment-SubmitPPIPayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="df237938-ed0c-4308-bc08-d52275a8332a">
@@ -3484,7 +3484,7 @@
   </con:testStep>
   <con:testStep type="request" id="b5d4a358-4a89-4889-9959-9c19856e07af" name="PPIServiceFacadeSoap12 SubmitPPIPaymentUsingWallet-SubmitPPIPaymentUsingWallet Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
       <con:request name="PPIServiceFacadeSoap12 SubmitPPIPaymentUsingWallet-SubmitPPIPaymentUsingWallet Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="7cd3ab55-fb64-4561-90ee-129d531fcc84">
@@ -3627,7 +3627,7 @@
   </con:testStep>
   <con:testStep type="request" id="ce494094-e04f-451a-9f76-70d997ba83ec" name="PPIServiceFacadeSoap12 SubmitPPIRecurringPayment-SubmitPPIRecurringPayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>SubmitPPIRecurringPayment</con:operation>
       <con:request name="PPIServiceFacadeSoap12 SubmitPPIRecurringPayment-SubmitPPIRecurringPayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="c041145b-fb87-4694-aaed-fbde60a02f74">
@@ -3709,7 +3709,7 @@
   </con:testStep>
   <con:testStep type="request" id="10cd8709-fd84-4cc1-8792-baff11a25521" name="PPIServiceFacadeSoap12 SubmitPPIReturnOrChargeback-SubmitPPIReturnOrChargeback Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>SubmitPPIReturnOrChargeback</con:operation>
       <con:request name="PPIServiceFacadeSoap12 SubmitPPIReturnOrChargeback-SubmitPPIReturnOrChargeback Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="f41595e9-4416-4a53-ac05-5780668c4e0b">
@@ -3787,7 +3787,7 @@
   </con:testStep>
   <con:testStep type="request" id="cc12208f-d5db-480d-807b-48aaf627a418" name="PPIServiceFacadeSoap12 SubmitWalletInformation-SubmitWalletInformation Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>SubmitWalletInformation</con:operation>
       <con:request name="PPIServiceFacadeSoap12 SubmitWalletInformation-SubmitWalletInformation Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="095490e2-11d7-4519-8127-ecd33d6f5780">
@@ -3915,7 +3915,7 @@
   </con:testStep>
   <con:testStep type="request" id="898ebf4a-4d63-419d-929c-ab82f52a2820" name="PPIServiceFacadeSoap12 ValidateFinancialInfo-ValidateFinancialInfo Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>ValidateFinancialInfo</con:operation>
       <con:request name="PPIServiceFacadeSoap12 ValidateFinancialInfo-ValidateFinancialInfo Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="e7507262-d8f0-4d28-a49e-0c4276b71c82">
@@ -3990,7 +3990,7 @@
   </con:testStep>
   <con:testStep type="request" id="0df2462d-fbdb-4c3c-906e-651ff7ae5986" name="PPIServiceFacadeSoap12 ValidatePPICustomer-ValidatePPICustomer Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>ValidatePPICustomer</con:operation>
       <con:request name="PPIServiceFacadeSoap12 ValidatePPICustomer-ValidatePPICustomer Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="a0b8c2e5-0e4e-49a9-8e01-89a391685bd5">
@@ -4064,7 +4064,7 @@
   </con:testStep>
   <con:testStep type="request" id="c2154f60-21a1-44a2-8d3a-cd3a957082d3" name="PPIServiceFacadeSoap12 VoidPPIPayment-VoidPPIPayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>VoidPPIPayment</con:operation>
       <con:request name="PPIServiceFacadeSoap12 VoidPPIPayment-VoidPPIPayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="89dbdb96-60bc-4738-b604-259aecf61f91">

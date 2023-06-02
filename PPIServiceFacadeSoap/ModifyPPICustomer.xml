@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="7c36c217-d1f9-487a-9c9e-75fb8b64a825" isOneWay="false" action="https://www.velocitypayment.com/ws/ModifyPPICustomer" name="ModifyPPICustomer" bindingOperationName="ModifyPPICustomer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:operation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="7c36c217-d1f9-487a-9c9e-75fb8b64a825" isOneWay="false" action="https://www.velocitypayment.com/ws/ModifyPPICustomer" name="ModifyPPICustomer" bindingOperationName="ModifyPPICustomer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+  <con:settings id="5f84af7f-4339-42c9-830b-d683285ab08c">
     <con:setting id="7c36c217-d1f9-487a-9c9e-75fb8b64a825fileName">ModifyPPICustomer</con:setting>
   </con:settings>
   <con:call id="07dabf5f-b065-4f76-9b50-7d05014345b2" defaultOutgoingWss="" defaultIncomingWss="" name="Request 1">

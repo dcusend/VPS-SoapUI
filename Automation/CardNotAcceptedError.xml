@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="55a02773-3853-4425-9726-514d049063ef" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="CardNotAcceptedError" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="55a02773-3853-4425-9726-514d049063ef" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="CardNotAcceptedError" searchProperties="true" timeout="0">
+  <con:settings id="0aadc152-2417-4a3f-a4e8-a00d5708a7ab">
     <con:setting id="55a02773-3853-4425-9726-514d049063effileName">CardNotAcceptedError</con:setting>
   </con:settings>
   <con:testStep type="request" id="8b456086-b10f-4049-86ab-85a7b606840a" name="SubmitPPIPayment-Sale">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment-Sale" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -162,7 +162,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="f7c5442e-cf88-4b73-8907-5bc4e0cbc954" name="SubmitPPIPayment-Auth">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment-Auth" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -319,7 +319,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="datagen" name="DataGenDateTest" id="282f4418-8633-4edd-a125-a1243d96f337">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Script">
         <con:configuration>
           <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd")

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="6e8022fb-e802-40e6-bb7b-4b9bdbb61246" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="SubmitPPIPayment DataCreation" searchProperties="true" maxResults="0" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="6e8022fb-e802-40e6-bb7b-4b9bdbb61246" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="SubmitPPIPayment DataCreation" searchProperties="true" maxResults="0" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+  <con:settings id="12687e1f-fdc4-42ed-a81b-a46101ae00b1">
     <con:setting id="469b14e0-6ea6-4836-a93d-02f001df9c4efileName">SubmitPPIPayment-TestCase</con:setting>
     <con:setting id="com.smartbear.ready.history.view.ClientResultsView$OptionsForm@disable_log">false</con:setting>
     <con:setting id="com.smartbear.ready.history.view.ClientResultsView$OptionsForm@errors_only">false</con:setting>
@@ -10,7 +10,7 @@
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="request" id="ad8a955c-4403-4438-9ed9-4fee44407f7c" name="SubmitPPIPayment" disabled="true">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -137,7 +137,7 @@
   </con:testStep>
   <con:testStep type="request" id="692c7d27-11cd-4461-827f-02426d00b232" name="SubmitPPIPayment2987" disabled="true">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment2987" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -278,7 +278,7 @@
   </con:testStep>
   <con:testStep type="request" id="c808c2e3-a719-48ac-9b67-bb9cd9ae73e3" name="SubmitPPIPaymentWWW" disabled="true">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPaymentWWW" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -426,7 +426,7 @@
   </con:testStep>
   <con:testStep type="datagen" name="DataGenDateTest" id="9ad1a2c1-6162-4a39-9ba4-d777c3229c5d" disabled="true">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Script">
         <con:configuration>
           <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd")
@@ -440,7 +440,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="request" id="1b586908-db5e-4062-93a3-83c521822e01" name="Copy of SubmitPPIPayment" disabled="true">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="Copy of SubmitPPIPayment" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -538,7 +538,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="request" id="27fbf3c4-a0f0-4b5b-8a4a-1be46f56f933" name="SubmitPPIPaymentQA509" disabled="true">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPaymentQA509" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -661,7 +661,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="request" id="a3936643-ae31-4f24-b4f9-d3d75e8fca50" name="SubmitPPIPaymentDemo1286" disabled="true">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPaymentDemo1286" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -783,7 +783,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="request" id="52c617e9-7362-4b30-b5e7-26da8c7a4ce5" name="SubmitPPIPayment3092" disabled="true">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment3092" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -890,7 +890,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="request" id="2575bc45-69e2-4838-91fc-16bb9db7d9b1" name="SubmitPPIPayment524" disabled="true">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment524" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -1013,7 +1013,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="request" id="6461acbb-93d0-4065-90e4-3e7fda8ffebb" name="Copy of SubmitPPIPaymentDemo3131" disabled="true">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="Copy of SubmitPPIPaymentDemo3131" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -1140,7 +1140,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="request" id="a4e6e39f-415e-4b5f-a569-34b2192e02e0" name="SubmitPPIPayment613" disabled="true">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment613" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -1286,7 +1286,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="request" id="3650160b-b227-4d3d-8a25-ed8ba34fcd48" name="SubmitPPIPayment495" disabled="true">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment495" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -1409,7 +1409,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="request" id="0a63693a-a796-48c8-95d9-0357142dbf86" name="SubmitPPIPaymentWWWAdvancedCF" disabled="true">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPaymentWWWAdvancedCF" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -1549,7 +1549,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="datasource" name="DataSourceDataCreation" id="070ce018-332d-4e8f-88b9-72c7369c7650">
     <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/CreateDataDeferredPayments.xlsx</file>
@@ -1568,7 +1568,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="datagen" name="DataGenforCAN" id="8be5b66e-7802-4402-96f1-bb02b6ce232d">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Number">
         <con:configuration>
           <start>100000</start>
@@ -1586,7 +1586,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="request" id="1ccfb2ae-8367-450b-8b32-94b92b202214" name="SubmitPPIPayment180Automated">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment180Automated" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">

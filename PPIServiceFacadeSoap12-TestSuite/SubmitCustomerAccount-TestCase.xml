@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="ae13bc39-87e6-48f9-947c-c64d2725f85b" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="SubmitCustomerAccount TestCase" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="ae13bc39-87e6-48f9-947c-c64d2725f85b" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="SubmitCustomerAccount TestCase" searchProperties="true" maxResults="0">
+  <con:settings id="692b5b09-87db-4ed9-ae37-3f2c94e3acb4">
     <con:setting id="ae13bc39-87e6-48f9-947c-c64d2725f85bfileName">SubmitCustomerAccount-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="1b06e210-7b2e-4c80-8903-651614052287" name="SubmitCustomerAccount">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccount" id="a25b89b7-f61a-467a-bde7-6104216cb749" defaultOutgoingWss="" defaultIncomingWss="">

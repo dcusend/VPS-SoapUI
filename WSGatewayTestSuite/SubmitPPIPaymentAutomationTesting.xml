@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="2da1c989-91c4-4956-b0db-e013f0a17c42" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="SubmitPPIPaymentAutomationTesting" searchProperties="true" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="2da1c989-91c4-4956-b0db-e013f0a17c42" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="SubmitPPIPaymentAutomationTesting" searchProperties="true">
+  <con:settings id="401253a9-91f2-418a-84f8-1fe8f46b02c1">
     <con:setting id="2da1c989-91c4-4956-b0db-e013f0a17c42fileName">SubmitPPIPaymentAutomationTesting</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -8,10 +8,10 @@
     <con:settings>
       <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
     </con:settings>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Data Connection">
         <con:configuration>
-          <Connection>GovolutionAutomationData( Demo2 )</Connection>
+          <Connection>GovolutionAutomationData( Default environment )</Connection>
           <query>Select MainTable.RID as MainTable_RID
 From MainTable</query>
           <fetchSize/>
@@ -25,7 +25,7 @@ From MainTable</query>
   </con:testStep>
   <con:testStep type="request" name="SubmitPPIPaymentAutoTesting" id="c62cf393-58bc-4a8c-aadd-3846bd0281cf">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPaymentAutoTesting" id="7c0c0ebd-4aab-4c0a-8ee5-5d14a1332127">

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="f6650464-f498-4b09-adfe-51495413108d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap-GetWalletInformation-GetWalletInformation Request TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="f6650464-f498-4b09-adfe-51495413108d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap-GetWalletInformation-GetWalletInformation Request TestCase" searchProperties="true" timeout="0">
+  <con:settings id="06ee38fe-33cd-4375-a9d8-a76e973f672c">
     <con:setting id="f6650464-f498-4b09-adfe-51495413108dfileName">PPIServiceFacadeSoap-GetWalletInformation-GetWalletInformation-Request-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="93bc5694-2ce0-4ace-8133-295577e8f964" name="GetWalletInformation GetWalletInformation Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetWalletInformation</con:operation>
       <con:request name="GetWalletInformation GetWalletInformation Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="9d195c5c-0a83-4658-9b55-d68ffe7e31cb">

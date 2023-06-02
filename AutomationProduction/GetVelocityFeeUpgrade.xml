@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="df75ecc0-862f-49c3-b4d5-f37843111535" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetVelocityFeeUpgrade" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="df75ecc0-862f-49c3-b4d5-f37843111535" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetVelocityFeeUpgrade" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+  <con:settings id="a9c2e98b-524d-4531-975c-a54484420f94">
     <con:setting id="2d6c180c-2041-44c5-afbf-6cdeac79bc4afileName">GetVelocityFeeUpgrade</con:setting>
     <con:setting id="df75ecc0-862f-49c3-b4d5-f37843111535fileName">GetVelocityFeeUpgrade</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="datasource" name="DataSourceGetVelocityFeeUpgrade" id="99a53bbf-e3e2-4eba-bfb3-33cb1fd71818">
     <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/GetVelocityFeeDataUpgrade.xlsx</file>
@@ -39,7 +39,7 @@
   </con:testStep>
   <con:testStep type="request" name="GetVelocityFeeUpgrade" id="6a1ea909-fa16-4e83-b775-5f74d01b24ee">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetVelocityFee</con:operation>
       <con:request name="GetVelocityFeeUpgrade" id="a490ceb3-19aa-4348-82ea-eca40b920b37">
@@ -48,21 +48,21 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:GetVelocityFee>\r
-         <ws:token>\r
-            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceGetVelocityFeeUpgrade#AT_Username}</ppi:UserName>\r
-            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceGetVelocityFeeUpgrade#AT_Password}</ppi:Password>\r
-            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceGetVelocityFeeUpgrade#AT_RequestID}</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceGetVelocityFeeUpgrade#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <ws:amount>${DataSourceGetVelocityFeeUpgrade#Amount}</ws:amount>\r
-         <ws:paymentType>${DataSourceGetVelocityFeeUpgrade#PaymentType}</ws:paymentType>\r
-         <ws:accountNumber>${DataSourceGetVelocityFeeUpgrade#Account}</ws:accountNumber>\r
-      </ws:GetVelocityFee>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetVelocityFee>
+         <ws:token>
+            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceGetVelocityFeeUpgrade#AT_Username}</ppi:UserName>
+            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceGetVelocityFeeUpgrade#AT_Password}</ppi:Password>
+            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceGetVelocityFeeUpgrade#AT_RequestID}</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceGetVelocityFeeUpgrade#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:amount>${DataSourceGetVelocityFeeUpgrade#Amount}</ws:amount>
+         <ws:paymentType>${DataSourceGetVelocityFeeUpgrade#PaymentType}</ws:paymentType>
+         <ws:accountNumber>${DataSourceGetVelocityFeeUpgrade#Account}</ws:accountNumber>
+      </ws:GetVelocityFee>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="c0b08754-2736-42c6-aee4-a47f9b8175ce"/>
         <con:assertion type="XPath Match" id="6b8358e3-ed1b-4ad3-bd8a-526c5925442b" name="Match content of [ns0:PPIFeeValue]">

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="7f7bd34e-dca2-4d46-81e1-1e6cf862eea7" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetVelocityFee TestCase-Dual-Old" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="7f7bd34e-dca2-4d46-81e1-1e6cf862eea7" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetVelocityFee TestCase-Dual-Old" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="">
+  <con:settings id="943dace4-a517-477c-931c-b53c18076112">
     <con:setting id="7f7bd34e-dca2-4d46-81e1-1e6cf862eea7fileName">GetVelocityFee-TestCase-Dual-Old</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="datasource" name="DataSourceFee" id="a295f3c3-63af-424e-8470-9775d5e7bd1d">
     <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/FeeData.xlsx</file>
@@ -33,7 +33,7 @@
   </con:testStep>
   <con:testStep type="request" id="0bde973a-ba71-4cf3-8fe6-6b84cc4bd4da" name="GetVelocityFee">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetVelocityFee</con:operation>
       <con:request name="GetVelocityFee" id="dc439367-9684-4945-9116-809c6b2327c8" defaultOutgoingWss="" defaultIncomingWss="" outgoingWss="" incomingWss="">

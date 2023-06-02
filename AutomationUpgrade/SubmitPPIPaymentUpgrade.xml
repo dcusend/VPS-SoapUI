@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="c2673082-d485-47ab-8b9f-802fd93ef622" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="SubmitPPIPaymentUpgrade" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="c2673082-d485-47ab-8b9f-802fd93ef622" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="SubmitPPIPaymentUpgrade" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+  <con:settings id="a44b0cd2-13da-43e6-9804-d475830751f3">
     <con:setting id="c2673082-d485-47ab-8b9f-802fd93ef622fileName">SubmitPPIPaymentUpgrade</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="datasource" name="DataSourceSaleUpgrade" id="45cf585d-c776-4360-9efd-0aee62b1a5b1">
     <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/SubmitPaymentDataUpgrade.xlsx</file>
@@ -96,7 +96,7 @@
   </con:testStep>
   <con:testStep type="request" name="SaleUpgrade" id="ccaa92e0-5630-4cc1-b86c-f0c58b7aa921">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SaleUpgrade" id="cf45849d-eb03-4a86-8340-80efeb2ea337">
@@ -242,7 +242,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="datagen" name="DataGenDateUpgrade" id="c5179f97-b281-4e5f-a81b-f3ac1ed36c3d">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Script">
         <con:configuration>
           <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd")

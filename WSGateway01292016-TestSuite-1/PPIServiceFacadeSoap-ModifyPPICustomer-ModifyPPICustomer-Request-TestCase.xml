@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="357a0939-11e9-4b2f-b8ff-9322b70bec22" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap-ModifyPPICustomer-ModifyPPICustomer Request TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="357a0939-11e9-4b2f-b8ff-9322b70bec22" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap-ModifyPPICustomer-ModifyPPICustomer Request TestCase" searchProperties="true" timeout="0">
+  <con:settings id="6b776031-47ab-43fe-b919-48f875393ee2">
     <con:setting id="357a0939-11e9-4b2f-b8ff-9322b70bec22fileName">PPIServiceFacadeSoap-ModifyPPICustomer-ModifyPPICustomer-Request-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="3541d157-82d3-4044-ae8f-36c5bf021271" name="ModifyPPICustomer ModifyPPICustomer Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>ModifyPPICustomer</con:operation>
       <con:request name="ModifyPPICustomer ModifyPPICustomer Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="edb8054b-8241-485d-9626-782d3e4a3c79">

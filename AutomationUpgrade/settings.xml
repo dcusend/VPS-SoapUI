@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testSuite id="580b176b-3bfd-4ae6-b85c-c2abb481f3cb" name="AutomationUpgrade" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="580b176b-3bfd-4ae6-b85c-c2abb481f3cb" name="AutomationUpgrade">
+  <con:settings id="5d341ed4-fb29-4474-a213-16cfe799df4e">
     <con:setting id="580b176b-3bfd-4ae6-b85c-c2abb481f3cbfileName">AutomationUpgrade</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>

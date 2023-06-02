@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="a4ceacb8-b019-409d-8ac9-096c197c11fe" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetReasonCodes TestCase" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="a4ceacb8-b019-409d-8ac9-096c197c11fe" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetReasonCodes TestCase" searchProperties="true" maxResults="0">
+  <con:settings id="642fada5-540b-46bc-8739-8dfdeeef0e53">
     <con:setting id="a4ceacb8-b019-409d-8ac9-096c197c11fefileName">GetReasonCodes-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="741116bf-c5bf-42dc-94e6-0357a5296fe8" name="GetReasonCodes">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>GetReasonCodes</con:operation>
       <con:request name="GetReasonCodes" id="e88e57ee-8cad-4aee-a3f7-fe5dc49417bc" defaultOutgoingWss="" defaultIncomingWss="">

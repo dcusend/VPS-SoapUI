@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="6f9ca4f6-a5c6-4cd4-bf5b-db93be9af76b" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="SubmitPPIPaymentUsingWalletAutomation" searchProperties="true" maxResults="0" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="6f9ca4f6-a5c6-4cd4-bf5b-db93be9af76b" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="SubmitPPIPaymentUsingWalletAutomation" searchProperties="true" maxResults="0" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+  <con:settings id="f5b643b6-5f93-4373-af7a-167a42cc4f2a">
     <con:setting id="6f9ca4f6-a5c6-4cd4-bf5b-db93be9af76bfileName">SubmitPPIPaymentUsingWalletAutomation</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="datasource" name="DataSourcePaymentUsingWallet" id="8eab3a23-cf46-431b-9560-b4f5f987a240">
     <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/PaymentUsingWallet.xlsx</file>
@@ -53,7 +53,7 @@
   </con:testStep>
   <con:testStep type="datagen" name="DataGenProcessDate" id="270c89cf-46ff-4ec3-8a61-5ad2bc1212ff">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Script">
         <con:configuration>
           <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd")
@@ -67,7 +67,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="request" id="f8b54db5-8f9b-41b0-8ca5-acf396384e5a" name="SubmitPPIPaymentUsingWallet">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
       <con:request name="SubmitPPIPaymentUsingWallet" id="5ea1ab63-dae7-443b-a34f-b570404595cb" defaultOutgoingWss="" defaultIncomingWss="">

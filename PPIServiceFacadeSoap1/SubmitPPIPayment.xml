@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="181f5e25-da83-4457-89b2-e85765d5ce85" isOneWay="false" action="https://www.velocitypayment.com/ws/SubmitPPIPayment" name="SubmitPPIPayment" bindingOperationName="SubmitPPIPayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:operation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="181f5e25-da83-4457-89b2-e85765d5ce85" isOneWay="false" action="https://www.velocitypayment.com/ws/SubmitPPIPayment" name="SubmitPPIPayment" bindingOperationName="SubmitPPIPayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+  <con:settings id="fbdef86f-c131-41d1-ad11-bae5216c4cab">
     <con:setting id="181f5e25-da83-4457-89b2-e85765d5ce85fileName">SubmitPPIPayment</con:setting>
   </con:settings>
   <con:call id="d41a5dee-5c89-4b52-a23b-4313c55d59a7" name="SubmitPPIPayment Request">

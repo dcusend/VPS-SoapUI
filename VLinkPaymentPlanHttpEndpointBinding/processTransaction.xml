@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="e5bb113b-cc17-45fe-b450-45771459c81d" isOneWay="false" action="urn:processTransaction" name="processTransaction" bindingOperationName="processTransaction" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:operation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="e5bb113b-cc17-45fe-b450-45771459c81d" isOneWay="false" action="urn:processTransaction" name="processTransaction" bindingOperationName="processTransaction" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+  <con:settings id="7d0c3bec-94dc-4e4d-931b-83f2f8fd570c">
     <con:setting id="e5bb113b-cc17-45fe-b450-45771459c81dfileName">processTransaction</con:setting>
   </con:settings>
   <con:call id="b66d9dc6-e5d0-4ede-851f-10f905584493" name="processTransaction Request">

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="34c8fd5e-3867-44d2-8da1-a0a7f45fcd37" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="CreateAndCancelInstallmentPlan-QA-ACH" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="34c8fd5e-3867-44d2-8da1-a0a7f45fcd37" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="CreateAndCancelInstallmentPlan-QA-ACH" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="">
+  <con:settings id="e66f3db1-57b5-47c3-a1d6-a8aa0561e860">
     <con:setting id="34c8fd5e-3867-44d2-8da1-a0a7f45fcd37fileName">CreateAndCancelInstallmentPlan-QA-ACH</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="request" id="e3725b78-057c-41e2-82e9-c7e02e682393" name="SubmitWalletInformationQA">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitWalletInformation</con:operation>
       <con:request name="SubmitWalletInformationQA" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8069539d-f842-40ba-aa58-e15e3455ca98" defaultOutgoingWss="" defaultIncomingWss="">
@@ -105,7 +105,7 @@
   </con:testStep>
   <con:testStep type="request" id="13b08b8d-1d6b-47db-9049-0a499a36fcf4" name="GetWalletInformation-QA">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetWalletInformation</con:operation>
       <con:request name="GetWalletInformation-QA" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="24ea61a1-41f8-41f5-af4c-8894b2dd46fc" defaultOutgoingWss="" defaultIncomingWss="">
@@ -168,7 +168,7 @@
   </con:testStep>
   <con:testStep type="request" id="2ce1d331-6d79-4293-a612-5d3ccb889e7d" name="CreateInstallmentPLan-QA">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>CreateInstallmentPlan</con:operation>
       <con:request name="CreateInstallmentPLan-QA" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="089c70b8-d718-4f1f-917f-1ca48681d113">
@@ -317,7 +317,7 @@ exists( //ns1:CreateInstallmentPlanResponse/ns1:CreateInstallmentPlanResult/ns0:
   </con:testStep>
   <con:testStep type="request" id="2ab99544-e1c3-4a89-b299-bef8374a2fef" name="CreateInstPlanWithLookup-QA">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>CreateInstallmentPlan</con:operation>
       <con:request name="CreateInstPlanWithLookup-QA" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="089c70b8-d718-4f1f-917f-1ca48681d113">
@@ -468,7 +468,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="236414da-26be-43d7-9dda-17d787b41e91" name="CancelInstPlanError-QA">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>CancelInstallmentPlan</con:operation>
       <con:request name="CancelInstPlanError-QA" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="27ec77b6-0042-47f0-a29e-4d85cfcfa3f4">
@@ -562,7 +562,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="d90e2b9f-f9b3-43e3-96f5-d10ca1d3cc7a" name="CancelInstPlan-WithoutLookup-QA">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>CancelInstallmentPlan</con:operation>
       <con:request name="CancelInstPlan-WithoutLookup-QA" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="27ec77b6-0042-47f0-a29e-4d85cfcfa3f4">
@@ -678,7 +678,7 @@ exists( //ns1:CancelInstallmentPlanResponse/ns1:CancelInstallmentPlanResult/ns0:
   </con:testStep>
   <con:testStep type="request" id="4c6d97ee-c4ff-4ff3-ad9d-350a3e07e230" name="CancelInstPlan-WithLookup-QA">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>CancelInstallmentPlan</con:operation>
       <con:request name="CancelInstPlan-WithLookup-QA" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="27ec77b6-0042-47f0-a29e-4d85cfcfa3f4">
@@ -794,7 +794,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="datagen" name="DataGen-RandomNumber" id="18aa078d-93dd-43e6-b4d9-cae7123a09f5">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Number">
         <con:configuration>
           <start>10000</start>
@@ -812,7 +812,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="datagen" name="DataGenDateTest" id="ad0070d0-e841-4e93-8ed5-18b87cbb5c27">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Script">
         <con:configuration>
           <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd")

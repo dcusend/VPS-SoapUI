@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="0c0e686e-d9d4-46f8-8f85-2dad65df66a1" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="SubmitWalletAutomation" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="0c0e686e-d9d4-46f8-8f85-2dad65df66a1" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="SubmitWalletAutomation" searchProperties="true" maxResults="0">
+  <con:settings id="3962fe0a-a517-4eab-b5ae-40145233e035">
     <con:setting id="0c0e686e-d9d4-46f8-8f85-2dad65df66a1fileName">SubmitWalletAutomation</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="request" id="f108fb00-dbda-4164-bdbd-da0daa124eae" name="AddToken">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitWalletInformation</con:operation>
       <con:request name="AddToken" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8069539d-f842-40ba-aa58-e15e3455ca98" defaultOutgoingWss="" defaultIncomingWss="">
@@ -110,7 +110,7 @@
   </con:testStep>
   <con:testStep type="transfer" name="PropertyTransfer 1" id="fd9bc015-d24e-406a-aa95-82805d76657a">
     <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:PropertyTransfersStep">
       <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false" entitize="false" ignoreEmpty="false" transferChildNodes="false">
         <con:name>ns0:PaymentAccountToken</con:name>
         <con:sourceType>Response</con:sourceType>
@@ -128,7 +128,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" name="DeleteToken" id="26cb60f5-428b-458a-bb5a-7a98ae6fc869">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitWalletInformation</con:operation>
       <con:request name="DeleteToken" id="d210a33b-3498-4c58-95c1-b163671aff13">
@@ -206,7 +206,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="properties" name="RetPayACToken" id="bda407a2-446d-4d7a-83ca-79aceb7bf944">
     <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:PropertiesStep" saveFirst="true">
       <con:properties>
         <con:property>
           <con:name>ns0:PaymentAccountToken</con:name>

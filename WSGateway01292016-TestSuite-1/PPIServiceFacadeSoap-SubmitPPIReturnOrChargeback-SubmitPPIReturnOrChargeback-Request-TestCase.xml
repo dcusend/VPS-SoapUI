@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="2b577ec7-0085-43b2-937e-b24f5b907934" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap-SubmitPPIReturnOrChargeback-SubmitPPIReturnOrChargeback Request TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="2b577ec7-0085-43b2-937e-b24f5b907934" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap-SubmitPPIReturnOrChargeback-SubmitPPIReturnOrChargeback Request TestCase" searchProperties="true" timeout="0">
+  <con:settings id="4ea3c2f0-3d14-4f8d-b7be-7ba4f8d28c8e">
     <con:setting id="2b577ec7-0085-43b2-937e-b24f5b907934fileName">PPIServiceFacadeSoap-SubmitPPIReturnOrChargeback-SubmitPPIReturnOrChargeback-Request-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="346ebbb4-9cd4-4aed-b8e6-38339604b486" name="SubmitPPIReturnOrChargeback SubmitPPIReturnOrChargeback Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIReturnOrChargeback</con:operation>
       <con:request name="SubmitPPIReturnOrChargeback SubmitPPIReturnOrChargeback Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4df10f1a-3ab3-42fa-8b19-d8ff57735678">

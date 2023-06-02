@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="3118715b-88ff-4691-8c91-ed88be94ca2f" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ModifyPPICustomer TestCase" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="3118715b-88ff-4691-8c91-ed88be94ca2f" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ModifyPPICustomer TestCase" searchProperties="true" maxResults="0">
+  <con:settings id="9847c421-0336-42cc-9044-bddfe103dddb">
     <con:setting id="3118715b-88ff-4691-8c91-ed88be94ca2ffileName">ModifyPPICustomer-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="0f893e1a-426e-4d15-86b7-8c46936175e5" name="ModifyPPICustomer">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>ModifyPPICustomer</con:operation>
       <con:request name="ModifyPPICustomer" id="d0b9695f-5041-4861-baaf-8b6613184dd6" defaultOutgoingWss="" defaultIncomingWss="">

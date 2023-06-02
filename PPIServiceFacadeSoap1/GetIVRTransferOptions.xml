@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="3b3a8cdb-30a2-4cf6-8d07-fb09d962e7c5" isOneWay="false" action="https://www.velocitypayment.com/ws/GetIVRTransferOptions" name="GetIVRTransferOptions" bindingOperationName="GetIVRTransferOptions" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:operation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="3b3a8cdb-30a2-4cf6-8d07-fb09d962e7c5" isOneWay="false" action="https://www.velocitypayment.com/ws/GetIVRTransferOptions" name="GetIVRTransferOptions" bindingOperationName="GetIVRTransferOptions" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+  <con:settings id="3496e935-564f-4d91-887c-11940d82ec29">
     <con:setting id="3b3a8cdb-30a2-4cf6-8d07-fb09d962e7c5fileName">GetIVRTransferOptions</con:setting>
   </con:settings>
   <con:call id="630db61b-9bbf-48da-9174-f772f41f9998" name="GetIVRTransferOptions Request">

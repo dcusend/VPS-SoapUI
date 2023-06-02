@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="21bf5285-07d1-419c-aaaf-c5aa8c628d68" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ValidatePPICustomer TestCase" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="21bf5285-07d1-419c-aaaf-c5aa8c628d68" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ValidatePPICustomer TestCase" searchProperties="true" maxResults="0">
+  <con:settings id="d63d6772-0d33-4d14-85fd-b9790576ab10">
     <con:setting id="21bf5285-07d1-419c-aaaf-c5aa8c628d68fileName">ValidatePPICustomer-TestCase</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="request" id="814dc2b2-a5c3-464d-bb08-08ee558206a1" name="ValidatePPICustomer">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>ValidatePPICustomer</con:operation>
       <con:request name="ValidatePPICustomer" id="ea2da728-6bce-4086-814f-bc4424036c93" defaultOutgoingWss="" defaultIncomingWss="">
@@ -67,7 +67,7 @@
   </con:testStep>
   <con:testStep type="request" id="b17892ea-316e-4c89-a0a2-4ce25087db20" name="ValidatePPICustomerQA524">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>ValidatePPICustomer</con:operation>
       <con:request name="ValidatePPICustomerQA524" id="ea2da728-6bce-4086-814f-bc4424036c93" defaultOutgoingWss="" defaultIncomingWss="">
@@ -128,7 +128,7 @@
   </con:testStep>
   <con:testStep type="request" id="57e1f4b3-2197-40da-a478-d0cec01060c7" name="ValidatePPICustomerWWW4733LIVE">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>ValidatePPICustomer</con:operation>
       <con:request name="ValidatePPICustomerWWW4733LIVE" id="ea2da728-6bce-4086-814f-bc4424036c93" defaultOutgoingWss="" defaultIncomingWss="">

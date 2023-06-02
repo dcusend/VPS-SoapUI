@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="8c589f6d-6682-49ca-8401-b258901a84a4" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="ACHabusePolicy-PaymentWithWallet" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="8c589f6d-6682-49ca-8401-b258901a84a4" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="ACHabusePolicy-PaymentWithWallet" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="">
+  <con:settings id="89260f0e-1bbb-4a65-885a-bc449257de4c">
     <con:setting id="8c589f6d-6682-49ca-8401-b258901a84a4fileName">ACHabusePolicy-PaymentWithWallet</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="datasource" name="Data SourceACHAbuseWallet" id="fde4ffc2-e007-49a2-82cd-120145753ef8">
     <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/ACHabusePolicy.xlsx</file>
@@ -33,7 +33,7 @@
   </con:testStep>
   <con:testStep type="datagen" name="DataGenDateTest" id="a624be0a-32d1-4d72-a59a-87a9d34b7cf8">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Script">
         <con:configuration>
           <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd")
@@ -47,7 +47,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="request" id="9cc5b875-0d7c-4ec0-a5fc-362de7b0de15" name="SubmitPPIPaymentUsingWalletQA562">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
       <con:request name="SubmitPPIPaymentUsingWalletQA562" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">

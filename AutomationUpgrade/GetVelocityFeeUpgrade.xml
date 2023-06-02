@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="2d6c180c-2041-44c5-afbf-6cdeac79bc4a" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetVelocityFeeUpgrade" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="2d6c180c-2041-44c5-afbf-6cdeac79bc4a" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetVelocityFeeUpgrade" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+  <con:settings id="4708a85f-703e-45e5-a969-d81d613c5865">
     <con:setting id="2d6c180c-2041-44c5-afbf-6cdeac79bc4afileName">GetVelocityFeeUpgrade</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="datasource" name="DataSourceGetVelocityFeeUpgrade" id="432d4a2e-431e-4d2d-8134-dea6ef4904d9">
     <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/GetVelocityFeeDataUpgrade.xlsx</file>
@@ -38,7 +38,7 @@
   </con:testStep>
   <con:testStep type="request" name="GetVelocityFeeUpgrade" id="6482da5d-e5f2-4156-9a7c-d8800a8e4c74">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetVelocityFee</con:operation>
       <con:request name="GetVelocityFeeUpgrade" id="a490ceb3-19aa-4348-82ea-eca40b920b37">

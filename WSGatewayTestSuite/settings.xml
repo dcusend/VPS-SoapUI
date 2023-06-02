@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testSuite id="b0c1fd1d-3e1d-4ce5-935c-3f2d793e7001" name="WSGatewayTestSuite" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="b0c1fd1d-3e1d-4ce5-935c-3f2d793e7001" name="WSGatewayTestSuite">
+  <con:settings id="249d5ef1-82bb-4363-9d0f-97b7d3405210">
     <con:setting id="b0c1fd1d-3e1d-4ce5-935c-3f2d793e7001fileName">WSGatewayTestSuite</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>

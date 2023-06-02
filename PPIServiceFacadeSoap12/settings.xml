@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:interface xsi:type="con:WsdlInterface" id="e865bd2c-71f0-4e98-b957-a176fe156690" wsaVersion="NONE" name="PPIServiceFacadeSoap12" type="wsdl" bindingName="{https://www.velocitypayment.com/ws}PPIServiceFacadeSoap12" soapVersion="1_2" anonymous="optional" definition="https://demo.velocitypayment.com:443/vgateway/VGatewayWebService?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" xsi:type="con:WsdlInterface" id="e865bd2c-71f0-4e98-b957-a176fe156690" wsaVersion="NONE" name="PPIServiceFacadeSoap12" type="wsdl" bindingName="{https://www.velocitypayment.com/ws}PPIServiceFacadeSoap12" soapVersion="1_2" anonymous="optional" definition="https://demo.velocitypayment.com:443/vgateway/VGatewayWebService?WSDL">
+  <con:settings id="9cfcdece-f786-4477-9978-972ad3675ab1">
     <con:setting id="e865bd2c-71f0-4e98-b957-a176fe156690fileName">PPIServiceFacadeSoap12</con:setting>
   </con:settings>
   <con:definitionCache type="TEXT" rootPart="https://demo.velocitypayment.com:443/vgateway/VGatewayWebService?WSDL">

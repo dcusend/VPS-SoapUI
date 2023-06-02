@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="451fbbc2-49f9-4b9f-bdd9-e11a0d96f007" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap12-SubmitCustomerAccount-SubmitCustomerAccount Request TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="451fbbc2-49f9-4b9f-bdd9-e11a0d96f007" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap12-SubmitCustomerAccount-SubmitCustomerAccount Request TestCase" searchProperties="true" timeout="0">
+  <con:settings id="34c12695-c8ee-4a67-ae01-0f0ce2af71a0">
     <con:setting id="451fbbc2-49f9-4b9f-bdd9-e11a0d96f007fileName">PPIServiceFacadeSoap12-SubmitCustomerAccount-SubmitCustomerAccount-Request-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="0aed337a-e2cb-4597-b8d7-4dbb329f4012" name="SubmitCustomerAccount SubmitCustomerAccount Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccount SubmitCustomerAccount Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="2fb540bf-15e1-466e-9c32-a4c5a60d801a">

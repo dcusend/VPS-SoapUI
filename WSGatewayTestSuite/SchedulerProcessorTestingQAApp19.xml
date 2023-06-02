@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="5b46db77-5d80-4817-9098-90cfea53fecf" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="SchedulerProcessorTestingQAApp19" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="5b46db77-5d80-4817-9098-90cfea53fecf" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="SchedulerProcessorTestingQAApp19" searchProperties="true" timeout="0">
+  <con:settings id="22eb598d-b5a0-40ce-a058-b0d77839faa0">
     <con:setting id="5b46db77-5d80-4817-9098-90cfea53fecffileName">SchedulerProcessorTestingQAApp19</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="request" id="925a93bd-851f-4a31-a36f-1e11697b87cc" name="SubmitPPIPaymentQA19">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPaymentQA19" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -149,7 +149,7 @@
   </con:testStep>
   <con:testStep type="request" id="d20c060f-87c6-4096-a173-e642880c3f7b" name="SubmitWalletInformationQA19">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitWalletInformation</con:operation>
       <con:request name="SubmitWalletInformationQA19" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8069539d-f842-40ba-aa58-e15e3455ca98" defaultOutgoingWss="" defaultIncomingWss="">
@@ -248,7 +248,7 @@
   </con:testStep>
   <con:testStep type="request" id="2ef407fb-aa47-4986-be74-d13aaa3928c7" name="GetWalletInformation-QA19">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetWalletInformation</con:operation>
       <con:request name="GetWalletInformation-QA19" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="24ea61a1-41f8-41f5-af4c-8894b2dd46fc" defaultOutgoingWss="" defaultIncomingWss="">
@@ -311,7 +311,7 @@
   </con:testStep>
   <con:testStep type="request" id="0ff4455f-edb1-4d68-8975-3eadfe403e69" name="CreateInstallmentPLan-QA19">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>CreateInstallmentPlan</con:operation>
       <con:request name="CreateInstallmentPLan-QA19" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="089c70b8-d718-4f1f-917f-1ca48681d113">
@@ -438,7 +438,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="8eb672b1-26c3-4df1-8c0c-3bbb17dc5f8a" name="SubmitPPIRecurringPaymentQA19">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIRecurringPayment</con:operation>
       <con:request name="SubmitPPIRecurringPaymentQA19" id="3d4d807b-424c-415f-8b9a-8cca28a3fe48" defaultOutgoingWss="" defaultIncomingWss="">

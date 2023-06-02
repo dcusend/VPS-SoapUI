@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="b984c69e-f2e1-402a-beca-dea3bb7fbce7" isOneWay="false" action="https://www.velocitypayment.com/ws/GetVelocityFee" name="GetVelocityFee" bindingOperationName="GetVelocityFee" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:operation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="b984c69e-f2e1-402a-beca-dea3bb7fbce7" isOneWay="false" action="https://www.velocitypayment.com/ws/GetVelocityFee" name="GetVelocityFee" bindingOperationName="GetVelocityFee" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+  <con:settings id="735e4a6c-287a-44d2-90f6-3753223f78d0">
     <con:setting id="b984c69e-f2e1-402a-beca-dea3bb7fbce7fileName">GetVelocityFee</con:setting>
   </con:settings>
   <con:call id="3109e5d5-15ee-456d-b23c-c3759520f870" name="GetVelocityFee Request">

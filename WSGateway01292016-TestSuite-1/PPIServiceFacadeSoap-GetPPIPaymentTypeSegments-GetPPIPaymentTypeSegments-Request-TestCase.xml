@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="88b52b85-f49b-4a67-8bd8-2d5453746f2c" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap-GetPPIPaymentTypeSegments-GetPPIPaymentTypeSegments Request TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="88b52b85-f49b-4a67-8bd8-2d5453746f2c" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap-GetPPIPaymentTypeSegments-GetPPIPaymentTypeSegments Request TestCase" searchProperties="true" timeout="0">
+  <con:settings id="d19de890-c0e8-4e86-af2c-785d90e75d4e">
     <con:setting id="88b52b85-f49b-4a67-8bd8-2d5453746f2cfileName">PPIServiceFacadeSoap-GetPPIPaymentTypeSegments-GetPPIPaymentTypeSegments-Request-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="42a17d6d-97fa-487a-8df0-357f9736e293" name="GetPPIPaymentTypeSegments GetPPIPaymentTypeSegments Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentTypeSegments</con:operation>
       <con:request name="GetPPIPaymentTypeSegments GetPPIPaymentTypeSegments Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="265745c8-2f31-4e59-ba9a-063d7dec96fc">

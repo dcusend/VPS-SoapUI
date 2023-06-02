@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:interface xsi:type="con:WsdlInterface" id="23ce6d07-9808-4cc0-8d7a-efb75aa6cc77" wsaVersion="NONE" name="VLinkPaymentPlanHttpEndpointBinding" type="wsdl" bindingName="{https://www.velocitypayment.com/}VLinkPaymentPlanHttpEndpointBinding" soapVersion="1_1" anonymous="optional" definition="https://qa.velocitypayment.com/vlink/VLinkPaymentPlanHttpEndpoint?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" xsi:type="con:WsdlInterface" id="23ce6d07-9808-4cc0-8d7a-efb75aa6cc77" wsaVersion="NONE" name="VLinkPaymentPlanHttpEndpointBinding" type="wsdl" bindingName="{https://www.velocitypayment.com/}VLinkPaymentPlanHttpEndpointBinding" soapVersion="1_1" anonymous="optional" definition="https://qa.velocitypayment.com/vlink/VLinkPaymentPlanHttpEndpoint?wsdl">
+  <con:settings id="643614c9-1653-4906-821c-d38c73100b08">
     <con:setting id="23ce6d07-9808-4cc0-8d7a-efb75aa6cc77fileName">VLinkPaymentPlanHttpEndpointBinding</con:setting>
   </con:settings>
   <con:definitionCache type="TEXT" rootPart="https://qa.velocitypayment.com/vlink/VLinkPaymentPlanHttpEndpoint?wsdl">

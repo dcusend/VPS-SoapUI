@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="39144a35-8fd5-4f00-b0b3-3f1081703686" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Refund" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="39144a35-8fd5-4f00-b0b3-3f1081703686" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Refund" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="">
+  <con:settings id="63036a90-0576-4855-aa06-7333c3e71828">
     <con:setting id="39144a35-8fd5-4f00-b0b3-3f1081703686fileName">Refund</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="datasource" name="DataSourceFullRefund" id="5f762553-3e83-4ef8-8aa0-699a2aa9693c">
     <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/FullRefund.xlsx</file>
@@ -99,7 +99,7 @@
   </con:testStep>
   <con:testStep type="request" name="SaleTransaction" id="8d5ecf64-d11e-4c31-97b9-0f2a0b3a4f55">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SaleTransaction" id="51226ea3-75ec-4a91-bf60-c514dcab5a07">
@@ -245,7 +245,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" name="RefundTransaction" id="1f79c956-7c5f-4ab9-aa6b-1841600ec0cc">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>RefundPPIPayment</con:operation>
       <con:request name="RefundTransaction" id="0c9e9d82-1db2-4701-9e65-5c3670b1dc64">
@@ -339,7 +339,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="datagen" name="DataGenTodaysDate" id="586b1391-9911-44ab-a6ed-ec965484c3fb">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Script">
         <con:configuration>
           <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:dd.sss'Z'")

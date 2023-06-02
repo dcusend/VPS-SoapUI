@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="5efca52c-ce0c-468d-9342-46d586f2e36e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="CaptureUpgrade" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="5efca52c-ce0c-468d-9342-46d586f2e36e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="CaptureUpgrade" searchProperties="true" timeout="0">
+  <con:settings id="4ab055b3-ea93-4f50-98db-b2565b69a68d">
     <con:setting id="8f24c2e7-ad90-42e1-bf53-6dd81fc5bc33fileName">CaptureUpgrade</con:setting>
     <con:setting id="5efca52c-ce0c-468d-9342-46d586f2e36efileName">CaptureUpgrade</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="request" name="CaptureSaleUpgrade" id="50c3c402-30c1-434e-b4d5-8ba20e0ee7a7">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="CaptureSaleUpgrade" id="e840b148-0ef6-415c-8b9f-a96852191747">
@@ -144,7 +144,7 @@ exists( //ns1:SubmitPPIPaymentResponse/ns1:SubmitPPIPaymentResult/ns0:ApprovalCo
   </con:testStep>
   <con:testStep type="datagen" name="DataGenCaptureTodayDate" id="3e862a39-b21e-4b10-a70f-fc6defceb3ca">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Script">
         <con:configuration>
           <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:dd.sss'Z'")
@@ -158,7 +158,7 @@ return sdf.format(new Date())</script>
   </con:testStep>
   <con:testStep type="request" name="CaptureUpgrade" id="099f0f67-fbb0-45af-a4ea-6bea2e7b011a">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>CapturePayment</con:operation>
       <con:request name="CaptureUpgrade" id="316cd92f-9e47-4f83-9479-f377c70cdb59">
@@ -167,19 +167,19 @@ return sdf.format(new Date())</script>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:CapturePayment>\r
-         <ws:token>\r
-            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">user2325</ppi:UserName>\r
-            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">pwd2325</ppi:Password>\r
-            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">vfgdfg456yydfg</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">2325</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <ws:paymentId>${CaptureSaleUpgrade#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:PaymentID[1]}</ws:paymentId>\r
-      </ws:CapturePayment>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:CapturePayment>
+         <ws:token>
+            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">user2325</ppi:UserName>
+            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">pwd2325</ppi:Password>
+            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">vfgdfg456yydfg</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">2325</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:paymentId>${CaptureSaleUpgrade#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:PaymentID[1]}</ws:paymentId>
+      </ws:CapturePayment>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="5f09da1d-3881-4b5a-950e-2439bef20dcb"/>
         <con:credentials>

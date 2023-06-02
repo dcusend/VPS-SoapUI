@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="46f9c9d4-3c7f-4579-8e40-9630a994da48" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="SubmitPPIPaymentUsingWallet TestCase" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="46f9c9d4-3c7f-4579-8e40-9630a994da48" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="SubmitPPIPaymentUsingWallet TestCase" searchProperties="true" maxResults="0">
+  <con:settings id="88b90b65-ff07-4b64-ab6c-ee814b7e373c">
     <con:setting id="46f9c9d4-3c7f-4579-8e40-9630a994da48fileName">SubmitPPIPaymentUsingWallet-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="45057e95-2b3e-4056-8f66-7577edbbdde5" name="SubmitPPIPaymentUsingWallet">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
       <con:request name="SubmitPPIPaymentUsingWallet" id="e09c6a0a-7921-4026-a12a-929bf9b25d38" defaultOutgoingWss="" defaultIncomingWss="">

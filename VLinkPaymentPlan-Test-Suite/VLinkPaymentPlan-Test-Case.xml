@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="2dfbcd23-802a-4f91-ba67-3d5c732662a7" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="VLinkPaymentPlan Test Case" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="2dfbcd23-802a-4f91-ba67-3d5c732662a7" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="VLinkPaymentPlan Test Case" searchProperties="true" timeout="0">
+  <con:settings id="e0d92e53-371f-4e69-a868-0227b1ad0db9">
     <con:setting id="2dfbcd23-802a-4f91-ba67-3d5c732662a7fileName">VLinkPaymentPlan-Test-Case</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="request" id="74580796-40e9-4db1-948f-9971e962d908" name="cancelPaymentPlan-QA">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>VLinkPaymentPlanHttpEndpointBinding</con:interface>
       <con:operation>cancelPaymentPlan</con:operation>
       <con:request name="cancelPaymentPlan-QA" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="afa2f2b7-8609-4a52-a88a-cf3564eef81c">
@@ -73,7 +73,7 @@
   </con:testStep>
   <con:testStep type="request" id="e84eea8d-225e-4115-ad4a-7565db4cf1f5" name="processTransaction">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>VLinkPaymentPlanHttpEndpointBinding</con:interface>
       <con:operation>processTransaction</con:operation>
       <con:request name="processTransaction" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="c6b1fe65-cb26-459e-88a7-b0ec501968c5">
@@ -277,7 +277,7 @@
   </con:testStep>
   <con:testStep type="request" id="82b00e90-574d-49f5-a91d-0e98d551b978" name="retrievePaymentPlan">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>VLinkPaymentPlanHttpEndpointBinding</con:interface>
       <con:operation>retrievePaymentPlan</con:operation>
       <con:request name="retrievePaymentPlan" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="e6b09516-5e95-4abf-a1b2-4f2a3b0155bf">
@@ -347,7 +347,7 @@
   </con:testStep>
   <con:testStep type="request" id="41c1e029-2a3f-47df-a5e3-0a71ff86a065" name="cancelPaymentPlan-WWW">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>VLinkPaymentPlanHttpEndpointBinding</con:interface>
       <con:operation>cancelPaymentPlan</con:operation>
       <con:request name="cancelPaymentPlan-WWW" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="afa2f2b7-8609-4a52-a88a-cf3564eef81c">

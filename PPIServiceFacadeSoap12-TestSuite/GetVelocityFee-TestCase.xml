@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="4249e354-8fdf-4814-bb95-ac809da86089" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetVelocityFee TestCase" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="4249e354-8fdf-4814-bb95-ac809da86089" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetVelocityFee TestCase" searchProperties="true" maxResults="0">
+  <con:settings id="b2bb0f1b-a581-4d47-9a06-82e4acb4fe0e">
     <con:setting id="4249e354-8fdf-4814-bb95-ac809da86089fileName">GetVelocityFee-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="b7e87f4d-0502-4007-aed4-cc274e4b8fdf" name="GetVelocityFee">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>GetVelocityFee</con:operation>
       <con:request name="GetVelocityFee" id="4b34c50c-6b48-4dc0-8a6a-bdcbee0e9bdc" defaultOutgoingWss="" defaultIncomingWss="">

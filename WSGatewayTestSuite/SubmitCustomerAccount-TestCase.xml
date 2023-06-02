@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="ba7e0dbc-2609-40b5-8fff-4ec6095b7fc7" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="SubmitCustomerAccount TestCase" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="ba7e0dbc-2609-40b5-8fff-4ec6095b7fc7" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="SubmitCustomerAccount TestCase" searchProperties="true" maxResults="0">
+  <con:settings id="e1aff2b3-3203-487f-8467-549933b13916">
     <con:setting id="ba7e0dbc-2609-40b5-8fff-4ec6095b7fc7fileName">SubmitCustomerAccount-TestCase</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="request" id="45234fef-33bf-4de9-8cef-aa7e709fb72d" name="SubmitCustomerAccount">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccount" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
@@ -75,7 +75,7 @@
   </con:testStep>
   <con:testStep type="request" id="bef42a6f-cf6c-4d84-bfe9-5d2926d62534" name="SubmitCustomerAccountWWW">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccountWWW" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
@@ -171,7 +171,7 @@
   </con:testStep>
   <con:testStep type="request" id="ab44764b-4f96-48d1-997a-36d7ae2377f6" name="SubmitCustomerAccountQA">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccountQA" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
@@ -269,7 +269,7 @@
   </con:testStep>
   <con:testStep type="request" id="47cf14bd-4b4e-46aa-acc5-0aa76cccdae1" name="SubmitCustomerAccountDemo">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccountDemo" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
@@ -338,7 +338,7 @@
   </con:testStep>
   <con:testStep type="request" id="2617ca15-4ff2-4165-bcc4-98b4ae21f160" name="SubmitCustomerAccountQA590">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccountQA590" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
@@ -434,7 +434,7 @@
   </con:testStep>
   <con:testStep type="request" id="7d2fac2c-4305-4566-a39d-ef486cf30b52" name="SubmitCustomerAccountQA589">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccountQA589" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
@@ -530,7 +530,7 @@
   </con:testStep>
   <con:testStep type="request" id="08cd79fa-e267-4195-8d09-672d9c585eea" name="SubmitCustomerAccountQA459">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccountQA459" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
@@ -627,7 +627,7 @@
   </con:testStep>
   <con:testStep type="request" id="db50878f-c7a4-4901-b9b2-70a8356c1c54" name="SubmitCustomerAccountQA524">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccountQA524" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
@@ -710,7 +710,7 @@
   </con:testStep>
   <con:testStep type="request" id="4b3772c1-80e6-4194-820f-171d5830798b" name="SubmitCustomerAccountDemo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccountDemo1286" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
@@ -781,7 +781,7 @@
   </con:testStep>
   <con:testStep type="request" id="99848b33-e542-4977-be7d-ebf5fdc51b31" name="SubmitCustomerAccountDemo2983">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccountDemo2983" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
@@ -851,7 +851,7 @@
   </con:testStep>
   <con:testStep type="request" id="034e949b-6e29-4814-8abf-03034bda808c" name="SubmitCustomerAccountWWW3217">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccountWWW3217" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
@@ -947,7 +947,7 @@
   </con:testStep>
   <con:testStep type="request" id="13a99249-0176-46d5-afc5-51649b91c256" name="SubmitCustomerAccountDemo1310">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccountDemo1310" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
@@ -1018,7 +1018,7 @@
   </con:testStep>
   <con:testStep type="request" id="9c24f93a-2ba9-499a-9fb9-17c76d437e77" name="SubmitCustomerAccount-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccount-Demo1286" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
@@ -1114,7 +1114,7 @@
   </con:testStep>
   <con:testStep type="request" id="279265e8-c7bf-4e0c-9e6f-bd6940d560ae" name="SubmitCustomerAccount-Demo-3792">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccount-Demo-3792" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
@@ -1179,7 +1179,7 @@
   </con:testStep>
   <con:testStep type="request" id="779599ae-d947-4a62-bd2e-b0c0b24e464f" name="SubmitCustomerAccount-Modify-Demo-3792">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccount-Modify-Demo-3792" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
@@ -1252,7 +1252,7 @@
   </con:testStep>
   <con:testStep type="request" id="75659a68-a184-4bc2-b119-cecc95b2d5bb" name="SubmitCustomerAccount-Unregister-Demo-3792">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccount-Unregister-Demo-3792" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
@@ -1311,7 +1311,7 @@
   </con:testStep>
   <con:testStep type="request" id="7c1bbd66-aaf7-4ea1-85bd-5e0949b7fd50" name="SubmitCustomerAccountWWW4733LIVE">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitCustomerAccount</con:operation>
       <con:request name="SubmitCustomerAccountWWW4733LIVE" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">

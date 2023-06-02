@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="05ce1f49-1991-414a-b68f-3ee021e6761b" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap12-RefundPPIPayment-RefundPPIPayment Request TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="05ce1f49-1991-414a-b68f-3ee021e6761b" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap12-RefundPPIPayment-RefundPPIPayment Request TestCase" searchProperties="true" timeout="0">
+  <con:settings id="2ddc4f13-bac1-4897-9714-19c67aad414e">
     <con:setting id="05ce1f49-1991-414a-b68f-3ee021e6761bfileName">PPIServiceFacadeSoap12-RefundPPIPayment-RefundPPIPayment-Request-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="e9731dc2-9285-4ea2-8f2f-1e7f2edb016f" name="RefundPPIPayment RefundPPIPayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>RefundPPIPayment</con:operation>
       <con:request name="RefundPPIPayment RefundPPIPayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="ddd03d04-e33e-4c1d-a2c7-7f035155d10f">

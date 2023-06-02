@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="36fac9c9-7050-46b0-981a-6533cf5f23d7" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="ACHabusePolicy-SubmitPayment" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="36fac9c9-7050-46b0-981a-6533cf5f23d7" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="ACHabusePolicy-SubmitPayment" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="">
+  <con:settings id="6a91fb5b-0c35-4996-b68d-510738239998">
     <con:setting id="36fac9c9-7050-46b0-981a-6533cf5f23d7fileName">ACHabusePolicy-SubmitPayment</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="datasource" name="DataSourceACHAbuse" id="77bd003a-f80e-4f36-b84c-341df11fd965">
     <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/ACHabusePolicy.xlsx</file>
@@ -31,7 +31,7 @@
   </con:testStep>
   <con:testStep type="datagen" name="DataGenDateTest" id="e6c68352-a183-43ab-8598-3372dee7ce58">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Script">
         <con:configuration>
           <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd")
@@ -45,7 +45,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="request" id="b2a13fe3-9885-45e7-af03-a64c09cb7e89" name="SubmitPPIPayment-QA562">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment-QA562" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">

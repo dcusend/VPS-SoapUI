@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="a0029dba-2dbc-4aaa-869a-9b12631618a9" isOneWay="false" action="https://www.velocitypayment.com/ws/SubmitPPIRecurringPayment" name="SubmitPPIRecurringPayment" bindingOperationName="SubmitPPIRecurringPayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:operation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="a0029dba-2dbc-4aaa-869a-9b12631618a9" isOneWay="false" action="https://www.velocitypayment.com/ws/SubmitPPIRecurringPayment" name="SubmitPPIRecurringPayment" bindingOperationName="SubmitPPIRecurringPayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+  <con:settings id="172118f9-f37a-4a21-9855-582b7dc3ee9c">
     <con:setting id="a0029dba-2dbc-4aaa-869a-9b12631618a9fileName">SubmitPPIRecurringPayment</con:setting>
   </con:settings>
   <con:call id="f8acf3ad-b19b-41cd-b918-7eeecf946887" name="SubmitPPIRecurringPayment Request">

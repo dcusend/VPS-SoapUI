@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="52b99403-5a86-487c-877e-883470de0e6f" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetVelocityFeeNegativeAdvanced TestCase" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="52b99403-5a86-487c-877e-883470de0e6f" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetVelocityFeeNegativeAdvanced TestCase" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+  <con:settings id="d1ced268-c2a3-4357-bfc9-f0bcd4f3f15b">
     <con:setting id="52b99403-5a86-487c-877e-883470de0e6ffileName">GetVelocityFeeNegativeAdvanced-TestCase</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="datasource" name="DataSourceFeeNegativeAdvanced" id="5f642740-558f-4c80-bd66-af10b0ef45bf">
     <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/FeeDataAdvanced.xlsx</file>
@@ -38,7 +38,7 @@
   </con:testStep>
   <con:testStep type="request" id="d416d13c-7d07-444e-b3e8-da9c17f27cd1" name="GetVelocityFeeSingle">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetVelocityFee</con:operation>
       <con:request name="GetVelocityFeeSingle" id="dc439367-9684-4945-9116-809c6b2327c8" defaultOutgoingWss="" defaultIncomingWss="" outgoingWss="" incomingWss="">

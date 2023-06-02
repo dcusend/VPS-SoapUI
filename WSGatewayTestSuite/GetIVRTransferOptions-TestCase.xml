@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="b94dae10-4e33-40ad-a6dc-4aae5c941891" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetIVRTransferOptions TestCase" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="b94dae10-4e33-40ad-a6dc-4aae5c941891" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetIVRTransferOptions TestCase" searchProperties="true" maxResults="0">
+  <con:settings id="e11085d9-f8fe-420a-a5ba-7805977462df">
     <con:setting id="b94dae10-4e33-40ad-a6dc-4aae5c941891fileName">GetIVRTransferOptions-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="60d80db6-21ce-45ea-9d34-5f9c217ae020" name="GetIVRTransferOptions">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetIVRTransferOptions</con:operation>
       <con:request name="GetIVRTransferOptions" id="422fe9e7-b6ff-4d78-8cbd-657b51fcd85a" defaultOutgoingWss="" defaultIncomingWss="">

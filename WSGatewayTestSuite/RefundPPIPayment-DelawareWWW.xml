@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="41e24fcd-7b9c-4289-91af-5b8b2a0d21e5" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="RefundPPIPayment-DelawareWWW" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="41e24fcd-7b9c-4289-91af-5b8b2a0d21e5" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="RefundPPIPayment-DelawareWWW" searchProperties="true" timeout="0">
+  <con:settings id="03929fbc-c01f-4220-9871-cf670f69d423">
     <con:setting id="41e24fcd-7b9c-4289-91af-5b8b2a0d21e5fileName">RefundPPIPayment-DelawareWWW</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="request" id="d44017c8-0bce-4574-93f5-db6e82b48926" name="RefundPPIPayment-DelawareWWW">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>RefundPPIPayment</con:operation>
       <con:request name="RefundPPIPayment-DelawareWWW" id="8b40194f-c509-4dec-8ea0-ba5bc3afbad0" defaultOutgoingWss="" defaultIncomingWss="">

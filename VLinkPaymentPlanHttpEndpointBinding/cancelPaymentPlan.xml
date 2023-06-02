@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="f4b8b7e9-b95b-402c-ba1b-f17880280226" isOneWay="false" action="urn:cancelPaymentPlan" name="cancelPaymentPlan" bindingOperationName="cancelPaymentPlan" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:operation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="f4b8b7e9-b95b-402c-ba1b-f17880280226" isOneWay="false" action="urn:cancelPaymentPlan" name="cancelPaymentPlan" bindingOperationName="cancelPaymentPlan" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+  <con:settings id="9848270d-c173-4412-af1d-db99541f8424">
     <con:setting id="f4b8b7e9-b95b-402c-ba1b-f17880280226fileName">cancelPaymentPlan</con:setting>
   </con:settings>
   <con:call id="c1046006-b9f8-429c-a2b6-08d23dc54952" name="cancelPaymentPlan Request">

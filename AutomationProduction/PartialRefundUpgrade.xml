@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="1eb8be6e-0478-4d77-b14b-004e50c3b6ae" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="PartialRefundUpgrade" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="1eb8be6e-0478-4d77-b14b-004e50c3b6ae" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="PartialRefundUpgrade" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+  <con:settings id="ca4a3e7b-c7a0-4e20-9d86-e03567f5c3e2">
     <con:setting id="0dc83380-4de1-4525-9826-f5adc9c11d16fileName">PartialRefundUpgrade</con:setting>
     <con:setting id="1eb8be6e-0478-4d77-b14b-004e50c3b6aefileName">PartialRefundUpgrade</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="datasource" name="DataSourcePartialRefundUpgrade" id="49aa670f-b3a7-4852-a2fb-280151e5be19">
     <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/PartialRefundDataUpgrade.xlsx</file>
@@ -100,7 +100,7 @@
   </con:testStep>
   <con:testStep type="request" name="PartialRefundSaleUpgrade" id="44c6afa5-148b-4b6d-a96a-f287d554d11b">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="PartialRefundSaleUpgrade" id="a88ab22b-980a-4744-b6cc-9ef6b5a0eaa5">
@@ -246,7 +246,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" name="PartialRefundUpgrade" id="021da34e-6d2a-4fd3-9f44-e44001e297d6">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>RefundPPIPayment</con:operation>
       <con:request name="PartialRefundUpgrade" id="6b72a4b3-3f85-4888-bad5-5c3433cbcc3a">
@@ -365,7 +365,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="datagen" name="DataGenPartialRefundTodayDate" id="9f7f8f89-6d86-4e32-9995-b3d4724c5668">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Script">
         <con:configuration>
           <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:dd.sss'Z'")

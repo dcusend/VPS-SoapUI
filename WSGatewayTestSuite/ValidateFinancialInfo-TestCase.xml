@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="45f6c0ae-a026-434d-83e3-60fd91952003" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ValidateFinancialInfo TestCase" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="45f6c0ae-a026-434d-83e3-60fd91952003" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ValidateFinancialInfo TestCase" searchProperties="true" maxResults="0">
+  <con:settings id="a36cdecc-be7f-4d02-9aa9-29cddc5c5ce3">
     <con:setting id="45f6c0ae-a026-434d-83e3-60fd91952003fileName">ValidateFinancialInfo-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="66b9c59c-e2b8-4003-b55a-476fce1c8a19" name="ValidateFinancialInfo">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>ValidateFinancialInfo</con:operation>
       <con:request name="ValidateFinancialInfo" id="f96f7545-806a-4597-9d33-d8c3062ee2bf" defaultOutgoingWss="" defaultIncomingWss="">

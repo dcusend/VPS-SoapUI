@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="a98034a4-2891-4d3c-a276-696ea2851010" isOneWay="false" action="https://www.velocitypayment.com/ws/CapturePayment" name="CapturePayment" bindingOperationName="CapturePayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:operation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="a98034a4-2891-4d3c-a276-696ea2851010" isOneWay="false" action="https://www.velocitypayment.com/ws/CapturePayment" name="CapturePayment" bindingOperationName="CapturePayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+  <con:settings id="4a065489-f941-472e-8147-eb0ef305eeb0">
     <con:setting id="a98034a4-2891-4d3c-a276-696ea2851010fileName">CapturePayment</con:setting>
   </con:settings>
   <con:call id="489a9faf-1cf1-4a53-a573-7a4cd803518b" defaultOutgoingWss="" defaultIncomingWss="" name="Request 1">

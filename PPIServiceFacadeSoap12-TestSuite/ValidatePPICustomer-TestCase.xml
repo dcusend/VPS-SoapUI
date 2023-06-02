@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="7458ba4e-69bf-494b-a961-2584523fc2c6" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ValidatePPICustomer TestCase" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="7458ba4e-69bf-494b-a961-2584523fc2c6" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ValidatePPICustomer TestCase" searchProperties="true" maxResults="0">
+  <con:settings id="81247e69-d3c4-4d54-a58e-221443029eb0">
     <con:setting id="7458ba4e-69bf-494b-a961-2584523fc2c6fileName">ValidatePPICustomer-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="478e852e-9704-4c3a-81a5-848f7ce13920" name="ValidatePPICustomer">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>ValidatePPICustomer</con:operation>
       <con:request name="ValidatePPICustomer" id="eb240485-508a-4096-a0fc-240d72fe45b3" defaultOutgoingWss="" defaultIncomingWss="">

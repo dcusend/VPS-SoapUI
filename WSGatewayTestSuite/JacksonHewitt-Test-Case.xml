@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="ea6013b1-5bb3-483f-9d8e-c0827f3ac4e6" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="JacksonHewitt Test Case" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="ea6013b1-5bb3-483f-9d8e-c0827f3ac4e6" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="JacksonHewitt Test Case" searchProperties="true" timeout="0">
+  <con:settings id="e210ddb6-1cc0-4f6d-a974-7b61f83de9bb">
     <con:setting id="ea6013b1-5bb3-483f-9d8e-c0827f3ac4e6fileName">JacksonHewitt-Test-Case</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="request" id="39047de8-bf9e-4fb2-9e0f-36bc86cc9d09" name="SubmitWalletInformationDemo">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitWalletInformation</con:operation>
       <con:request name="SubmitWalletInformationDemo" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8069539d-f842-40ba-aa58-e15e3455ca98" defaultOutgoingWss="" defaultIncomingWss="">
@@ -96,7 +96,7 @@
   </con:testStep>
   <con:testStep type="request" id="99f1f2dc-07e1-4cdf-96af-68169998fc11" name="GetWalletInformationDemo">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetWalletInformation</con:operation>
       <con:request name="GetWalletInformationDemo" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="24ea61a1-41f8-41f5-af4c-8894b2dd46fc" defaultOutgoingWss="" defaultIncomingWss="">
@@ -159,7 +159,7 @@
   </con:testStep>
   <con:testStep type="request" id="6c6d2197-8fda-4847-b5a8-8c617b556067" name="SubmitPPIPaymentUsingWalletDemo">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
       <con:request name="SubmitPPIPaymentUsingWalletDemo" id="5ea1ab63-dae7-443b-a34f-b570404595cb" defaultOutgoingWss="" defaultIncomingWss="">
@@ -233,7 +233,7 @@
   </con:testStep>
   <con:testStep type="request" id="fed2823b-dbd4-4bc2-b011-14f828ce2e17" name="GetPPIPaymentFee">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
       <con:request name="GetPPIPaymentFee" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
@@ -296,7 +296,7 @@
   </con:testStep>
   <con:testStep type="request" id="959d9ceb-3d57-4db5-b7fe-3928cb81691f" name="GetVelocityFee">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetVelocityFee</con:operation>
       <con:request name="GetVelocityFee" id="923111e8-1464-4321-aac7-077a86a8b4f8" defaultOutgoingWss="" defaultIncomingWss="">
@@ -360,7 +360,7 @@
   </con:testStep>
   <con:testStep type="request" id="e70e54b7-e8ac-4847-a9e2-6847c867c40f" name="VoidPPIPayment">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>VoidPPIPayment</con:operation>
       <con:request name="VoidPPIPayment" id="ecc66677-0a5d-4b44-8c27-938c752eb3bd" defaultOutgoingWss="" defaultIncomingWss="">
@@ -424,7 +424,7 @@
   </con:testStep>
   <con:testStep type="request" id="1c00ebb3-e579-4389-8d0e-8bd87cf47ded" name="GetReasonCodes">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetReasonCodes</con:operation>
       <con:request name="GetReasonCodes" id="2ea6a20d-f531-4685-81e9-b4fdb42e37a7" defaultOutgoingWss="" defaultIncomingWss="">
@@ -484,7 +484,7 @@
   </con:testStep>
   <con:testStep type="request" id="dae5ff5e-d052-4fff-91a7-980cee4a37f8" name="CapturePayment-Demo">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>CapturePayment</con:operation>
       <con:request name="CapturePayment-Demo" id="8b925bfb-5bb2-4184-beac-053d99cd7a60" defaultOutgoingWss="" defaultIncomingWss="">
@@ -546,7 +546,7 @@
   </con:testStep>
   <con:testStep type="request" id="d3a52657-9dea-41d0-8682-eb4e2049f52c" name="RefundPPIPayment-Demo">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>RefundPPIPayment</con:operation>
       <con:request name="RefundPPIPayment-Demo" id="8b40194f-c509-4dec-8ea0-ba5bc3afbad0" defaultOutgoingWss="" defaultIncomingWss="">
@@ -615,7 +615,7 @@
   </con:testStep>
   <con:testStep type="request" id="d5fb3670-479c-4ceb-a3e1-4540e094ce77" name="SubmitPPIPayment">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">

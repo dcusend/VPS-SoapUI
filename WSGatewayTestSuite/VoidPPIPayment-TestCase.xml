@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="ea97ea24-b756-4b19-b686-ea7befedb4b1" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="VoidPPIPayment TestCase" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="ea97ea24-b756-4b19-b686-ea7befedb4b1" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="VoidPPIPayment TestCase" searchProperties="true" maxResults="0">
+  <con:settings id="08bad8e4-8597-4452-b028-ffacdc91f856">
     <con:setting id="ea97ea24-b756-4b19-b686-ea7befedb4b1fileName">VoidPPIPayment-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="63b28553-c4cf-4eaa-9f38-ae3c51914b21" name="VoidPPIPayment">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>VoidPPIPayment</con:operation>
       <con:request name="VoidPPIPayment" id="ecc66677-0a5d-4b44-8c27-938c752eb3bd" defaultOutgoingWss="" defaultIncomingWss="">
@@ -70,7 +70,7 @@
   </con:testStep>
   <con:testStep type="request" id="3aa63e80-57cb-4cba-a000-fe9ee8aabde8" name="Copy of VoidPPIPaymentDemo3131">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>VoidPPIPayment</con:operation>
       <con:request name="Copy of VoidPPIPaymentDemo3131" id="ecc66677-0a5d-4b44-8c27-938c752eb3bd" defaultOutgoingWss="" defaultIncomingWss="">
@@ -134,7 +134,7 @@
   </con:testStep>
   <con:testStep type="request" id="d1901326-976c-4b5d-80c7-a0ec2237510f" name="Copy of VoidPPIPaymentWWW2325">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>VoidPPIPayment</con:operation>
       <con:request name="Copy of VoidPPIPaymentWWW2325" id="ecc66677-0a5d-4b44-8c27-938c752eb3bd" defaultOutgoingWss="" defaultIncomingWss="">
@@ -199,7 +199,7 @@
   </con:testStep>
   <con:testStep type="request" id="948768db-9183-4143-961f-71943806c224" name="VoidPPIPayment180">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>VoidPPIPayment</con:operation>
       <con:request name="VoidPPIPayment180" id="ecc66677-0a5d-4b44-8c27-938c752eb3bd" defaultOutgoingWss="" defaultIncomingWss="">
@@ -263,7 +263,7 @@
   </con:testStep>
   <con:testStep type="request" id="0b704509-ab70-4658-8ff2-544cb4e6a23c" name="VoidPPIPayment613">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>VoidPPIPayment</con:operation>
       <con:request name="VoidPPIPayment613" id="ecc66677-0a5d-4b44-8c27-938c752eb3bd" defaultOutgoingWss="" defaultIncomingWss="">
@@ -327,7 +327,7 @@
   </con:testStep>
   <con:testStep type="request" id="a5142aaa-e1ac-487d-81df-003e412ed6c5" name="VoidPPIPayment-Demo3582">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>VoidPPIPayment</con:operation>
       <con:request name="VoidPPIPayment-Demo3582" id="ecc66677-0a5d-4b44-8c27-938c752eb3bd" defaultOutgoingWss="" defaultIncomingWss="">
@@ -393,7 +393,7 @@
   </con:testStep>
   <con:testStep type="request" id="aaefbf6b-7f6a-409e-82fa-340833c9e1f2" name="VoidPPIPayment-Demo1286">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>VoidPPIPayment</con:operation>
       <con:request name="VoidPPIPayment-Demo1286" id="ecc66677-0a5d-4b44-8c27-938c752eb3bd" defaultOutgoingWss="" defaultIncomingWss="">
@@ -459,7 +459,7 @@
   </con:testStep>
   <con:testStep type="request" id="ff2d3c18-590b-44f8-9571-f355eb9ba08e" name="VoidPPIPayment-QA-FDMS-665-StrCre">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>VoidPPIPayment</con:operation>
       <con:request name="VoidPPIPayment-QA-FDMS-665-StrCre" id="ecc66677-0a5d-4b44-8c27-938c752eb3bd" defaultOutgoingWss="" defaultIncomingWss="">

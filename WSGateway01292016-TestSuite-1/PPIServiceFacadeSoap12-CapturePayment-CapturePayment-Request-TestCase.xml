@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="e220b0e9-99ec-426e-9f00-8b0ec347189d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap12-CapturePayment-CapturePayment Request TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="e220b0e9-99ec-426e-9f00-8b0ec347189d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap12-CapturePayment-CapturePayment Request TestCase" searchProperties="true" timeout="0">
+  <con:settings id="34ba6885-173b-476d-8c5a-2f3708a68af3">
     <con:setting id="e220b0e9-99ec-426e-9f00-8b0ec347189dfileName">PPIServiceFacadeSoap12-CapturePayment-CapturePayment-Request-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="9fa1a785-d0ea-4075-955f-eaa2f9c63e88" name="CapturePayment CapturePayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>CapturePayment</con:operation>
       <con:request name="CapturePayment CapturePayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="fb519708-b0da-49d3-90c8-19b2a71a041a">

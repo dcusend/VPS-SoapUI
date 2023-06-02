@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="588e0c16-199a-4e42-9f7a-3fd07742a5bd" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="SubmitWalletUpgrade" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="588e0c16-199a-4e42-9f7a-3fd07742a5bd" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="SubmitWalletUpgrade" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+  <con:settings id="2936b453-329c-4cee-a31f-5dca6940afae">
     <con:setting id="588e0c16-199a-4e42-9f7a-3fd07742a5bdfileName">SubmitWalletUpgrade</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="datasource" name="DataSourceAddWalletUpgrade" id="99fa27fe-9bd7-4766-b8b0-6aa31d957d27">
     <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/WalletDataUpgrade.xlsx</file>
@@ -62,7 +62,7 @@
   </con:testStep>
   <con:testStep type="request" name="SubmitWalletUpgrade" id="0ef65f5d-f7fa-46e1-a21d-304db2924641">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitWalletInformation</con:operation>
       <con:request name="SubmitWalletUpgrade" id="0d388465-0c9b-41bc-afb9-8c39341e0ef4">
@@ -71,51 +71,51 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:SubmitWalletInformation>\r
-         <ws:token>\r
-            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceAddWalletUpgrade#Username}</ppi:UserName>\r
-            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceAddWalletUpgrade#Password}</ppi:Password>\r
-            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceAddWalletUpgrade#RequestID}</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceAddWalletUpgrade#BEIDToken}</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <ws:walletRequest>\r
-            <ppi:Action xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceAddWalletUpgrade#Action}</ppi:Action>\r
-            <ppi:NickName xmlns:ppi="http://www.ePayments.com/PPI"/>\r
-            <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${DataGenWalletIDUpgrade#WalletIDGenerator}</ppi:WalletID>\r
-            <ppi:Vehicle xmlns:ppi="http://www.ePayments.com/PPI">\r
-               <ppip:AbaNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#ABANumber}</ppip:AbaNumber>\r
-               <ppip:AccountType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#ACType}</ppip:AccountType>\r
-               <ppip:CheckNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#CheckNum}</ppip:CheckNumber>\r
-               <ppip:CheckType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#CheckType}</ppip:CheckType>\r
-               <ppip:CheckNumberPosition xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#CheckNumberPosition}</ppip:CheckNumberPosition>\r
-               <ppip:CVV2Code xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#CVV}</ppip:CVV2Code>\r
-               <ppip:ExpirationDate xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#ExpDate}</ppip:ExpirationDate>\r
-               <ppip:PaymentVehicleNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#VehicleNumber}</ppip:PaymentVehicleNumber>\r
-               <ppip:PaymentMethodCategory xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#PMCategory}</ppip:PaymentMethodCategory>\r
-               <ppip:EnforcePinDebitValidation xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#EnforcePIN}</ppip:EnforcePinDebitValidation>\r
-            </ppi:Vehicle>\r
-            <ppi:Payor xmlns:ppi="http://www.ePayments.com/PPI">\r
-               <ppi:AccountName>${DataSourceAddWalletUpgrade#ACName}</ppi:AccountName>\r
-               <ppi:AddressLine1>${DataSourceAddWalletUpgrade#AL1}</ppi:AddressLine1>\r
-               <ppi:AddressLine2>${DataSourceAddWalletUpgrade#AL2}</ppi:AddressLine2>\r
-               <ppi:Country>${DataSourceAddWalletUpgrade#Country}</ppi:Country>\r
-               <ppi:PhoneNumber>${DataSourceAddWalletUpgrade#Phone}</ppi:PhoneNumber>\r
-               <ppi:FirstName>${DataSourceAddWalletUpgrade#FirstName}</ppi:FirstName>\r
-               <ppi:LastName>${DataSourceAddWalletUpgrade#LastName}</ppi:LastName>\r
-               <ppi:MiddleInitial>${DataSourceAddWalletUpgrade#MI}</ppi:MiddleInitial>\r
-               <ppi:EmailAddress>${DataSourceAddWalletUpgrade#Email}</ppi:EmailAddress>\r
-               <ppi:ZipCode>${DataSourceAddWalletUpgrade#ZIP}</ppi:ZipCode>\r
-               <ppi:BusinessName>${DataSourceAddWalletUpgrade#BusineName}</ppi:BusinessName>\r
-               <ppi:IsBusinessName>${DataSourceAddWalletUpgrade#IsBusName}</ppi:IsBusinessName>\r
-            </ppi:Payor>\r
-            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceAddWalletUpgrade#PayACToken}</ppi:PaymentAccountToken>\r
-            <ppi:ClientReferenceNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceAddWalletUpgrade#ClientRefNum}</ppi:ClientReferenceNumber>\r
-         </ws:walletRequest>\r
-      </ws:SubmitWalletInformation>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitWalletInformation>
+         <ws:token>
+            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceAddWalletUpgrade#Username}</ppi:UserName>
+            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceAddWalletUpgrade#Password}</ppi:Password>
+            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceAddWalletUpgrade#RequestID}</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceAddWalletUpgrade#BEIDToken}</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:walletRequest>
+            <ppi:Action xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceAddWalletUpgrade#Action}</ppi:Action>
+            <ppi:NickName xmlns:ppi="http://www.ePayments.com/PPI"/>
+            <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${DataGenWalletIDUpgrade#WalletIDGenerator}</ppi:WalletID>
+            <ppi:Vehicle xmlns:ppi="http://www.ePayments.com/PPI">
+               <ppip:AbaNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#ABANumber}</ppip:AbaNumber>
+               <ppip:AccountType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#ACType}</ppip:AccountType>
+               <ppip:CheckNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#CheckNum}</ppip:CheckNumber>
+               <ppip:CheckType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#CheckType}</ppip:CheckType>
+               <ppip:CheckNumberPosition xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#CheckNumberPosition}</ppip:CheckNumberPosition>
+               <ppip:CVV2Code xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#CVV}</ppip:CVV2Code>
+               <ppip:ExpirationDate xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#ExpDate}</ppip:ExpirationDate>
+               <ppip:PaymentVehicleNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#VehicleNumber}</ppip:PaymentVehicleNumber>
+               <ppip:PaymentMethodCategory xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#PMCategory}</ppip:PaymentMethodCategory>
+               <ppip:EnforcePinDebitValidation xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceAddWalletUpgrade#EnforcePIN}</ppip:EnforcePinDebitValidation>
+            </ppi:Vehicle>
+            <ppi:Payor xmlns:ppi="http://www.ePayments.com/PPI">
+               <ppi:AccountName>${DataSourceAddWalletUpgrade#ACName}</ppi:AccountName>
+               <ppi:AddressLine1>${DataSourceAddWalletUpgrade#AL1}</ppi:AddressLine1>
+               <ppi:AddressLine2>${DataSourceAddWalletUpgrade#AL2}</ppi:AddressLine2>
+               <ppi:Country>${DataSourceAddWalletUpgrade#Country}</ppi:Country>
+               <ppi:PhoneNumber>${DataSourceAddWalletUpgrade#Phone}</ppi:PhoneNumber>
+               <ppi:FirstName>${DataSourceAddWalletUpgrade#FirstName}</ppi:FirstName>
+               <ppi:LastName>${DataSourceAddWalletUpgrade#LastName}</ppi:LastName>
+               <ppi:MiddleInitial>${DataSourceAddWalletUpgrade#MI}</ppi:MiddleInitial>
+               <ppi:EmailAddress>${DataSourceAddWalletUpgrade#Email}</ppi:EmailAddress>
+               <ppi:ZipCode>${DataSourceAddWalletUpgrade#ZIP}</ppi:ZipCode>
+               <ppi:BusinessName>${DataSourceAddWalletUpgrade#BusineName}</ppi:BusinessName>
+               <ppi:IsBusinessName>${DataSourceAddWalletUpgrade#IsBusName}</ppi:IsBusinessName>
+            </ppi:Payor>
+            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceAddWalletUpgrade#PayACToken}</ppi:PaymentAccountToken>
+            <ppi:ClientReferenceNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceAddWalletUpgrade#ClientRefNum}</ppi:ClientReferenceNumber>
+         </ws:walletRequest>
+      </ws:SubmitWalletInformation>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="27dac1b1-641c-4744-93fd-fb37e29860a2"/>
         <con:assertion type="XPath Match" id="18f348cc-d0f7-4a0c-8b3c-877d0699617a" name="Match content of [ns0:ResultCode]">
@@ -192,7 +192,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="datagen" name="DataGenWalletIDUpgrade" id="d3151625-df65-4d36-8411-abf2002e6e46">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Number">
         <con:configuration>
           <start>1000000000</start>
@@ -201,7 +201,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <pattern/>
           <random>true</random>
           <persist>true</persist>
-          <current>3394404715.0000000000000000000000000000000000000000000000000</current>
+          <current>8409466040.00000000000000000000000000000000000000000000000000</current>
         </con:configuration>
         <con:name>WalletIDGenerator</con:name>
         <con:mode>STEP</con:mode>
@@ -211,7 +211,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" name="GetWalletUpgrade" id="f2c6e801-5d86-42cb-bd79-b8a9782b44cc">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetWalletInformation</con:operation>
       <con:request name="GetWalletUpgrade" id="9edac66e-73fc-4b5e-8b2a-a3aa18cfd17c">
@@ -220,19 +220,19 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:GetWalletInformation>\r
-         <ws:token>\r
-            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">user2325</ppi:UserName>\r
-            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">pwd2325</ppi:Password>\r
-            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">dfsdf345dfgdfgd</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">2325</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <ws:walletID>${SubmitWalletUpgrade#RawRequest#declare namespace ppi='http://www.ePayments.com/PPI'; declare namespace ws='https://www.velocitypayment.com/ws'; //ws:SubmitWalletInformation[1]/ws:walletRequest[1]/ppi:WalletID[1]}</ws:walletID>\r
-      </ws:GetWalletInformation>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetWalletInformation>
+         <ws:token>
+            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">user2325</ppi:UserName>
+            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">pwd2325</ppi:Password>
+            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">dfsdf345dfgdfgd</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">2325</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:walletID>${SubmitWalletUpgrade#RawRequest#declare namespace ppi='http://www.ePayments.com/PPI'; declare namespace ws='https://www.velocitypayment.com/ws'; //ws:SubmitWalletInformation[1]/ws:walletRequest[1]/ppi:WalletID[1]}</ws:walletID>
+      </ws:GetWalletInformation>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="e2e5e13b-95b3-48df-8b1b-32bbae5c9817"/>
         <con:assertion type="XPath Match" id="331ee76e-e845-40f2-aa57-0d7bf2c03265" name="Match content of [ns0:ResultCode]">
@@ -251,7 +251,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <path>declare namespace ns0='http://www.ePayments.com/PPI';
 declare namespace ns1='https://www.velocitypayment.com/ws';
 //ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:ResultText[1]/text()</path>
-            <content>Wallet infornmation retrieved successfully</content>
+            <content>Wallet information retrieved successfully</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -349,7 +349,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="transfer" name="PropertyTransferCorp" id="22d2545b-e7e7-454b-ae5c-c97b68a21196">
     <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:PropertyTransfersStep">
       <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false" entitize="false" ignoreEmpty="false" transferChildNodes="false">
         <con:name>ns2:PaymentAccountToken</con:name>
         <con:sourceType>Response</con:sourceType>
@@ -371,7 +371,7 @@ declare namespace ws='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="transfer" name="PropertyTransferPS" id="d09954c2-483e-451b-8e5c-87295732100a">
     <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:PropertyTransfersStep">
       <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
         <con:name>ns2:PaymentAccountToken</con:name>
         <con:sourceType>Response</con:sourceType>
@@ -393,7 +393,7 @@ declare namespace ws='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="transfer" name="PropertyTransferPC" id="15b0ad7a-7519-4dee-9b8c-3c827020c29c">
     <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:PropertyTransfersStep">
       <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false" entitize="false" ignoreEmpty="false" transferChildNodes="false">
         <con:name>ns2:PaymentAccountToken</con:name>
         <con:sourceType>Response</con:sourceType>
@@ -415,7 +415,7 @@ declare namespace ws='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="transfer" name="PropertyTransferCC" id="711e924e-14cc-4df9-b65b-a6944f471784">
     <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:PropertyTransfersStep">
       <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
         <con:name>ns2:PaymentAccountToken</con:name>
         <con:sourceType>Response</con:sourceType>
@@ -437,7 +437,7 @@ declare namespace ws='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" name="WalletPaymentUpgradeCC" id="a173b047-fe5b-4159-8a5d-23c93a028d79">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
       <con:request name="WalletPaymentUpgradeCC" id="b09fb2c1-1099-4c26-ae83-f19186a50576">
@@ -476,7 +476,7 @@ declare namespace ws='https://www.velocitypayment.com/ws';
             <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource>
             <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${SubmitWalletUpgrade#RawRequest#declare namespace ppi='http://www.ePayments.com/PPI'; declare namespace ws='https://www.velocitypayment.com/ws'; //ws:SubmitWalletInformation[1]/ws:walletRequest[1]/ppi:WalletID[1]}</ppi:WalletID>
-            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">38849321111</ppi:PaymentAccountToken>
+            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">40004661111</ppi:PaymentAccountToken>
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>
    </soapenv:Body>
@@ -548,7 +548,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="datagen" name="DataGenWalletDate" id="752d8029-6b51-4fbe-a187-711004d58247">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Script">
         <con:configuration>
           <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd")
@@ -562,7 +562,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
   </con:testStep>
   <con:testStep type="request" name="WalletPaymentUpgradePC" id="49331bf0-96f2-40c9-8b63-04b59493a9c7">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
       <con:request name="WalletPaymentUpgradePC" id="7033dad4-9284-4766-bac6-5f16bcfad212">
@@ -601,7 +601,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
             <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource>
             <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${SubmitWalletUpgrade#RawRequest#declare namespace ppi='http://www.ePayments.com/PPI'; declare namespace ws='https://www.velocitypayment.com/ws'; //ws:SubmitWalletInformation[1]/ws:walletRequest[1]/ppi:WalletID[1]}</ppi:WalletID>
-            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">38849322222</ppi:PaymentAccountToken>
+            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">40004662222</ppi:PaymentAccountToken>
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>
    </soapenv:Body>
@@ -673,7 +673,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" name="WalletPaymentUpgradePS" id="aa680bc7-046e-4638-b8b7-9f70bee35657">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
       <con:request name="WalletPaymentUpgradePS" id="3ca6b747-1865-419c-8844-60c785462642">
@@ -712,7 +712,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource>
             <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${SubmitWalletUpgrade#RawRequest#declare namespace ppi='http://www.ePayments.com/PPI'; declare namespace ws='https://www.velocitypayment.com/ws'; //ws:SubmitWalletInformation[1]/ws:walletRequest[1]/ppi:WalletID[1]}</ppi:WalletID>
-            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">38849323333</ppi:PaymentAccountToken>
+            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">40004663333</ppi:PaymentAccountToken>
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>
    </soapenv:Body>
@@ -784,7 +784,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" name="WalletPaymentUpgradeCorp" id="bd37bb8d-8550-471e-8312-c2e5eff9fc51">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
       <con:request name="WalletPaymentUpgradeCorp" id="ddd06f17-16c5-42df-8ccb-e3e475b74dc4">
@@ -823,7 +823,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource>
             <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${SubmitWalletUpgrade#RawRequest#declare namespace ppi='http://www.ePayments.com/PPI'; declare namespace ws='https://www.velocitypayment.com/ws'; //ws:SubmitWalletInformation[1]/ws:walletRequest[1]/ppi:WalletID[1]}</ppi:WalletID>
-            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">38849325555</ppi:PaymentAccountToken>
+            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">40004665555</ppi:PaymentAccountToken>
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>
    </soapenv:Body>

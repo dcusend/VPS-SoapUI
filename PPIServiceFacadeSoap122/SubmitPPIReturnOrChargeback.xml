@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="9bd66095-8518-45be-bde1-ceb442642f83" isOneWay="false" action="https://www.velocitypayment.com/ws/SubmitPPIReturnOrChargeback" name="SubmitPPIReturnOrChargeback" bindingOperationName="SubmitPPIReturnOrChargeback" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:operation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="9bd66095-8518-45be-bde1-ceb442642f83" isOneWay="false" action="https://www.velocitypayment.com/ws/SubmitPPIReturnOrChargeback" name="SubmitPPIReturnOrChargeback" bindingOperationName="SubmitPPIReturnOrChargeback" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+  <con:settings id="958b475c-726b-4c1b-ad03-2a9eb0978375">
     <con:setting id="9bd66095-8518-45be-bde1-ceb442642f83fileName">SubmitPPIReturnOrChargeback</con:setting>
   </con:settings>
   <con:call id="6a8c1dbc-7248-4e23-a606-b30844f7cf3f" name="SubmitPPIReturnOrChargeback Request">

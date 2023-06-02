@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testSuite id="505beb94-80cf-457d-98bb-707ebdaedbd1" name="PPIServiceFacadeSoap12 TestSuite" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="505beb94-80cf-457d-98bb-707ebdaedbd1" name="PPIServiceFacadeSoap12 TestSuite">
+  <con:settings id="136b41c3-b6b4-4b10-89a4-501575bb70b1">
     <con:setting id="505beb94-80cf-457d-98bb-707ebdaedbd1fileName">PPIServiceFacadeSoap12-TestSuite</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="98d659ab-4094-437b-b228-adb57c25a02e" isOneWay="false" action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" name="SubmitCustomerAccount" bindingOperationName="SubmitCustomerAccount" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:operation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="98d659ab-4094-437b-b228-adb57c25a02e" isOneWay="false" action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" name="SubmitCustomerAccount" bindingOperationName="SubmitCustomerAccount" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+  <con:settings id="a132a864-29bd-4ca6-be15-78f3ff85b1ee">
     <con:setting id="98d659ab-4094-437b-b228-adb57c25a02efileName">SubmitCustomerAccount</con:setting>
   </con:settings>
   <con:call id="728c7ae0-007e-4f29-82b7-b028c6f6f4ed" defaultOutgoingWss="" defaultIncomingWss="" name="Request 1">

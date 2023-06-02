@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="8a491fdd-30bb-432d-b621-a2a7b604c269" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap12-GetPPIPaymentFee-GetPPIPaymentFee Request TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="8a491fdd-30bb-432d-b621-a2a7b604c269" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap12-GetPPIPaymentFee-GetPPIPaymentFee Request TestCase" searchProperties="true" timeout="0">
+  <con:settings id="88c6fba9-8560-4c71-a994-011c94d8da98">
     <con:setting id="8a491fdd-30bb-432d-b621-a2a7b604c269fileName">PPIServiceFacadeSoap12-GetPPIPaymentFee-GetPPIPaymentFee-Request-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="ac64cb7d-be9f-4a37-abf1-c45793751b08" name="GetPPIPaymentFee GetPPIPaymentFee Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
       <con:request name="GetPPIPaymentFee GetPPIPaymentFee Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="16f81510-9904-411c-8111-ac639cb08a48">

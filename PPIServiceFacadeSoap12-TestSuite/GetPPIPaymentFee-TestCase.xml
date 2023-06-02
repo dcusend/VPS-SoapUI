@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="8e346423-6260-43a1-ac7b-9460e5799bc2" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetPPIPaymentFee TestCase" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="8e346423-6260-43a1-ac7b-9460e5799bc2" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetPPIPaymentFee TestCase" searchProperties="true" maxResults="0">
+  <con:settings id="dda02dd0-6b9e-4055-a456-4a0bd47b7a0d">
     <con:setting id="8e346423-6260-43a1-ac7b-9460e5799bc2fileName">GetPPIPaymentFee-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="b5e9d507-96c7-468f-826a-7fc599f05d4d" name="GetPPIPaymentFee">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
       <con:request name="GetPPIPaymentFee" id="6d144234-991f-483f-97ff-0c1cfad5aeff" defaultOutgoingWss="" defaultIncomingWss="">

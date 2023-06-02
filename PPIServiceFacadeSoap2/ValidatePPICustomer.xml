@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="80b1201c-1367-4c42-99d2-439c9602cd82" isOneWay="false" action="https://www.velocitypayment.com/ws/ValidatePPICustomer" name="ValidatePPICustomer" bindingOperationName="ValidatePPICustomer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:operation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="80b1201c-1367-4c42-99d2-439c9602cd82" isOneWay="false" action="https://www.velocitypayment.com/ws/ValidatePPICustomer" name="ValidatePPICustomer" bindingOperationName="ValidatePPICustomer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+  <con:settings id="0629dc2f-8f38-48d3-a612-c1da0507da2c">
     <con:setting id="80b1201c-1367-4c42-99d2-439c9602cd82fileName">ValidatePPICustomer</con:setting>
   </con:settings>
   <con:call id="4e5353f8-e32f-4655-b194-3ea1003f8cf1" name="ValidatePPICustomer Request">

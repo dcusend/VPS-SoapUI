@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="ddf5e26a-492c-4d60-ab8c-04c7e47a34ee" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetVelocityFeeSingleANDDualAdvanced TestCase" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="ddf5e26a-492c-4d60-ab8c-04c7e47a34ee" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetVelocityFeeSingleANDDualAdvanced TestCase" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+  <con:settings id="c22ecdb0-9763-4402-a603-0b5c5a81607d">
     <con:setting id="ddf5e26a-492c-4d60-ab8c-04c7e47a34eefileName">GetVelocityFeeSingleANDDualAdvanced-TestCase</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="datasource" name="AdvancedDataSourceFeeSingle" id="0d2e5dd8-be08-4151-a3de-7b4ca312ec79">
     <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/FeeDataAdvanced.xlsx</file>
@@ -40,7 +40,7 @@
   </con:testStep>
   <con:testStep type="request" id="8baf76c0-c03c-47a8-ac18-cd19b13f99d3" name="GetVelocityFeeSingle">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetVelocityFee</con:operation>
       <con:request name="GetVelocityFeeSingle" id="dc439367-9684-4945-9116-809c6b2327c8" defaultOutgoingWss="" defaultIncomingWss="" outgoingWss="" incomingWss="">

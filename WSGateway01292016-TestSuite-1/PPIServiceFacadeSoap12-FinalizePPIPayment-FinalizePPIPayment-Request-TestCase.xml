@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="4dfdf55d-5b71-4574-af41-518610eae621" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap12-FinalizePPIPayment-FinalizePPIPayment Request TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="4dfdf55d-5b71-4574-af41-518610eae621" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap12-FinalizePPIPayment-FinalizePPIPayment Request TestCase" searchProperties="true" timeout="0">
+  <con:settings id="c10ae2b4-b84f-43fb-bea3-8719727f8ef3">
     <con:setting id="4dfdf55d-5b71-4574-af41-518610eae621fileName">PPIServiceFacadeSoap12-FinalizePPIPayment-FinalizePPIPayment-Request-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="633cc4fe-b523-450b-a7c9-f12aabd16427" name="FinalizePPIPayment FinalizePPIPayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>FinalizePPIPayment</con:operation>
       <con:request name="FinalizePPIPayment FinalizePPIPayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="ca398a52-79ee-49d4-8a81-4510d3e3f75a">

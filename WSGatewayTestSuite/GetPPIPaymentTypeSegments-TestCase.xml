@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="9c6cd906-6ba0-4224-aa04-2052839ca237" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetPPIPaymentTypeSegments TestCase" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="9c6cd906-6ba0-4224-aa04-2052839ca237" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetPPIPaymentTypeSegments TestCase" searchProperties="true" maxResults="0">
+  <con:settings id="6fc58079-8b4e-455a-9332-ed20fd5980fc">
     <con:setting id="9c6cd906-6ba0-4224-aa04-2052839ca237fileName">GetPPIPaymentTypeSegments-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="0e2115f1-18c9-4001-92a9-b7e59f25f082" name="GetPPIPaymentTypeSegments">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentTypeSegments</con:operation>
       <con:request name="GetPPIPaymentTypeSegments" id="2492acab-1aee-4c28-8db5-422b04111726" defaultOutgoingWss="" defaultIncomingWss="">

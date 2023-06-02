@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="4db5b1f2-df29-467c-8aff-a4cb77504a4b" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetPPIPaymentFee TestCase" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="4db5b1f2-df29-467c-8aff-a4cb77504a4b" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetPPIPaymentFee TestCase" searchProperties="true" maxResults="0">
+  <con:settings id="3379391e-0401-41b6-9c42-e92f6c2dc2d9">
     <con:setting id="4db5b1f2-df29-467c-8aff-a4cb77504a4bfileName">GetPPIPaymentFee-TestCase</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="request" id="22dd5c72-154e-4102-9b86-c8493158d3be" name="GetPPIPaymentFee">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
       <con:request name="GetPPIPaymentFee" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
@@ -69,7 +69,7 @@
   </con:testStep>
   <con:testStep type="request" id="41703108-c86f-4878-845d-b832b1724864" name="GetPPIPaymentFee-WWW-4080-DoNotUse">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
       <con:request name="GetPPIPaymentFee-WWW-4080-DoNotUse" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
@@ -133,7 +133,7 @@
   </con:testStep>
   <con:testStep type="request" id="da1658cf-acb6-4de9-b1f1-7ccf5c47d2b7" name="GetPPIPaymentFee 2">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
       <con:request name="GetPPIPaymentFee 2" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
@@ -196,7 +196,7 @@
   </con:testStep>
   <con:testStep type="request" id="d825d7b8-a160-453b-b405-dfb5f6c41fde" name="GetPPIPaymentFee 2 2">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
       <con:request name="GetPPIPaymentFee 2 2" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">

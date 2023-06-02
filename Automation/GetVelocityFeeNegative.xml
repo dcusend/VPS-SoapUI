@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="afbc0f93-dbea-4424-aa40-0bc06aad969b" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetVelocityFeeNegative" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="afbc0f93-dbea-4424-aa40-0bc06aad969b" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetVelocityFeeNegative" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" maxResults="0">
+  <con:settings id="aa08aa52-2f18-4841-a3e3-41d185bfdae0">
     <con:setting id="IncludeOverview">true</con:setting>
     <con:setting id="IncludeResults">true</con:setting>
     <con:setting id="FlowLayout">true</con:setting>
@@ -11,7 +11,7 @@
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="datasource" name="DataSourceFeeNegative" id="120e13d4-5069-4daf-b2d9-3999491bee84">
     <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/FeeData.xlsx</file>
@@ -38,7 +38,7 @@
   </con:testStep>
   <con:testStep type="request" id="69ff2a19-ca0c-4594-9105-fe8006ef5728" name="GetVelocityFee - Negative">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetVelocityFee</con:operation>
       <con:request name="GetVelocityFee - Negative" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="acfc42fb-c0d1-4853-9e94-d6316a3c7c16" defaultOutgoingWss="" defaultIncomingWss="">

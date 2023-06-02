@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="db62bcb5-45e2-40b9-9601-ff442b898d7e" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ModifyPPIPayment TestCase" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="db62bcb5-45e2-40b9-9601-ff442b898d7e" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ModifyPPIPayment TestCase" searchProperties="true" maxResults="0">
+  <con:settings id="3714fd6c-fe22-43da-a288-b27cf76be360">
     <con:setting id="db62bcb5-45e2-40b9-9601-ff442b898d7efileName">ModifyPPIPayment-TestCase</con:setting>
   </con:settings>
   <con:testStep type="request" id="7f6eee61-2dd5-4928-94d9-0c68292432eb" name="ModifyPPIPayment">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap12</con:interface>
       <con:operation>ModifyPPIPayment</con:operation>
       <con:request name="ModifyPPIPayment" id="8d95e5d3-90ae-4e32-945d-3b8f42d7cf0c" defaultOutgoingWss="" defaultIncomingWss="">

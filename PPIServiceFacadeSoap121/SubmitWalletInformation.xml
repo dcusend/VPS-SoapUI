@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="acb54e2e-4df7-47a9-aeeb-91e3278d1333" isOneWay="false" action="https://www.velocitypayment.com/ws/SubmitWalletInformation" name="SubmitWalletInformation" bindingOperationName="SubmitWalletInformation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:operation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="acb54e2e-4df7-47a9-aeeb-91e3278d1333" isOneWay="false" action="https://www.velocitypayment.com/ws/SubmitWalletInformation" name="SubmitWalletInformation" bindingOperationName="SubmitWalletInformation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+  <con:settings id="8f825468-825e-470e-970a-100954b02a21">
     <con:setting id="acb54e2e-4df7-47a9-aeeb-91e3278d1333fileName">SubmitWalletInformation</con:setting>
   </con:settings>
   <con:call id="92140f21-075f-4251-9e26-6698e17ece4d" name="SubmitWalletInformation Request">

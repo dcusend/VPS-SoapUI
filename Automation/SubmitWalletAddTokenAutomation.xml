@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="a775be6e-9e3f-4143-841a-6c9d924d7f07" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="SubmitWalletAddTokenAutomation" searchProperties="true" maxResults="0" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="a775be6e-9e3f-4143-841a-6c9d924d7f07" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="SubmitWalletAddTokenAutomation" searchProperties="true" maxResults="0" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+  <con:settings id="defa7adb-6777-49b3-92fc-72bf80407471">
     <con:setting id="IncludeOverview">true</con:setting>
     <con:setting id="IncludeResults">true</con:setting>
     <con:setting id="FlowLayout">true</con:setting>
@@ -13,7 +13,7 @@
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="datasource" name="DataSourceAddToken" id="ba5f2a2a-7742-4ca5-bea4-1c9dd95e9120">
     <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/WalletData.xlsx</file>
@@ -67,7 +67,7 @@
   </con:testStep>
   <con:testStep type="datagen" name="DataGenWalletID" id="2e75cb68-3400-484c-b5d9-97f704e5c43f">
     <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
       <con:property type="Number">
         <con:configuration>
           <start>1000000000</start>
@@ -85,7 +85,7 @@
   </con:testStep>
   <con:testStep type="request" id="50048371-5d59-4934-9d88-7302884dafa3" name="AddTokenAutomation">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitWalletInformation</con:operation>
       <con:request name="AddTokenAutomation" id="2e8ca9cf-f51b-48e1-98d3-b2662375c32d" defaultOutgoingWss="" defaultIncomingWss="">
@@ -233,7 +233,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="transfer" name="GeneratedWalletID" id="6dbe1ae3-e0f3-48cb-9c9d-957afec47b44">
     <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:PropertyTransfersStep">
       <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
         <con:name>WallID</con:name>
         <con:sourceType>Request</con:sourceType>
@@ -248,7 +248,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" id="87feccf5-b41a-46b0-bbdc-694f58352a53" name="DeleteToken">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitWalletInformation</con:operation>
       <con:request name="DeleteToken" id="2e8ca9cf-f51b-48e1-98d3-b2662375c32d" defaultOutgoingWss="" defaultIncomingWss="">
@@ -403,7 +403,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="datasource" name="DataSourceAddTokenNegative" id="51f0882a-83c9-4724-b6e4-66d3cd90edb1">
     <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/WalletData.xlsx</file>
@@ -459,7 +459,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" name="AddTokenNegative" id="8901f5bb-34ec-43ed-8d9c-3265d88ed69d">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitWalletInformation</con:operation>
       <con:request name="AddTokenNegative" id="0dd3d8bb-75f7-481d-8210-6e5826631e35">
@@ -587,7 +587,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="datasource" name="DataSourceDeleteWalletError" id="a55e61a1-4a28-4856-8219-3a38aebe1711">
     <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/WalletData.xlsx</file>
@@ -644,7 +644,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:testStep>
   <con:testStep type="request" name="DeleteWalletError" id="ff4cc9ca-a10f-45b4-9227-45187b2920e9">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitWalletInformation</con:operation>
       <con:request name="DeleteWalletError" id="03f98613-4de8-468a-a28a-0fe2ada41290">
@@ -773,7 +773,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   <con:properties>
     <con:property>
       <con:name>WalletID</con:name>
-      <con:value>6811480571</con:value>
+      <con:value>8820285467</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
