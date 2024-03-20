@@ -9,29 +9,31 @@
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>ValidateFinancialInfo</con:operation>
       <con:request name="ValidateFinancialInfo" id="f96f7545-806a-4597-9d33-d8c3062ee2bf" defaultOutgoingWss="" defaultIncomingWss="">
-        <con:settings/>
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:ValidateFinancialInfo>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <ppi:UserName>?</ppi:UserName>\r
-            <!--Optional:-->\r
-            <ppi:Password>?</ppi:Password>\r
-            <!--Optional:-->\r
-            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>\r
-            <!--Optional:-->\r
-            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <ws:financialType>?</ws:financialType>\r
-         <!--Optional:-->\r
-         <ws:input>?</ws:input>\r
-      </ws:ValidateFinancialInfo>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:ValidateFinancialInfo>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <ppi:UserName>?</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>?</ppi:Password>
+            <!--Optional:-->
+            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>
+            <!--Optional:-->
+            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:financialType>ABA</ws:financialType>
+         <!--Optional:-->
+         <ws:input>?</ws:input>
+      </ws:ValidateFinancialInfo>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -39,6 +41,7 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/ValidateFinancialInfo" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
         <con:environmentSpec>
           <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
             <con:authProfile>Inherit From Parent</con:authProfile>

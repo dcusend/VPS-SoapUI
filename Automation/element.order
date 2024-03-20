@@ -26,3 +26,4 @@ JacksonHewitt-Test-Case-in-QA.xml
 JacksonHewitt-PartialRefund-Test-Case-in-QA.xml
 CreateAndCancelInstallmentPlan-QA-CC.xml
 CardNotAcceptedError.xml
+RefundACHWithWallet.xml

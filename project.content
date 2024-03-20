@@ -226,6 +226,7 @@ Automation\JacksonHewitt-Test-Case-in-QA.xml
 Automation\JacksonHewitt-PartialRefund-Test-Case-in-QA.xml
 Automation\CreateAndCancelInstallmentPlan-QA-CC.xml
 Automation\CardNotAcceptedError.xml
+Automation\RefundACHWithWallet.xml
 AutomationUpgrade\SubmitPPIPaymentUpgrade.xml
 AutomationUpgrade\GetVelocityFeeUpgrade.xml
 AutomationUpgrade\SubmitWalletUpgrade.xml

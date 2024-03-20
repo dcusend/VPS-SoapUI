@@ -201,7 +201,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <pattern/>
           <random>true</random>
           <persist>true</persist>
-          <current>8409466040.00000000000000000000000000000000000000000000000000</current>
+          <current>6906410705.00000000000000000000000000000000000000000000000000000</current>
         </con:configuration>
         <con:name>WalletIDGenerator</con:name>
         <con:mode>STEP</con:mode>
@@ -476,7 +476,7 @@ declare namespace ws='https://www.velocitypayment.com/ws';
             <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource>
             <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${SubmitWalletUpgrade#RawRequest#declare namespace ppi='http://www.ePayments.com/PPI'; declare namespace ws='https://www.velocitypayment.com/ws'; //ws:SubmitWalletInformation[1]/ws:walletRequest[1]/ppi:WalletID[1]}</ppi:WalletID>
-            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">40004661111</ppi:PaymentAccountToken>
+            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">41535881111</ppi:PaymentAccountToken>
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>
    </soapenv:Body>
@@ -601,7 +601,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
             <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource>
             <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${SubmitWalletUpgrade#RawRequest#declare namespace ppi='http://www.ePayments.com/PPI'; declare namespace ws='https://www.velocitypayment.com/ws'; //ws:SubmitWalletInformation[1]/ws:walletRequest[1]/ppi:WalletID[1]}</ppi:WalletID>
-            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">40004662222</ppi:PaymentAccountToken>
+            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">41535882222</ppi:PaymentAccountToken>
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>
    </soapenv:Body>
@@ -712,7 +712,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource>
             <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${SubmitWalletUpgrade#RawRequest#declare namespace ppi='http://www.ePayments.com/PPI'; declare namespace ws='https://www.velocitypayment.com/ws'; //ws:SubmitWalletInformation[1]/ws:walletRequest[1]/ppi:WalletID[1]}</ppi:WalletID>
-            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">40004663333</ppi:PaymentAccountToken>
+            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">41535883333</ppi:PaymentAccountToken>
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>
    </soapenv:Body>
@@ -823,7 +823,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource>
             <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${SubmitWalletUpgrade#RawRequest#declare namespace ppi='http://www.ePayments.com/PPI'; declare namespace ws='https://www.velocitypayment.com/ws'; //ws:SubmitWalletInformation[1]/ws:walletRequest[1]/ppi:WalletID[1]}</ppi:WalletID>
-            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">40004665555</ppi:PaymentAccountToken>
+            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">41535885555</ppi:PaymentAccountToken>
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>
    </soapenv:Body>
