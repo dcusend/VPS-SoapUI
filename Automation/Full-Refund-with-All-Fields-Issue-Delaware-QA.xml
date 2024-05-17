@@ -81,7 +81,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                <!--Optional:-->
                
                
-               <ppip:CVV2Code>1234</ppip:CVV2Code><ppip:ExpirationDate>12/23</ppip:ExpirationDate><ppip:PaymentVehicleNumber>371449635392376</ppip:PaymentVehicleNumber>
+               <ppip:CVV2Code>1234</ppip:CVV2Code><ppip:ExpirationDate>12/28</ppip:ExpirationDate><ppip:PaymentVehicleNumber>371449635392376</ppip:PaymentVehicleNumber>
                <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation/>
             </ppi:Vehicle>
@@ -285,7 +285,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
 declare namespace ns0='http://www.ePayments.com/PPI';
 declare namespace ns1='https://www.velocitypayment.com/ws';
 //ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:Wallet[1]/ns0:PaymentAccount[1]/ns2:ExpirationDate[1]/text()</path>
-            <content>12/23</content>
+            <content>12/28</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>

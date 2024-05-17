@@ -221,7 +221,7 @@
                <ppip:PaymentMethodCategory>${DataSourceSubmitPPIPaymentPositive#V_PMCategory}</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation>${DataSourceSubmitPPIPaymentPositive#V_EnforcePin}</ppip:EnforcePinDebitValidation>
             </ppi:Vehicle>
-         </ws:payment><ws:storedCredential/>
+         </ws:payment><ws:storedCredential>false</ws:storedCredential>
       </ws:SubmitPPIPayment>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
