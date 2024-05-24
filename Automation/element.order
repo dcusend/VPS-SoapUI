@@ -28,3 +28,5 @@ CreateAndCancelInstallmentPlan-QA-CC.xml
 CardNotAcceptedError.xml
 RefundACHWithWallet.xml
 SubmitPPIPayment-CreditCard-NoPayerEmailAddress.xml
+CaptureLessThanAuth.xml
+CaptureMoreThanAuth-Error.xml
