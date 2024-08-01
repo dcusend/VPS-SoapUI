@@ -239,6 +239,8 @@ AutomationUpgrade\PartialRefundUpgrade.xml
 AutomationUpgrade\CaptureUpgrade.xml
 AutomationUpgrade\CreateInstallmentPlan-Upgrade.xml
 AutomationUpgrade\Live-Processors-Testing.xml
+AutomationUpgrade\CaptureLessThanAuth.xml
+AutomationUpgrade\CaptureMoreThanAuth-Error.xml
 AutomationProduction\SubmitPPIPaymentUpgrade.xml
 AutomationProduction\GetVelocityFeeUpgrade.xml
 AutomationProduction\SubmitWalletUpgrade.xml
@@ -253,6 +255,8 @@ AutomationProduction\Full-Refund-All-Fields-Issue-Delaware-WWW.xml
 AutomationProduction\Multiple-Partial-Refund-Issue-Delaware-WWW.xml
 AutomationProduction\CreateInstallmentPlan-WWW.xml
 AutomationProduction\Live-Processors-Testing.xml
+AutomationProduction\CaptureLessThanAuth.xml
+AutomationProduction\CaptureMoreThanAuth-Error.xml
 WSGateway01292016-TestSuite-1\PPIServiceFacadeSoap-CapturePayment-CapturePayment-Request-TestCase.xml
 WSGateway01292016-TestSuite-1\PPIServiceFacadeSoap-FinalizePPIPayment-FinalizePPIPayment-Request-TestCase.xml
 WSGateway01292016-TestSuite-1\PPIServiceFacadeSoap-GetIVRTransferOptions-GetIVRTransferOptions-Request-TestCase.xml

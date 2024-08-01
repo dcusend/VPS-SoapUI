@@ -7,3 +7,5 @@ PartialRefundUpgrade.xml
 CaptureUpgrade.xml
 CreateInstallmentPlan-Upgrade.xml
 Live-Processors-Testing.xml
+CaptureLessThanAuth.xml
+CaptureMoreThanAuth-Error.xml

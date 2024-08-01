@@ -708,14 +708,14 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                </ppi:Fees>
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
-               <ppi:PaymentSegment>
+               <ppi:InvoiceData><ppip:Amount>2.59</ppip:Amount><ppip:InvoiceNumber>5896</ppip:InvoiceNumber></ppi:InvoiceData><ppi:PaymentSegment>
                   <ppip:Amount>10.50</ppip:Amount>
                   <ppip:SegmentType>Payment Amount</ppip:SegmentType>
                   <!--Optional:-->
                </ppi:PaymentSegment>
                <!--Optional:-->
                <ppi:PaymentType>Regular</ppi:PaymentType>
-               <ppi:ProcessDate>2024-05-22T08:59:00.000-04:00</ppi:ProcessDate>
+               <ppi:ProcessDate>2024-07-03T08:59:00.000-04:00</ppi:ProcessDate><ppi:CustomData><ppi:ID>CustomData1</ppi:ID><ppi:Value>Custom Data 1</ppi:Value></ppi:CustomData>
                <!--Zero or more repetitions:-->
             </ppi:AdditionalInfo>
             <ppi:Customer>
@@ -5797,86 +5797,91 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:SubmitPPIPayment>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            <!--Optional:-->
-            <!--Optional:-->
-            <!--Optional:-->
-            <ppi:UserName>mvd_express</ppi:UserName>
-            
-            <ppi:Password>Velocity2022!</ppi:Password><ppi:PPITransactionRequestId>5435345345gdffdg</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>4345</ppi:PPIBusinessEntityIdentifierToken>
-         </ws:token>
-         <!--Optional:-->
-         <ws:payment Notes="">
-            <!--Optional:-->
-            <ppi:AdditionalInfo>
-               <!--Zero or more repetitions:-->
-               <ppi:Fees>
-                  <ppip:FeeType>Customer</ppip:FeeType>
-                  <ppip:Amount>0</ppip:Amount>
-               </ppi:Fees>
-               <!--Zero or more repetitions:-->
-               <!--Zero or more repetitions:-->
-               <ppi:PaymentSegment>
-                  <ppip:Amount>10.50</ppip:Amount>
-                  <ppip:SegmentType>Regular</ppip:SegmentType>
-                  <!--Optional:-->
-               </ppi:PaymentSegment>
-               <!--Optional:-->
-               <ppi:PaymentType>Regular</ppi:PaymentType>
-               <ppi:ProcessDate>2024-04-29T08:59:00.000-04:00</ppi:ProcessDate>
-               <!--Zero or more repetitions:-->
-            </ppi:AdditionalInfo>
-            
-            <!--Optional:-->
-            <!--Optional:-->
-            <ppi:ClientAccountNumber>12341100077</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
-            <ppi:PaymentSource>Web</ppi:PaymentSource>
-            <!--Optional:-->
-            <ppi:Payor>
-               <!--Optional:-->
-               <!--Optional:-->
-               <!--Optional:-->
-               <!--Optional:-->
-               <!--Optional:-->
-               <!--Optional:-->
-               <!--Optional:-->
-               <!--Optional:-->
-               <!--Optional:-->
-               <!--Optional:-->
-               <!--Optional:-->
-               <ppi:AddressLine1>1853 man terr</ppi:AddressLine1>
-               <ppi:PhoneNumber>2587412589</ppi:PhoneNumber>
-               <ppi:FirstName>Mike</ppi:FirstName>
-               <ppi:LastName>Prisbaso</ppi:LastName>
-               <ppi:ZipCode>22201</ppi:ZipCode>
-               
-               <ppi:IsBusinessName>false</ppi:IsBusinessName>
-            </ppi:Payor>
-            <!--Optional:-->
-            <ppi:Vehicle>
-               <!--Optional:-->
-               
-               <ppip:AccountType/>
-               <!--Optional:-->
-               <ppip:CheckType/>
-               <ppip:CheckNumberPosition/>
-               <!--Optional:-->
-               <!--Optional:-->
-               <!--Optional:-->
-               <ppip:CVV2Code>123</ppip:CVV2Code><ppip:ExpirationDate>12/25</ppip:ExpirationDate><ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
-               <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
-               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
-            </ppi:Vehicle>
-         </ws:payment><ws:storedCredential>false</ws:storedCredential>
-      </ws:SubmitPPIPayment>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitPPIPayment>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>mvd_express</ppi:UserName>\r
+            <ppi:Password>Velocity2022!</ppi:Password>\r
+            <ppi:PPITransactionRequestId>5435345345gdffdg</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>4345</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:payment Notes="">\r
+            <!--Optional:-->\r
+            <ppi:AdditionalInfo>\r
+               <!--Zero or more repetitions:-->\r
+               <ppi:Fees>\r
+                  <ppip:FeeType>Customer</ppip:FeeType>\r
+                  <ppip:Amount>0</ppip:Amount>\r
+               </ppi:Fees>\r
+               <!--Zero or more repetitions:-->\r
+               <!--Zero or more repetitions:-->\r
+               <ppi:PaymentSegment>\r
+                  <ppip:Amount>10.50</ppip:Amount>\r
+                  <ppip:SegmentType>Regular</ppip:SegmentType>\r
+                  <!--Optional:-->\r
+               </ppi:PaymentSegment>\r
+               <!--Optional:-->\r
+               <ppi:PaymentType>Regular</ppi:PaymentType>\r
+               <ppi:ProcessDate>2024-07-03T08:59:00.000-04:00</ppi:ProcessDate>\r
+               <ppi:CustomData>\r
+                  <ppi:ID>CustomData1</ppi:ID>\r
+                  <ppi:Value>Custom Data 1</ppi:Value>\r
+               </ppi:CustomData>\r
+               <!--Zero or more repetitions:-->\r
+            </ppi:AdditionalInfo>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:ClientAccountNumber>12341100077</ppi:ClientAccountNumber>\r
+            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>\r
+            <ppi:PaymentSource>Web</ppi:PaymentSource>\r
+            <!--Optional:-->\r
+            <ppi:Payor>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppi:AddressLine1>1853 man terr</ppi:AddressLine1>\r
+               <ppi:PhoneNumber>2587412589</ppi:PhoneNumber>\r
+               <ppi:FirstName>Mike</ppi:FirstName>\r
+               <ppi:LastName>Prisbaso</ppi:LastName>\r
+               <ppi:ZipCode>22201</ppi:ZipCode>\r
+               <ppi:IsBusinessName>false</ppi:IsBusinessName>\r
+            </ppi:Payor>\r
+            <!--Optional:-->\r
+            <ppi:Vehicle>\r
+               <!--Optional:-->\r
+               <ppip:AccountType/>\r
+               <!--Optional:-->\r
+               <ppip:CheckType/>\r
+               <ppip:CheckNumberPosition/>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppip:CVV2Code>123</ppip:CVV2Code>\r
+               <ppip:ExpirationDate>12/25</ppip:ExpirationDate>\r
+               <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>\r
+               <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>\r
+               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>\r
+            </ppi:Vehicle>\r
+         </ws:payment>\r
+         <ws:storedCredential>false</ws:storedCredential>\r
+      </ws:SubmitPPIPayment>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>

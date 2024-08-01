@@ -12,3 +12,5 @@ Full-Refund-All-Fields-Issue-Delaware-WWW.xml
 Multiple-Partial-Refund-Issue-Delaware-WWW.xml
 CreateInstallmentPlan-WWW.xml
 Live-Processors-Testing.xml
+CaptureLessThanAuth.xml
+CaptureMoreThanAuth-Error.xml
