@@ -4,30 +4,32 @@
     <con:setting id="d43bda7b-c281-47cf-918d-431c7526d6b1fileName">GetPPIPaymentFee</con:setting>
   </con:settings>
   <con:call id="af254e3c-ba9f-46c5-9693-8ace1b55db69" defaultOutgoingWss="" defaultIncomingWss="" name="Request 1">
-    <con:settings/>
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
     <con:encoding>UTF-8</con:encoding>
     <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:GetPPIPaymentFee>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <ppi:UserName>?</ppi:UserName>\r
-            <!--Optional:-->\r
-            <ppi:Password>?</ppi:Password>\r
-            <!--Optional:-->\r
-            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>\r
-            <!--Optional:-->\r
-            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <ws:paymentAmount>?</ws:paymentAmount>\r
-         <ws:method>?</ws:method>\r
-         <!--Optional:-->\r
-         <ws:clientAccountNumber>?</ws:clientAccountNumber>\r
-      </ws:GetPPIPaymentFee>\r
-   </soapenv:Body>\r
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetPPIPaymentFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <ppi:UserName>?</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>?</ppi:Password>
+            <!--Optional:-->
+            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>
+            <!--Optional:-->
+            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:paymentAmount>?</ws:paymentAmount>
+         <ws:method>?</ws:method>
+         <!--Optional:-->
+         <ws:clientAccountNumber>?</ws:clientAccountNumber>
+      </ws:GetPPIPaymentFee>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
     <con:credentials>
       <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -35,6 +37,7 @@
     </con:credentials>
     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
     <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/GetPPIPaymentFee"/>
+    <con:wsrmConfig version="1.2"/>
     <con:environmentSpec>
       <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
         <con:authProfile>Inherit From Parent</con:authProfile>

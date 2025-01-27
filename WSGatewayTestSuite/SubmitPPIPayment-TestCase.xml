@@ -386,7 +386,7 @@
                <ppi:FirstName>Hasna</ppi:FirstName>
                <ppi:LastName>Mana</ppi:LastName>
                <ppi:ZipCode>21054</ppi:ZipCode>
-               <ppi:EmailAddress></ppi:EmailAddress>
+               
                <ppi:BusinessName>My Company</ppi:BusinessName>
                <ppi:IsBusinessName>false</ppi:IsBusinessName>
             </ppi:Payor>
@@ -953,7 +953,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                </ppi:PaymentSegment>
                <!--Optional:-->
                <ppi:PaymentType>Debt</ppi:PaymentType>
-               <ppi:ProcessDate>2021-08-20T14:30:00.000-04:00</ppi:ProcessDate>
+               <ppi:ProcessDate>2025-01-08T14:30:00.000-04:00</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
             </ppi:AdditionalInfo>
             <ppi:Customer>
@@ -1454,105 +1454,105 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:SubmitPPIPayment>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:UserName>user548</ppi:UserName>\r
-            <ppi:Password>pwd548</ppi:Password>\r
-            <ppi:PPITransactionRequestId>sdfsdf345r56456rgfsd</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken>0548</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <!--Optional:-->\r
-         <ws:payment Notes="">\r
-            <!--Optional:-->\r
-            <ppi:AdditionalInfo>\r
-               <!--Zero or more repetitions:-->\r
-               <ppi:Fees>\r
-                  <ppip:FeeType>Customer</ppip:FeeType>\r
-                  <ppip:Amount>3</ppip:Amount>\r
-               </ppi:Fees>\r
-               <!--Zero or more repetitions:-->\r
-               <!--Zero or more repetitions:-->\r
-               <ppi:PaymentSegment>\r
-                  <ppip:Amount>10.00</ppip:Amount>\r
-                  <ppip:SegmentType>Enter Amount</ppip:SegmentType>\r
-                  <!--Optional:-->\r
-               </ppi:PaymentSegment>\r
-               <!--Optional:-->\r
-               <ppi:PaymentType>Regular</ppi:PaymentType>\r
-               <ppi:ProcessDate>2018-12-21T14:47:38.536-05:00</ppi:ProcessDate>\r
-               <!--Zero or more repetitions:-->\r
-            </ppi:AdditionalInfo>\r
-            <!--Optional:-->\r
-            <ppi:Customer>\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <ppi:AddressLine1>2311 main st</ppi:AddressLine1>\r
-               <ppi:PhoneNumber>2402589632</ppi:PhoneNumber>\r
-               <ppi:Zip>21114</ppi:Zip>\r
-            </ppi:Customer>\r
-            <ppi:ClientAccountNumber>145879603</ppi:ClientAccountNumber>\r
-            <!--Optional:-->\r
-            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>\r
-            <ppi:PaymentSource>Agent</ppi:PaymentSource>\r
-            <!--Optional:-->\r
-            <ppi:Payor>\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <ppi:AddressLine1>1853 man terr</ppi:AddressLine1>\r
-               <ppi:PhoneNumber>2587412589</ppi:PhoneNumber>\r
-               <ppi:FirstName>Hasna</ppi:FirstName>\r
-               <ppi:LastName>Mana</ppi:LastName>\r
-               <ppi:ZipCode>27017</ppi:ZipCode>\r
-               <ppi:BusinessName>asdasdasd</ppi:BusinessName>\r
-               <ppi:IsBusinessName>false</ppi:IsBusinessName>\r
-            </ppi:Payor>\r
-            <!--Optional:-->\r
-            <ppi:Vehicle>\r
-               <!--Optional:-->\r
-               <ppip:AccountType/>\r
-               <!--Optional:-->\r
-               <ppip:CheckType/>\r
-               <ppip:CheckNumberPosition/>\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <!--Optional:-->\r
-               <ppip:CVV2Code>145</ppip:CVV2Code>\r
-               <ppip:ExpirationDate>12/20</ppip:ExpirationDate>\r
-               <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>\r
-               <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>\r
-               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>\r
-            </ppi:Vehicle>\r
-         </ws:payment>\r
-      </ws:SubmitPPIPayment>\r
-   </soapenv:Body>\r
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitPPIPayment>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user548</ppi:UserName>
+            <ppi:Password>pwd548</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsdf345r56456rgfsd</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>0548</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:payment Notes="">
+            <!--Optional:-->
+            <ppi:AdditionalInfo>
+               <!--Zero or more repetitions:-->
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>3</ppip:Amount>
+               </ppi:Fees>
+               <!--Zero or more repetitions:-->
+               <!--Zero or more repetitions:-->
+               <ppi:PaymentSegment>
+                  <ppip:Amount>10.00</ppip:Amount>
+                  <ppip:SegmentType>Enter Amount</ppip:SegmentType>
+                  <!--Optional:-->
+               </ppi:PaymentSegment>
+               <!--Optional:-->
+               <ppi:PaymentType>Regular</ppi:PaymentType>
+               <ppi:ProcessDate>2025-01-08T14:47:38.536-05:00</ppi:ProcessDate>
+               <!--Zero or more repetitions:-->
+            </ppi:AdditionalInfo>
+            <!--Optional:-->
+            <ppi:Customer>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppi:AddressLine1>2311 main st</ppi:AddressLine1>
+               <ppi:PhoneNumber>2402589632</ppi:PhoneNumber>
+               <ppi:Zip>21114</ppi:Zip>
+            </ppi:Customer>
+            <ppi:ClientAccountNumber>145879603</ppi:ClientAccountNumber>
+            <!--Optional:-->
+            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource>Agent</ppi:PaymentSource>
+            <!--Optional:-->
+            <ppi:Payor>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppi:AddressLine1>1853 man terr</ppi:AddressLine1>
+               <ppi:PhoneNumber>2587412589</ppi:PhoneNumber>
+               <ppi:FirstName>Hasna</ppi:FirstName>
+               <ppi:LastName>Mana</ppi:LastName>
+               <ppi:ZipCode>27017</ppi:ZipCode>
+               <ppi:BusinessName>asdasdasd</ppi:BusinessName>
+               <ppi:IsBusinessName>false</ppi:IsBusinessName>
+            </ppi:Payor>
+            <!--Optional:-->
+            <ppi:Vehicle>
+               <!--Optional:-->
+               <ppip:AccountType/>
+               <!--Optional:-->
+               <ppip:CheckType/>
+               <ppip:CheckNumberPosition/>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppip:CVV2Code>145</ppip:CVV2Code>
+               <ppip:ExpirationDate>12/25</ppip:ExpirationDate>
+               <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
+               <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
+            </ppi:Vehicle>
+         </ws:payment><ws:storedCredential/>
+      </ws:SubmitPPIPayment>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -6158,6 +6158,151 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitPPIPayment" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="e535b9c3-03d5-4d70-8f57-21edfecb824c" name="SubmitPPIPaymentWWW-2326">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitPPIPayment</con:operation>
+      <con:request name="SubmitPPIPaymentWWW-2326" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitPPIPayment>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user2326</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>pswd2326</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsdf345r56456rgfsd</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>2326</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:payment Notes="">
+            <!--Optional:-->
+            <ppi:AdditionalInfo>
+               <!--Zero or more repetitions:-->
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>0</ppip:Amount>
+               </ppi:Fees>
+               <!--Zero or more repetitions:-->
+               <!--Zero or more repetitions:-->
+               
+               <ppi:PaymentSegment>
+                  <ppip:Amount>10.50</ppip:Amount>
+                  <ppip:SegmentType>Enter Amount</ppip:SegmentType>
+                  <!--Optional:-->
+               </ppi:PaymentSegment>
+               <!--Optional:-->
+               <ppi:PaymentType>Regular</ppi:PaymentType>
+               <ppi:ProcessDate>2025-01-08T12:47:38.536-05:00</ppi:ProcessDate>
+               
+               <!--Zero or more repetitions:-->
+            </ppi:AdditionalInfo>
+            <!--Optional:-->
+            <ppi:Customer>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppi:AddressLine1>2311 main st</ppi:AddressLine1>
+               <ppi:PhoneNumber>240 258 9632</ppi:PhoneNumber>
+               <ppi:Zip>21114</ppi:Zip>
+            </ppi:Customer>
+            <ppi:ClientAccountNumber>145879603</ppi:ClientAccountNumber>
+            <!--Optional:-->
+            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource>Agent</ppi:PaymentSource>
+            <!--Optional:-->
+            <ppi:Payor>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppi:AddressLine1>1853 man terr</ppi:AddressLine1>
+               <ppi:PhoneNumber>2587412589</ppi:PhoneNumber>
+               <ppi:FirstName>Hasna</ppi:FirstName>
+               <ppi:LastName>Mana</ppi:LastName>
+               <ppi:ZipCode>21054</ppi:ZipCode>
+               
+               <ppi:BusinessName>My Company</ppi:BusinessName>
+               <ppi:IsBusinessName>false</ppi:IsBusinessName>
+            </ppi:Payor>
+            <!--Optional:-->
+            <ppi:Vehicle>
+               <!--Optional:-->
+               <ppip:AccountType/>
+               <!--Optional:-->
+               <ppip:CheckType/>
+               <ppip:CheckNumberPosition/>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppip:CVV2Code>123</ppip:CVV2Code>
+               <ppip:ExpirationDate>12/28</ppip:ExpirationDate>
+               <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
+               <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
+            </ppi:Vehicle>
+         </ws:payment>
+         <ws:storedCredential/>
+      </ws:SubmitPPIPayment>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitPPIPayment" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
         <con:environmentSpec>

@@ -52,3 +52,6 @@ JacksonHewitt-Test-Case-in-QA.xml
 JacksonHewitt-PartialRefund-Test-Case-in-QA.xml
 CreateAndCancelInstallmentPlan-QA-CC.xml
 MVDExpress-Test-Case.xml
+GetFeeWallet-Test-Case.xml
+GetFeeWallet-LiveClient-Demo-2130.xml
+GetFeeWallet-Test-Case---QA509-AdvancedDual.xml

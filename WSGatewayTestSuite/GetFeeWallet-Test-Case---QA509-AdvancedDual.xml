@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="fd2a4976-c130-4536-9a09-ca332dc34941" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetFeeWallet Test Case - QA509-AdvancedDual" searchProperties="true" timeout="0">
+  <con:settings>
+    <con:setting id="fd2a4976-c130-4536-9a09-ca332dc34941fileName">GetFeeWallet-Test-Case---QA509-AdvancedDual</con:setting>
+  </con:settings>
+  <con:testStep type="request" id="56455187-72e3-460c-b898-f5cced4bcb4d" name="GetVelocityFee-509-Dual-Adv-QA">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>GetVelocityFee</con:operation>
+      <con:request name="GetVelocityFee-509-Dual-Adv-QA" id="923111e8-1464-4321-aac7-077a86a8b4f8" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetVelocityFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user509</ppi:UserName>
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>sdf34tegdfg456rgdfg</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:amount>100</ws:amount>
+         <ws:paymentType>1</ws:paymentType><ws:accountNumber>4111111111111111</ws:accountNumber>
+         
+         <!--Optional:-->
+      </ws:GetVelocityFee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/GetVelocityFee" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="939a6363-eecf-46e5-ad8a-055586713b8b" name="GetPPIPaymentFee-QA509-DualAdv-Visa">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>GetPPIPaymentFee</con:operation>
+      <con:request name="GetPPIPaymentFee-QA509-DualAdv-Visa" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetPPIPaymentFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user509</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:paymentAmount>10</ws:paymentAmount>
+         <ws:method>CreditCard</ws:method>
+         <!--Optional:-->
+      </ws:GetPPIPaymentFee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/GetPPIPaymentFee" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="973fc713-4cbc-4f15-9735-60a5934499df" name="GetPPIPaymentFee-QA509-DualAdv-Visa Debit">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>GetPPIPaymentFee</con:operation>
+      <con:request name="GetPPIPaymentFee-QA509-DualAdv-Visa Debit" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetPPIPaymentFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user509</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:paymentAmount>10</ws:paymentAmount>
+         <ws:method>CreditCard</ws:method>
+         <!--Optional:-->
+      </ws:GetPPIPaymentFee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/GetPPIPaymentFee" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="62205130-cf10-48ca-bb72-63523f62c5de" name="GetPPIPaymentFee-QA509-DualAdv-MasterCard">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>GetPPIPaymentFee</con:operation>
+      <con:request name="GetPPIPaymentFee-QA509-DualAdv-MasterCard" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetPPIPaymentFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user509</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:paymentAmount>10</ws:paymentAmount>
+         <ws:method>CreditCard</ws:method>
+         <!--Optional:-->
+      </ws:GetPPIPaymentFee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/GetPPIPaymentFee" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="496781a7-c988-4081-bfe9-0b92823c5568" name="GetPPIPaymentFee-QA509-DualAdv-MasterCard Debit">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>GetPPIPaymentFee</con:operation>
+      <con:request name="GetPPIPaymentFee-QA509-DualAdv-MasterCard Debit" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetPPIPaymentFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user509</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:paymentAmount>10</ws:paymentAmount>
+         <ws:method>CreditCard</ws:method>
+         <!--Optional:-->
+      </ws:GetPPIPaymentFee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/GetPPIPaymentFee" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="802f4faf-f3b2-44b2-8999-15b4293f6df3" name="GetPPIPaymentFee-QA509-DualAdv-Discover">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>GetPPIPaymentFee</con:operation>
+      <con:request name="GetPPIPaymentFee-QA509-DualAdv-Discover" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetPPIPaymentFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user509</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:paymentAmount>10</ws:paymentAmount>
+         <ws:method>CreditCard</ws:method>
+         <!--Optional:-->
+      </ws:GetPPIPaymentFee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/GetPPIPaymentFee" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="cd3badae-10fd-44ff-aff4-21976d1f09fe" name="GetPPIPaymentFee-QA509-DualAdv-AmericanExpress">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>GetPPIPaymentFee</con:operation>
+      <con:request name="GetPPIPaymentFee-QA509-DualAdv-AmericanExpress" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetPPIPaymentFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user509</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:paymentAmount>10</ws:paymentAmount>
+         <ws:method>CreditCard</ws:method>
+         <!--Optional:-->
+      </ws:GetPPIPaymentFee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/GetPPIPaymentFee" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="198b34f0-6325-48ca-bf96-400b9e6abd3e" name="GetPPIPaymentFee-QA509-DualAdv-PersonalACH">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>GetPPIPaymentFee</con:operation>
+      <con:request name="GetPPIPaymentFee-QA509-DualAdv-PersonalACH" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetPPIPaymentFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user509</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:paymentAmount>10</ws:paymentAmount>
+         <ws:method>Ach</ws:method>
+         <!--Optional:-->
+      </ws:GetPPIPaymentFee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/GetPPIPaymentFee" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="1e7deea5-a4e5-4bb8-96ec-c8f48e109a04" name="GetPPIPaymentFee-QA509-DualAdv-CorporateACH">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>GetPPIPaymentFee</con:operation>
+      <con:request name="GetPPIPaymentFee-QA509-DualAdv-CorporateACH" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetPPIPaymentFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user509</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:paymentAmount>10</ws:paymentAmount>
+         <ws:method>CreditCard</ws:method>
+         <!--Optional:-->
+      </ws:GetPPIPaymentFee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/GetPPIPaymentFee" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="321c7044-a33d-41df-b9ba-d272e71cf502" name="SubmitPPIPayment-QA509-DualAdv">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitPPIPayment</con:operation>
+      <con:request name="SubmitPPIPayment-QA509-DualAdv" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitPPIPayment>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user509</ppi:UserName>
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsdf345r56456rgfsd</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:payment Notes="">
+            <!--Optional:-->
+            <ppi:AdditionalInfo>
+               <!--Zero or more repetitions:-->
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>0</ppip:Amount>
+               </ppi:Fees>
+               <!--Zero or more repetitions:-->
+               <!--Zero or more repetitions:-->
+               <ppi:PaymentSegment>
+                  <ppip:Amount>10.00</ppip:Amount>
+                  <ppip:SegmentType>Regular</ppip:SegmentType>
+                  <!--Optional:-->
+               </ppi:PaymentSegment>
+               <!--Optional:-->
+               <ppi:PaymentType>Regular</ppi:PaymentType>
+               <ppi:ProcessDate>2025-01-08T14:30:00.000-04:00</ppi:ProcessDate>
+               <!--Zero or more repetitions:-->
+            </ppi:AdditionalInfo>
+            <ppi:Customer>
+               <ppi:AddressLine2>suite 600</ppi:AddressLine2>
+            </ppi:Customer>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:ClientAccountNumber>5478962</ppi:ClientAccountNumber>
+            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource>Agent</ppi:PaymentSource>
+            <!--Optional:-->
+            <ppi:Payor>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppi:AddressLine1>1853 man terr</ppi:AddressLine1>
+               <ppi:FirstName>Motas</ppi:FirstName>
+               <ppi:LastName>Jhakas</ppi:LastName>
+               <ppi:ZipCode>22201</ppi:ZipCode>
+               <ppi:BusinessName>gdfgdfg</ppi:BusinessName>
+               <ppi:IsBusinessName>false</ppi:IsBusinessName>
+            </ppi:Payor>
+            <!--Optional:-->
+            <ppi:Vehicle>
+               <!--Optional:-->
+               <ppip:AccountType/>
+               <!--Optional:-->
+               <ppip:CheckType/>
+               <ppip:CheckNumberPosition/>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppip:CVV2Code>147</ppip:CVV2Code>
+               <ppip:ExpirationDate>12/29</ppip:ExpirationDate>
+               <ppip:PaymentVehicleNumber>5424000000000015</ppip:PaymentVehicleNumber>
+               <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
+            </ppi:Vehicle>
+         </ws:payment>
+         <ws:storedCredential>false</ws:storedCredential>
+      </ws:SubmitPPIPayment>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitPPIPayment" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="81af38a4-b1b8-44be-a28d-2073ee2ab569" name="SubmitWalletInformation-QA509-DualAdv">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitWalletInformation</con:operation>
+      <con:request name="SubmitWalletInformation-QA509-DualAdv" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8069539d-f842-40ba-aa58-e15e3455ca98" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitWalletInformation>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user509</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>pwd509</ppi:Password>
+            <!--Optional:-->
+            <ppi:PPITransactionRequestId>Request16</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:walletRequest>
+            <ppi:Action>AddToken</ppi:Action>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:NickName>631Nickname838</ppi:NickName>
+            <ppi:WalletID>631Wallet838</ppi:WalletID>
+            <ppi:Vehicle>
+               <!--Optional:-->
+               <ppip:AccountType/>
+               <!--Optional:-->
+               <ppip:CheckType/>
+               <ppip:CheckNumberPosition/>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppip:CVV2Code>125</ppip:CVV2Code>
+               <ppip:ExpirationDate>09/25</ppip:ExpirationDate>
+               
+               <ppip:PaymentVehicleNumber>4847184080857023</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
+            </ppi:Vehicle>
+            <!--Optional:-->
+            <ppi:Payor>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--<ppi:FirstName/>-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppi:AccountName>ac name 833</ppi:AccountName>
+               <ppi:AddressLine1>2311 york road833</ppi:AddressLine1>
+               <ppi:Country>US</ppi:Country>
+               <ppi:PhoneNumber>5471250011</ppi:PhoneNumber>
+               <ppi:FirstName>fname833</ppi:FirstName>
+               <ppi:LastName>lname833</ppi:LastName>
+               
+               <ppi:ZipCode>02116</ppi:ZipCode><ppi:IsBusinessName>false</ppi:IsBusinessName>
+            </ppi:Payor>
+            <ppi:ClientReferenceNumber>5478963</ppi:ClientReferenceNumber>
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:walletRequest>
+      </ws:SubmitWalletInformation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="8d414cc5-3acb-4cb0-aae9-9cc6539e8d58" name="SOAP Response"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitWalletInformation"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="c449aef4-27e9-4af3-aeb4-d41e3d9878f2" name="GetWalletInformation-QA509-DualAdv">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>GetWalletInformation</con:operation>
+      <con:request name="GetWalletInformation-QA509-DualAdv" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="24ea61a1-41f8-41f5-af4c-8894b2dd46fc" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetWalletInformation>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user509</ppi:UserName>
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:walletID>631Wallet837</ws:walletID>
+         <!--Optional:-->
+      </ws:GetWalletInformation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/GetWalletInformation"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="d5b5e9b3-4f12-4ced-bc05-dd91280ca203" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
+      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitPPIPaymentUsingWallet>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            <ppi:UserName>user509</ppi:UserName>
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:ppiWalletPayment Notes="">
+            <!--Optional:-->
+            <ppi:AdditionalInfo>
+               <!--Zero or more repetitions:-->
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>0</ppip:Amount>
+               </ppi:Fees>
+               <!--Zero or more repetitions:-->
+               <!--Zero or more repetitions:-->
+               <ppi:PaymentSegment>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Regular</ppip:SegmentType>
+                  
+                  <!--Optional:-->
+               </ppi:PaymentSegment>
+               <!--Optional:-->
+               
+               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2025-01-08T20:20:00.000Z</ppi:ProcessDate>
+               <!--Zero or more repetitions:-->
+            </ppi:AdditionalInfo>
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:ClientAccountNumber>5478962</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource/>
+            
+            <ppi:WalletID>631Wallet836</ppi:WalletID><ppi:PaymentAccountToken>1451281111</ppi:PaymentAccountToken>
+         </ws:ppiWalletPayment>
+      </ws:SubmitPPIPaymentUsingWallet>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="719435cb-0ff9-4ac5-a061-f1c65e68970f" name="SOAP Response"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

@@ -9,27 +9,27 @@
     </con:settings>
     <con:encoding>UTF-8</con:encoding>
     <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:GetVelocityFee>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <ppi:UserName>?</ppi:UserName>\r
-            <!--Optional:-->\r
-            <ppi:Password>?</ppi:Password>\r
-            <!--Optional:-->\r
-            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>\r
-            <!--Optional:-->\r
-            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <ws:amount>?</ws:amount>\r
-         <ws:paymentType>?</ws:paymentType>\r
-         <!--Optional:-->\r
-         <ws:accountNumber>?</ws:accountNumber>\r
-      </ws:GetVelocityFee>\r
-   </soapenv:Body>\r
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetVelocityFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <ppi:UserName>?</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>?</ppi:Password>
+            <!--Optional:-->
+            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>
+            <!--Optional:-->
+            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:amount>?</ws:amount>
+         <ws:paymentType>?</ws:paymentType>
+         <!--Optional:-->
+         <ws:accountNumber>?</ws:accountNumber>
+      </ws:GetVelocityFee>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
     <con:credentials>
       <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>

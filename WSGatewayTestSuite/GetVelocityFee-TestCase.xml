@@ -414,7 +414,7 @@
             <ppi:PPIBusinessEntityIdentifierToken>524</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:amount>5</ws:amount>
-         <ws:paymentType>4</ws:paymentType>
+         <ws:paymentType>1</ws:paymentType><ws:accountNumber>4111111111111111</ws:accountNumber>
          
          <!--Optional:-->
       </ws:GetVelocityFee>
@@ -476,8 +476,8 @@
             <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:amount>100</ws:amount>
-         <ws:paymentType>1</ws:paymentType>
-         <ws:accountNumber>4111111111111111</ws:accountNumber>
+         <ws:paymentType>1</ws:paymentType><ws:accountNumber>4111111111111111</ws:accountNumber>
+         
          <!--Optional:-->
       </ws:GetVelocityFee>
    </soapenv:Body>
@@ -1111,8 +1111,8 @@
             <ppi:PPIBusinessEntityIdentifierToken>631</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:amount>100</ws:amount>
-         <ws:paymentType>1</ws:paymentType>
-         <ws:accountNumber>4111111111111111</ws:accountNumber>
+         <ws:paymentType>1</ws:paymentType><ws:accountNumber>4111111111111111</ws:accountNumber>
+         
          <!--Optional:-->
       </ws:GetVelocityFee>
    </soapenv:Body>
