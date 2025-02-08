@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase xmlns:con="http://eviware.com/soapui/config" id="fd2a4976-c130-4536-9a09-ca332dc34941" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetFeeWallet Test Case - QA509-AdvancedDual" searchProperties="true" timeout="0">
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fd2a4976-c130-4536-9a09-ca332dc34941" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetFeeWallet Test Case - QA509-AdvancedDual" searchProperties="true" timeout="0">
   <con:settings>
     <con:setting id="fd2a4976-c130-4536-9a09-ca332dc34941fileName">GetFeeWallet-Test-Case---QA509-AdvancedDual</con:setting>
   </con:settings>
   <con:testStep type="request" id="56455187-72e3-460c-b898-f5cced4bcb4d" name="GetVelocityFee-509-Dual-Adv-QA">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+    <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetVelocityFee</con:operation>
       <con:request name="GetVelocityFee-509-Dual-Adv-QA" id="923111e8-1464-4321-aac7-077a86a8b4f8" defaultOutgoingWss="" defaultIncomingWss="">
@@ -68,7 +68,7 @@
   </con:testStep>
   <con:testStep type="request" id="939a6363-eecf-46e5-ad8a-055586713b8b" name="GetPPIPaymentFee-QA509-DualAdv-Visa">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+    <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
       <con:request name="GetPPIPaymentFee-QA509-DualAdv-Visa" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
@@ -93,11 +93,22 @@
             <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
-         <ws:method>CreditCard</ws:method>
+         <ws:method>Visa</ws:method>
          <!--Optional:-->
       </ws:GetPPIPaymentFee>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
+        <con:assertion type="XPath Match" id="5fc32d0f-1df0-4d19-b76d-7bdab0ca1694" name="Match content of [ns0:PPIFeeValue]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetPPIPaymentFeeResponse[1]/ns1:GetPPIPaymentFeeResult[1]/ns0:PPIFeeValue[1]/text()</path>
+            <content>2.0</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -131,7 +142,7 @@
   </con:testStep>
   <con:testStep type="request" id="973fc713-4cbc-4f15-9735-60a5934499df" name="GetPPIPaymentFee-QA509-DualAdv-Visa Debit">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+    <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
       <con:request name="GetPPIPaymentFee-QA509-DualAdv-Visa Debit" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
@@ -156,11 +167,22 @@
             <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
-         <ws:method>CreditCard</ws:method>
+         <ws:method>Visa Debit</ws:method>
          <!--Optional:-->
       </ws:GetPPIPaymentFee>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
+        <con:assertion type="XPath Match" id="72bd61eb-7048-4267-bed7-27c3405b2de5" name="Match content of [ns0:PPIFeeValue]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetPPIPaymentFeeResponse[1]/ns1:GetPPIPaymentFeeResult[1]/ns0:PPIFeeValue[1]/text()</path>
+            <content>5.0</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -194,7 +216,7 @@
   </con:testStep>
   <con:testStep type="request" id="62205130-cf10-48ca-bb72-63523f62c5de" name="GetPPIPaymentFee-QA509-DualAdv-MasterCard">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+    <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
       <con:request name="GetPPIPaymentFee-QA509-DualAdv-MasterCard" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
@@ -219,11 +241,22 @@
             <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
-         <ws:method>CreditCard</ws:method>
+         <ws:method>MasterCard</ws:method>
          <!--Optional:-->
       </ws:GetPPIPaymentFee>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
+        <con:assertion type="XPath Match" id="af635a10-70d0-4ae6-82ac-f24d1954cf8c" name="Match content of [ns0:PPIFeeValue]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetPPIPaymentFeeResponse[1]/ns1:GetPPIPaymentFeeResult[1]/ns0:PPIFeeValue[1]/text()</path>
+            <content>5.0</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -257,7 +290,7 @@
   </con:testStep>
   <con:testStep type="request" id="496781a7-c988-4081-bfe9-0b92823c5568" name="GetPPIPaymentFee-QA509-DualAdv-MasterCard Debit">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+    <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
       <con:request name="GetPPIPaymentFee-QA509-DualAdv-MasterCard Debit" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
@@ -282,11 +315,22 @@
             <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
-         <ws:method>CreditCard</ws:method>
+         <ws:method>MasterCard Debit</ws:method>
          <!--Optional:-->
       </ws:GetPPIPaymentFee>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
+        <con:assertion type="XPath Match" id="ff71931b-720f-45ce-9635-cf4c7aee72d0" name="Match content of [ns0:PPIFeeValue]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetPPIPaymentFeeResponse[1]/ns1:GetPPIPaymentFeeResult[1]/ns0:PPIFeeValue[1]/text()</path>
+            <content>10.0</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -320,7 +364,7 @@
   </con:testStep>
   <con:testStep type="request" id="802f4faf-f3b2-44b2-8999-15b4293f6df3" name="GetPPIPaymentFee-QA509-DualAdv-Discover">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+    <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
       <con:request name="GetPPIPaymentFee-QA509-DualAdv-Discover" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
@@ -345,11 +389,22 @@
             <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
-         <ws:method>CreditCard</ws:method>
+         <ws:method>Discover</ws:method>
          <!--Optional:-->
       </ws:GetPPIPaymentFee>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
+        <con:assertion type="XPath Match" id="352b141d-5e4b-4a50-91d5-3bb257784350" name="Match content of [ns0:PPIFeeValue]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetPPIPaymentFeeResponse[1]/ns1:GetPPIPaymentFeeResult[1]/ns0:PPIFeeValue[1]/text()</path>
+            <content>4.0</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -383,7 +438,7 @@
   </con:testStep>
   <con:testStep type="request" id="cd3badae-10fd-44ff-aff4-21976d1f09fe" name="GetPPIPaymentFee-QA509-DualAdv-AmericanExpress">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+    <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
       <con:request name="GetPPIPaymentFee-QA509-DualAdv-AmericanExpress" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
@@ -408,11 +463,22 @@
             <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
-         <ws:method>CreditCard</ws:method>
+         <ws:method>American Express</ws:method>
          <!--Optional:-->
       </ws:GetPPIPaymentFee>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
+        <con:assertion type="XPath Match" id="c9b67432-6c66-48d7-b15c-e07300196d3d" name="Match content of [ns0:PPIFeeValue]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetPPIPaymentFeeResponse[1]/ns1:GetPPIPaymentFeeResult[1]/ns0:PPIFeeValue[1]/text()</path>
+            <content>4.0</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -446,7 +512,7 @@
   </con:testStep>
   <con:testStep type="request" id="198b34f0-6325-48ca-bf96-400b9e6abd3e" name="GetPPIPaymentFee-QA509-DualAdv-PersonalACH">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+    <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
       <con:request name="GetPPIPaymentFee-QA509-DualAdv-PersonalACH" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
@@ -471,11 +537,22 @@
             <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
-         <ws:method>Ach</ws:method>
+         <ws:method>Personal</ws:method>
          <!--Optional:-->
       </ws:GetPPIPaymentFee>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
+        <con:assertion type="XPath Match" id="9ea380d9-d505-4a50-9240-ba79c79eb663" name="Match content of [ns0:PPIFeeValue]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetPPIPaymentFeeResponse[1]/ns1:GetPPIPaymentFeeResult[1]/ns0:PPIFeeValue[1]/text()</path>
+            <content>1.1</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -509,7 +586,7 @@
   </con:testStep>
   <con:testStep type="request" id="1e7deea5-a4e5-4bb8-96ec-c8f48e109a04" name="GetPPIPaymentFee-QA509-DualAdv-CorporateACH">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+    <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
       <con:request name="GetPPIPaymentFee-QA509-DualAdv-CorporateACH" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
@@ -534,11 +611,22 @@
             <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
-         <ws:method>CreditCard</ws:method>
+         <ws:method>Corporate</ws:method>
          <!--Optional:-->
       </ws:GetPPIPaymentFee>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
+        <con:assertion type="XPath Match" id="3668809e-9e82-408f-a1d9-e580933f9148" name="Match content of [ns0:PPIFeeValue]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetPPIPaymentFeeResponse[1]/ns1:GetPPIPaymentFeeResult[1]/ns0:PPIFeeValue[1]/text()</path>
+            <content>6.0</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -572,7 +660,7 @@
   </con:testStep>
   <con:testStep type="request" id="321c7044-a33d-41df-b9ba-d272e71cf502" name="SubmitPPIPayment-QA509-DualAdv">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+    <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
       <con:request name="SubmitPPIPayment-QA509-DualAdv" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
@@ -603,18 +691,18 @@
                <!--Zero or more repetitions:-->
                <ppi:Fees>
                   <ppip:FeeType>Customer</ppip:FeeType>
-                  <ppip:Amount>0</ppip:Amount>
+                  <ppip:Amount>5</ppip:Amount>
                </ppi:Fees>
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
                   <ppip:Amount>10.00</ppip:Amount>
-                  <ppip:SegmentType>Regular</ppip:SegmentType>
+                  <ppip:SegmentType>Utility</ppip:SegmentType>
                   <!--Optional:-->
                </ppi:PaymentSegment>
                <!--Optional:-->
-               <ppi:PaymentType>Regular</ppi:PaymentType>
-               <ppi:ProcessDate>2025-01-08T14:30:00.000-04:00</ppi:ProcessDate>
+               
+               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2025-02-03T14:30:00.000-04:00</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
             </ppi:AdditionalInfo>
             <ppi:Customer>
@@ -699,7 +787,7 @@
   </con:testStep>
   <con:testStep type="request" id="81af38a4-b1b8-44be-a28d-2073ee2ab569" name="SubmitWalletInformation-QA509-DualAdv">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+    <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitWalletInformation</con:operation>
       <con:request name="SubmitWalletInformation-QA509-DualAdv" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8069539d-f842-40ba-aa58-e15e3455ca98" defaultOutgoingWss="" defaultIncomingWss="">
@@ -729,21 +817,21 @@
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:NickName>631Nickname838</ppi:NickName>
-            <ppi:WalletID>631Wallet838</ppi:WalletID>
+            <ppi:NickName>631Nickname839</ppi:NickName>
+            <ppi:WalletID>631Wallet839</ppi:WalletID>
             <ppi:Vehicle>
                <!--Optional:-->
-               <ppip:AccountType/>
+               <ppip:AbaNumber>256072691</ppip:AbaNumber><ppip:AccountType>Checking</ppip:AccountType>
                <!--Optional:-->
-               <ppip:CheckType/>
+               <ppip:CheckType>Personal</ppip:CheckType>
                <ppip:CheckNumberPosition/>
                <!--Optional:-->
                <!--Optional:-->
                <!--Optional:-->
-               <ppip:CVV2Code>125</ppip:CVV2Code>
-               <ppip:ExpirationDate>09/25</ppip:ExpirationDate>
                
-               <ppip:PaymentVehicleNumber>4847184080857023</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               
+               
+               <ppip:PaymentVehicleNumber>258369265</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>Ach</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
             </ppi:Vehicle>
             <!--Optional:-->
@@ -767,9 +855,9 @@
                <ppi:FirstName>fname833</ppi:FirstName>
                <ppi:LastName>lname833</ppi:LastName>
                
-               <ppi:ZipCode>02116</ppi:ZipCode><ppi:IsBusinessName>false</ppi:IsBusinessName>
+               <ppi:ZipCode>02116</ppi:ZipCode><ppi:BusinessName>Some Company</ppi:BusinessName><ppi:IsBusinessName>true</ppi:IsBusinessName>
             </ppi:Payor>
-            <ppi:ClientReferenceNumber>5478963</ppi:ClientReferenceNumber>
+            <ppi:ClientReferenceNumber>5478964</ppi:ClientReferenceNumber>
             <!--Optional:-->
             <!--Optional:-->
          </ws:walletRequest>
@@ -809,7 +897,7 @@
   </con:testStep>
   <con:testStep type="request" id="c449aef4-27e9-4af3-aeb4-d41e3d9878f2" name="GetWalletInformation-QA509-DualAdv">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+    <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetWalletInformation</con:operation>
       <con:request name="GetWalletInformation-QA509-DualAdv" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="24ea61a1-41f8-41f5-af4c-8894b2dd46fc" defaultOutgoingWss="" defaultIncomingWss="">
@@ -833,7 +921,7 @@
             <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>
             <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
-         <ws:walletID>631Wallet837</ws:walletID>
+         <ws:walletID>631Wallet839</ws:walletID>
          <!--Optional:-->
       </ws:GetWalletInformation>
    </soapenv:Body>
@@ -869,12 +957,12 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="d5b5e9b3-4f12-4ced-bc05-dd91280ca203" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv">
+  <con:testStep type="request" id="d5b5e9b3-4f12-4ced-bc05-dd91280ca203" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-Visa">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+    <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
-      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-Visa" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -902,18 +990,18 @@
                <!--Zero or more repetitions:-->
                <ppi:Fees>
                   <ppip:FeeType>Customer</ppip:FeeType>
-                  <ppip:Amount>0</ppip:Amount>
+                  <ppip:Amount>2</ppip:Amount>
                </ppi:Fees>
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
-                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Regular</ppip:SegmentType>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Utility</ppip:SegmentType>
                   
                   <!--Optional:-->
                </ppi:PaymentSegment>
                <!--Optional:-->
                
-               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2025-01-08T20:20:00.000Z</ppi:ProcessDate>
+               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>${DataGenDateTest#TodayDate}</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
             </ppi:AdditionalInfo>
             <!--Optional:-->
@@ -925,12 +1013,23 @@
             <ppi:ClientAccountNumber>5478962</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource/>
             
-            <ppi:WalletID>631Wallet836</ppi:WalletID><ppi:PaymentAccountToken>1451281111</ppi:PaymentAccountToken>
+            <ppi:WalletID>631Wallet839</ppi:WalletID><ppi:PaymentAccountToken>1475211111</ppi:PaymentAccountToken>
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="719435cb-0ff9-4ac5-a061-f1c65e68970f" name="SOAP Response"/>
+        <con:assertion type="XPath Match" id="f687d313-8162-4bbc-a4e9-323b7ce26462" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment captured successfully</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -959,6 +1058,888 @@
           </con:entry>
         </con:environmentSpec>
       </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="f9a78599-e375-482f-8c87-d2bb1b12d495" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-VisaDebit">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
+      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-VisaDebit" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitPPIPaymentUsingWallet>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            <ppi:UserName>user509</ppi:UserName>
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:ppiWalletPayment Notes="">
+            <!--Optional:-->
+            <ppi:AdditionalInfo>
+               <!--Zero or more repetitions:-->
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>5</ppip:Amount>
+               </ppi:Fees>
+               <!--Zero or more repetitions:-->
+               <!--Zero or more repetitions:-->
+               <ppi:PaymentSegment>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Utility</ppip:SegmentType>
+                  
+                  <!--Optional:-->
+               </ppi:PaymentSegment>
+               <!--Optional:-->
+               
+               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>${DataGenDateTest#TodayDate}</ppi:ProcessDate>
+               <!--Zero or more repetitions:-->
+            </ppi:AdditionalInfo>
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:ClientAccountNumber>5478962</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource/>
+            
+            <ppi:WalletID>631Wallet839</ppi:WalletID><ppi:PaymentAccountToken>1475217023</ppi:PaymentAccountToken>
+         </ws:ppiWalletPayment>
+      </ws:SubmitPPIPaymentUsingWallet>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="719435cb-0ff9-4ac5-a061-f1c65e68970f" name="SOAP Response"/>
+        <con:assertion type="XPath Match" id="2afb912f-047b-49cb-846d-770bceccfeb9" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment captured successfully</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="001c5f51-f6ee-419c-8a0d-a6721bbc8d6b" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-MasterCard">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
+      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-MasterCard" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitPPIPaymentUsingWallet>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            <ppi:UserName>user509</ppi:UserName>
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:ppiWalletPayment Notes="">
+            <!--Optional:-->
+            <ppi:AdditionalInfo>
+               <!--Zero or more repetitions:-->
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>5</ppip:Amount>
+               </ppi:Fees>
+               <!--Zero or more repetitions:-->
+               <!--Zero or more repetitions:-->
+               <ppi:PaymentSegment>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Utility</ppip:SegmentType>
+                  
+                  <!--Optional:-->
+               </ppi:PaymentSegment>
+               <!--Optional:-->
+               
+               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>${DataGenDateTest#TodayDate}</ppi:ProcessDate>
+               <!--Zero or more repetitions:-->
+            </ppi:AdditionalInfo>
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:ClientAccountNumber>5478962</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource/>
+            
+            <ppi:WalletID>631Wallet839</ppi:WalletID><ppi:PaymentAccountToken>1475210015</ppi:PaymentAccountToken>
+         </ws:ppiWalletPayment>
+      </ws:SubmitPPIPaymentUsingWallet>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="719435cb-0ff9-4ac5-a061-f1c65e68970f" name="SOAP Response"/>
+        <con:assertion type="XPath Match" id="f687d313-8162-4bbc-a4e9-323b7ce26462" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment captured successfully</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="0d7e2fa5-5473-475d-a138-5043303cd2fe" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment captured successfully</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="4c301789-8a7a-4f21-bf9e-14d7e6e0a934" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-MasterCard Debit">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
+      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-MasterCard Debit" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitPPIPaymentUsingWallet>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            <ppi:UserName>user509</ppi:UserName>
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:ppiWalletPayment Notes="">
+            <!--Optional:-->
+            <ppi:AdditionalInfo>
+               <!--Zero or more repetitions:-->
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>5</ppip:Amount>
+               </ppi:Fees>
+               <!--Zero or more repetitions:-->
+               <!--Zero or more repetitions:-->
+               <ppi:PaymentSegment>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Utility</ppip:SegmentType>
+                  
+                  <!--Optional:-->
+               </ppi:PaymentSegment>
+               <!--Optional:-->
+               
+               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>${DataGenDateTest#TodayDate}</ppi:ProcessDate>
+               <!--Zero or more repetitions:-->
+            </ppi:AdditionalInfo>
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:ClientAccountNumber>5478962</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource/>
+            
+            <ppi:WalletID>631Wallet839</ppi:WalletID>
+         </ws:ppiWalletPayment>
+      </ws:SubmitPPIPaymentUsingWallet>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="719435cb-0ff9-4ac5-a061-f1c65e68970f" name="SOAP Response"/>
+        <con:assertion type="XPath Match" id="f687d313-8162-4bbc-a4e9-323b7ce26462" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment captured successfully</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="0d7e2fa5-5473-475d-a138-5043303cd2fe" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment captured successfully</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="3e520e13-4687-43a2-9a2f-7236637e76c8" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-AmericanExpress">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
+      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-AmericanExpress" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitPPIPaymentUsingWallet>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            <ppi:UserName>user509</ppi:UserName>
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:ppiWalletPayment Notes="">
+            <!--Optional:-->
+            <ppi:AdditionalInfo>
+               <!--Zero or more repetitions:-->
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>4</ppip:Amount>
+               </ppi:Fees>
+               <!--Zero or more repetitions:-->
+               <!--Zero or more repetitions:-->
+               <ppi:PaymentSegment>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Utility</ppip:SegmentType>
+                  
+                  <!--Optional:-->
+               </ppi:PaymentSegment>
+               <!--Optional:-->
+               
+               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>${DataGenDateTest#TodayDate}</ppi:ProcessDate>
+               <!--Zero or more repetitions:-->
+            </ppi:AdditionalInfo>
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:ClientAccountNumber>5478962</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource/>
+            
+            <ppi:WalletID>631Wallet839</ppi:WalletID><ppi:PaymentAccountToken>1475211003</ppi:PaymentAccountToken>
+         </ws:ppiWalletPayment>
+      </ws:SubmitPPIPaymentUsingWallet>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="719435cb-0ff9-4ac5-a061-f1c65e68970f" name="SOAP Response"/>
+        <con:assertion type="XPath Match" id="f687d313-8162-4bbc-a4e9-323b7ce26462" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment captured successfully</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="fce3d021-c488-4add-8ed8-5e01205c480c" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment captured successfully</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="adbb1a99-981b-4f6b-8350-0537f18971db" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-Discover">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
+      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-Discover" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitPPIPaymentUsingWallet>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            <ppi:UserName>user509</ppi:UserName>
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:ppiWalletPayment Notes="">
+            <!--Optional:-->
+            <ppi:AdditionalInfo>
+               <!--Zero or more repetitions:-->
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>4</ppip:Amount>
+               </ppi:Fees>
+               <!--Zero or more repetitions:-->
+               <!--Zero or more repetitions:-->
+               <ppi:PaymentSegment>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Utility</ppip:SegmentType>
+                  
+                  <!--Optional:-->
+               </ppi:PaymentSegment>
+               <!--Optional:-->
+               
+               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>${DataGenDateTest#TodayDate}</ppi:ProcessDate>
+               <!--Zero or more repetitions:-->
+            </ppi:AdditionalInfo>
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:ClientAccountNumber>5478962</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource/>
+            
+            <ppi:WalletID>631Wallet839</ppi:WalletID><ppi:PaymentAccountToken>1475210216</ppi:PaymentAccountToken>
+         </ws:ppiWalletPayment>
+      </ws:SubmitPPIPaymentUsingWallet>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="719435cb-0ff9-4ac5-a061-f1c65e68970f" name="SOAP Response"/>
+        <con:assertion type="XPath Match" id="f687d313-8162-4bbc-a4e9-323b7ce26462" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment captured successfully</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="6a273919-9dac-421f-b3b2-7d02069aeaec" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment captured successfully</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="b8b0075a-1c9f-4054-a370-9ad6d50d4595" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-PersonalChecking">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
+      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-PersonalChecking" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitPPIPaymentUsingWallet>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            <ppi:UserName>user509</ppi:UserName>
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:ppiWalletPayment Notes="">
+            <!--Optional:-->
+            <ppi:AdditionalInfo>
+               <!--Zero or more repetitions:-->
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>1</ppip:Amount>
+               </ppi:Fees>
+               <!--Zero or more repetitions:-->
+               <!--Zero or more repetitions:-->
+               <ppi:PaymentSegment>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Utility</ppip:SegmentType>
+                  
+                  <!--Optional:-->
+               </ppi:PaymentSegment>
+               <!--Optional:-->
+               
+               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>${DataGenDateTest#TodayDate}</ppi:ProcessDate>
+               <!--Zero or more repetitions:-->
+            </ppi:AdditionalInfo>
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:ClientAccountNumber>5478962</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource/>
+            
+            <ppi:WalletID>631Wallet839</ppi:WalletID><ppi:PaymentAccountToken>1475219261</ppi:PaymentAccountToken>
+         </ws:ppiWalletPayment>
+      </ws:SubmitPPIPaymentUsingWallet>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="719435cb-0ff9-4ac5-a061-f1c65e68970f" name="SOAP Response"/>
+        <con:assertion type="XPath Match" id="f687d313-8162-4bbc-a4e9-323b7ce26462" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment captured successfully</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="54ef1ec8-1003-492c-96c6-b6c75e4ac3dc" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-PersonalSavings">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
+      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-PersonalSavings" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitPPIPaymentUsingWallet>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            <ppi:UserName>user509</ppi:UserName>
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:ppiWalletPayment Notes="">
+            <!--Optional:-->
+            <ppi:AdditionalInfo>
+               <!--Zero or more repetitions:-->
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>1</ppip:Amount>
+               </ppi:Fees>
+               <!--Zero or more repetitions:-->
+               <!--Zero or more repetitions:-->
+               <ppi:PaymentSegment>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Utility</ppip:SegmentType>
+                  
+                  <!--Optional:-->
+               </ppi:PaymentSegment>
+               <!--Optional:-->
+               
+               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>${DataGenDateTest#TodayDate}</ppi:ProcessDate>
+               <!--Zero or more repetitions:-->
+            </ppi:AdditionalInfo>
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:ClientAccountNumber>5478962</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource/>
+            
+            <ppi:WalletID>631Wallet839</ppi:WalletID><ppi:PaymentAccountToken>1475219262</ppi:PaymentAccountToken>
+         </ws:ppiWalletPayment>
+      </ws:SubmitPPIPaymentUsingWallet>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="719435cb-0ff9-4ac5-a061-f1c65e68970f" name="SOAP Response"/>
+        <con:assertion type="XPath Match" id="f687d313-8162-4bbc-a4e9-323b7ce26462" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment captured successfully</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="90a0a4ce-b0ee-4903-80ec-c4fd1592166b" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-Corporate">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
+      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-Corporate" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitPPIPaymentUsingWallet>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            <ppi:UserName>user509</ppi:UserName>
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:ppiWalletPayment Notes="">
+            <!--Optional:-->
+            <ppi:AdditionalInfo>
+               <!--Zero or more repetitions:-->
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>6</ppip:Amount>
+               </ppi:Fees>
+               <!--Zero or more repetitions:-->
+               <!--Zero or more repetitions:-->
+               <ppi:PaymentSegment>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Utility</ppip:SegmentType>
+                  
+                  <!--Optional:-->
+               </ppi:PaymentSegment>
+               <!--Optional:-->
+               
+               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>${DataGenDateTest#TodayDate}</ppi:ProcessDate>
+               <!--Zero or more repetitions:-->
+            </ppi:AdditionalInfo>
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:ClientAccountNumber>5478962</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource/>
+            
+            <ppi:WalletID>631Wallet839</ppi:WalletID><ppi:PaymentAccountToken>1475219263</ppi:PaymentAccountToken>
+         </ws:ppiWalletPayment>
+      </ws:SubmitPPIPaymentUsingWallet>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="719435cb-0ff9-4ac5-a061-f1c65e68970f" name="SOAP Response"/>
+        <con:assertion type="XPath Match" id="f687d313-8162-4bbc-a4e9-323b7ce26462" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment captured successfully</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datagen" name="DataGenDateTest" id="3ad057ed-36ff-49cf-b6e2-0f8d0e3d9385">
+    <con:settings/>
+    <con:config xsi:type="con:DataGeneratorStep">
+      <con:property type="Script">
+        <con:configuration>
+          <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd")
+return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
+        </con:configuration>
+        <con:name>TodayDate</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
     </con:config>
   </con:testStep>
   <con:properties/>

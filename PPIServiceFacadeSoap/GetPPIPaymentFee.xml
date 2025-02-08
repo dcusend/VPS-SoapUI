@@ -59,6 +59,42 @@
       </con:entry>
     </con:environmentSpec>
   </con:call>
+  <con:call id="46cf16fe-116e-4f06-a2b3-cbb5493a5c09" name="Request 2">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://demo.velocitypayment.com/vgateway/VGatewayWebService?WSDL</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetPPIPaymentFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <ppi:UserName>?</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>?</ppi:Password>
+            <!--Optional:-->
+            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>
+            <!--Optional:-->
+            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:paymentAmount>?</ws:paymentAmount>
+         <ws:method>?</ws:method>
+         <!--Optional:-->
+         <ws:clientAccountNumber>?</ws:clientAccountNumber>
+      </ws:GetPPIPaymentFee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/GetPPIPaymentFee"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
   <con:environmentSpec>
     <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
       <con:authProfile>Inherit From Parent</con:authProfile>
