@@ -547,7 +547,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <path>declare namespace ns0='http://www.ePayments.com/PPI';
 declare namespace ns1='https://www.velocitypayment.com/ws';
 //ns1:GetPPIPaymentFeeResponse[1]/ns1:GetPPIPaymentFeeResult[1]/ns0:PPIFeeValue[1]/text()</path>
-            <content>1.1</content>
+            <content>1.0</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -702,7 +702,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                </ppi:PaymentSegment>
                <!--Optional:-->
                
-               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2025-02-03T14:30:00.000-04:00</ppi:ProcessDate>
+               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2025-02-27T14:30:00.000-04:00</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
             </ppi:AdditionalInfo>
             <ppi:Customer>
