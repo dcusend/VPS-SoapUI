@@ -30,3 +30,4 @@ RefundACHWithWallet.xml
 SubmitPPIPayment-CreditCard-NoPayerEmailAddress.xml
 CaptureLessThanAuth.xml
 CaptureMoreThanAuth-Error.xml
+GetFeeWallet-Test-Case---QA509-AdvancedDual.xml

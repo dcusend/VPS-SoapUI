@@ -9,3 +9,4 @@ CreateInstallmentPlan-Upgrade.xml
 Live-Processors-Testing.xml
 CaptureLessThanAuth.xml
 CaptureMoreThanAuth-Error.xml
+GetFeeWallet-Test-Case-5566-AdvancedDual.xml

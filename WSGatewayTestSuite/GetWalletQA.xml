@@ -154,7 +154,7 @@
             <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>
             <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
-         <ws:walletID>2325CC654</ws:walletID>
+         <ws:walletID>2325CC655</ws:walletID>
          <!--Optional:-->
       </ws:GetWalletInformation>
    </soapenv:Body>

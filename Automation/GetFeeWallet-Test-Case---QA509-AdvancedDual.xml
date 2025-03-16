@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fd2a4976-c130-4536-9a09-ca332dc34941" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetFeeWallet Test Case - QA509-AdvancedDual" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="">
+<con:testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="aa0d98fb-0e4c-4a3f-be56-7a2800c6ff34" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetFeeWallet Test Case - QA509-AdvancedDual" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="">
   <con:settings>
-    <con:setting id="fd2a4976-c130-4536-9a09-ca332dc34941fileName">GetFeeWallet-Test-Case---QA509-AdvancedDual</con:setting>
+    <con:setting id="aa0d98fb-0e4c-4a3f-be56-7a2800c6ff34fileName">GetFeeWallet-Test-Case---QA509-AdvancedDual</con:setting>
   </con:settings>
-  <con:testStep type="request" id="56455187-72e3-460c-b898-f5cced4bcb4d" name="GetVelocityFee-509-Dual-Adv-QA">
+  <con:testStep type="request" id="24033b44-5d73-4102-b064-fcd52eabbd42" name="GetVelocityFee-509-Dual-Adv-QA">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -66,7 +66,7 @@
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="939a6363-eecf-46e5-ad8a-055586713b8b" name="GetPPIPaymentFee-QA509-DualAdv-Visa">
+  <con:testStep type="request" id="e2407d50-a633-4871-a995-7cd21ffe0fe6" name="GetPPIPaymentFee-QA509-DualAdv-Visa">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -140,7 +140,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="973fc713-4cbc-4f15-9735-60a5934499df" name="GetPPIPaymentFee-QA509-DualAdv-Visa Debit">
+  <con:testStep type="request" id="16ef5cc3-005a-4a02-ab18-4f2eea5e95d3" name="GetPPIPaymentFee-QA509-DualAdv-Visa Debit">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -214,7 +214,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="62205130-cf10-48ca-bb72-63523f62c5de" name="GetPPIPaymentFee-QA509-DualAdv-MasterCard">
+  <con:testStep type="request" id="039df905-d374-4da0-aee1-86300044eb38" name="GetPPIPaymentFee-QA509-DualAdv-MasterCard">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -288,7 +288,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="496781a7-c988-4081-bfe9-0b92823c5568" name="GetPPIPaymentFee-QA509-DualAdv-MasterCard Debit">
+  <con:testStep type="request" id="8d8803a1-bea7-459a-a09b-7962d7836629" name="GetPPIPaymentFee-QA509-DualAdv-MasterCard Debit">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -362,7 +362,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="802f4faf-f3b2-44b2-8999-15b4293f6df3" name="GetPPIPaymentFee-QA509-DualAdv-Discover">
+  <con:testStep type="request" id="c5ed5967-ac2d-403c-990a-67b614836ab9" name="GetPPIPaymentFee-QA509-DualAdv-Discover">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -436,7 +436,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="cd3badae-10fd-44ff-aff4-21976d1f09fe" name="GetPPIPaymentFee-QA509-DualAdv-AmericanExpress">
+  <con:testStep type="request" id="07330318-9573-4a8a-b8b7-c3f9cd8388b0" name="GetPPIPaymentFee-QA509-DualAdv-AmericanExpress">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -510,7 +510,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="198b34f0-6325-48ca-bf96-400b9e6abd3e" name="GetPPIPaymentFee-QA509-DualAdv-PersonalACH">
+  <con:testStep type="request" id="33153f37-6217-4c64-a41e-69ead3f94afc" name="GetPPIPaymentFee-QA509-DualAdv-PersonalACH">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -584,7 +584,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="1e7deea5-a4e5-4bb8-96ec-c8f48e109a04" name="GetPPIPaymentFee-QA509-DualAdv-CorporateACH">
+  <con:testStep type="request" id="4692dc4b-4b80-4838-a0c3-063da503c714" name="GetPPIPaymentFee-QA509-DualAdv-CorporateACH">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -658,7 +658,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="321c7044-a33d-41df-b9ba-d272e71cf502" name="SubmitPPIPayment-QA509-DualAdv">
+  <con:testStep type="request" id="5cead1ff-7b2c-4e3e-920f-cfad184f9370" name="SubmitPPIPayment-QA509-DualAdv">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -702,7 +702,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                </ppi:PaymentSegment>
                <!--Optional:-->
                
-               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>${DataGenDateTest#TodayDate}</ppi:ProcessDate>
+               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2025-02-27T14:30:00.000-04:00</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
             </ppi:AdditionalInfo>
             <ppi:Customer>
@@ -754,17 +754,6 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </ws:SubmitPPIPayment>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="XPath Match" id="f74f8a62-1668-4e08-983c-a7277a3e1cd2" name="Match content of [ns0:ResultText]">
-          <con:configuration>
-            <path>declare namespace ns0='http://www.ePayments.com/PPI';
-declare namespace ns1='https://www.velocitypayment.com/ws';
-//ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:ResultText[1]/text()</path>
-            <content>Payment Approved</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
-          </con:configuration>
-        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -796,7 +785,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="81af38a4-b1b8-44be-a28d-2073ee2ab569" name="SubmitWalletInformation-QA509-DualAdv">
+  <con:testStep type="request" id="bd24a7b8-b705-4ac1-a6c9-7f67d8fb1151" name="SubmitWalletInformation-QA509-DualAdv">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -906,7 +895,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="c449aef4-27e9-4af3-aeb4-d41e3d9878f2" name="GetWalletInformation-QA509-DualAdv">
+  <con:testStep type="request" id="761cfe39-0f30-4273-bd95-1a982fab6ee5" name="GetWalletInformation-QA509-DualAdv">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -968,7 +957,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="d5b5e9b3-4f12-4ced-bc05-dd91280ca203" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-Visa">
+  <con:testStep type="request" id="31933e29-aa16-49d7-bc21-48a6a37b77ca" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-Visa">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -1071,7 +1060,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="f9a78599-e375-482f-8c87-d2bb1b12d495" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-VisaDebit">
+  <con:testStep type="request" id="ae00c3cf-0b39-4a86-9a72-3c202953c3b0" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-VisaDebit">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -1174,7 +1163,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="001c5f51-f6ee-419c-8a0d-a6721bbc8d6b" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-MasterCard">
+  <con:testStep type="request" id="281ce923-4a3e-4aa3-bfd5-65c7d57a0b5a" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-MasterCard">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -1288,7 +1277,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="4c301789-8a7a-4f21-bf9e-14d7e6e0a934" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-MasterCard Debit">
+  <con:testStep type="request" id="ed400bdd-083c-4853-8598-26790ac78adb" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-MasterCard Debit">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -1402,7 +1391,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="3e520e13-4687-43a2-9a2f-7236637e76c8" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-AmericanExpress">
+  <con:testStep type="request" id="821b454b-0ac6-485e-a99a-dea31d456935" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-AmericanExpress">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -1516,7 +1505,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="adbb1a99-981b-4f6b-8350-0537f18971db" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-Discover">
+  <con:testStep type="request" id="363c39fc-c15c-45b5-be4f-bddaaf262df7" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-Discover">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -1630,7 +1619,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="b8b0075a-1c9f-4054-a370-9ad6d50d4595" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-PersonalChecking">
+  <con:testStep type="request" id="0a6e38bf-5518-4721-9146-2145c6dca454" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-PersonalChecking">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -1733,7 +1722,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="54ef1ec8-1003-492c-96c6-b6c75e4ac3dc" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-PersonalSavings">
+  <con:testStep type="request" id="6742f5ec-4751-40fb-9b9a-6423f45bec6d" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-PersonalSavings">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -1836,7 +1825,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="90a0a4ce-b0ee-4903-80ec-c4fd1592166b" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-Corporate">
+  <con:testStep type="request" id="65f1638d-1433-437f-aecf-d5db28a1f321" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-Corporate">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
@@ -1939,7 +1928,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="datagen" name="DataGenDateTest" id="3ad057ed-36ff-49cf-b6e2-0f8d0e3d9385">
+  <con:testStep type="datagen" name="DataGenDateTest" id="6d7cc506-909d-4902-8b39-2317841e6ac4">
     <con:settings/>
     <con:config xsi:type="con:DataGeneratorStep">
       <con:property type="Script">

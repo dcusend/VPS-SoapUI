@@ -1,77 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="fd2a4976-c130-4536-9a09-ca332dc34941" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetFeeWallet Test Case - QA509-AdvancedDual" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="">
+<con:testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="af8ec35d-a534-4711-b9a6-f4e5eda9e32f" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetFeeWallet Test Case -5071-AdvancedDual" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="">
   <con:settings>
-    <con:setting id="fd2a4976-c130-4536-9a09-ca332dc34941fileName">GetFeeWallet-Test-Case---QA509-AdvancedDual</con:setting>
+    <con:setting id="af8ec35d-a534-4711-b9a6-f4e5eda9e32ffileName">GetFeeWallet-Test-Case--5071-AdvancedDual</con:setting>
   </con:settings>
-  <con:testStep type="request" id="56455187-72e3-460c-b898-f5cced4bcb4d" name="GetVelocityFee-509-Dual-Adv-QA">
-    <con:settings/>
-    <con:config xsi:type="con:RequestStep">
-      <con:interface>PPIServiceFacadeSoap</con:interface>
-      <con:operation>GetVelocityFee</con:operation>
-      <con:request name="GetVelocityFee-509-Dual-Adv-QA" id="923111e8-1464-4321-aac7-077a86a8b4f8" defaultOutgoingWss="" defaultIncomingWss="">
-        <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-        </con:settings>
-        <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:GetVelocityFee>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            <!--Optional:-->
-            <!--Optional:-->
-            <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
-            <ppi:Password>pwd509</ppi:Password>
-            <ppi:PPITransactionRequestId>sdf34tegdfg456rgdfg</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
-         </ws:token>
-         <ws:amount>100</ws:amount>
-         <ws:paymentType>1</ws:paymentType><ws:accountNumber>4111111111111111</ws:accountNumber>
-         
-         <!--Optional:-->
-      </ws:GetVelocityFee>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request>
-        <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-          <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig action="https://www.velocitypayment.com/ws/GetVelocityFee" mustUnderstand="NONE" version="200508"/>
-        <con:wsrmConfig version="1.2"/>
-        <con:environmentSpec>
-          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-        </con:environmentSpec>
-      </con:request>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="request" id="939a6363-eecf-46e5-ad8a-055586713b8b" name="GetPPIPaymentFee-QA509-DualAdv-Visa">
+  <con:testStep type="request" id="8905ddbd-6b11-4dae-89f0-a1e9878dce9c" name="GetPPIPaymentFee-Demo5071-DualAdv-Visa">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
-      <con:request name="GetPPIPaymentFee-QA509-DualAdv-Visa" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="GetPPIPaymentFee-Demo5071-DualAdv-Visa" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -86,11 +23,11 @@
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
+            <ppi:UserName>user5071</ppi:UserName>
             <!--Optional:-->
-            <ppi:Password>pwd509</ppi:Password>
+            <ppi:Password>pwd5071</ppi:Password>
             <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
          <ws:method>Visa</ws:method>
@@ -140,12 +77,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="973fc713-4cbc-4f15-9735-60a5934499df" name="GetPPIPaymentFee-QA509-DualAdv-Visa Debit">
+  <con:testStep type="request" id="f49973fc-eca2-4263-9911-7270b7c88597" name="GetPPIPaymentFee-Demo5071-DualAdv-Visa Debit">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
-      <con:request name="GetPPIPaymentFee-QA509-DualAdv-Visa Debit" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="GetPPIPaymentFee-Demo5071-DualAdv-Visa Debit" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -160,11 +97,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
+            <ppi:UserName>user5071</ppi:UserName>
             <!--Optional:-->
-            <ppi:Password>pwd509</ppi:Password>
+            <ppi:Password>pwd5071</ppi:Password>
             <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
          <ws:method>Visa Debit</ws:method>
@@ -214,12 +151,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="62205130-cf10-48ca-bb72-63523f62c5de" name="GetPPIPaymentFee-QA509-DualAdv-MasterCard">
+  <con:testStep type="request" id="40d5bb90-8b14-4550-b3bc-b512927749fd" name="GetPPIPaymentFee-Demo5071-DualAdv-MasterCard">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
-      <con:request name="GetPPIPaymentFee-QA509-DualAdv-MasterCard" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="GetPPIPaymentFee-Demo5071-DualAdv-MasterCard" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -234,11 +171,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
+            <ppi:UserName>user5071</ppi:UserName>
             <!--Optional:-->
-            <ppi:Password>pwd509</ppi:Password>
+            <ppi:Password>pwd5071</ppi:Password>
             <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
          <ws:method>MasterCard</ws:method>
@@ -288,12 +225,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="496781a7-c988-4081-bfe9-0b92823c5568" name="GetPPIPaymentFee-QA509-DualAdv-MasterCard Debit">
+  <con:testStep type="request" id="f91d1c3a-2599-4557-8dc4-6e788a103171" name="GetPPIPaymentFee-Demo5071-DualAdv-MasterCard Debit">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
-      <con:request name="GetPPIPaymentFee-QA509-DualAdv-MasterCard Debit" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="GetPPIPaymentFee-Demo5071-DualAdv-MasterCard Debit" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -308,11 +245,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
+            <ppi:UserName>user5071</ppi:UserName>
             <!--Optional:-->
-            <ppi:Password>pwd509</ppi:Password>
+            <ppi:Password>pwd5071</ppi:Password>
             <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
          <ws:method>MasterCard Debit</ws:method>
@@ -362,12 +299,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="802f4faf-f3b2-44b2-8999-15b4293f6df3" name="GetPPIPaymentFee-QA509-DualAdv-Discover">
+  <con:testStep type="request" id="fb6f815c-68a3-4fec-ab6d-1edc766edd8e" name="GetPPIPaymentFee-Demo5071-DualAdv-Discover">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
-      <con:request name="GetPPIPaymentFee-QA509-DualAdv-Discover" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="GetPPIPaymentFee-Demo5071-DualAdv-Discover" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -382,11 +319,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
+            <ppi:UserName>user5071</ppi:UserName>
             <!--Optional:-->
-            <ppi:Password>pwd509</ppi:Password>
+            <ppi:Password>pwd5071</ppi:Password>
             <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
          <ws:method>Discover</ws:method>
@@ -436,12 +373,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="cd3badae-10fd-44ff-aff4-21976d1f09fe" name="GetPPIPaymentFee-QA509-DualAdv-AmericanExpress">
+  <con:testStep type="request" id="58d9ae00-e2a1-4146-b495-ecc1b94e272e" name="GetPPIPaymentFee-Demo5071-DualAdv-AmericanExpress">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
-      <con:request name="GetPPIPaymentFee-QA509-DualAdv-AmericanExpress" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="GetPPIPaymentFee-Demo5071-DualAdv-AmericanExpress" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -456,11 +393,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
+            <ppi:UserName>user5071</ppi:UserName>
             <!--Optional:-->
-            <ppi:Password>pwd509</ppi:Password>
+            <ppi:Password>pwd5071</ppi:Password>
             <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
          <ws:method>American Express</ws:method>
@@ -510,12 +447,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="198b34f0-6325-48ca-bf96-400b9e6abd3e" name="GetPPIPaymentFee-QA509-DualAdv-PersonalACH">
+  <con:testStep type="request" id="120ff95e-5ee8-4793-b2fa-da12094460ec" name="GetPPIPaymentFee-Demo5071-DualAdv-PersonalACH">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
-      <con:request name="GetPPIPaymentFee-QA509-DualAdv-PersonalACH" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="GetPPIPaymentFee-Demo5071-DualAdv-PersonalACH" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -530,11 +467,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
+            <ppi:UserName>user5071</ppi:UserName>
             <!--Optional:-->
-            <ppi:Password>pwd509</ppi:Password>
+            <ppi:Password>pwd5071</ppi:Password>
             <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
          <ws:method>Personal</ws:method>
@@ -584,12 +521,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="1e7deea5-a4e5-4bb8-96ec-c8f48e109a04" name="GetPPIPaymentFee-QA509-DualAdv-CorporateACH">
+  <con:testStep type="request" id="811e782f-741f-42fe-857d-3c95babafa48" name="GetPPIPaymentFee-Demo5071-DualAdv-CorporateACH">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetPPIPaymentFee</con:operation>
-      <con:request name="GetPPIPaymentFee-QA509-DualAdv-CorporateACH" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="GetPPIPaymentFee-Demo5071-DualAdv-CorporateACH" id="44efaed4-aaf3-4890-9bf7-16c46d450652" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -604,11 +541,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
+            <ppi:UserName>user5071</ppi:UserName>
             <!--Optional:-->
-            <ppi:Password>pwd509</ppi:Password>
+            <ppi:Password>pwd5071</ppi:Password>
             <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
          <ws:method>Corporate</ws:method>
@@ -658,12 +595,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="321c7044-a33d-41df-b9ba-d272e71cf502" name="SubmitPPIPayment-QA509-DualAdv">
+  <con:testStep type="request" id="e0df4e93-bb5e-494f-9d0e-bcb38f54dbe9" name="SubmitPPIPayment-Demo5071-DualAdv">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPayment</con:operation>
-      <con:request name="SubmitPPIPayment-QA509-DualAdv" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="SubmitPPIPayment-Demo5071-DualAdv" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -679,10 +616,10 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
-            <ppi:Password>pwd509</ppi:Password>
-            <ppi:PPITransactionRequestId>sdfsdf345r56456rgfsd</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:UserName>user5071</ppi:UserName>
+            <ppi:Password>pwd5071</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsdf345r56456rgfsd2</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <!--Optional:-->
          <ws:payment Notes="">
@@ -691,13 +628,13 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                <!--Zero or more repetitions:-->
                <ppi:Fees>
                   <ppip:FeeType>Customer</ppip:FeeType>
-                  <ppip:Amount>5</ppip:Amount>
+                  <ppip:Amount>5.00</ppip:Amount>
                </ppi:Fees>
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
                   <ppip:Amount>10.00</ppip:Amount>
-                  <ppip:SegmentType>Utility</ppip:SegmentType>
+                  <ppip:SegmentType>Regular</ppip:SegmentType>
                   <!--Optional:-->
                </ppi:PaymentSegment>
                <!--Optional:-->
@@ -706,7 +643,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                <!--Zero or more repetitions:-->
             </ppi:AdditionalInfo>
             <ppi:Customer>
-               <ppi:AddressLine2>suite 600</ppi:AddressLine2>
+               <ppi:AddressLine2>suite 600</ppi:AddressLine2><ppi:PhoneNumber>7038945000</ppi:PhoneNumber>
             </ppi:Customer>
             <!--Optional:-->
             <!--Optional:-->
@@ -754,17 +691,6 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </ws:SubmitPPIPayment>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="XPath Match" id="f74f8a62-1668-4e08-983c-a7277a3e1cd2" name="Match content of [ns0:ResultText]">
-          <con:configuration>
-            <path>declare namespace ns0='http://www.ePayments.com/PPI';
-declare namespace ns1='https://www.velocitypayment.com/ws';
-//ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:ResultText[1]/text()</path>
-            <content>Payment Approved</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
-          </con:configuration>
-        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -796,12 +722,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="81af38a4-b1b8-44be-a28d-2073ee2ab569" name="SubmitWalletInformation-QA509-DualAdv">
+  <con:testStep type="request" id="59e72a1b-cc2e-48f4-8ec0-e10d06d49960" name="SubmitWalletInformation-Demo5071-DualAdv">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitWalletInformation</con:operation>
-      <con:request name="SubmitWalletInformation-QA509-DualAdv" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8069539d-f842-40ba-aa58-e15e3455ca98" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="SubmitWalletInformation-Demo5071-DualAdv" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8069539d-f842-40ba-aa58-e15e3455ca98" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -815,12 +741,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
          <ws:token>
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
+            <ppi:UserName>user5071</ppi:UserName>
             <!--Optional:-->
-            <ppi:Password>pwd509</ppi:Password>
+            <ppi:Password>pwd5071</ppi:Password>
             <!--Optional:-->
             <ppi:PPITransactionRequestId>Request16</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <!--Optional:-->
          <ws:walletRequest>
@@ -906,12 +832,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="c449aef4-27e9-4af3-aeb4-d41e3d9878f2" name="GetWalletInformation-QA509-DualAdv">
+  <con:testStep type="request" id="75cb975e-3d30-460f-87a9-f61a3dfb9357" name="GetWalletInformation-Demo5071-DualAdv">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>GetWalletInformation</con:operation>
-      <con:request name="GetWalletInformation-QA509-DualAdv" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="24ea61a1-41f8-41f5-af4c-8894b2dd46fc" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="GetWalletInformation-Demo5071-DualAdv" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="24ea61a1-41f8-41f5-af4c-8894b2dd46fc" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -927,10 +853,10 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
-            <ppi:Password>pwd509</ppi:Password>
+            <ppi:UserName>user5071</ppi:UserName>
+            <ppi:Password>pwd5071</ppi:Password>
             <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:walletID>631Wallet839</ws:walletID>
          <!--Optional:-->
@@ -968,12 +894,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="d5b5e9b3-4f12-4ced-bc05-dd91280ca203" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-Visa">
+  <con:testStep type="request" id="85445327-b649-491f-aa58-da5152374676" name="SubmitPPIPaymentUsingWallet-Demo5071-DualAdv-Visa">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
-      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-Visa" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="SubmitPPIPaymentUsingWallet-Demo5071-DualAdv-Visa" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -990,9 +916,9 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             
-            <ppi:UserName>user509</ppi:UserName>
-            <ppi:Password>pwd509</ppi:Password>
-            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:UserName>user5071</ppi:UserName>
+            <ppi:Password>pwd5071</ppi:Password>
+            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <!--Optional:-->
          <ws:ppiWalletPayment Notes="">
@@ -1006,7 +932,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
-                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Utility</ppip:SegmentType>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Regular</ppip:SegmentType>
                   
                   <!--Optional:-->
                </ppi:PaymentSegment>
@@ -1071,12 +997,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="f9a78599-e375-482f-8c87-d2bb1b12d495" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-VisaDebit">
+  <con:testStep type="request" id="2f7d2ed2-16ba-42ea-9050-6d6095d7cdd9" name="SubmitPPIPaymentUsingWallet-Demo5071-DualAdv-VisaDebit">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
-      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-VisaDebit" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="SubmitPPIPaymentUsingWallet-Demo5071-DualAdv-VisaDebit" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1093,9 +1019,9 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             
-            <ppi:UserName>user509</ppi:UserName>
-            <ppi:Password>pwd509</ppi:Password>
-            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:UserName>user5071</ppi:UserName>
+            <ppi:Password>pwd5071</ppi:Password>
+            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <!--Optional:-->
          <ws:ppiWalletPayment Notes="">
@@ -1109,7 +1035,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
-                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Utility</ppip:SegmentType>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Regular</ppip:SegmentType>
                   
                   <!--Optional:-->
                </ppi:PaymentSegment>
@@ -1174,12 +1100,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="001c5f51-f6ee-419c-8a0d-a6721bbc8d6b" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-MasterCard">
+  <con:testStep type="request" id="50668071-c8ab-4415-aaa7-df52fdedebc0" name="SubmitPPIPaymentUsingWallet-Demo5071-DualAdv-MasterCard">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
-      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-MasterCard" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="SubmitPPIPaymentUsingWallet-Demo5071-DualAdv-MasterCard" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1196,9 +1122,9 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             
-            <ppi:UserName>user509</ppi:UserName>
-            <ppi:Password>pwd509</ppi:Password>
-            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:UserName>user5071</ppi:UserName>
+            <ppi:Password>pwd5071</ppi:Password>
+            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <!--Optional:-->
          <ws:ppiWalletPayment Notes="">
@@ -1212,7 +1138,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
-                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Utility</ppip:SegmentType>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Regular</ppip:SegmentType>
                   
                   <!--Optional:-->
                </ppi:PaymentSegment>
@@ -1288,12 +1214,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="4c301789-8a7a-4f21-bf9e-14d7e6e0a934" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-MasterCard Debit">
+  <con:testStep type="request" id="1bd11374-fc0f-45a8-9107-a2b2865a6d42" name="SubmitPPIPaymentUsingWallet-Demo5071-DualAdv-MasterCard Debit">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
-      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-MasterCard Debit" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="SubmitPPIPaymentUsingWallet-Demo5071-DualAdv-MasterCard Debit" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1310,9 +1236,9 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             
-            <ppi:UserName>user509</ppi:UserName>
-            <ppi:Password>pwd509</ppi:Password>
-            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:UserName>user5071</ppi:UserName>
+            <ppi:Password>pwd5071</ppi:Password>
+            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <!--Optional:-->
          <ws:ppiWalletPayment Notes="">
@@ -1326,7 +1252,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
-                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Utility</ppip:SegmentType>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Regular</ppip:SegmentType>
                   
                   <!--Optional:-->
                </ppi:PaymentSegment>
@@ -1402,12 +1328,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="3e520e13-4687-43a2-9a2f-7236637e76c8" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-AmericanExpress">
+  <con:testStep type="request" id="13730668-5b0f-4518-94ff-cebea0e9a38a" name="SubmitPPIPaymentUsingWallet-Demo5071-DualAdv-AmericanExpress">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
-      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-AmericanExpress" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="SubmitPPIPaymentUsingWallet-Demo5071-DualAdv-AmericanExpress" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1424,9 +1350,9 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             
-            <ppi:UserName>user509</ppi:UserName>
-            <ppi:Password>pwd509</ppi:Password>
-            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:UserName>user5071</ppi:UserName>
+            <ppi:Password>pwd5071</ppi:Password>
+            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <!--Optional:-->
          <ws:ppiWalletPayment Notes="">
@@ -1440,7 +1366,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
-                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Utility</ppip:SegmentType>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Regular</ppip:SegmentType>
                   
                   <!--Optional:-->
                </ppi:PaymentSegment>
@@ -1516,12 +1442,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="adbb1a99-981b-4f6b-8350-0537f18971db" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-Discover">
+  <con:testStep type="request" id="aa8e7876-9267-4918-a626-14a9b858d197" name="SubmitPPIPaymentUsingWallet-Demo5071-DualAdv-Discover">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
-      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-Discover" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="SubmitPPIPaymentUsingWallet-Demo5071-DualAdv-Discover" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1538,9 +1464,9 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             
-            <ppi:UserName>user509</ppi:UserName>
-            <ppi:Password>pwd509</ppi:Password>
-            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:UserName>user5071</ppi:UserName>
+            <ppi:Password>pwd5071</ppi:Password>
+            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <!--Optional:-->
          <ws:ppiWalletPayment Notes="">
@@ -1554,7 +1480,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
-                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Utility</ppip:SegmentType>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Regular</ppip:SegmentType>
                   
                   <!--Optional:-->
                </ppi:PaymentSegment>
@@ -1630,12 +1556,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="b8b0075a-1c9f-4054-a370-9ad6d50d4595" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-PersonalChecking">
+  <con:testStep type="request" id="dc87aeea-5e9a-4997-848c-61c65ca2efb6" name="SubmitPPIPaymentUsingWallet-Demo5071-DualAdv-PersonalChecking">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
-      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-PersonalChecking" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="SubmitPPIPaymentUsingWallet-Demo5071-DualAdv-PersonalChecking" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1652,9 +1578,9 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             
-            <ppi:UserName>user509</ppi:UserName>
-            <ppi:Password>pwd509</ppi:Password>
-            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:UserName>user5071</ppi:UserName>
+            <ppi:Password>pwd5071</ppi:Password>
+            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <!--Optional:-->
          <ws:ppiWalletPayment Notes="">
@@ -1668,7 +1594,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
-                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Utility</ppip:SegmentType>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Regular</ppip:SegmentType>
                   
                   <!--Optional:-->
                </ppi:PaymentSegment>
@@ -1733,12 +1659,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="54ef1ec8-1003-492c-96c6-b6c75e4ac3dc" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-PersonalSavings">
+  <con:testStep type="request" id="84a1e5c6-0d6d-4921-9564-b4cc5285c1b9" name="SubmitPPIPaymentUsingWallet-Demo5071-DualAdv-PersonalSavings">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
-      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-PersonalSavings" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="SubmitPPIPaymentUsingWallet-Demo5071-DualAdv-PersonalSavings" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1755,9 +1681,9 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             
-            <ppi:UserName>user509</ppi:UserName>
-            <ppi:Password>pwd509</ppi:Password>
-            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:UserName>user5071</ppi:UserName>
+            <ppi:Password>pwd5071</ppi:Password>
+            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <!--Optional:-->
          <ws:ppiWalletPayment Notes="">
@@ -1771,7 +1697,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
-                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Utility</ppip:SegmentType>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Regular</ppip:SegmentType>
                   
                   <!--Optional:-->
                </ppi:PaymentSegment>
@@ -1836,12 +1762,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="90a0a4ce-b0ee-4903-80ec-c4fd1592166b" name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-Corporate">
+  <con:testStep type="request" id="0d94a506-17f1-4fd0-8298-0bbe46a67e51" name="SubmitPPIPaymentUsingWallet-Demo5071-DualAdv-Corporate">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
       <con:interface>PPIServiceFacadeSoap</con:interface>
       <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
-      <con:request name="SubmitPPIPaymentUsingWallet-QA509-DualAdv-Corporate" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:request name="SubmitPPIPaymentUsingWallet-Demo5071-DualAdv-Corporate" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -1858,9 +1784,9 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             
-            <ppi:UserName>user509</ppi:UserName>
-            <ppi:Password>pwd509</ppi:Password>
-            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:UserName>user5071</ppi:UserName>
+            <ppi:Password>pwd5071</ppi:Password>
+            <ppi:PPITransactionRequestId>7896541258</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>5071</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <!--Optional:-->
          <ws:ppiWalletPayment Notes="">
@@ -1874,7 +1800,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
-                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Utility</ppip:SegmentType>
+                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Regular</ppip:SegmentType>
                   
                   <!--Optional:-->
                </ppi:PaymentSegment>
@@ -1939,7 +1865,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="datagen" name="DataGenDateTest" id="3ad057ed-36ff-49cf-b6e2-0f8d0e3d9385">
+  <con:testStep type="datagen" name="DataGenDateTest" id="77e65cd5-a6f8-4a43-8ddf-94518016c4d6">
     <con:settings/>
     <con:config xsi:type="con:DataGeneratorStep">
       <con:property type="Script">
