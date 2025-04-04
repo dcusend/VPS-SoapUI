@@ -625,8 +625,8 @@
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:NickName>495Nickname142</ppi:NickName>
-            <ppi:WalletID>495Wallet142</ppi:WalletID>
+            <ppi:NickName>Nickname</ppi:NickName>
+            <ppi:WalletID>495WalletID850</ppi:WalletID>
             <ppi:Vehicle>
                <!--Optional:-->
                <ppip:AccountType/>
@@ -637,7 +637,7 @@
                <!--Optional:-->
                <!--Optional:-->
                <ppip:CVV2Code>147</ppip:CVV2Code>
-               <ppip:ExpirationDate>12/25</ppip:ExpirationDate>
+               <ppip:ExpirationDate>12/28</ppip:ExpirationDate>
                <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
             </ppi:Vehicle>
@@ -668,6 +668,119 @@
             </ppi:Payor>
             
             <ppi:ClientReferenceNumber>495CAN139</ppi:ClientReferenceNumber>
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:walletRequest>
+      </ws:SubmitWalletInformation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="8d414cc5-3acb-4cb0-aae9-9cc6539e8d58" name="SOAP Response"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitWalletInformation"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="340ce76f-4c26-4168-ad5e-9f459d02a685">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="e9ddc45e-62b1-4856-b842-795d88eb9ee8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0bb03ed4-90c7-439a-b3c1-5b9d4c6d7f88">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="82a1c8f6-c89d-4861-b0b2-369393cfc3a1">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="7a9b6b2f-ab95-4cd7-a195-a7db683f2af4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="1329e3cc-e169-41bd-abb7-aebc80d04a9e">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="5e16f9aa-b3bc-446f-af4a-2a769cb2262e" name="DeleteWalletQA495">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RequestStep">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitWalletInformation</con:operation>
+      <con:request name="DeleteWalletQA495" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8069539d-f842-40ba-aa58-e15e3455ca98" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitWalletInformation>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user495</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>pwd495</ppi:Password>
+            <ppi:PPITransactionRequestId>Request15</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>495</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:walletRequest>
+            <ppi:Action>DeleteWallet</ppi:Action>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            <ppi:WalletID>495WalletID850</ppi:WalletID>
+            <ppi:Vehicle>
+               <!--Optional:-->
+               <ppip:AccountType/>
+               <!--Optional:-->
+               <ppip:CheckType/>
+               <ppip:CheckNumberPosition/>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               
+               
+               <ppip:PaymentMethodCategory/>
+               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
+            </ppi:Vehicle>
+            <!--Optional:-->
+            <ppi:Payor>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--<ppi:FirstName/>-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               <ppi:ZipCode>21054</ppi:ZipCode><ppi:IsBusinessName>false</ppi:IsBusinessName>
+            </ppi:Payor>
+            
+            
             <!--Optional:-->
             <!--Optional:-->
          </ws:walletRequest>

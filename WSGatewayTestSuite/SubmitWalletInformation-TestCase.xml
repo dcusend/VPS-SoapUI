@@ -245,8 +245,8 @@
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:NickName>495WalletID7200</ppi:NickName>
-            <ppi:WalletID>495WalletID7200</ppi:WalletID>
+            <ppi:NickName>495WalletID72012</ppi:NickName>
+            <ppi:WalletID>495WalletID72012</ppi:WalletID>
             <ppi:Vehicle>
                <!--Optional:-->
                
@@ -264,15 +264,15 @@
             <!--Optional:-->
             <ppi:Payor>
                <ppi:AccountName>My AC name</ppi:AccountName>
-               <ppi:AddressLine1>2311 york road</ppi:AddressLine1>
-               <ppi:PhoneNumber>7038945000</ppi:PhoneNumber>
-               <ppi:FirstName>Rosa</ppi:FirstName>
+               
+               <ppi:AddressLine1>2311 york road</ppi:AddressLine1><ppi:PhoneNumber>7038945000</ppi:PhoneNumber>
+               
                <ppi:LastName>Asad</ppi:LastName>
                <ppi:ZipCode>22201</ppi:ZipCode>
                <ppi:IsBusinessName/>
             </ppi:Payor>
             
-            <ppi:ClientReferenceNumber>4950071200</ppi:ClientReferenceNumber>
+            <ppi:ClientReferenceNumber>4950071201</ppi:ClientReferenceNumber>
             <!--Optional:-->
             <!--Optional:-->
          </ws:walletRequest>

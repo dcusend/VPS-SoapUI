@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase xmlns:con="http://eviware.com/soapui/config" id="55a02773-3853-4425-9726-514d049063ef" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="CardNotAcceptedError" searchProperties="true" timeout="0">
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="55a02773-3853-4425-9726-514d049063ef" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="CardNotAcceptedError" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="">
   <con:settings id="0aadc152-2417-4a3f-a4e8-a00d5708a7ab">
     <con:setting id="55a02773-3853-4425-9726-514d049063effileName">CardNotAcceptedError</con:setting>
   </con:settings>

@@ -3,6 +3,20 @@
   <con:settings>
     <con:setting id="aa0d98fb-0e4c-4a3f-be56-7a2800c6ff34fileName">GetFeeWallet-Test-Case---QA509-AdvancedDual</con:setting>
   </con:settings>
+  <con:testStep type="datagen" name="DataGenDateTest" id="6d7cc506-909d-4902-8b39-2317841e6ac4">
+    <con:settings/>
+    <con:config xsi:type="con:DataGeneratorStep">
+      <con:property type="Script">
+        <con:configuration>
+          <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd")
+return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
+        </con:configuration>
+        <con:name>TodayDate</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+    </con:config>
+  </con:testStep>
   <con:testStep type="request" id="24033b44-5d73-4102-b064-fcd52eabbd42" name="GetVelocityFee-509-Dual-Adv-QA">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
@@ -1926,20 +1940,6 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           </con:entry>
         </con:environmentSpec>
       </con:request>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="datagen" name="DataGenDateTest" id="6d7cc506-909d-4902-8b39-2317841e6ac4">
-    <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep">
-      <con:property type="Script">
-        <con:configuration>
-          <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd")
-return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
-        </con:configuration>
-        <con:name>TodayDate</con:name>
-        <con:mode>STEP</con:mode>
-        <con:shared>false</con:shared>
-      </con:property>
     </con:config>
   </con:testStep>
   <con:properties/>

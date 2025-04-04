@@ -15,7 +15,7 @@
           <pattern/>
           <random>true</random>
           <persist>true</persist>
-          <current>2549069681.00000000000000000000000000000000000000000000000000000</current>
+          <current>8125389850.00000000000000000000000000000000000000000000000000000</current>
         </con:configuration>
         <con:name>WalletIDGenerator</con:name>
         <con:mode>STEP</con:mode>
@@ -229,8 +229,8 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">pwd2325</ppi:Password>
             <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">dfsdf345dfgdfgd</ppi:PPITransactionRequestId>
             <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">2325</ppi:PPIBusinessEntityIdentifierToken>
-         </ws:token>
-         <ws:walletID>${SubmitWalletUpgrade#RawRequest#declare namespace ppi='http://www.ePayments.com/PPI'; declare namespace ws='https://www.velocitypayment.com/ws'; //ws:SubmitWalletInformation[1]/ws:walletRequest[1]/ppi:WalletID[1]}</ws:walletID>
+         </ws:token><ws:walletID>${DataGenWalletIDUpgrade#WalletIDGenerator}</ws:walletID>
+         
       </ws:GetWalletInformation>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
@@ -252,17 +252,6 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
 declare namespace ns1='https://www.velocitypayment.com/ws';
 //ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:ResultText[1]/text()</path>
             <content>Wallet information retrieved successfully</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="XPath Match" id="589ae727-a0f2-4f3b-af2c-11fb60a5213d" name="Match content of [ns0:WalletID]">
-          <con:configuration>
-            <path>declare namespace ns0='http://www.ePayments.com/PPI';
-declare namespace ns1='https://www.velocitypayment.com/ws';
-//ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:Wallet[1]/ns0:WalletID[1]/text()</path>
-            <content>${SubmitWalletUpgrade#RawRequest#declare namespace ppi='http://www.ePayments.com/PPI'; declare namespace ws='https://www.velocitypayment.com/ws'; //ws:SubmitWalletInformation[1]/ws:walletRequest[1]/ppi:WalletID[1]}</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -311,6 +300,17 @@ declare namespace ns2='http://tempuri.org/';
 declare namespace ns1='https://www.velocitypayment.com/ws';
 //ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:Wallet[1]/ns0:PaymentAccount[4]/ns2:PartialPaymentVehicleNumber[1]/text()</path>
             <content>****1111</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="04d04347-e10b-4a7d-b8c8-bbb639869d78" name="Match content of [ns0:WalletID]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:Wallet[1]/ns0:WalletID[1]/text()</path>
+            <content>${DataGenWalletIDUpgrade#WalletIDGenerator}</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -475,8 +475,8 @@ declare namespace ws='https://www.velocitypayment.com/ws';
             <ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">25874400</ppi:ClientAccountNumber>
             <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource>
-            <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${SubmitWalletUpgrade#RawRequest#declare namespace ppi='http://www.ePayments.com/PPI'; declare namespace ws='https://www.velocitypayment.com/ws'; //ws:SubmitWalletInformation[1]/ws:walletRequest[1]/ppi:WalletID[1]}</ppi:WalletID>
-            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI"/>
+            <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${DataGenWalletIDUpgrade#WalletIDGenerator}</ppi:WalletID>
+            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">55606561111</ppi:PaymentAccountToken>
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>
    </soapenv:Body>
@@ -600,8 +600,8 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
             <ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">25874400</ppi:ClientAccountNumber>
             <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource>
-            <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${SubmitWalletUpgrade#RawRequest#declare namespace ppi='http://www.ePayments.com/PPI'; declare namespace ws='https://www.velocitypayment.com/ws'; //ws:SubmitWalletInformation[1]/ws:walletRequest[1]/ppi:WalletID[1]}</ppi:WalletID>
-            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI"/>
+            <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${DataGenWalletIDUpgrade#WalletIDGenerator}</ppi:WalletID>
+            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">55606562222</ppi:PaymentAccountToken>
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>
    </soapenv:Body>
@@ -711,8 +711,8 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">25874400</ppi:ClientAccountNumber>
             <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource>
-            <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${SubmitWalletUpgrade#RawRequest#declare namespace ppi='http://www.ePayments.com/PPI'; declare namespace ws='https://www.velocitypayment.com/ws'; //ws:SubmitWalletInformation[1]/ws:walletRequest[1]/ppi:WalletID[1]}</ppi:WalletID>
-            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI"/>
+            <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${DataGenWalletIDUpgrade#WalletIDGenerator}</ppi:WalletID>
+            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">55606563333</ppi:PaymentAccountToken>
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>
    </soapenv:Body>
@@ -822,8 +822,8 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">25874400</ppi:ClientAccountNumber>
             <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource>
-            <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${SubmitWalletUpgrade#RawRequest#declare namespace ppi='http://www.ePayments.com/PPI'; declare namespace ws='https://www.velocitypayment.com/ws'; //ws:SubmitWalletInformation[1]/ws:walletRequest[1]/ppi:WalletID[1]}</ppi:WalletID>
-            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI"/>
+            <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${DataGenWalletIDUpgrade#WalletIDGenerator}</ppi:WalletID>
+            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">55606565555</ppi:PaymentAccountToken>
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>
    </soapenv:Body>
