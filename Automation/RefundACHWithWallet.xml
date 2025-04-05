@@ -368,7 +368,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
 declare namespace ns0='http://www.ePayments.com/PPI';
 declare namespace ns1='https://www.velocitypayment.com/ws';
 //ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:Wallet[1]/ns0:PaymentAccount[1]/ns2:PaymentMethod[1]/text()</path>
-            <content>ACH</content>
+            <content>Personal</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>

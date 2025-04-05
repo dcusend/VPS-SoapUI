@@ -629,7 +629,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <path>declare namespace ns0='http://www.ePayments.com/PPI';
 declare namespace ns1='https://www.velocitypayment.com/ws';
 matches( //ns1:CancelInstallmentPlanResponse[1]/ns1:CancelInstallmentPlanResult[1]/ns0:PaymentPlanID[1]/text(), '10.*' )</path>
-            <content>true</content>
+            <content>false</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -734,7 +734,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <path>declare namespace ns0='http://www.ePayments.com/PPI';
 declare namespace ns1='https://www.velocitypayment.com/ws';
 matches( //ns1:CancelInstallmentPlanResponse[1]/ns1:CancelInstallmentPlanResult[1]/ns0:PaymentPlanID[1]/text(), '10.*' )</path>
-            <content>true</content>
+            <content>false</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
