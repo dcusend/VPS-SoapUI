@@ -557,7 +557,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://qa2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -580,7 +580,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                <!--Zero or more repetitions:-->
                <ppi:Fees>
                   <ppip:FeeType>Customer</ppip:FeeType>
-                  <ppip:Amount>2</ppip:Amount>
+                  <ppip:Amount>5</ppip:Amount>
                </ppi:Fees>
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
@@ -591,7 +591,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                </ppi:PaymentSegment>
                <!--Optional:-->
                <ppi:PaymentType>Regular</ppi:PaymentType>
-               <ppi:ProcessDate>2025-04-04T15:59:00.000-04:00</ppi:ProcessDate>
+               <ppi:ProcessDate>2025-07-02T15:59:00.000-04:00</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
             </ppi:AdditionalInfo>
             <ppi:Customer><ppi:FirstName>dgdfgdfg</ppi:FirstName><ppi:Zip>21054</ppi:Zip></ppi:Customer><ppi:ClientAccountNumber>365214002</ppi:ClientAccountNumber>
@@ -632,8 +632,8 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                <!--Optional:-->
                <ppip:CVV2Code>145</ppip:CVV2Code>
                
-               <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
-               <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               <ppip:ExpirationDate>12/28</ppip:ExpirationDate><ppip:PaymentVehicleNumber>4847352658779710</ppip:PaymentVehicleNumber>
+               <ppip:PaymentMethodCategory>DebitCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation/>
             </ppi:Vehicle>
          </ws:payment><ws:storedCredential/>

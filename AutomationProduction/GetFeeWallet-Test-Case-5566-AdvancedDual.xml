@@ -3,6 +3,20 @@
   <con:settings>
     <con:setting id="3eefeea6-26c0-497d-8d05-d6a035db5c96fileName">GetFeeWallet-Test-Case-5566-AdvancedDual</con:setting>
   </con:settings>
+  <con:testStep type="datagen" name="DataGenDateTest" id="cfa29109-d1fd-400a-9ca6-9ab3dd458bad">
+    <con:settings/>
+    <con:config xsi:type="con:DataGeneratorStep">
+      <con:property type="Script">
+        <con:configuration>
+          <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd")
+return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
+        </con:configuration>
+        <con:name>TodayDate</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+    </con:config>
+  </con:testStep>
   <con:testStep type="request" id="2009bb75-ea92-4de7-983c-9b2f53acfde1" name="GetPPIPaymentFee-5566-DualAdv-Visa">
     <con:settings/>
     <con:config xsi:type="con:RequestStep">
@@ -13,7 +27,7 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
    <soapenv:Header/>
    <soapenv:Body>
@@ -87,7 +101,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
    <soapenv:Header/>
    <soapenv:Body>
@@ -161,7 +175,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
    <soapenv:Header/>
    <soapenv:Body>
@@ -171,11 +185,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
+            <ppi:UserName>user5566</ppi:UserName>
             <!--Optional:-->
-            <ppi:Password>pwd509</ppi:Password>
+            <ppi:Password>pwd5566</ppi:Password>
             <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:PPIBusinessEntityIdentifierToken>5566</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
          <ws:method>MasterCard</ws:method>
@@ -235,7 +249,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
    <soapenv:Header/>
    <soapenv:Body>
@@ -245,11 +259,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
+            <ppi:UserName>user5566</ppi:UserName>
             <!--Optional:-->
-            <ppi:Password>pwd509</ppi:Password>
+            <ppi:Password>pwd5566</ppi:Password>
             <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:PPIBusinessEntityIdentifierToken>5566</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
          <ws:method>MasterCard Debit</ws:method>
@@ -309,7 +323,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
    <soapenv:Header/>
    <soapenv:Body>
@@ -319,11 +333,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
+            <ppi:UserName>user5566</ppi:UserName>
             <!--Optional:-->
-            <ppi:Password>pwd509</ppi:Password>
+            <ppi:Password>pwd5566</ppi:Password>
             <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:PPIBusinessEntityIdentifierToken>5566</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
          <ws:method>Discover</ws:method>
@@ -383,7 +397,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
    <soapenv:Header/>
    <soapenv:Body>
@@ -393,11 +407,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
+            <ppi:UserName>user5566</ppi:UserName>
             <!--Optional:-->
-            <ppi:Password>pwd509</ppi:Password>
+            <ppi:Password>pwd5566</ppi:Password>
             <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:PPIBusinessEntityIdentifierToken>5566</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
          <ws:method>American Express</ws:method>
@@ -457,7 +471,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
    <soapenv:Header/>
    <soapenv:Body>
@@ -467,11 +481,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
+            <ppi:UserName>user5566</ppi:UserName>
             <!--Optional:-->
-            <ppi:Password>pwd509</ppi:Password>
+            <ppi:Password>pwd5566</ppi:Password>
             <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:PPIBusinessEntityIdentifierToken>5566</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
          <ws:method>Personal</ws:method>
@@ -531,7 +545,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
    <soapenv:Header/>
    <soapenv:Body>
@@ -541,11 +555,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
+            <ppi:UserName>user5566</ppi:UserName>
             <!--Optional:-->
-            <ppi:Password>pwd509</ppi:Password>
+            <ppi:Password>pwd5566</ppi:Password>
             <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:PPIBusinessEntityIdentifierToken>5566</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>10</ws:paymentAmount>
          <ws:method>Corporate</ws:method>
@@ -605,7 +619,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -616,10 +630,10 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
-            <ppi:Password>pwd509</ppi:Password>
+            <ppi:UserName>user5566</ppi:UserName>
+            <ppi:Password>pwd5566</ppi:Password>
             <ppi:PPITransactionRequestId>sdfsdf345r56456rgfsd</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:PPIBusinessEntityIdentifierToken>5566</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <!--Optional:-->
          <ws:payment Notes="">
@@ -628,7 +642,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                <!--Zero or more repetitions:-->
                <ppi:Fees>
                   <ppip:FeeType>Customer</ppip:FeeType>
-                  <ppip:Amount>5</ppip:Amount>
+                  <ppip:Amount>2.00</ppip:Amount>
                </ppi:Fees>
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
@@ -639,7 +653,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                </ppi:PaymentSegment>
                <!--Optional:-->
                
-               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2025-02-27T14:30:00.000-04:00</ppi:ProcessDate>
+               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>${DataGenDateTest#TodayDate}</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
             </ppi:AdditionalInfo>
             <ppi:Customer>
@@ -682,7 +696,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                <!--Optional:-->
                <ppip:CVV2Code>147</ppip:CVV2Code>
                <ppip:ExpirationDate>12/29</ppip:ExpirationDate>
-               <ppip:PaymentVehicleNumber>5424000000000015</ppip:PaymentVehicleNumber>
+               <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
                <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
             </ppi:Vehicle>
@@ -732,7 +746,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -741,12 +755,12 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
          <ws:token>
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:UserName>user509</ppi:UserName>
+            <ppi:UserName>user5566</ppi:UserName>
             <!--Optional:-->
-            <ppi:Password>pwd509</ppi:Password>
+            <ppi:Password>pwd5566</ppi:Password>
             <!--Optional:-->
             <ppi:PPITransactionRequestId>Request16</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:PPIBusinessEntityIdentifierToken>5566</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <!--Optional:-->
          <ws:walletRequest>
@@ -1863,20 +1877,6 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           </con:entry>
         </con:environmentSpec>
       </con:request>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="datagen" name="DataGenDateTest" id="cfa29109-d1fd-400a-9ca6-9ab3dd458bad">
-    <con:settings/>
-    <con:config xsi:type="con:DataGeneratorStep">
-      <con:property type="Script">
-        <con:configuration>
-          <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd")
-return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
-        </con:configuration>
-        <con:name>TodayDate</con:name>
-        <con:mode>STEP</con:mode>
-        <con:shared>false</con:shared>
-      </con:property>
     </con:config>
   </con:testStep>
   <con:properties/>

@@ -11,7 +11,7 @@
     <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
       <con:dataSource type="Data Connection">
         <con:configuration>
-          <Connection>GovolutionAutomationData( QA2 )</Connection>
+          <Connection>GovolutionAutomationData( Default environment )</Connection>
           <query>Select MainTable.RID as MainTable_RID
 From MainTable</query>
           <fetchSize/>
