@@ -284,7 +284,7 @@
             <ppi:PPIBusinessEntityIdentifierToken>3008</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <ws:paymentAmount>119.74</ws:paymentAmount>
-         <ws:method>DebitCard</ws:method>
+         <ws:method>MasterCard Debit</ws:method>
          
          <!--Optional:-->
       </ws:GetPPIPaymentFee>
