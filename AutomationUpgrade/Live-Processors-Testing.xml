@@ -102,11 +102,11 @@
                <ppip:CheckType/>
                <ppip:CheckNumberPosition/>
                <!--Optional:-->
-               <ppip:CVV2Code>656</ppip:CVV2Code>
+               <ppip:CVV2Code>217</ppip:CVV2Code>
                <!--Optional:-->
-               <ppip:ExpirationDate>03/26</ppip:ExpirationDate>
+               <ppip:ExpirationDate>12/31</ppip:ExpirationDate>
                <!--Optional:-->
-               <ppip:PaymentVehicleNumber>5567080011582687</ppip:PaymentVehicleNumber>
+               <ppip:PaymentVehicleNumber>4358808486916303</ppip:PaymentVehicleNumber>
                <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation/>
             </ppi:Vehicle>
@@ -425,11 +425,11 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                <ppip:CheckType/>
                <ppip:CheckNumberPosition/>
                <!--Optional:-->
-               <ppip:CVV2Code>656</ppip:CVV2Code>
+               <ppip:CVV2Code>217</ppip:CVV2Code>
                <!--Optional:-->
-               <ppip:ExpirationDate>03/26</ppip:ExpirationDate>
+               <ppip:ExpirationDate>12/31</ppip:ExpirationDate>
                <!--Optional:-->
-               <ppip:PaymentVehicleNumber>5567080011582687</ppip:PaymentVehicleNumber>
+               <ppip:PaymentVehicleNumber>4358808486916303</ppip:PaymentVehicleNumber>
                <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation/>
             </ppi:Vehicle>
