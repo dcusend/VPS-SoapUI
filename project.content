@@ -180,6 +180,7 @@ WSGatewayTestSuite\MVDExpress-Test-Case.xml
 WSGatewayTestSuite\GetFeeWallet-Test-Case.xml
 WSGatewayTestSuite\GetFeeWallet-LiveClient-Demo-2130.xml
 WSGatewayTestSuite\GetFeeWallet-Test-Case---QA509-AdvancedDual.xml
+WSGatewayTestSuite\HCwater-WWW-App3008-Testing-DoNotUse.xml
 PPIServiceFacadeSoap12-TestSuite\CapturePayment-TestCase.xml
 PPIServiceFacadeSoap12-TestSuite\FinalizePPIPayment-TestCase.xml
 PPIServiceFacadeSoap12-TestSuite\GetIVRTransferOptions-TestCase.xml
