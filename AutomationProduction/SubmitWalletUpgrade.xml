@@ -16,7 +16,7 @@
           <pattern/>
           <random>true</random>
           <persist>true</persist>
-          <current>6081922079.00000000000000000000000000000000000000000000000000000</current>
+          <current>6785958748.00000000000000000000000000000000000000000000000000000</current>
         </con:configuration>
         <con:name>WalletIDGenerator</con:name>
         <con:mode>STEP</con:mode>
