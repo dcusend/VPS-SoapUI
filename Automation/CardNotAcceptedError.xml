@@ -87,7 +87,7 @@
                <!--Optional:-->
                <!--Optional:-->
                <ppip:CVV2Code>145</ppip:CVV2Code>
-               <ppip:ExpirationDate>12/25</ppip:ExpirationDate>
+               <ppip:ExpirationDate>12/29</ppip:ExpirationDate>
                <ppip:PaymentVehicleNumber>374245002771003</ppip:PaymentVehicleNumber>
                <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation/>
@@ -244,7 +244,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                <!--Optional:-->
                <!--Optional:-->
                <ppip:CVV2Code>145</ppip:CVV2Code>
-               <ppip:ExpirationDate>12/25</ppip:ExpirationDate>
+               <ppip:ExpirationDate>12/29</ppip:ExpirationDate>
                <ppip:PaymentVehicleNumber>374245002771003</ppip:PaymentVehicleNumber>
                <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation/>

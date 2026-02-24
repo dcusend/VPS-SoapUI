@@ -60,7 +60,7 @@
                <ppip:AccountType/>
                <ppip:CheckType/>
                <ppip:CheckNumberPosition/>
-               <ppip:CVV2Code>123</ppip:CVV2Code><ppip:ExpirationDate>12/25</ppip:ExpirationDate><ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
+               <ppip:CVV2Code>123</ppip:CVV2Code><ppip:ExpirationDate>12/29</ppip:ExpirationDate><ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
                <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
             </ppi:Vehicle>
@@ -239,7 +239,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
 declare namespace ns0='http://www.ePayments.com/PPI';
 declare namespace ns1='https://www.velocitypayment.com/ws';
 //ns1:GetWalletInformationResponse[1]/ns1:GetWalletInformationResult[1]/ns0:Wallet[1]/ns0:PaymentAccount[1]/ns2:ExpirationDate[1]/text()</path>
-            <content>12/25</content>
+            <content>12/29</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -794,7 +794,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                   <SegmentType xmlns="http://www.ePayments.com/PPIPayment">Regular</SegmentType>
                </PaymentSegment>
                <PaymentType>Regular</PaymentType>
-               <ProcessDate>2021-11-03T19:35:53.000Z</ProcessDate>
+               <ProcessDate>${DataGenProcessDate#ProcessDateToday}</ProcessDate>
             </AdditionalInfo>
             <ClientAccountNumber xmlns="http://www.ePayments.com/PPI">6639201</ClientAccountNumber>
             <PreAuthorizeOnly xmlns="http://www.ePayments.com/PPI">true</PreAuthorizeOnly>
@@ -952,7 +952,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                   <SegmentType xmlns="http://www.ePayments.com/PPIPayment">Regular</SegmentType>
                </PaymentSegment>
                <PaymentType>Regular</PaymentType>
-               <ProcessDate>2021-11-03T19:35:53.000Z</ProcessDate>
+               <ProcessDate>${DataGenProcessDate#ProcessDateToday}</ProcessDate>
             </AdditionalInfo>
             <ClientAccountNumber xmlns="http://www.ePayments.com/PPI">6639201</ClientAccountNumber>
             <PreAuthorizeOnly xmlns="http://www.ePayments.com/PPI">false</PreAuthorizeOnly>
@@ -1095,7 +1095,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                   <SegmentType xmlns="http://www.ePayments.com/PPIPayment">Regular</SegmentType>
                </PaymentSegment>
                <PaymentType>Regular</PaymentType>
-               <ProcessDate>2021-11-03T19:35:53.000Z</ProcessDate>
+               <ProcessDate>${DataGenProcessDate#ProcessDateToday}</ProcessDate>
             </AdditionalInfo>
             <ClientAccountNumber xmlns="http://www.ePayments.com/PPI">6639201</ClientAccountNumber>
             <PreAuthorizeOnly xmlns="http://www.ePayments.com/PPI">false</PreAuthorizeOnly>
@@ -1405,7 +1405,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
       <con:properties>
         <con:property>
           <con:name>ns2:PaymentAccountToken</con:name>
-          <con:value>4015141111</con:value>
+          <con:value>4038241111</con:value>
         </con:property>
       </con:properties>
     </con:config>
@@ -1416,7 +1416,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
       <con:properties>
         <con:property>
           <con:name>ns0:PaymentID</con:name>
-          <con:value>439439247741364</con:value>
+          <con:value>2152228882630858</con:value>
         </con:property>
       </con:properties>
     </con:config>

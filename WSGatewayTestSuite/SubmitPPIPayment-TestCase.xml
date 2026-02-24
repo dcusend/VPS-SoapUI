@@ -557,7 +557,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://qa2.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -591,7 +591,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                </ppi:PaymentSegment>
                <!--Optional:-->
                <ppi:PaymentType>Regular</ppi:PaymentType>
-               <ppi:ProcessDate>2025-08-26T15:59:00.000-04:00</ppi:ProcessDate>
+               <ppi:ProcessDate>2026-02-23T15:59:00.000-04:00</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
             </ppi:AdditionalInfo>
             <ppi:Customer><ppi:FirstName>dgdfgdfg</ppi:FirstName><ppi:Zip>21054</ppi:Zip></ppi:Customer><ppi:ClientAccountNumber>365214002</ppi:ClientAccountNumber>
@@ -953,7 +953,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                </ppi:PaymentSegment>
                <!--Optional:-->
                <ppi:PaymentType>Debt</ppi:PaymentType>
-               <ppi:ProcessDate>2026-01-28T14:30:00.000-04:00</ppi:ProcessDate>
+               <ppi:ProcessDate>2026-02-23T14:30:00.000-04:00</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
             </ppi:AdditionalInfo>
             <ppi:Customer>

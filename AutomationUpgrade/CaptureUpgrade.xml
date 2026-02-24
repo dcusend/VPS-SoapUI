@@ -56,7 +56,7 @@
                <ppip:CheckType xmlns:ppip="http://www.ePayments.com/PPIPayment"/>
                <ppip:CheckNumberPosition xmlns:ppip="http://www.ePayments.com/PPIPayment"/>
                <ppip:CVV2Code xmlns:ppip="http://www.ePayments.com/PPIPayment">123</ppip:CVV2Code>
-               <ppip:ExpirationDate xmlns:ppip="http://www.ePayments.com/PPIPayment">12/25</ppip:ExpirationDate>
+               <ppip:ExpirationDate xmlns:ppip="http://www.ePayments.com/PPIPayment">12/29</ppip:ExpirationDate>
                <ppip:PaymentVehicleNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">4111111111111111</ppip:PaymentVehicleNumber>
                <ppip:PaymentMethodCategory xmlns:ppip="http://www.ePayments.com/PPIPayment">CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation xmlns:ppip="http://www.ePayments.com/PPIPayment">false</ppip:EnforcePinDebitValidation>

@@ -42,7 +42,7 @@
                <ppip:AccountType/>
                <ppip:CheckType/>
                <ppip:CheckNumberPosition/>
-               <ppip:CVV2Code>123</ppip:CVV2Code><ppip:ExpirationDate>12/25</ppip:ExpirationDate><ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
+               <ppip:CVV2Code>123</ppip:CVV2Code><ppip:ExpirationDate>12/29</ppip:ExpirationDate><ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
                <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
             </ppi:Vehicle>

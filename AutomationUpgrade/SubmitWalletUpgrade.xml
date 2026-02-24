@@ -15,7 +15,7 @@
           <pattern/>
           <random>true</random>
           <persist>true</persist>
-          <current>4740887388.0000000000000000000000000000000000000000000000000000</current>
+          <current>1410927946.0000000000000000000000000000000000000000000000000000</current>
         </con:configuration>
         <con:name>WalletIDGenerator</con:name>
         <con:mode>STEP</con:mode>
@@ -476,7 +476,7 @@ declare namespace ws='https://www.velocitypayment.com/ws';
             <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource>
             <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${DataGenWalletIDUpgrade#WalletIDGenerator}</ppi:WalletID>
-            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">61355271111</ppi:PaymentAccountToken>
+            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">63526621111</ppi:PaymentAccountToken>
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>
    </soapenv:Body>
@@ -601,7 +601,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
             <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource>
             <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${DataGenWalletIDUpgrade#WalletIDGenerator}</ppi:WalletID>
-            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">61355272222</ppi:PaymentAccountToken>
+            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">63526622222</ppi:PaymentAccountToken>
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>
    </soapenv:Body>
@@ -712,7 +712,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource>
             <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${DataGenWalletIDUpgrade#WalletIDGenerator}</ppi:WalletID>
-            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">61355273333</ppi:PaymentAccountToken>
+            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">63526623333</ppi:PaymentAccountToken>
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>
    </soapenv:Body>
@@ -823,7 +823,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource>
             <ppi:WalletID xmlns:ppi="http://www.ePayments.com/PPI">${DataGenWalletIDUpgrade#WalletIDGenerator}</ppi:WalletID>
-            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">61355275555</ppi:PaymentAccountToken>
+            <ppi:PaymentAccountToken xmlns:ppi="http://www.ePayments.com/PPI">63526625555</ppi:PaymentAccountToken>
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>
    </soapenv:Body>
