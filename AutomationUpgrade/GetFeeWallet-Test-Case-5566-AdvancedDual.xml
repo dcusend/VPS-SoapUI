@@ -1943,7 +1943,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
           <pattern/>
           <random>true</random>
           <persist>true</persist>
-          <current>5938263161.00000000000000000000000000000000000000000000000000000</current>
+          <current>3639382629.00000000000000000000000000000000000000000000000000000</current>
         </con:configuration>
         <con:name>WalletIDGenerator</con:name>
         <con:mode>STEP</con:mode>

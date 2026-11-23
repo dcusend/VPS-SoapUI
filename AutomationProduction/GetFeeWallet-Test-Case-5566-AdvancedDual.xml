@@ -2132,7 +2132,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <pattern/>
           <random>true</random>
           <persist>true</persist>
-          <current>1097397069.0000000000000000000000000000000000000000000000000000</current>
+          <current>4506248167.0000000000000000000000000000000000000000000000000000</current>
         </con:configuration>
         <con:name>WalletIDGenerator</con:name>
         <con:mode>STEP</con:mode>
